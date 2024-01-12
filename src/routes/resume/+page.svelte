@@ -6,7 +6,7 @@
     ]
     const histories = [
         {
-            company: '이랜드리테일',
+            company: 'Eland Retail',
             position: '선임 백엔드개발자',
             period: '2022.04 ~ 재직중',
             projects: [
@@ -15,10 +15,9 @@
                     stacks: ['Python', 'Django', 'AWS'],
                     keyword: '옥션 데이터 모델 설계및 API 구현',
                     contents: [
-                        'API 설계 및 구현, 어드민 페이지 구현',
                         '입찰처리를 위해 Redis와 Celery를 이용한 실시간 데이터 전송 처리 기능 개발',
                         '그룹사 SSO를 활용하여 OAuth 컨셉을 이용하여 연동 및 인증 체계 구현',
-                        '개인정보 암호화, 클라우드 환경구축 및 파이프라인 구성'
+                        '개인정보 암호화, 클라우드 환경구축 및 파이프라인 구성',
                     ]
                 },
                 {
@@ -27,14 +26,14 @@
                     keyword: '미술품 데이터 모델 설계및 API 구현',
                     contents: [
                         'API 설계 및 구현, 어드민 페이지 구현',
-                        '미술품의 색깔별 카테고리화를 머신러닝 기술을 이용하여 자동화하는 기능을 개발',
-                        '관리자 페이지를 개선하고 엑셀 입력/출력, 맞춤법 검사와 간편한 이미지 업로드 위젯 등 사용성 개선에 기여'
+                        '색깔별 카테고리화 및 자동화하는 기능을 개발',
+                        '어드민 개발 및 사용성 개선',
                     ]
                 }
             ]
         },
         {
-            company: '글로카로카',
+            company: 'Glocaloca',
             position: '선임 백엔드개발자',
             period: '2021.05 ~ 2022.02',
             projects: [
@@ -50,7 +49,7 @@
             ],
         },
         {
-            company: '캐럿글로벌',
+            company: 'Carrot Global',
             position: '주임 연구원',
             period: '2020.06 ~ 2021.05',
             projects: [
@@ -105,6 +104,103 @@
             ]
         }
     ]
+
+    /**
+     * ### Java
+     *
+     * - **Spring Framework**를 활용한 3년 이상의 프로젝트 참여
+     * - Spring Boot의 JPA, QueryDSL, Security, Thymeleaf 등을 이용한 다양한 프로젝트 수행
+     * - 웹서비스 구축에서 REST API 개발까지 폭넓은 역량 발휘
+     * - SMS, 세금계산서, 회원인증 등 외부 서비스와의 연동 경험
+     * - 기존 레거시 프로젝트를 Spring Framework로 전환
+     *
+     * ### Python
+     *
+     * - PHP 기반 사이트를 **Django**로 전환하여 개선
+     * - 카테고리라이징을 위한 ML모델 연동으로 프로젝트 향상
+     * - Redis PUB/SUB을 활용한 **SSE**모듈 개발 참여
+     *
+     * ### Javascript
+     *
+     * - Node.js를 이용한 **REST API** 서버 개발
+     * - Vue.js를 활용한 어드민 시스템 개발
+     * - Vue.js와 Ionic을 결합한 **모바일 어플리케이션** 개발
+     * - Jquery 기반 프로젝트의 유지보수
+     *
+     * ### Cloud
+     *
+     * - AWS(EC2, IAM, ECR, RDS, Route53 등)를 사용한 **서버 인프라 구축**
+     * - 네이버 클라우드와 자체 온프레미스 환경에서 서버 관리
+     * - Github, Gitlab Action/Runner를 통한 배포 스크립트 작성 및 Slack을 통한 배포상태 공유
+     *
+     * ### ETC
+     *
+     * - 다수의 데이터베이스 **전환** 프로젝트 참여
+     * - 라즈베리파이를 이용한 키오스크 및 출석 시스템 개발
+     * - PHP 레거시 프로젝트에 새로운 기능 추가 및 유지보수 참여
+     */
+
+    const techs = [
+        {
+            title: 'Java',
+            contents: [
+                'Spring Framework를 활용한 3년 이상의 프로젝트 참여',
+                'Spring Boot의 JPA, QueryDSL, Security, Thymeleaf 등을 이용한 다양한 프로젝트 수행',
+                '웹서비스 구축에서 REST API 개발까지 폭넓은 역량 발휘',
+                'SMS, 세금계산서, 회원인증 등 외부 서비스와의 연동 경험',
+                '기존 레거시 프로젝트를 Spring Framework로 전환',
+            ]
+        },
+        {
+            title: 'Python',
+            contents: [
+                'PHP 기반 사이트를 Django로 전환하여 개선',
+                '카테고리라이징을 위한 ML모델 연동으로 프로젝트 향상',
+                'Redis PUB/SUB을 활용한 SSE모듈 개발 참여',
+            ]
+        },
+        {
+            title: 'Javascript',
+            contents: [
+                'Node.js를 이용한 REST API 서버 개발',
+                'Vue.js를 활용한 어드민 시스템 개발',
+                'Vue.js와 Ionic을 결합한 모바일 어플리케이션 개발',
+                'Jquery 기반 프로젝트의 유지보수',
+            ]
+        },
+        {
+            title: 'Cloud',
+            contents: [
+                'AWS(EC2, IAM, ECR, RDS, Route53 등)를 사용한 서버 인프라 구축',
+                '네이버 클라우드와 자체 온프레미스 환경에서 서버 관리',
+                'Github, Gitlab Action/Runner를 통한 배포 스크립트 작성 및 Slack을 통한 배포상태 공유',
+            ]
+        },
+        {
+            title: 'ETC',
+            contents: [
+                '다수의 데이터베이스 전환 프로젝트 참여',
+                '라즈베리파이를 이용한 키오스크 및 출석 시스템 개발',
+                'PHP 레거시 프로젝트에 새로운 기능 추가 및 유지보수 참여',
+            ]
+        }
+    ]
+
+    const educations = [
+        {
+            title: '인덕대학교 컴퓨터소프트웨어학과',
+            period: '',
+        },
+        {
+            title: '비트캠프 자바 웹 개발자 양성과정',
+            period: '',
+        }
+    ]
+
+    function downloadPdf() {
+        // 현재 페이지 인쇄
+        window.print()
+    }
 </script>
 
 <svelte:head>
@@ -114,51 +210,69 @@
 
 <main class="space-y-2 resume">
     <div class="paragraphs">
-        <h1>박동환</h1>
-        <div class="flex items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                <path fill="currentColor"
-                      d="M12 22q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12v1.45q0 1.475-1.012 2.513T18.5 17q-.875 0-1.65-.375t-1.3-1.075q-.725.725-1.638 1.088T12 17q-2.075 0-3.538-1.463T7 12q0-2.075 1.463-3.538T12 7q2.075 0 3.538 1.463T17 12v1.45q0 .65.425 1.1T18.5 15q.65 0 1.075-.45t.425-1.1V12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20h5v2h-5Zm0-7q1.25 0 2.125-.875T15 12q0-1.25-.875-2.125T12 9q-1.25 0-2.125.875T9 12q0 1.25.875 2.125T12 15Z"></path>
-            </svg>
-            <p class="text-sm">
-                rakddh@gmail.com
+        <div class="paragraph flex justify-between items-center block-underline">
+            <div class="flex items-center space-x-1">
+                <h1 class="text-lg">박동환 / Backend Developer</h1>
+            </div>
+            <div>
+                <div class="flex items-center">
+                    <p class="text-xs">
+                        rakddh@gmail.com
+                    </p>
+                </div>
+                <!-- 다운로드 버튼 -->
+                <div class="flex items-center">
+                    <button class="text-xs underline" on:click={downloadPdf}>
+                        Download PDF
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="paragraph">
+            <p>
+                환경에 구애받지 않고 다양한 프로그래밍 언어와 기술을 활용한 개발 경력을 가지고 있습니다.
+                Java, Spring, JavaScript 등 다양한 도구와 기술을 사용하여 사용자 경험과 성능을 고려한 효율적이고 유지보수가 쉬운 코드를 작성하는 경험이 있습니다.
+                또한, 새로운 기술에 대한 학습과 창의적인 문제 해결에도 열정적으로 접근합니다. 소통과 협업을 통해 팀의 목표를 달성하는 데에도 기여하고자 합니다.
+            </p>
+            <p>
+                프레임워크 보다는 프로그래밍 언어와 같이 일하는 방식을 더 고민합니다.
+                사람들이 많이 사용하는 서비스를 만들며 보람을 느끼고, 비즈니스 요구사항을 빠르게 구현하는데 익숙합니다.
+                백엔드 엔지니어 보다는, 서비스에 오너십을 가지고 가꾸는 사람이 되고자 합니다.
             </p>
         </div>
-        <p>
-            환경에 구애받지 않고 다양한 프로그래밍 언어와 기술을 활용한 개발 경력을 가지고 있습니다.
-            Java, Spring, JavaScript 등 다양한 도구와 기술을 사용하여 사용자 경험과 성능을 고려한 효율적이고 유지보수가 쉬운 코드를 작성하는 경험이 있습니다.
-            또한, 새로운 기술에 대한 학습과 창의적인 문제 해결에도 열정적으로 접근합니다. 소통과 협업을 통해 팀의 목표를 달성하는 데에도 기여하고자 합니다.
-        </p>
-        <p>
-            프레임워크 보다는 프로그래밍 언어와 같이 일하는 방식을 더 고민합니다.
-            사람들이 많이 사용하는 서비스를 만들며 보람을 느끼고, 비즈니스 요구사항을 빠르게 구현하는데 익숙합니다.
-            백엔드 엔지니어 보다는, 서비스에 오너십을 가지고 가꾸는 사람이 되고자 합니다.
-        </p>
+
+
     </div>
-    <div class="paragraphs block-underline">
-        <div class="paragraph">
-            <h2 class="title">기술스택</h2>
-            <div class="stacks">
-                {#each stacks as stack}
-                    <span class="stack">{stack}</span>
-                {/each}
-            </div>
+    <div class="paragraphs">
+        <div class="paragraph block-underline">
+            <h1 class="text-lg">Tech Experience</h1>
+        </div>
+        <div class="projects">
+            {#each techs as tech}
+                <div class="">
+                    <h2 class="title">{tech.title}</h2>
+                    <ul class="list-disc list-inside">
+                        {#each tech.contents as content}
+                            <li class="content">{content}</li>
+                        {/each}
+                    </ul>
+                </div>
+            {/each}
         </div>
     </div>
     <div class="paragraphs">
-
-        <h2 class="title">
-            경력
-        </h2>
+        <h1 class="text-lg block-underline">Work Experience</h1>
+    </div>
+    <div class="paragraphs">
         <div class="histories">
             {#each histories as history}
                 <div class="history">
-                    <div class="flex justify-between">
-                        <h3 class="subtitle font-bold">
+                    <div class="flex justify-between items-center">
+                        <h1 class="subtitle font-bold">
                             {history.company}
-                        </h3>
+                        </h1>
                         <div class="content text-xs text-gray-400">
-                            {history.position} / {history.period}
+                            {history.period}
                         </div>
                     </div>
 
@@ -166,12 +280,8 @@
                         {#each history.projects as project}
                             <div class="project">
                                 <div class="project-title">
-                                    <h4>{project.title}</h4>
-                                    <div class="stacks">
-                                        {#each project.stacks as stack}
-                                            <span class="stack">{stack}</span>
-                                        {/each}
-                                    </div>
+                                    <h2 class="text-sm">{project.title}</h2>
+
                                 </div>
                                 <div class="content">
                                     <b>{project.keyword}</b>
@@ -188,15 +298,39 @@
             {/each}
         </div>
     </div>
+    <div class="paragraphs">
+        <div class="paragraph block-underline">
+            <h1 class="text-lg">Education</h1>
+        </div>
+        <div class="">
+            {#each educations as education}
+                <div class="">
+                    <div class="flex justify-between items-center">
+                        <h1 class="">
+                            {education.title}
+                        </h1>
+                        <div class="content text-xs text-gray-400">
+                            {education.period}
+                        </div>
+                    </div>
+                </div>
+            {/each}
+
+        </div>
+    </div>
 </main>
 
 <style lang="scss">
+  li {
+    @apply list-disc list-inside;
+  }
+
   .resume {
     @apply px-4 py-8;
-    @apply mt-1;
+    @apply my-2;
     @apply bg-white;
     @apply rounded-lg;
-    @apply shadow-md;
+    //@apply shadow-md;
     // a4사이즈 210mm x 297mm
     max-width: 210mm;
 
@@ -204,6 +338,7 @@
 
   .stacks {
     @apply space-x-1;
+
   }
 
   .stack {
@@ -227,6 +362,11 @@
 
   .paragraphs {
     @apply pb-2;
+    @apply space-y-4;
+
+    p {
+      @apply text-sm
+    }
 
     .title {
       @apply text-lg font-bold;
@@ -257,7 +397,6 @@
       .project-title {
 
         h4 {
-          @apply italic;
           @apply text-sm;
         }
 
