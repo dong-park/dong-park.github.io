@@ -9,6 +9,20 @@
             company: 'Eland Retail',
             position: '선임 백엔드개발자',
             period: '2022.04 ~ 재직중',
+            summary: [
+                {
+                    title: 'AWS 서버 인프라 및 서비스 마이그레이션',
+                    content: '클라우드 마이그레이션 프로젝트를 주도하여, AWS로의 전환을 통해 시스템의 안정성과 확장성을 보장했습니다. 이 과정에서 서버 구성, 네트워크 설정, 데이터베이스 마이그레이션 등을 포괄적으로 관리했습니다.'
+                },
+                {
+                    title: '어드민 패널 및 API 개발',
+                    content: 'Django 프레임워크를 사용하여 복잡한 비즈니스 로직을 처리하는 어드민 패널을 개발했습니다. RESTful API 설계와 구현을 통해 시스템 간 통신의 효율성을 극대화했습니다.'
+                },
+                {
+                    title: '시스템 최적화 및 효율성 향상',
+                    content: '성능 모니터링 도구를 사용하여 시스템 병목 현상을 식별하고, 캐싱, 로드 밸런싱 등의 방법으로 시스템 성능을 최적화했습니다.'
+                },
+            ],
             projects: [
                 {
                     title: '이랜드 옥션 / 갤러리',
@@ -18,7 +32,8 @@
                         '입찰처리를 위해 Redis와 Celery를 이용한 실시간 데이터 전송 처리 기능 개발',
                         '그룹사 SSO를 활용하여 OAuth 컨셉을 이용하여 연동 및 인증 체계 구현',
                         '개인정보 암호화, 클라우드 환경구축 및 파이프라인 구성',
-                    ]
+                    ],
+                    link: 'https://www.auction.co.kr/'
                 },
                 {
                     title: '미술품 조각투자 플랫폼 WillWill',
@@ -36,6 +51,11 @@
             company: 'Glocaloca',
             position: '선임 백엔드개발자',
             period: '2021.05 ~ 2022.02',
+            summary: [
+                '프롭테크 도메인의 서비스 구성중 단독 백엔드 개발 파트를 담당했습니다',
+                'Spring Boot및 Jenkins를 활용하여 API 및 CI/CD 환경을 구성했습니다',
+                '하위 피처로 빠른 개발을 위해 nest.js를 활용해 API 환경구성을 경험 했습니다',
+            ],
             projects: [
                 {
                     title: '공유 주거 플랫폼',
@@ -52,6 +72,11 @@
             company: 'Carrot Global',
             position: '주임 연구원',
             period: '2020.06 ~ 2021.05',
+            summary: [
+                'Spring Framework, PHP 레거시, Ionic 다양한 환경에서 개발경험을 했습니다.',
+                '네이버클라우드 및 IDC 환경에서 서버 장애 대처 및 하드웨어 교체 및 신설경험을 했습니다.',
+                '안드로이드, IOS 모바일 어플리케이션 배포 및 출시까지 A-Z를 경험했습니다.',
+            ],
             projects: [
                 {
                     title: '당근농장',
@@ -79,6 +104,11 @@
             company: '주식회사 위메스',
             position: '사원 백엔드개발자',
             period: '2018.11 ~ 2020.06',
+            summary: [
+                'Spring Framework를 이용해 신설 서비스를 구성하고, PHP 환경에 기존 서비스에 피처 개발을 담당했습니다',
+                'WebRTC 프로토콜 기반에 화상서비스 프로토타입 개발을 담당했습니다',
+                '라즈베리파이를 활용한 키오스크 및 출석모듈 개발을 담당했습니다',
+            ],
             projects: [
                 {
                     title: '난공매니저',
@@ -146,7 +176,6 @@
             contents: [
                 'Spring Framework를 활용한 3년 이상의 프로젝트 참여',
                 'Spring Boot의 JPA, QueryDSL, Security, Thymeleaf 등을 이용한 다양한 프로젝트 수행',
-                '웹서비스 구축에서 REST API 개발까지 폭넓은 역량 발휘',
                 'SMS, 세금계산서, 회원인증 등 외부 서비스와의 연동 경험',
                 '기존 레거시 프로젝트를 Spring Framework로 전환',
             ]
@@ -154,18 +183,17 @@
         {
             title: 'Python',
             contents: [
-                'PHP 기반 사이트를 Django로 전환하여 개선',
+                'CI 기반 사이트를 Django로 전환하여 개선',
                 '카테고리라이징을 위한 ML모델 연동으로 프로젝트 향상',
-                'Redis PUB/SUB을 활용한 SSE모듈 개발 참여',
+                'Redis를 활용한 SSE모듈 개발 참여',
             ]
         },
         {
             title: 'Javascript',
             contents: [
-                'Node.js를 이용한 REST API 서버 개발',
+                'nest.js, express 를 활용한 REST API 서버 개발',
                 'Vue.js를 활용한 어드민 시스템 개발',
-                'Vue.js와 Ionic을 결합한 모바일 어플리케이션 개발',
-                'Jquery 기반 프로젝트의 유지보수',
+                'Ionic을 이용한 크로스플랫폼 모바일 어플리케이션 개발',
             ]
         },
         {
@@ -176,14 +204,6 @@
                 'Github, Gitlab Action/Runner를 통한 배포 스크립트 작성 및 Slack을 통한 배포상태 공유',
             ]
         },
-        {
-            title: 'ETC',
-            contents: [
-                '다수의 데이터베이스 전환 프로젝트 참여',
-                '라즈베리파이를 이용한 키오스크 및 출석 시스템 개발',
-                'PHP 레거시 프로젝트에 새로운 기능 추가 및 유지보수 참여',
-            ]
-        }
     ]
 
     const educations = [
@@ -276,24 +296,32 @@
                         </div>
                     </div>
 
-                    <div class="projects">
-                        {#each history.projects as project}
-                            <div class="project">
-                                <div class="project-title">
-                                    <h2 class="text-sm">{project.title}</h2>
-
-                                </div>
-                                <div class="content">
-                                    <b>{project.keyword}</b>
-                                    <ul>
-                                        {#each project.contents as content}
-                                            <li>{content}</li>
-                                        {/each}
-                                    </ul>
-                                </div>
-                            </div>
+                    <div class="summary">
+                        {#each history.summary as summary}
+                            <p class="content">
+                                {summary}
+                            </p>
                         {/each}
                     </div>
+
+<!--                    <div class="projects">-->
+<!--                        {#each history.projects as project}-->
+<!--                            <div class="project">-->
+<!--                                <div class="project-title">-->
+<!--                                    <h2 class="text-sm">{project.title}</h2>-->
+
+<!--                                </div>-->
+<!--                                <div class="content">-->
+<!--                                    <b>{project.keyword}</b>-->
+<!--                                    <ul>-->
+<!--                                        {#each project.contents as content}-->
+<!--                                            <li>{content}</li>-->
+<!--                                        {/each}-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        {/each}-->
+<!--                    </div>-->
                 </div>
             {/each}
         </div>
