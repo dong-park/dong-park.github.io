@@ -131,12 +131,12 @@
   "resolved" "https://registry.npmjs.org/@polka/url/-/url-1.0.0-next.23.tgz"
   "version" "1.0.0-next.23"
 
-"@sveltejs/adapter-static@^1.0.0-next.50":
-  "integrity" "sha512-xZKBmiwFGW8nrH8+eysUAAo9XrtApI81q0m67y1bexVw8IY7/x741b6VEklNM7BZ7js0Mi2x+yCkHpOee8UZKQ=="
-  "resolved" "https://registry.npmjs.org/@sveltejs/adapter-static/-/adapter-static-1.0.0-next.50.tgz"
-  "version" "1.0.0-next.50"
+"@sveltejs/adapter-static@^2.0.3":
+  "integrity" "sha512-VUqTfXsxYGugCpMqQv1U0LIdbR3S5nBkMMDmpjGVJyM6Q2jHVMFtdWJCkeHMySc6mZxJ+0eZK3T7IgmUCDrcUQ=="
+  "resolved" "https://registry.npmjs.org/@sveltejs/adapter-static/-/adapter-static-2.0.3.tgz"
+  "version" "2.0.3"
 
-"@sveltejs/kit@^1.0.0-next.587":
+"@sveltejs/kit@^1.0.0-next.587", "@sveltejs/kit@^1.5.0":
   "integrity" "sha512-2w2VbPpK8DI3QCSVa2UNAv5sKNks1LT8GsEdpk41ffOyO2znGx2ZwcRWacsqlvh3d9lncZuDdANvCbTbuKvy3Q=="
   "resolved" "https://registry.npmjs.org/@sveltejs/kit/-/kit-1.27.2.tgz"
   "version" "1.27.2"
