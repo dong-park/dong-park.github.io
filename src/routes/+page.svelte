@@ -1,9 +1,13 @@
 <script>
-    import Header from "../components/Header.svelte";
+    import {goto} from "$app/navigation";
 
     export let title = 'dongpark.land'
     export let summary = ''
-    // export let publishedAt = ''
+    export let data;
+
+    function gotoPost(title) {
+        goto(`/posts/${title}`)
+    }
 </script>
 
 <svelte:head>
@@ -11,35 +15,12 @@
     <meta name="description" content={summary}/>
 </svelte:head>
 
-<main>
-
-    <div class="flex-col">
-        <div class="flex items-end">
-            <img src="favicon.png" alt="favicon" class="h-14 me">
+<main class="p-4">
+    <div class="flex justify-between">
+        <div class="flex-col items-end">
+            <h1 class="text-3xl">dongpark.log</h1>
+            <h2 class="text-sm">Just do anything.</h2>
         </div>
-        <div class="flex items-center space-x-1">
-            <h1>박동환</h1>
-            <span class="text-sm">dongpark</span>
-        </div>
-
-    </div>
-
-    <div data-animate="" data-animate-speed="slow">
-        <!-- 소개 -->
-        <div class="my-7 space-y-2">
-            <p>
-                프레임워크 보다는 프로그래밍 언어와 같이 <b>일하는 방식</b>을 더 고민합니다.
-                사람들이 많이 사용하는 <b>서비스</b>를 만들며 보람을 느끼고, <b>비즈니스 요구사항</b>을 빠르게 구현하는데 익숙합니다.
-                백엔드 엔지니어 보다는, 서비스에 오너십을 가지고 <b>가꾸는 사람</b>이 되려 노력합니다.
-            </p>
-            <p>
-                현재 이랜드리테일 에서
-                <b><a class="external-link" href="https://www.kakaocorp.com/page/" target="_blank">이랜드갤러리</a></b>
-                를 개발하고 있습니다.
-            </p>
-        </div>
-
-        <!-- 현재 -->
         <div class="">
             <div data-animate="" class="flex gap-0.5">
                 <a style="--lv-wait: 1;"
@@ -59,7 +40,7 @@
                 </a>
                 <a style="--lv-wait: 1;"
                    class="flex items-center gap-1 rounded p-1 transition-colors hover:bg-selection hover:text-body"
-                   href="https://bepyan.notion.site/Frontend-Developer-69fd245161734c1793e8df78dffe705c?pvs=4"
+                   href="https://dongpark.notion.site/Backend-Engineer-c285d31e9ac9411e882e48a5c6f30f83?pvs=4"
                    target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 15 15">
                         <path fill="currentColor"
@@ -67,31 +48,19 @@
                     </svg>
                 </a></div>
         </div>
+    </div>
 
-        <!-- 나의 공간 -->
-        <div class="my-7 flex">
-            <div data-animate="" class="flex flex-col">
-                <div style="--lv-wait: 2;">
-                    <a class="link font-bold external-link w-[75px]" href="/brand">Brand</a>
-                    <span class="ml-3 text-sm">그간 저의 발자취와 이력입니다.</span>
-                </div>
-                <div style="--lv-wait: 2;">
-                    <a class="link font-bold external-link w-[75px]" href="/media">Project</a>
-                    <span class="ml-3 text-sm">프로젝트를 소개합니다.</span>
-                </div>
-                <div style="--lv-wait: 2;">
-                    <a class="link font-bold external-link w-[75px]" href="/brand">Note</a>
-                    <span class="ml-3 text-sm">생각과 기록을 모았습니다.</span>
-                </div>
+    <div class="mt-6 space-y-5">
+        {#each data.posts as post}
+            <div class="hover:bg-gray-100 hover:cursor-pointer" on:click={gotoPost(post.path)}>
+                <h1 class="text-lg">{post.title}</h1>
+                <p class="text-sm">{post.summary}</p>
+                <p class="text-sm">{post.date}</p>
             </div>
-        </div>
+        {/each}
+        <!-- svelte foreach data.posts as post (post.id) -->
     </div>
 </main>
 
 <style lang="scss">
-
-  .me:hover {
-
-  }
-
 </style>
