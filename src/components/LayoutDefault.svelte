@@ -1,32 +1,32 @@
 <script>
-    export let title = ''
-    export let summary = ''
-    export let publishedAt = ''
-    export let thumbnail = ''
+	export let title = '';
+	export let summary = '';
+	export let publishedAt = '';
+	export let thumbnail = '';
 </script>
 
 <svelte:head>
-    <title>{title}</title>
-    <meta name="description" content={summary}/>
+	<title>{title}</title>
+	<meta name="description" content={summary} />
 </svelte:head>
 
 <main>
-    <article class="post">
-        <img src="/auction.png" alt="" class="background-image">
-        <div class="content-wrapper">
-            <div class="cover" style="">
-                <h1 class="cover-title">{title}</h1>
-                <h2 class="cover-subtitle">{summary}</h2>
-                <p class="info">
-                    <time>{publishedAt}</time>
-                </p>
-            </div>
-            <div class="cover-line"></div>
-            <div class="post-content" data-animate="" data-animate-speed="slow">
-                <slot/>
-            </div>
-        </div>
-    </article>
+	<article class="post">
+		<img src="/auction.png" alt="" class="background-image">
+		<div class="content-wrapper">
+			<div class="cover" style="">
+				<h1 class="cover-title">{title}</h1>
+				<h2 class="cover-subtitle">{summary}</h2>
+				<p class="info">
+					<time>{publishedAt}</time>
+				</p>
+			</div>
+			<div class="cover-line"></div>
+			<div class="post-content" data-animate="" data-animate-speed="slow">
+				<slot />
+			</div>
+		</div>
+	</article>
 </main>
 
 
@@ -75,8 +75,17 @@
     @apply text-2xl font-bold;
   }
 
-  .post-content {
+  :global(pre) {
+    @apply bg-gray-100 p-4 rounded-md;
+    @apply overflow-x-auto;
+		@apply text-xs;
 
+    @media (max-width: 700px) {
+      @apply overflow-x-auto;
+    }
+  }
+
+  .post-content {
     & > :global(h1) {
       @apply text-4xl font-bold;
       @apply mt-8 mb-4;
@@ -92,15 +101,6 @@
 
     & > :global(ul) {
       @apply list-disc list-inside;
-    }
-
-    & > :global(pre) {
-      @apply bg-gray-100 p-4 rounded-md;
-      @apply overflow-x-auto;
-
-      @media (max-width: 700px) {
-        @apply overflow-x-auto;
-      }
     }
   }
 </style>
