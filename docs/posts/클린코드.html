@@ -5,15 +5,15 @@
 		<link rel="icon" href="../favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		
-		<link href="../_app/immutable/assets/0.6d32d257.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/4.65856297.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.daf1de76.js">
+		<link href="../_app/immutable/assets/0.dbf6deab.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/4.c0407c0c.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.936792a5.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/index.f97ab432.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.f16ba57c.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.28979de0.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/0.7d00df52.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/4.1b2ef0a6.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/4.0369e207.js"><title>클린코드 요약</title><!-- HEAD_svelte-qs65uz_START --><meta name="description" content="클린코드 정독후 요약사항을 정리합니다."><!-- HEAD_svelte-qs65uz_END -->
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.aaa45635.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.b63a0dd6.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.1fe3ff76.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/4.32beff50.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/4.24fc82d9.js"><title>클린코드 요약</title><!-- HEAD_svelte-qs65uz_START --><meta name="description" content="클린코드 정독후 요약사항을 정리합니다."><!-- HEAD_svelte-qs65uz_END -->
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
@@ -21,70 +21,64 @@
 
 <div class="layout-container svelte-bz1dze">
 
-<main><article class="post"><img src="/auction.png" alt="" class="background-image svelte-g2lbvz">
-		<div class="content-wrapper svelte-g2lbvz"><div class="cover svelte-g2lbvz" style=""><h1 class="cover-title svelte-g2lbvz">클린코드 요약</h1>
+<main><article class="post"><img src="/auction.png" alt="" class="background-image svelte-87fb0m">
+		<div class="content-wrapper svelte-87fb0m"><div class="cover svelte-87fb0m" style=""><h1 class="cover-title svelte-87fb0m">클린코드 요약</h1>
 				<h2 class="cover-subtitle">클린코드 정독후 요약사항을 정리합니다.</h2>
 				<p class="info"><time></time></p></div>
-			<div class="cover-line svelte-g2lbvz"></div>
-			<div class="post-content svelte-g2lbvz" data-animate="" data-animate-speed="slow"><h1 id="1장-깨끗한-코드"><a href="#1장-깨끗한-코드">1장 깨끗한 코드</a></h1>
-<ul><li>빨리가는 유일한 방법은 언제나 코드를 깨끗하게 유지하는 습관이다. p7</li>
-<li>단순한 코드 규칙으로 구현을 시작하는법 p13<ul><li>모든 테스트를 통과한다</li>
+			<div class="cover-line svelte-87fb0m"></div>
+			<div class="post-content svelte-luwpx3" data-animate="" data-animate-speed="slow"><h1 id="1장-깨끗한-코드"><a href="#1장-깨끗한-코드">1장 깨끗한 코드</a></h1>
+<ul><li>빨리가는 유일한 방법은 언제나 코드를 깨끗하게 유지하는 습관이다.</li>
+<li>단순한 코드 규칙으로 구현을 시작하는법<ul><li>모든 테스트를 통과한다</li>
 <li>중복이 없다</li>
 <li>시스템 내 모든 설계 아이디어를 표현한다</li>
 <li>클래스, 메서드, 함수 등을 최대한 줄인다.</li></ul></li>
-<li>캠프장을 처음 왔을 때 보다 더 깨끗하게 하고 떠나라 p19</li></ul>
+<li>캠프장을 처음 왔을 때 보다 더 깨끗하게 하고 떠나라</li></ul>
 <h1 id="2장-의미있는-이름"><a href="#2장-의미있는-이름">2장 의미있는 이름</a></h1>
-<ul><li>의도를 분명히 밝히자: 코드가 무엇을 의미하는지 독자로 하여금 납득이 되어야 한다</li>
+<ul><li>의도를 분명히 밝히자: 코드가 무엇을 의미하는지 독자로 하여금 납득이 되어야 한다.</li>
 <li>그릇된 정보를 피하라: 변수나 함수 이름에 잘못된 정보를 포함시키지 말아야 한다. 다른 사람이 코드를 읽을 때 혼란을 줄 수 있으며, 잘못된 가정을 할 수도 있다.</li>
 <li>의미 있게 구분하라: 변수나 함수 이름은 서로 다른 개념을 구분할 수 있도록 명확하고 일관성 있게 작성해야 한다. 혼란을 줄이고 코드의 가독성을 향상시킨다.</li>
 <li>발음하기 쉬운 이름을 사용하라. 코드의 이름은 다른 사람들이 발음하기 쉽고 이해하기 쉽게 작성되어야 한다.</li>
 <li>검색하기 쉬운 이름을 사용하라. 변수나 함수의 이름은 다른 사람들이 쉽게 검색할 수 있도록 작성되어야 한다. 명확하고 직관적인 이름을 선택하여 코드의 유지보수성을 높이는데 도움이 된다.</li>
 <li>인코딩을 피하라: 변수나 함수 이름에 인코딩을 사용하지 않는 것이 좋다. 의미 있는 이름을 사용하여 코드의 가독성을 높이는 것이 중요하다.</li>
-<li>자신의 기억력을 자랑하지 마라: 변수 이름을 자신만 아는 이름으로 변환하지 말아라</li>
-<li>불필요한 유머나 맥락을 벗어나는 명명법을 사용하지 말고 방법론에 의한 명명법을 쓰자</li></ul>
+<li>자신의 기억력을 자랑하지 마라: 변수 이름을 자신만 아는 이름으로 변환하지 말아라.</li>
+<li>불필요한 유머나 맥락을 벗어나는 명명법을 사용하지 말고 방법론에 의한 명명법을 쓰자.</li></ul>
 <h1 id="3장-함수"><a href="#3장-함수">3장 함수</a></h1>
 <h3 id="작게-만들어라"><a href="#작게-만들어라">작게 만들어라</a></h3>
-<p>호출하는 함수 형식으로 함수는 짧을수록 좋다 2~3줄 내외면 더 좋다. 들여쓰기 구조도 1단이나 2단을 넘어서면 힘들어진다</p>
+<ul><li>호출하는 함수 형식으로 함수는 짧을수록 좋다 2~3줄 내외면 더 좋다. 들여쓰기 구조도 1단이나 2단을 넘어서면 힘들어진다</li></ul>
 <h3 id="한-가지만-해라"><a href="#한-가지만-해라">한 가지만 해라</a></h3>
-<p>추상화 단계에서 일을 하는 가짓수가 하나여야 한다 가령 다른 함수를 호출하는 함수가 존재한다면 그 함수는 한가지 일을 하고 있는것이다.</p>
+<ul><li>추상화 단계에서 일을 하는 가짓수가 하나여야 한다 가령 다른 함수를 호출하는 함수가 존재한다면 그 함수는 한가지 일을 하고 있는것이다.</li></ul>
 <h3 id="함수-당-추상화-수준은-하나로"><a href="#함수-당-추상화-수준은-하나로">함수 당 추상화 수준은 하나로</a></h3>
-<p>한 함수내에 여러가지 추상화 수준을 섞으면 코드를 읽는 사람이 헷갈린다. 특정 표현이 근본 개념인지 아니면 세부사항인지 구분하기 어려운 탓이다.</p>
-<p>내려가기 규칙을 활용하자 위에서 아래로 프로그램을 읽을수 있도록 함수 추상화 수준을 한단계씩 내려보자</p>
-<p>TO 설정 페이지와 해제 페이지를 포함라혀면, 설정 페이지를 폼학하고, 테스트 페이지 내용을 포함하고 해제 페이지를 포함한다.</p>
-<ul><li>To 설정 페이지를 포함하려면, 슈트이면 슈트 설정 페이지를 포함한 후 일반 설정 페이지를 포함한다.</li>
+<ul><li>한 함수내에 여러가지 추상화 수준을 섞으면 코드를 읽는 사람이 헷갈린다. 특정 표현이 근본 개념인지 아니면 세부사항인지 구분하기 어려운 탓이다.</li>
+<li>내려가기 규칙을 활용하자 위에서 아래로 프로그램을 읽을수 있도록 함수 추상화 수준을 한단계씩 내려보자</li>
+<li>TO 설정 페이지와 해제 페이지를 포함라혀면, 설정 페이지를 폼학하고, 테스트 페이지 내용을 포함하고 해제 페이지를 포함한다.<ul><li>To 설정 페이지를 포함하려면, 슈트이면 슈트 설정 페이지를 포함한 후 일반 설정 페이지를 포함한다.</li>
 <li>To 슈트 설정 페이지를 포함하려면, 부모 계층에서 SuiteSetUp 페이지를 찾아 Include문과 페이지 경로를 추가한다.</li>
-<li>To 부모 계층을 검색하려면…</li></ul>
+<li>To 부모 계층을 검색하려면…</li></ul></li></ul>
 <h3 id="switch문"><a href="#switch문">Switch문</a></h3>
-<p>스위치 문을 다형성 객체를 생성하는 코드 안에서 허용하고 상속관계로 숨기고 다른 코드에 노출하지 않는 방법이 있다.</p>
+<ul><li>스위치 문을 다형성 객체를 생성하는 코드 안에서 허용하고 상속관계로 숨기고 다른 코드에 노출하지 않는 방법이 있다.</li></ul>
 <h3 id="서술적인-이름을-사용하라"><a href="#서술적인-이름을-사용하라">서술적인 이름을 사용하라</a></h3>
-<p>이름이 길어도 괜찮고 서술적인 이름이 짧고 어려운 이름보다 좋다. 함수 이름을 정할때 여러 단어가 쉽게 읽히는 명명법을 사용하는것이 좋다. 여러 단어를 사용해 함수 기능을 표현하라</p>
-<p>모듈 내에서 함수 이름은 같은 문구,명사,동사를 사용한다.</p>
+<ul><li>이름이 길어도 괜찮고 서술적인 이름이 짧고 어려운 이름보다 좋다. 함수 이름을 정할때 여러 단어가 쉽게 읽히는 명명법을 사용하는것이 좋다. 여러 단어를 사용해 함수 기능을 표현하라</li>
+<li>모듈 내에서 함수 이름은 같은 문구,명사,동사를 사용한다.</li></ul>
 <h3 id="함수-인수"><a href="#함수-인수">함수 인수</a></h3>
-<p>함수에서 이상적인 인수 개수는 0개이다. 다음은 1개이고 다음은2개이다. 최선은 입력 인수가 없는 경우 ex: IncludeSetupPageInfo(new PageContent) → includeSetupPage()</p>
-<p><em>많이쓰는 단항형식</em>
-함수에 인수 1개를 넘기는 이유</p>
-<ol><li>인수에 질문을 던지는 경우</li>
+<ul><li>함수에서 이상적인 인수 개수는 0개이다. 다음은 1개이고 다음은2개이다. 최선은 입력 인수가 없는 경우 ex: IncludeSetupPageInfo(new PageContent) → includeSetupPage()</li>
+<li><em>많이쓰는 단항형식</em><ul><li>함수에 인수 1개를 넘기는 이유<ol><li>인수에 질문을 던지는 경우</li>
 <li>인수를 뭔가로 변환해 결과를 반환하는 경우</li>
-<li>단항 함수 형식의 이벤트</li></ol>
-<p>플래그 인수는 추하다. 함수에 부울 값을 넘기는 관례는 차라리 인수별말고 상황별로 함수를 나누는 편이 좋다</p>
-<p><em>이항함수</em>
-인수가 2개인 함수는 1개인 함수보다 이해하기 어렵다. 프로그램을 짜다보면 불가피한 경우도 생기지만 그만큼 위험이 따른다</p>
-<p><em>삼항함수</em>
-삼항 함수부터는 신중히 고려해야 한다..</p>
-<p><em>동사와 키워드</em>
-단항 함수는 함수와 인수가 동사/명사 쌍을 이ㅝ야 한다.
-함수 이름에 키워드를 추가하는 편도 좋다</p>
+<li>단항 함수 형식의 이벤트</li></ol></li></ul></li>
+<li>플래그 인수는 추하다. 함수에 부울 값을 넘기는 관례는 차라리 인수별말고 상황별로 함수를 나누는 편이 좋다</li>
+<li><em>이항함수</em><ul><li>인수가 2개인 함수는 1개인 함수보다 이해하기 어렵다. 프로그램을 짜다보면 불가피한 경우도 생기지만 그만큼 위험이 따른다</li></ul></li>
+<li><em>삼항함수</em><ul><li>삼항 함수부터는 신중히 고려해야 한다..</li></ul></li>
+<li><em>동사와 키워드</em><ul><li>단항 함수는 함수와 인수가 동사/명사 쌍을 이ㅝ야 한다.</li>
+<li>함수 이름에 키워드를 추가하는 편도 좋다</li></ul></li></ul>
 <h3 id="부수-효과를-일으키지-마라"><a href="#부수-효과를-일으키지-마라">부수 효과를 일으키지 마라</a></h3>
-<p>함수에서 한 가지를 하겠다고 약속하고선 남몰래 다른 짓을 하지 말아라!</p>
+<ul><li>함수에서 한 가지를 하겠다고 약속하고선 남몰래 다른 짓을 하지 말아라!</li></ul>
 <h3 id="명령과-조회를-분리하라"><a href="#명령과-조회를-분리하라">명령과 조회를 분리하라!</a></h3>
-<p>함수는 뭔가를 수행하거나 뭔가에 답하거나 둘중 하나만 해야한다. 둘 다 하면 안 된다. 객체 상태를 변경하거나 아니면 객체 정보를 반환하거나 둘 중 하나다.</p>
+<ul><li>함수는 뭔가를 수행 하거나 뭔가에 답 하거나 둘중 하나만 해야한다. 둘 다 하면 안 된다. 객체 상태를 변경 하거나 아니면 객체 정보를 반환 하거나 둘 중 하나다.</li></ul>
 <h3 id="trycatch-블록은-한-함수에서-별도로-처리"><a href="#trycatch-블록은-한-함수에서-별도로-처리">Try/Catch 블록은 한 함수에서 별도로 처리</a></h3>
-<p>코드 구조에 혼란을 일으키며, 정상 동작과 오류 처리 동작을 뒤섞는다.</p>
+<ul><li>코드 구조에 혼란을 일으키며, 정상 동작과 오류 처리 동작을 뒤섞는다.</li></ul>
 <h3 id="반복하지-마라"><a href="#반복하지-마라">반복하지 마라</a></h3>
-<p>중복은 소트트웨어에서 모든 악의 근원이다. 많은 원칙과 기법이 중복을 없애거나 제어할 목적으로 나왔다.</p>
+<ul><li>중복은 소트트웨어에서 모든 악의 근원이다. 많은 원칙과 기법이 중복을 없애거나 제어할 목적으로 나왔다.</li></ul>
 <h1 id="4장-주석"><a href="#4장-주석">4장 주석</a></h1>
-<p>잘 달린 주석은 어떤 정보보다 유용하지만, 거짓말을 하는 경우가 많다. 일부가 여기서 저기로 옮겨지면서 발생하는 불상사</p>
-<p>진실은 한 곳에만 존재한다. 바로 코드다 코드만이 자기가 하는 일을 진실되게 말한다.</p>
+<p>잘 달린 주석은 어떤 정보보다 유용하지만, 거짓말을 하는 경우가 많다. 일부가 여기서 저기로 옮겨지면서 발생하는 불상사
+진실은 한 곳에만 존재한다. 바로 코드다 코드만이 자기가 하는 일을 진실되게 말한다.</p>
 <h3 id="주석은-나쁜-코드를-보완하지-못한다"><a href="#주석은-나쁜-코드를-보완하지-못한다">주석은 나쁜 코드를 보완하지 못한다</a></h3>
 <ul><li>표현력이 풍부하고 주석이 거의 없는 코드가, 복잡하고 어수선하며 주석이 많이 달린 코드보다 훨씬 좋다.</li></ul>
 <h3 id="코드를-의도로-표현하라"><a href="#코드를-의도로-표현하라">코드를 의도로 표현하라</a></h3>
@@ -105,7 +99,6 @@ docs형..
 TODO주석
 중요성을 강조하는 주석</li></ul>
 <h3 id="나쁜-주석"><a href="#나쁜-주석">나쁜 주석</a></h3>
-<p>대다수 주석이 속하는 범주, 허술한 코드를 지탱하거나, 엉뚱한 코드를 변명하거나, 미숙한 결정을 합리화 한다.</p>
 <ul><li>주절거리는 주석: 저자에게만 의미가 있고 의사소통이 어려운 주석들</li>
 <li>같은 이야기를 중복하는 주석: 주석이 코드보다 더 많은 정보를 제공하지 못하는 경우</li>
 <li>오해할 여지가 있는 주석: 코드보다 읽기도 어려운 주석에 살짝 잘못된 정보를 포함한 경우</li>
@@ -128,17 +121,14 @@ TODO주석
 <ul><li>코드 형식은 매우 중요하다</li>
 <li>오늘 구현한 기능이 다음 버전에서 바뀔 확률은 아주 높다. 가독성이 바뀔 코드의 품질을 결정한다.</li></ul>
 <h3 id="적절한-행-길이를-유지하라"><a href="#적절한-행-길이를-유지하라">적절한 행 길이를 유지하라</a></h3>
-<ul><li><p>대다수가 500줄을 넘지 않고 대부분이 200줄 정도인 파일로도 커다란 시스템을 구축할수 있다.</p></li>
-<li><p>신문 기사처럼 작성하라</p>
-<ul><li>최상단 기사를 몇 마디로 요약하는 표제가 나오고, 첫 문단이 기사 내용을 요약한다.</li>
+<ul><li>대다수가 500줄을 넘지 않고 대부분이 200줄 정도인 파일로도 커다란 시스템을 구축할수 있다.</li>
+<li>신문 기사처럼 작성하라<ul><li>최상단 기사를 몇 마디로 요약하는 표제가 나오고, 첫 문단이 기사 내용을 요약한다.</li>
 <li>소스 파일도 이와 비슷하게 이름만 보고도 올바른 모듈을 판단 할 정도로 신경 써서 짓는다.</li>
 <li>소스 파일 첫 부분은 고차원 개념과 알고리즘을 설명하고 아래로 내려갈수록 세세하게 묘사한다.</li>
 <li>신문은 다양한 기사로 이뤄진다. 대다수 기사가 아주 짧고 날짜, 이름들을 뒤섞은 긴 기사 하나만 싣는다면 아무도 읽지 않을것이다.</li></ul></li>
-<li><p>개념은 빈 행으로 분리하라</p>
-<ul><li>모든 코드는 왼쪽에서 오른쪽으로 그리고 위에서 아래로 읽힌다.</li>
+<li>개념은 빈 행으로 분리하라<ul><li>모든 코드는 왼쪽에서 오른쪽으로 그리고 위에서 아래로 읽힌다.</li>
 <li>일련의 행 묶음은 완결된 생각 하나를 표현한다.</li></ul></li>
-<li><p>세로 밀집도</p>
-<ul><li><p>줄바꿈이 개념을 분리한다면 세로 밀집도는 연광성을 의미한다. 서로 밀접한 코드 행은 세로로 가까이 놓여야 한다는 뜻이다.</p>
+<li>세로 밀집도<ul><li>줄바꿈이 개념을 분리한다면 세로 밀집도는 연광성을 의미한다. 서로 밀접한 코드 행은 세로로 가까이 놓여야 한다는 뜻이다.</li></ul></li></ul>
 <pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ReporterConfig</span> <span class="token punctuation">&#123;</span>
 	<span class="token comment">// 변수끼리는 세로로 묶어놓기</span>
 	<span class="token keyword">private</span> <span class="token class-name">String</span> m_className<span class="token punctuation">;</span>
@@ -147,16 +137,16 @@ TODO주석
 	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addProperty</span><span class="token punctuation">(</span><span class="token class-name">Property</span> property<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
 		m_properties<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>property<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre></li></ul></li>
-<li><p>수직 거리</p>
-<ul><li><p>서로 밀접한 개념은 세로로 가까이 둬야 한다. 물론 두 개념이 서로 다른 파일에 속한다면 규칙이 통하지 않는다. 하지만 타당한 근거 없다면 서로 밀접한 개념은 한 파일에 속해야 마땅하다.</p></li>
-<li><p>변수선언 위치</p>
-<ul><li>사용하는 위치에 최대한 가까이 선언한다. 우리가 만든 함수는 매우 짧으므로 지역 변수는 각 함수 맨 처음에 선언한다.</li>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
+<ul><li>수직 거리<ul><li>서로 밀접한 개념은 세로로 가까이 둬야 한다. 물론 두 개념이 서로 다른 파일에 속한다면 규칙이 통하지 않는다. 하지만 타당한 근거 없다면 서로 밀접한 개념은 한 파일에 속해야 마땅하다.</li>
+<li>변수선언 위치<ul><li>사용하는 위치에 최대한 가까이 선언한다. 우리가 만든 함수는 매우 짧으므로 지역 변수는 각 함수 맨 처음에 선언한다.</li>
 <li>루프를 제어하는 변수는 흔히 루프문 내부에 선언한다. (아주 드물지만 블록 상단이나 루프 직전에 선언하는 사례도 있다)</li></ul></li>
-<li><p>인스턴스 변수</p>
-<ul><li>클래스 맨 처음에 선언한다.</li></ul></li>
-<li><p>종속 함수</p>
-<ul><li><p>한 함수가 다른 함수를 호출한다면 두 함수는 세로로 가까이 배치한다.</p>
+<li>인스턴스 변수<ul><li>클래스 맨 처음에 선언한다.</li></ul></li>
+<li>종속 함수<ul><li>한 함수가 다른 함수를 호출한다면 두 함수는 세로로 가까이 배치한다.</li></ul></li>
+<li>개념적 유사성<ul><li>친화도가 높을수록 코드를 가까이 배치한다.</li>
+<li>친화도가 높은 요인은 한 함수가 다른 함수를 호출해 생기는 종속성이 생기는 경우나 명명법이 똑가톡 기본 기능이 유사한 경우</li></ul></li></ul></li>
+<li>세로 순서<ul><li>가장 중요한 개념을 가장 먼저 표현한다.</li>
+<li>세세한 사항을 최대한 배제한다.</li></ul></li></ul>
 <pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">Response</span> <span class="token function">makeResponse</span><span class="token punctuation">(</span><span class="token class-name">FitNesseContext</span> context<span class="token punctuation">,</span> <span class="token class-name">Request</span> request<span class="token punctuation">)</span> 
 	<span class="token keyword">throw</span> <span class="token class-name">Exception</span> <span class="token punctuation">&#123;</span>
 		<span class="token class-name">String</span> pageNmae <span class="token operator">=</span> <span class="token function">getPageNameOrDefault</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token string">"FrontPage"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -164,13 +154,7 @@ TODO주석
 <span class="token comment">//////////////////////</span>
 <span class="token keyword">private</span> <span class="token class-name">String</span> <span class="token function">getPageNameOrDefault</span><span class="token punctuation">(</span><span class="token class-name">Reuqest</span> request<span class="token punctuation">,</span> <span class="token class-name">String</span> defaultPageName<span class="token punctuation">)</span>
 <span class="token comment">//////////////////////</span>
-<span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">loadPage</span><span class="token punctuation">(</span><span class="token class-name">String</span> resource<span class="token punctuation">,</span> <span class="token class-name">FitNesseContext</span> context<span class="token punctuation">)</span></code><!-- HTML_TAG_END --></pre></li></ul></li>
-<li><p>개념적 유사성</p>
-<ul><li>친화도가 높을수록 코드를 가까이 배치한다.</li>
-<li>친화도가 높은 요인은 한 함수가 다른 함수를 호출해 생기는 종속성이 생기는 경우나 명명법이 똑가톡 기본 기능이 유사한 경우</li></ul></li></ul></li>
-<li><p>세로 순서</p>
-<ul><li>가장 중요한 개념을 가장 먼저 표현한다.</li>
-<li>세세한 사항을 최대한 배제한다.</li></ul></li></ul>
+<span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">loadPage</span><span class="token punctuation">(</span><span class="token class-name">String</span> resource<span class="token punctuation">,</span> <span class="token class-name">FitNesseContext</span> context<span class="token punctuation">)</span></code><!-- HTML_TAG_END --></pre>
 <h3 id="가로-형식-맞추기"><a href="#가로-형식-맞추기">가로 형식 맞추기</a></h3>
 <ul><li>기존 오픈소스 코드들은 60자 이상부터 떨어진다. 프로그래머는 명백하게 짧은 행을 선호한다.</li>
 <li>100자나 120자에 달해도 나쁘지 않지만 그 이상은 솔직히 주의 부족이다.</li>
@@ -187,12 +171,10 @@ TODO주석
 <ul><li>변수 사이에 함수라는 계층을 넣는다고 구현이 저절로 감춰지지는 않는다. 구현을 감추려면 추상화가 필요하다. 그보다는 추상 인터페이스를 제공해 사용자가 구현을 모른 채 자료의 핵심을 조작할 수 있어야 진정한 의미의 클래스다.</li>
 <li>개발자는 객체가 포함하는 자료를 표현할 가장 좋은 방법을 심각하게 고민해야 한다.</li></ul>
 <h3 id="자료객체-비대칭"><a href="#자료객체-비대칭">자료/객체 비대칭</a></h3>
-<ul><li><p>객체와 자료 구조는 근본적으로 양분된다.</p>
-<ul><li>절차적인 코드는 기존 자료 구조를 변경하지 않으면서 새 함수를 추가하기 쉽다. 반면, 객체 지향 코드는 기존 함수를 변경하지 않으면서 새 클래스를 추가하기 슆다.</li>
+<ul><li>객체와 자료 구조는 근본적으로 양분된다.<ul><li>절차적인 코드는 기존 자료 구조를 변경하지 않으면서 새 함수를 추가하기 쉽다. 반면, 객체 지향 코드는 기존 함수를 변경하지 않으면서 새 클래스를 추가하기 슆다.</li>
 <li>절차적인 코드는 새로운 자료 구조를 추가하기 어렵다. 그러려면 모든 함수를 고쳐야 한다. 객체 지향 코드는 새로운 함수를 추가하기 어렵다. 그러려면 모든 클래스를 고쳐야 한다.</li>
 <li>둘다 참이다. 다시말해 객체 지향코드에서 어려운 변경은 절차적인 코드에서 쉬우며, 절차적인 코드에서 어려운 변경은 객체 지향 코드에서 쉽다.</li></ul></li>
-<li><p>예시</p>
-<ul><li><p>절차적인 접근예시</p>
+<li>예시<ul><li><p>절차적인 접근예시</p>
 <pre class="language-java"><!-- HTML_TAG_START --><code class="language-java">
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Square</span> <span class="token punctuation">&#123;</span>
 	<span class="token keyword">public</span> <span class="token class-name">Point</span> topLeft<span class="token punctuation">;</span>
@@ -508,7 +490,8 @@ BufferedOutputStream bos = ctxt.createScratchFilesStream(classFileName);
 <li><strong>적시에Timely → 테스트 코드를 만들고 운영코드를 작성하라</strong></li></ul>
 <h3 id="결론-2"><a href="#결론-2">결론</a></h3>
 <ul><li>깨끗한 테스트코드는 실제 코드의 유지보수성, 재사용성의 보존을 강화하고 프로젝트를 건강하게 해준다</li>
-<li>지속적으로 코드를 꺠끗하게 관리하고 간결하게 정리하도록하자</li></ul></div></div></article>
+<li>지속적으로 코드를 꺠끗하게 관리하고 간결하게 정리하도록하자</li></ul>
+</div></div></article>
 </main>
 </div>
 
@@ -516,7 +499,7 @@ BufferedOutputStream bos = ctxt.createScratchFilesStream(classFileName);
 			
 			<script>
 				{
-					__sveltekit_rcz3zo = {
+					__sveltekit_1y441b3 = {
 						base: new URL("..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -526,8 +509,8 @@ BufferedOutputStream bos = ctxt.createScratchFilesStream(classFileName);
 					const data = [null,null];
 
 					Promise.all([
-						import("../_app/immutable/entry/start.daf1de76.js"),
-						import("../_app/immutable/entry/app.28979de0.js")
+						import("../_app/immutable/entry/start.936792a5.js"),
+						import("../_app/immutable/entry/app.b63a0dd6.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 4],
