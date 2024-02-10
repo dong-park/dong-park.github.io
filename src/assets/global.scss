@@ -251,7 +251,7 @@ img, video {
   --page-width: 1072px;
   --content-width: 700px;
   --body-margin-left: max(24px, env(safe-area-inset-left));
-  --body-margin-right: max(24px, env(safe-area-inset-right))
+  --body-margin-right: max(24px, env(safe-area-inset-right));
 }
 
 //@media (max-width: var(--lg)) {

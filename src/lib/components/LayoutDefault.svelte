@@ -1,4 +1,6 @@
 <script>
+	import MarkDownLoader from './MarkDownLoader.svelte';
+
 	export let title = '';
 	export let summary = '';
 	export let publishedAt = '';
@@ -22,20 +24,26 @@
 				</p>
 			</div>
 			<div class="cover-line"></div>
-			<div class="post-content" data-animate="" data-animate-speed="slow">
+			<MarkDownLoader>
 				<slot />
-			</div>
+			</MarkDownLoader>
 		</div>
 	</article>
 </main>
 
 
 <style lang="scss">
+  :global(body) {
+    font-family: var(--font-family);
+    font-size: var(--base-font-size);
+    color: var(--primary-color);
+    line-height: 1.6;
+  }
+
   .background-image {
     @apply absolute w-full h-[45%] top-0 left-0;
     @apply object-cover;
     @apply z-0;
-
 
     @media (min-width: 700px) {
       @apply h-[50%];
@@ -44,7 +52,7 @@
   }
 
   .content-wrapper {
-    @apply relative bg-white p-12;
+    @apply relative bg-white py-6 px-4;
     @apply h-[var(--cover-height)] flex flex-col justify-end;
     @apply flex flex-col justify-end;
     @apply mt-[70px];
@@ -64,7 +72,7 @@
   }
 
   .cover-line {
-    @apply mt-4 mb-6 h-[1px] bg-gray-300;
+    @apply mt-4 mb-4 h-[1px] bg-gray-300;
   }
 
   h1 {
@@ -78,29 +86,10 @@
   :global(pre) {
     @apply bg-gray-100 p-4 rounded-md;
     @apply overflow-x-auto;
-		@apply text-xs;
+    @apply text-xs;
 
     @media (max-width: 700px) {
       @apply overflow-x-auto;
-    }
-  }
-
-  .post-content {
-    & > :global(h1) {
-      @apply text-4xl font-bold;
-      @apply mt-8 mb-4;
-    }
-
-    & > :global(h2) {
-      @apply text-3xl font-bold;
-    }
-
-    & > :global(h3) {
-      @apply text-2xl font-bold;
-    }
-
-    & > :global(ul) {
-      @apply list-disc list-inside;
     }
   }
 </style>
