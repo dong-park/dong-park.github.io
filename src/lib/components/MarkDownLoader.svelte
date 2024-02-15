@@ -1,10 +1,13 @@
-<div class="post-content" data-animate="" data-animate-speed="slow">
-	<slot />
+
+
+<div class="post-content">
+	<slot>
+	</slot>
 </div>
 
 <style lang="scss">
-  $font-family: 'Helvetica', sans-serif;
-  $base-font-size: 14.5px;
+  //$font-family: var(--font-sans), sans;
+  $base-font-size: 16px;
   $primary-color: #333;
   $secondary-color: #777;
   $link-color: #007bff;
@@ -12,12 +15,18 @@
   $blockquote-background: #f9f9f9;
   $blockquote-border-color: #ccc;
 
+	:global(li::marker) {
+		// list 색깔 변경 tailwind
+		color: var(--gray-300);
+  }
+
   .post-content {
     :global(*) {
-      font-family: $font-family;
-      font-size: $base-font-size;
-      color: $primary-color;
-      line-height: 1.6;
+      @apply font-sans;
+      @apply text-black;
+
+      letter-spacing: 0px;
+      line-height: 1.75;
     }
 
     :global(h1),
@@ -33,12 +42,22 @@
       font-weight: $header-font-weight;
     }
 
-    :global(h1) { font-size: 1.1em; }
-    //:global(h2) { font-size: 1.75em; }
-    //:global(h3) { font-size: 1.5em; }
+    :global(h1) { font-size: 1em; }
+    :global(h2) { font-size: 1.1em; }
+    :global(h3) { font-size: 1em; }
     //:global(h4) { font-size: 1.25em; }
     //:global(h5) { font-size: 1em; }
     //:global(h6) { font-size: 0.875em; }
+
+		:global(strong) {
+			font-size: 1em;
+			font-weight: 600;
+		}
+
+		:global(p), :global(li) {
+			font-family: var(--font-sans);
+			font-weight: 200;
+		}
 
     // 인용문 스타일링
     :global(blockquote) {
@@ -48,53 +67,32 @@
       border-left: 5px solid $blockquote-border-color;
     }
 
-    // 목록 스타일링
-    :global(ul), :global(ol) {
-      margin-top: 0;
-      padding-left: 20px;
-			@apply list-disc list-inside;
-			// list 색깔 변경
+		// 코드 스타일링
+		:global(pre) {
+			@apply font-mono;
+			@apply text-sm;
+			@apply bg-gray-100;
+			@apply p-4;
+			@apply rounded-md;
+			@apply overflow-x-auto;
 		}
-    // 코드 블록 스타일링
-    :global(pre), :global(code) {
-      font-family: monospace;
-      background-color: #f5f5f5;
-      padding: 5px;
-      border-radius: 5px;
-    }
 
-    :global(pre) {
-      overflow-x: auto;
-    }
+		// ul, li
+		:global(ul) {
+			@apply list-disc;
+			@apply pl-4;
+		}
 
-    // 테이블 스타일링
-    :global(table) {
-      width: 100%;
-      border-collapse: collapse;
-    }
+		// ol, li
+		:global(ol) {
+			@apply list-decimal;
+			@apply pl-4;
+		}
 
-    :global(th), :global(td) {
-      padding: 0.5em;
-      border: 1px solid $secondary-color;
-    }
-
-    // 링크 스타일링
-    :global(a) {
-      //color: $link-color;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-    // 응답성
-    @media (max-width: 600px) {
-      :global(body) {
-        font-size: 14px;
-      }
-    }
-
+		// a
+		:global(a) {
+			@apply underline;
+		}
   }
 
 </style>
