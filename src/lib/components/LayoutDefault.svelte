@@ -107,11 +107,6 @@
     @apply mb-2;
   }
 
-  .font-bold {
-    font-weight: bold; // This might be redundant if using Tailwind CSS or similar
-  }
-
-	// nav는 화면이 800px 이상일 때만 보이도록 함
 	nav {
 		@media (max-width: 800px) {
 			display: none;

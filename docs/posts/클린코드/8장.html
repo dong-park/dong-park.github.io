@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="../../favicon.png" />
+	<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css"
+				rel="stylesheet">
+	<link rel="preload" href="https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Medium.woff2" crossorigin=""
+				as="font" type="font/woff2">
+	<link rel="preload" href="https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-SemiBold.woff2" crossorigin=""
+				as="font" type="font/woff2">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&amp;display=swap"
+				rel="stylesheet">
+	<!--		<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />-->
+	<meta name="viewport" content="width=device-width" />
+	
+		<link href="../../_app/immutable/assets/0.ac9e7a8a.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/LayoutDefault.197d325e.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.aac4338f.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.a6243f30.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.7b58f777.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.47c1e9e3.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.fcc2a80a.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/13.380f8bf9.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/LayoutDefault.47afac3f.js"><title>8장 경계</title><!-- HEAD_svelte-qs65uz_START --><meta name="description" content=""><!-- HEAD_svelte-qs65uz_END -->
+</head>
+<body data-sveltekit-preload-data="hover">
+<div style="display: contents">
+
+
+<div class="layout-container svelte-bz1dze">
+<main><nav class="fixed -translate-x-[250px] max-w-[230px] mt-6 svelte-1tndldd"><ul data-animate data-animate-speed="slow"></ul></nav>
+	<article class="content-wrapper svelte-1tndldd" data-animate data-animate-speed="slow"><h1 class="svelte-1tndldd">8장 경계</h1>
+		<div class="text-sm">Feb 1, 2024</div>
+		<div class="post-content svelte-192r67j"><h3 id="서드파티-코드-사용하기"><a href="#서드파티-코드-사용하기">서드파티 코드 사용하기</a></h3>
+<p>인터페이스를 “제공하는” 입장과 “사용하는” 입장 사이에는 필연적인 긴장감이 존재한다. 사용하는 입장에서 인터페이스의 변경을 우려한다면 래핑하는것도 하나의 방법이다.</p>
+<h3 id="경계를-탐험하고-공부하기"><a href="#경계를-탐험하고-공부하기">경계를 탐험하고 공부하기</a></h3>
+<p>서드파티 코드를 사용할때 우리는 사용할 코드에 대해 테스트할 필요가 있다.</p>
+<p>log4j의 예</p>
+<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java">  	<span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testLogCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">Logger</span> logger <span class="token operator">=</span> <span class="token class-name">Logger</span><span class="token punctuation">.</span><span class="token function">getLogger</span><span class="token punctuation">(</span><span class="token string">"MyLogger"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testLogAddAppender</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">Logger</span> logger <span class="token operator">=</span> <span class="token class-name">Logger</span><span class="token punctuation">.</span><span class="token function">getLogger</span><span class="token punctuation">(</span><span class="token string">"MyLogger"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">ConsoleAppender</span> appender <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ConsoleAppender</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        logger<span class="token punctuation">.</span><span class="token function">addAppender</span><span class="token punctuation">(</span>appender<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testLogAddAppender</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">Logger</span> logger <span class="token operator">=</span> <span class="token class-name">Logger</span><span class="token punctuation">.</span><span class="token function">getLogger</span><span class="token punctuation">(</span><span class="token string">"MyLogger"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        logger<span class="token punctuation">.</span><span class="token function">removeAllAppenders</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        logger<span class="token punctuation">.</span><span class="token function">addAppender</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ConsoleAppender</span><span class="token punctuation">(</span>
+            <span class="token keyword">new</span> <span class="token class-name">PatternLayout</span><span class="token punctuation">(</span><span class="token string">"%p %t %m%n"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token class-name">ConsoleAppender</span><span class="token punctuation">.</span><span class="token constant">SYSTEM_OUT</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LogTest</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Logger</span> logger<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Before</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">initialize</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        logger <span class="token operator">=</span> <span class="token class-name">Logger</span><span class="token punctuation">.</span><span class="token function">getLogger</span><span class="token punctuation">(</span><span class="token string">"logger"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        logger<span class="token punctuation">.</span><span class="token function">removeAllAppenders</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Logger</span><span class="token punctuation">.</span><span class="token function">getRootLogger</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeAllAppenders</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">basicLogger</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">BasicConfigurator</span><span class="token punctuation">.</span><span class="token function">configure</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"basicLogger"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addAppenderWithStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        logger<span class="token punctuation">.</span><span class="token function">addAppender</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ConsoleAppender</span><span class="token punctuation">(</span>
+            <span class="token keyword">new</span> <span class="token class-name">PatternLayout</span><span class="token punctuation">(</span><span class="token string">"%p %t %m%n"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token class-name">ConsoleAppender</span><span class="token punctuation">.</span><span class="token constant">SYSTEM_OUT</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"addAppenderWithStream"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addAppenderWithoutStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        logger<span class="token punctuation">.</span><span class="token function">addAppender</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ConsoleAppender</span><span class="token punctuation">(</span>
+            <span class="token keyword">new</span> <span class="token class-name">PatternLayout</span><span class="token punctuation">(</span><span class="token string">"%p %t %m%n"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"addAppenderWithoutStream"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
+<h3 id="아직-존재하지-않는-코드-사용하기"><a href="#아직-존재하지-않는-코드-사용하기">아직 존재하지 않는 코드 사용하기</a></h3>
+<p>아직 개발되지 않은 모듈이 필요한데, 인터페이스를 정의하면 분업이 가능하다. 인터페이스를 정의 함으로써 메인로직을 더 깔끔하게 짤 수 있다.</p>
+<h3 id="clean한-경계"><a href="#clean한-경계">Clean한 경계</a></h3>
+<p>좋은 소프트웨어는 변경에 유연하게 대처해야 한다. 내부 코드가 서드파티에 영향을 줄수 없게 래핑하듯 변경에 유연하게 대처할수 있는 경계를 만들어야 한다.</p>
+</div></article>
+
+
+
+	<div id="utterances-comments" class="content-wrapper svelte-1tndldd"></div>
+</main>
+</div>
+
+
+			
+			<script>
+				{
+					__sveltekit_sz7fun = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.aac4338f.js"),
+						import("../../_app/immutable/entry/app.47c1e9e3.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 13],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+</body>
+<footer class="w-full justify-center text-center py-2">
+	<p class="text-xs">
+		&copy; 2024 dongpark. Powered by SvelteKit.
+	</p>
+</footer>
+</html>
