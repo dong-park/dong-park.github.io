@@ -1,4 +1,4 @@
-import{S as Us,i as Ws,s as Xs,a as Ss,c as Ys,b as Zs,m as ds,g as hs,d as Fs,t as gs,e as sa,f as aa,h as Gs,j as o,k as u,l as _,n as f,o as r,p as c,q as a,r as i,u as x,v as l,w as t,x as ea}from"../chunks/index.a6243f30.js";import{L as la}from"../chunks/LayoutDefault.86601040.js";function ta(A){let p,m,v,E,n,k,y,S,B,es,ls,J,$,H,ts,K,T,ps,N,b,F,ns,os,O,M,Ks=`<code class="language-java"><span class="token class-name">SuperDashboard</span> <span class="token class-name">Class</span> 책임
+import{S as Us,i as Ws,s as Xs,a as Ss,c as Ys,b as Zs,m as ds,g as hs,d as Fs,t as gs,e as sa,f as aa,h as Gs,j as o,k as u,l as _,n as f,o as r,p as c,q as a,r as i,u as x,v as l,w as t,x as ea}from"../chunks/index.1415e133.js";import{L as la}from"../chunks/LayoutDefault.47f22488.js";function ta(A){let p,m,v,E,n,k,y,S,B,es,ls,J,$,H,ts,K,T,ps,N,b,F,ns,os,O,M,Ks=`<code class="language-java"><span class="token class-name">SuperDashboard</span> <span class="token class-name">Class</span> 책임
 <span class="token operator">-</span> 소프트웨어 버전 정보 추적
 <span class="token operator">-</span> 스윙 컴포넌트 관리
 단일 책임 규칙에 위배<span class="token operator">!</span>
