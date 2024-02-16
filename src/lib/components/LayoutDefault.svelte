@@ -70,7 +70,6 @@
 			{#each headings as { id, text, text_, tagName, top, el }}
 				<li class="truncate">
 					<a class="text-sm cursor-pointer {activeSection === text_ ? 'font-bold' : ''}"
-						 href={`#${text_}`}
 						 on:click={() => el.scrollIntoView({ behavior: 'smooth' })}
 					>
 						{text}
