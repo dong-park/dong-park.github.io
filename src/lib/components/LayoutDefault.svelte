@@ -25,6 +25,23 @@
 		return new Date(date).toLocaleDateString('en-US', options);
 	}
 
+	function back_page() {
+		const pathArray = window.location.pathname.split('/').filter(Boolean);
+		if (pathArray.length > 1) {
+			pathArray.pop();
+			let newPath = '/' + pathArray.join('/');
+
+			if (pathArray.length === 1) {
+				newPath = '/';
+			}
+
+			window.location.pathname = newPath;
+		} else {
+			// Optionally handle the case where there is no previous depth (e.g., navigate to home)
+			console.log("No previous depth. Stay on the current page or navigate to a default page.");
+		}
+	}
+
 	onMount(() => {
 		const h2Elements = Array.from(document.querySelectorAll('h2, h3'));
 		const utteranceScript = document.createElement('script');
@@ -66,6 +83,7 @@
 </svelte:head>
 <main>
 	<nav class="fixed -translate-x-[250px] max-w-[230px] mt-6">
+		<button class="text-sm" on:click={back_page}>⬅</button>
 		<ul data-animate data-animate-speed="slow">
 			{#each headings as { id, text, text_, tagName, top, el }}
 				<li class="truncate">
@@ -85,9 +103,6 @@
 			<slot />
 		</MarkDownLoader>
 	</article>
-<!--	<div class="similar-posts">-->
-<!--		<p>비슷한 태그의 글</p>-->
-<!--	</div>-->
 	<div id="utterances-comments" class="content-wrapper"/>
 </main>
 

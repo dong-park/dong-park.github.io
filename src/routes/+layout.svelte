@@ -1,9 +1,9 @@
 <script>
-    import "../assets/global.scss"
+	import '../assets/global.scss';
 </script>
 
 <div class="layout-container">
-    <slot></slot>
+	<slot></slot>
 </div>
 
 <style lang="scss">
