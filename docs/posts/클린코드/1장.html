@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="../../favicon.png" />
+	<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css"
+				rel="stylesheet">
+	<link rel="preload" href="https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Medium.woff2" crossorigin=""
+				as="font" type="font/woff2">
+	<link rel="preload" href="https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-SemiBold.woff2" crossorigin=""
+				as="font" type="font/woff2">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&amp;display=swap"
+				rel="stylesheet">
+	<!--		<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />-->
+	<meta name="viewport" content="width=device-width" />
+	
+		<link href="../../_app/immutable/assets/0.3577d3ef.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/LayoutDefault.bdff586c.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.23d089ef.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.a6243f30.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.1466af93.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.04e5f4be.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.b424613a.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/6.10264110.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/LayoutDefault.86601040.js"><title>1장 깨끗한 코드</title><!-- HEAD_svelte-qs65uz_START --><meta name="description" content=""><!-- HEAD_svelte-qs65uz_END -->
+</head>
+<body data-sveltekit-preload-data="hover">
+<div style="display: contents">
+
+
+<div class="layout-container svelte-bz1dze">
+<main><nav class="fixed -translate-x-[250px] max-w-[230px] mt-6 svelte-1tndldd"><ul data-animate data-animate-speed="slow"></ul></nav>
+	<article class="content-wrapper svelte-1tndldd" data-animate data-animate-speed="slow"><h1 class="svelte-1tndldd">1장 깨끗한 코드</h1>
+		<div class="text-sm">Jan 1, 2024</div>
+		<div class="post-content svelte-z8bp36"><div class="mt-[1.5em]"></div>
+	<h2 id="클린-코드-소프트웨어-개발-속도를-높이는-관문"><a href="#클린-코드-소프트웨어-개발-속도를-높이는-관문"><strong>클린 코드: 소프트웨어 개발 속도를 높이는 관문</strong></a></h2>
+<p>소프트웨어 개발 영역에서 효율성과 속도에 대한 탐구는 종종 역설적인 진실로 이어집니다. 즉, 개발 프로세스를 진정으로 가속화하는 유일한 방법은 코드의 청결성을 유지하는 것입니다. 클린 코드 철학의 핵심인 이 원칙은
+속도와 코드 품질이 상충되는 이해관계가 아니라 오히려 동일한 목표의 보완적인 측면임을 강조합니다.</p>
+<h3 id="클린-코드의-기초"><a href="#클린-코드의-기초"><strong>클린 코드의 기초</strong></a></h3>
+<p>클린 코드의 핵심은 단순히 작동하는 코드를 작성하는 것 이상입니다. 원저작자가 아닌 다른 사람도 쉽게 읽고, 이해하고, 수정할 수 있는 코드를 만드는 것입니다. 이 개념은 해당 주제에 관한 문헌의 주목할만한 주장으로
+우아하게 요약되어 있습니다. “빠르게 진행하는 유일한 방법은 항상 코드를 깨끗하게 유지하는 것입니다.” 이 선언문은 개발자에게 지침이 되어 프로젝트의 효율성과 효율성을 높이는 경로로서 코드의 청결성을
+우선시하도록 촉구합니다.</p>
+<h3 id="클린-코드-구현-4단계-접근-방식"><a href="#클린-코드-구현-4단계-접근-방식"><strong>클린 코드 구현: 4단계 접근 방식</strong></a></h3>
+<p>클린 코드를 향한 여정은 구현을 위한 네 가지 간단한 규칙을 채택하는 것부터 시작할 수 있습니다.</p>
+<ol><li><strong>모든 테스트 통과:</strong> 코드가 모든 테스트를 일관되게 통과하는지 확인하는 것이 청결을 향한 첫 번째 단계입니다. 이는 코드가 기능적 요구 사항을 충족할 뿐만 아니라 개발 팀이 정한 품질 표준을 준수함을
+보장합니다.</li>
+<li><strong>중복 금지:</strong> 중복은 클린 코드의 적입니다. 중복된 코드 조각을 피하면 코드베이스를 보다 쉽게 관리할 수 있을 뿐만 아니라 오류 및 불일치 가능성도 줄어듭니다.</li>
+<li><strong>시스템 내에서 모든 디자인 아이디어 표현:</strong> 클린 코드는 디자인 의도를 효과적으로 전달하므로 미래의 개발자가 특정 구현의 근거와 전체 시스템 아키텍처에 어떻게 적용되는지 더 쉽게 이해할 수 있습니다.</li>
+<li><strong>클래스, 메서드, 함수 등의 수를 최소화하세요.</strong> 단순화가 핵심입니다. 코드의 복잡성을 줄임으로써 개발자는 코드의 가독성과 유지 관리성을 향상시켜 더 쉽게 업데이트하고 수정할 수 있습니다.</li></ol>
+<h3 id="캠프장의-규칙-처음-찾은-것보다-코드베이스를-더-좋게-남겨두기"><a href="#캠프장의-규칙-처음-찾은-것보다-코드베이스를-더-좋게-남겨두기"><strong>캠프장의 규칙: 처음 찾은 것보다 코드베이스를 더 좋게 남겨두기</strong></a></h3>
+<p>클린 코드의 필수 정신은 “캠프장을 처음 도착했을 때보다 깨끗하게 유지하세요”라는 조언에 요약되어 있습니다. 이 은유적 지침은 개발자가 작업하는 코드를 지속적으로 개선하고 개선하여 각 기여가 가치를 더할 뿐만 아니라
+코드베이스의 전반적인 품질을 향상시키도록 장려합니다. 이러한 접근 방식은 청결과 효율성을 지속적으로 우선시하는 지속적인 개선 문화를 조성합니다.</p>
+<h3 id="청결을-향한-끝없는-여정"><a href="#청결을-향한-끝없는-여정"><strong>청결을 향한 끝없는 여정</strong></a></h3>
+<p>깨끗한 코드를 달성하기 위해 설명된 명확한 경로와 원칙에도 불구하고 여정은 계속 진행 중입니다. 본문에는 “클린코드에 대한 끝없는 고민은 정리하고 계속 정리하는 방법인데 왕도는 없는 것 같다. 그냥 청소를 쉽게
+해주는 패턴이 있는 것 같다”고 인정하고 있다. 이 성찰은 더 깔끔한 코드를 촉진하는 전략과 관행이 있지만 프로세스에는 지속적인 경계와 노력이 필요하다는 점을 강조합니다. 청결에 대한 단일 솔루션이나 “왕도”는
+없습니다. 이는 학습하고, 적응하고, 개선하는 지속적인 과정입니다.</p>
+<h3 id="결론"><a href="#결론"><strong>결론</strong></a></h3>
+<p>클린 코드는 효율적이고 지속 가능한 소프트웨어 개발의 초석입니다. 간단한 규칙을 준수하고, 지속적인 개선 정신을 수용하고, 여정의 지속적인 성격을 인식함으로써 개발자는 코드가 깨끗하고 효율적이며 미래에도 대비할 수
+있도록 보장할 수 있습니다. 이 접근 방식은 개발 프로세스를 가속화할 뿐만 아니라 코드베이스가 시간이 지나도 강력하고 적응 가능하며 유지 관리하기 쉬운 상태로 유지되도록 보장합니다. 끊임없이 진화하는 소프트웨어 개발
+환경에서 클린 코드는 개발자가 더 좋고, 더 빠르고, 더 안정적인 소프트웨어 솔루션을 구축할 수 있도록 지원하는 기본 원칙으로 두드러집니다.</p>
+</div></article>
+
+
+
+	<div id="utterances-comments" class="content-wrapper svelte-1tndldd"></div>
+</main>
+</div>
+
+
+			
+			<script>
+				{
+					__sveltekit_1snfl5f = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.23d089ef.js"),
+						import("../../_app/immutable/entry/app.04e5f4be.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 6],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+</body>
+<footer class="w-full justify-center text-center py-2">
+	<p class="text-xs">
+		&copy; 2024 dongpark. Powered by SvelteKit.
+	</p>
+</footer>
+</html>

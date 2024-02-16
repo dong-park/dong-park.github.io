@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="../../favicon.png" />
+	<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css"
+				rel="stylesheet">
+	<link rel="preload" href="https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Medium.woff2" crossorigin=""
+				as="font" type="font/woff2">
+	<link rel="preload" href="https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-SemiBold.woff2" crossorigin=""
+				as="font" type="font/woff2">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&amp;display=swap"
+				rel="stylesheet">
+	<!--		<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />-->
+	<meta name="viewport" content="width=device-width" />
+	
+		<link href="../../_app/immutable/assets/0.3577d3ef.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/LayoutDefault.bdff586c.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.23d089ef.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.a6243f30.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.1466af93.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.04e5f4be.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.b424613a.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/11.0433cb9a.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/LayoutDefault.86601040.js"><title>6장 객체와 자료구조</title><!-- HEAD_svelte-qs65uz_START --><meta name="description" content=""><!-- HEAD_svelte-qs65uz_END -->
+</head>
+<body data-sveltekit-preload-data="hover">
+<div style="display: contents">
+
+
+<div class="layout-container svelte-bz1dze">
+<main><nav class="fixed -translate-x-[250px] max-w-[230px] mt-6 svelte-1tndldd"><ul data-animate data-animate-speed="slow"></ul></nav>
+	<article class="content-wrapper svelte-1tndldd" data-animate data-animate-speed="slow"><h1 class="svelte-1tndldd">6장 객체와 자료구조</h1>
+		<div class="text-sm">Jan 20, 2024</div>
+		<div class="post-content svelte-z8bp36"><div class="mt-[1.5em]"></div>
+	<p>변수를 비공개로 정의 하는 이유는 남들이 변수에 의존하지 않게 만들고 싶어서다.</p>
+<h3 id="자료-추상화"><a href="#자료-추상화">자료 추상화</a></h3>
+<p>변수 사이에 함수라는 계층을 넣는다고 구현이 저절로 감춰지지는 않는다. 구현을 감추려면 추상화가 필요하다. 그보다는 추상 인터페이스를 제공해 사용자가 구현을 모른 채 자료의 핵심을 조작할 수 있어야 진정한 의미의 클래스다.</p>
+<p>개발자는 객체가 포함하는 자료를 표현할 가장 좋은 방법을 심각하게 고민해야 한다.</p>
+<h3 id="자료객체-비대칭"><a href="#자료객체-비대칭">자료/객체 비대칭</a></h3>
+<p>객체와 자료 구조는 근본적으로 양분된다.</p>
+<p>절차적인 코드는 기존 자료 구조를 변경하지 않으면서 새 함수를 추가하기 쉽다. 반면, 객체 지향 코드는 기존 함수를 변경하지 않으면서 새 클래스를 추가하기 쉽다.</p>
+<p>절차적인 코드는 새로운 자료 구조를 추가하기 어렵다. 그러려면 모든 함수를 고쳐야 한다. 객체 지향 코드는 새로운 함수를 추가하기 어렵다. 그러려면 모든 클래스를 고쳐야 한다.</p>
+<p>다시 말하자면 둘다 참이다. 객체 지향코드에서 어려운 변경은 절차적인 코드에서 쉬우며, 절차적인 코드에서 어려운 변경은 객체 지향 코드에서 쉽다.</p>
+<p>절차적인 접근법은 아래와 같다.</p>
+<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Square</span> <span class="token punctuation">&#123;</span>
+	<span class="token keyword">public</span> <span class="token class-name">Point</span> topLeft<span class="token punctuation">;</span>
+	<span class="token keyword">public</span> <span class="token keyword">double</span> side<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Rectangle</span> <span class="token punctuation">&#123;</span>
+	<span class="token keyword">public</span> <span class="token class-name">Point</span> topLeft<span class="token punctuation">;</span>
+	<span class="token keyword">public</span> <span class="token keyword">double</span> height<span class="token punctuation">;</span>
+	<span class="token keyword">public</span> <span class="token keyword">double</span> width<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Circle</span> <span class="token punctuation">&#123;</span>
+	<span class="token keyword">public</span> <span class="token class-name">Point</span> center<span class="token punctuation">;</span>
+	<span class="token keyword">public</span> <span class="token keyword">double</span> redius<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Geometry</span> <span class="token punctuation">&#123;</span>
+	<span class="token keyword">public</span> <span class="token keyword">double</span> <span class="token function">area</span><span class="token punctuation">(</span><span class="token class-name">Object</span> shape<span class="token punctuation">)</span> <span class="token keyword">throw</span> <span class="token class-name">NoSuchShapeExcpetion</span><span class="token operator">~</span>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
+<p>다형성 접근예시는 아래와 같다.</p>
+<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Square</span> <span class="token keyword">implements</span> <span class="token class-name">Shape</span> <span class="token punctuation">&#123;</span>
+	<span class="token keyword">private</span> <span class="token class-name">Point</span> topLeft<span class="token punctuation">;</span>
+	<span class="token keyword">private</span> <span class="token keyword">double</span> side<span class="token punctuation">;</span>
+
+	<span class="token keyword">public</span> <span class="token keyword">double</span> <span class="token function">area</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">return</span> side<span class="token operator">*</span>side<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
+<h3 id="디미터-법칙"><a href="#디미터-법칙">디미터 법칙</a></h3>
+<p>디미터 법칙이란 모듈은 자신이 조작하는 객체의 속사정을 몰라야 한다는 법칙이다. 예를 들어 클래스 C의 메서드 f는 다음과 같은 메서드만 호출해야 한다</p>
+<ul><li>클래스 그 자체</li>
+<li>함수로 인해 생성된 객체</li>
+<li>함수의 인수로 넘어온 객체</li>
+<li>클래스의 인스턴스 변수에 저장된 객체</li></ul>
+<p>객체라면 내부 구조를 숨겨야 하므로 확실히 디미터 법칙을 위반한다. 자료구조 라면 내부 구조를 노출하므로 디미터 법칙이 적용되지 않는다.</p>
+<p>아래는 기차놀이의 예로 함수들이 호출하는 객체의 인스턴스 공개범위가 너무 넓기 때문에 기차놀이를 하는 예이다.</p>
+<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token operator">*</span><span class="token operator">*</span><span class="token comment">// 부적절한 기차놀이의 예 각 인자가 소유하는 객체들의 공개범위가 너무 넓다.</span>
+<span class="token comment">// as-is</span>
+<span class="token keyword">final</span> <span class="token class-name">String</span> outputDir <span class="token operator">=</span> ctext<span class="token punctuation">.</span><span class="token function">getOptions</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getScracthDir</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getAbsolutePath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// to-be** </span>
+<span class="token operator">*</span><span class="token operator">*</span><span class="token class-name">Options</span> opts <span class="token operator">=</span> ctxt<span class="token punctuation">.</span><span class="token function">getOptions</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">File</span> scractchDir <span class="token operator">=</span> opts<span class="token punctuation">.</span><span class="token function">getScratchDir</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">final</span> <span class="token class-name">String</span> outputDir <span class="token operator">=</span> scracthDir<span class="token punctuation">.</span><span class="token function">getAbsolutePath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">*</span><span class="token operator">*</span></code><!-- HTML_TAG_END --></pre>
+<p>절반은 객체, 절반은 자료 구조인 잡종 구조가 나온다. 이런 잡종 구조는 새로운 함수는 물론이고 새로운 자료 구조도 추가하기 어렵다. 단점만 모아놓은 구조이다.</p>
+<p>그렇다면 임시 디렉토러의 절대 경로는 어떻게 얻어야 좋을까?</p>
+<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java">ctxt<span class="token punctuation">.</span><span class="token function">getAboslutePathOfScratchDirectoryOption</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// ctxt 객체에 공개해야 하는 메서드가 너무 많아진다</span>
+ctx<span class="token punctuation">.</span><span class="token function">getScratchDirectoryOption</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getAbsolutePath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 자료 구조를 반환 한다고 가정한다.</span></code><!-- HTML_TAG_END --></pre>
+<p>그렇다면 ctxt 객체에 임시 파일을 생성하라고 시키면 어떨까?
+객체에게 맡기기에 적당한 임무로 보인다!</p>
+<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token class-name">BufferedOutputStream</span> bos <span class="token operator">=</span> ctxt<span class="token punctuation">.</span><span class="token function">createScratchFilesStream</span><span class="token punctuation">(</span>classFileName<span class="token punctuation">)</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
+<h3 id="자료-전달-객체"><a href="#자료-전달-객체">자료 전달 객체</a></h3>
+<ul><li><p>자료 구조체의 전형적인 형태는 공개 변수만 있고 함수가 없는 클래스이다. 이런 자료구조체를 DTO(Data Transfer Object)라 한다.</p></li>
+<li><p>좀더 일반적인 형태는 Bean 구조이다. 비공개 변수를 조회 설정 함수로 조작하는 방식. 사이비 캡슐화로 일부 순수주의자나 만족시킬뿐 별다른 이익을 제공하지 않는다.</p>
+<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> property1<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> property2<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">MyClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">// Default constructor</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getProperty1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> property1<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setProperty1</span><span class="token punctuation">(</span><span class="token class-name">String</span> property1<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>property1 <span class="token operator">=</span> property1<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getProperty2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> property2<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setProperty2</span><span class="token punctuation">(</span><span class="token keyword">int</span> property2<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>property2 <span class="token operator">=</span> property2<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre></li>
+<li><p>활성 레코드</p>
+<ul><li>공개 변수가 있거나 비공개 변수에 조회/설정 함수가 있는 자료구조, 대게 save나 find와 같이 탐색함수도 제공한다. 불행히도 비즈니스 규칙 메서드를 추가해 이런 자료 구조를 개체로 취급하는 개발자가 흔하다. 하지만 이는 바람직하지 않다. 활성 레코드는 자료 구조로 취급한다.</li></ul></li></ul>
+<h3 id="결론"><a href="#결론">결론</a></h3>
+<ul><li>객체는 동작을 공개하고 자료를 숨긴다. 기존 동작을 변경하지 않으면서 객체 타입을 추가하기는 쉬운 반면 기존 객체에 새 동작을 추가하기는 어렵다.</li>
+<li>자료 구조는 동작 없이 자료를 노출한다. 기존 자료 구조에 새 동작을 추가하기 쉬우나, 기존 함수에 새 자료 구조를 추가하기는 어렵다.</li>
+<li>시스템을 구현할때 새로운 자료 타입을 추가하는 유연셩이 필요하면 객체가 더 적합하다. 새로운 동작을 추가하는 유연성이 필요하면 절차적인 코드가 더 적합하다. 어느쪽이 맞는가는 상황에 따라 다르다.</li></ul>
+</div></article>
+
+
+
+	<div id="utterances-comments" class="content-wrapper svelte-1tndldd"></div>
+</main>
+</div>
+
+
+			
+			<script>
+				{
+					__sveltekit_1snfl5f = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.23d089ef.js"),
+						import("../../_app/immutable/entry/app.04e5f4be.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 11],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+</body>
+<footer class="w-full justify-center text-center py-2">
+	<p class="text-xs">
+		&copy; 2024 dongpark. Powered by SvelteKit.
+	</p>
+</footer>
+</html>
