@@ -96,6 +96,7 @@
 			{/each}
 		</ul>
 	</nav>
+	<button class="back-button" on:click={back_page}>⬅</button>
 	<article class="content-wrapper" data-animate data-animate-speed="slow">
 		<h1>{title}</h1>
 		<div class="text-sm">{transformDate()}</div>
@@ -112,6 +113,14 @@
     @apply font-bold;
   }
 
+	.back-button {
+		@apply px-4 text-xs;
+
+		@media (min-width: 1250px) {
+			display: none;
+    }
+	}
+
   .content-wrapper {
     @apply relative bg-white py-6 px-4;
     @apply flex flex-col;
@@ -126,4 +135,6 @@
 			display: none;
 		}
 	}
+
+
 </style>

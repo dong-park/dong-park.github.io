@@ -28,7 +28,6 @@
       margin-right: auto;
       max-width: var(--content-width);
       padding-top: var(--page-top);
-      //padding-bottom: var(--page-top);
     }
   }
 </style>
