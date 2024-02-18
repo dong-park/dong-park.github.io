@@ -2,9 +2,17 @@
 	import '../assets/global.scss';
 </script>
 
-<div class="layout-container">
-	<slot></slot>
+<div class="layout-container h-screen w-screen">
+	<div class="flex flex-col justify-between h-[100vh]">
+		<slot></slot>
+		<footer class="w-full text-center py-2">
+			<p class="text-xs">
+				&copy; 2024 dongpark. Powered by SvelteKit.
+			</p>
+		</footer>
+	</div>
 </div>
+
 
 <style lang="scss">
   .layout-container {

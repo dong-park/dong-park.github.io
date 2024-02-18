@@ -51,7 +51,7 @@
 			text: el.innerText,
 			text_: el.innerText.toLowerCase().replace(/ /g, '-'),
 			tagName: el.tagName,
-			top: el.offsetTop + 160,
+			top: el.offsetTop + 225,
 			el: el
 		}));
 
@@ -82,12 +82,12 @@
 	<meta name="description" content={summary} />
 </svelte:head>
 <main>
-	<nav class="fixed -translate-x-[250px] max-w-[230px] mt-6">
-		<button class="text-sm" on:click={back_page}>⬅</button>
-		<ul data-animate data-animate-speed="slow">
+	<nav data-animate data-animate-speed="slow" class="fixed -translate-x-[180px] max-w-[150px] mt-6">
+		<button class="text-xs" on:click={back_page}>⬅</button>
+		<ul>
 			{#each headings as { id, text, text_, tagName, top, el }}
 				<li class="truncate">
-					<a class="text-sm cursor-pointer {activeSection === text_ ? 'font-bold' : ''}"
+					<a class="text-xs cursor-pointer {activeSection === text_ ? 'font-bold' : ''}"
 						 on:click={() => el.scrollIntoView({ behavior: 'smooth' })}
 					>
 						{text}
@@ -122,7 +122,7 @@
   }
 
 	nav {
-		@media (max-width: 800px) {
+		@media (max-width: 1250px) {
 			display: none;
 		}
 	}

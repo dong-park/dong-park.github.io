@@ -18,8 +18,8 @@
 <main class="p-4">
     <div class="flex justify-between">
         <div class="flex-col items-end">
-            <h1 class="text-3xl">dongpark.log</h1>
-            <h2 class="text-sm">Just do anything.</h2>
+            <h1 class="text-2xl">dongpark.log</h1>
+            <h2 class="text-xs">Just do anything.</h2>
         </div>
         <div class="">
             <div data-animate="" class="flex gap-0.5">
