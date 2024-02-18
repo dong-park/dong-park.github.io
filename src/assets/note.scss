@@ -90,8 +90,24 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
     @apply pl-4;
   }
 
-  :global(ul) > :global(li) > :global(a) {
-    @apply underline;
+  :global(p) > :global(a) {
+    text-decoration-line: underline;
+    text-decoration-color: var(--border);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    @apply text-sm decoration-1;
+  }
+
+  :global(p) > :global(a)::after {
+    margin: 0;
+    content: '';
+    display: inline-block;
+    width: 0.85rem; /* Width of the icon */
+    height: 0.85rem; /* Height of the icon */
+    background: url('/link.svg'); /* Path to your SVG icon */
+    background-size: cover;
+    background-repeat: no-repeat;
+    @apply text-center p-1;
   }
 
 

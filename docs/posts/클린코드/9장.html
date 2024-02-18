@@ -15,15 +15,15 @@
 	<meta name="viewport" content="width=device-width" />
 	
 		<link href="../../_app/immutable/assets/0.c249ee3e.css" rel="stylesheet">
-		<link href="../../_app/immutable/assets/LayoutDefault.17253e93.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../_app/immutable/entry/start.1bd83e89.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/index.9d643c29.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.ea375330.js">
-		<link rel="modulepreload" href="../../_app/immutable/entry/app.31308466.js">
-		<link rel="modulepreload" href="../../_app/immutable/nodes/0.d57205bd.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/stores.09f10295.js">
-		<link rel="modulepreload" href="../../_app/immutable/nodes/14.a0287faa.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/LayoutDefault.827a5a69.js"><title>9장 유닛 테스트</title><!-- HEAD_svelte-vchxrj_START --><link rel="icon" type="image/png" href="/favicon.png"><!-- HEAD_svelte-vchxrj_END --><!-- HEAD_svelte-bklfkh_START --><script async src="https://www.googletagmanager.com/gtag/js?id=G-7WELFQJ9KV"></script><script>window.dataLayer = window.dataLayer || [];
+		<link href="../../_app/immutable/assets/LayoutDefault.213c9a9b.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.ca9a05e9.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.da6fef4a.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.beae4838.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.c0d53495.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.8a2c908e.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/stores.9a19607c.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/14.24b9197b.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/LayoutDefault.dec6d90c.js"><title>9장 유닛 테스트</title><!-- HEAD_svelte-vchxrj_START --><link rel="icon" type="image/png" href="/favicon.png"><!-- HEAD_svelte-vchxrj_END --><!-- HEAD_svelte-bklfkh_START --><script async src="https://www.googletagmanager.com/gtag/js?id=G-7WELFQJ9KV"></script><script>window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 		gtag('config', 'G-7WELFQJ9KV');
@@ -37,12 +37,13 @@
 
 
 <div class="layout-container h-screen w-screen svelte-bz1dze"><div class="flex flex-col justify-between h-[100vh]">
-<main><nav data-animate data-animate-speed="slow" class="fixed -translate-x-[230px] max-w-[200px] mt-6 svelte-1n6jnjx"><button class="text-sm">⬅</button>
-		<ul></ul></nav>
-	<button class="back-button svelte-1n6jnjx">⬅</button>
-	<article class="content-wrapper svelte-1n6jnjx" data-animate data-animate-speed="slow"><h1 class="svelte-1n6jnjx">9장 유닛 테스트</h1>
+
+<main><nav data-animate data-animate-speed="slow" class="fixed -translate-x-[230px] max-w-[200px] mt-6 svelte-ftplsh"><button class="text-sm">⬅</button>
+	<ul></ul></nav>
+<button class="back-button svelte-ftplsh">⬅</button>
+	<article class="relative bg-white py-6 px-4 " data-animate data-animate-speed="slow"><h1>9장 유닛 테스트</h1>
 		<div class="text-sm">Feb 5, 2024</div>
-		<div class="post-content svelte-fgg5yd"><div class="mt-[1.5em]"></div>
+		<div class="post-content svelte-1i752ph"><div class="mt-[1.5em]"></div>
 	<p>코드를 테스트 하는 테스트코드는 없었던 개념이였지만, 애자일과 TDD의 영향으로 많은 개발자들이 자동화된 유닛테스트를 만들고 있다.</p>
 <h3 id="the-three-laws-of-tdd"><a href="#the-three-laws-of-tdd">The Three Laws of TDD</a></h3>
 <ol><li>실패하는 단위 테스트를 작성할 때까지 실제 코드를 작성하지 않는다.</li>
@@ -167,7 +168,7 @@
 <h3 id="결론"><a href="#결론">결론</a></h3>
 <p>깨끗한 테스트코드는 실제 코드의 유지보수성, 재사용성의 보존을 강화하고 프로젝트를 건강하게 해준다. 지속적으로 코드를 꺠끗하게 관리하고 간결하게 정리하도록하자</p>
 </div></article>
-	<div id="utterances-comments" class="content-wrapper svelte-1n6jnjx"></div>
+	<div id="utterances-comments" class="content-wrapper"></div>
 </main>
 		<footer class="w-full text-center py-2"><p class="text-xs">© 2024 dongpark. Powered by SvelteKit.
 			</p></footer></div>
@@ -177,7 +178,7 @@
 			
 			<script>
 				{
-					__sveltekit_bdf15q = {
+					__sveltekit_15qf3lj = {
 						base: new URL("../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -187,8 +188,8 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("../../_app/immutable/entry/start.1bd83e89.js"),
-						import("../../_app/immutable/entry/app.31308466.js")
+						import("../../_app/immutable/entry/start.ca9a05e9.js"),
+						import("../../_app/immutable/entry/app.c0d53495.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 14],
