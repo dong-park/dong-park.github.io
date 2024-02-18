@@ -14,16 +14,16 @@
 	<!--		<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />-->
 	<meta name="viewport" content="width=device-width" />
 	
-		<link href="../../_app/immutable/assets/0.3b602a4c.css" rel="stylesheet">
-		<link href="../../_app/immutable/assets/LayoutDefault.ca44b9c8.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../_app/immutable/entry/start.669770ac.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/index.cf9db551.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.d38648c5.js">
-		<link rel="modulepreload" href="../../_app/immutable/entry/app.46967467.js">
-		<link rel="modulepreload" href="../../_app/immutable/nodes/0.c5ee7a6b.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/stores.92012574.js">
-		<link rel="modulepreload" href="../../_app/immutable/nodes/13.15be465c.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/LayoutDefault.fe32a63e.js"><title>8장 경계</title><!-- HEAD_svelte-bklfkh_START --><script async src="https://www.googletagmanager.com/gtag/js?id=G-7WELFQJ9KV"></script><script>window.dataLayer = window.dataLayer || [];
+		<link href="../../_app/immutable/assets/0.c249ee3e.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/LayoutDefault.17253e93.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.c94ec967.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.9d643c29.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.62cd3174.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.28dfe1b8.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.f8f043fb.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/stores.4144bba5.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/13.228c111b.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/LayoutDefault.b6b176ea.js"><title>8장 경계</title><!-- HEAD_svelte-bklfkh_START --><script async src="https://www.googletagmanager.com/gtag/js?id=G-7WELFQJ9KV"></script><script>window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 		gtag('config', 'G-7WELFQJ9KV');
@@ -34,13 +34,13 @@
 
 
 
-
 <div class="layout-container h-screen w-screen svelte-bz1dze"><div class="flex flex-col justify-between h-[100vh]">
-<main><nav data-animate data-animate-speed="slow" class="fixed -translate-x-[180px] max-w-[150px] mt-6 svelte-1ndlp0n"><button class="text-xs">⬅</button>
+<main><nav data-animate data-animate-speed="slow" class="fixed -translate-x-[230px] max-w-[200px] mt-6 svelte-1n6jnjx"><button class="text-sm">⬅</button>
 		<ul></ul></nav>
-	<article class="content-wrapper svelte-1ndlp0n" data-animate data-animate-speed="slow"><h1 class="svelte-1ndlp0n">8장 경계</h1>
+	<button class="back-button svelte-1n6jnjx">⬅</button>
+	<article class="content-wrapper svelte-1n6jnjx" data-animate data-animate-speed="slow"><h1 class="svelte-1n6jnjx">8장 경계</h1>
 		<div class="text-sm">Feb 1, 2024</div>
-		<div class="post-content svelte-z8bp36"><div class="mt-[1.5em]"></div>
+		<div class="post-content svelte-fgg5yd"><div class="mt-[1.5em]"></div>
 	<h3 id="서드파티-코드-사용하기"><a href="#서드파티-코드-사용하기">서드파티 코드 사용하기</a></h3>
 <p>인터페이스를 “제공하는” 입장과 “사용하는” 입장 사이에는 필연적인 긴장감이 존재한다. 사용하는 입장에서 인터페이스의 변경을 우려한다면 래핑하는것도 하나의 방법이다.</p>
 <h3 id="경계를-탐험하고-공부하기"><a href="#경계를-탐험하고-공부하기">경계를 탐험하고 공부하기</a></h3>
@@ -106,7 +106,7 @@
 <h3 id="clean한-경계"><a href="#clean한-경계">Clean한 경계</a></h3>
 <p>좋은 소프트웨어는 변경에 유연하게 대처해야 한다. 내부 코드가 서드파티에 영향을 줄수 없게 래핑하듯 변경에 유연하게 대처할수 있는 경계를 만들어야 한다.</p>
 </div></article>
-	<div id="utterances-comments" class="content-wrapper svelte-1ndlp0n"></div>
+	<div id="utterances-comments" class="content-wrapper svelte-1n6jnjx"></div>
 </main>
 		<footer class="w-full text-center py-2"><p class="text-xs">© 2024 dongpark. Powered by SvelteKit.
 			</p></footer></div>
@@ -116,7 +116,7 @@
 			
 			<script>
 				{
-					__sveltekit_hs35x5 = {
+					__sveltekit_gs6pme = {
 						base: new URL("../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -126,8 +126,8 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("../../_app/immutable/entry/start.669770ac.js"),
-						import("../../_app/immutable/entry/app.46967467.js")
+						import("../../_app/immutable/entry/start.c94ec967.js"),
+						import("../../_app/immutable/entry/app.28dfe1b8.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 13],

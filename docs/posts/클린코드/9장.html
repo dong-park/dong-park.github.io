@@ -14,16 +14,16 @@
 	<!--		<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />-->
 	<meta name="viewport" content="width=device-width" />
 	
-		<link href="../../_app/immutable/assets/0.3b602a4c.css" rel="stylesheet">
-		<link href="../../_app/immutable/assets/LayoutDefault.ca44b9c8.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../_app/immutable/entry/start.669770ac.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/index.cf9db551.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.d38648c5.js">
-		<link rel="modulepreload" href="../../_app/immutable/entry/app.46967467.js">
-		<link rel="modulepreload" href="../../_app/immutable/nodes/0.c5ee7a6b.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/stores.92012574.js">
-		<link rel="modulepreload" href="../../_app/immutable/nodes/14.8b63e860.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/LayoutDefault.fe32a63e.js"><title>9장 유닛 테스트</title><!-- HEAD_svelte-bklfkh_START --><script async src="https://www.googletagmanager.com/gtag/js?id=G-7WELFQJ9KV"></script><script>window.dataLayer = window.dataLayer || [];
+		<link href="../../_app/immutable/assets/0.c249ee3e.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/LayoutDefault.17253e93.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.c94ec967.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.9d643c29.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.62cd3174.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.28dfe1b8.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.f8f043fb.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/stores.4144bba5.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/14.47c67760.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/LayoutDefault.b6b176ea.js"><title>9장 유닛 테스트</title><!-- HEAD_svelte-bklfkh_START --><script async src="https://www.googletagmanager.com/gtag/js?id=G-7WELFQJ9KV"></script><script>window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 		gtag('config', 'G-7WELFQJ9KV');
@@ -34,130 +34,138 @@
 
 
 
-
 <div class="layout-container h-screen w-screen svelte-bz1dze"><div class="flex flex-col justify-between h-[100vh]">
-<main><nav data-animate data-animate-speed="slow" class="fixed -translate-x-[180px] max-w-[150px] mt-6 svelte-1ndlp0n"><button class="text-xs">⬅</button>
+<main><nav data-animate data-animate-speed="slow" class="fixed -translate-x-[230px] max-w-[200px] mt-6 svelte-1n6jnjx"><button class="text-sm">⬅</button>
 		<ul></ul></nav>
-	<article class="content-wrapper svelte-1ndlp0n" data-animate data-animate-speed="slow"><h1 class="svelte-1ndlp0n">9장 유닛 테스트</h1>
+	<button class="back-button svelte-1n6jnjx">⬅</button>
+	<article class="content-wrapper svelte-1n6jnjx" data-animate data-animate-speed="slow"><h1 class="svelte-1n6jnjx">9장 유닛 테스트</h1>
 		<div class="text-sm">Feb 5, 2024</div>
-		<div class="post-content svelte-z8bp36"><div class="mt-[1.5em]"></div>
+		<div class="post-content svelte-fgg5yd"><div class="mt-[1.5em]"></div>
 	<p>코드를 테스트 하는 테스트코드는 없었던 개념이였지만, 애자일과 TDD의 영향으로 많은 개발자들이 자동화된 유닛테스트를 만들고 있다.</p>
 <h3 id="the-three-laws-of-tdd"><a href="#the-three-laws-of-tdd">The Three Laws of TDD</a></h3>
-<p><strong>첫째 법칙:</strong> 실패하는 단위 테스트를 작성할 때까지 실제 코드를 작성하지 않는다.</p>
-<p><strong>둘째 법칙:</strong> 컴파일은 실패하지 않으면서 실행이 실패하는 정도로만 단위 테스트를 작성한다.</p>
-<p><strong>셋째 법칙:</strong> 현재 실패하는 테스트를 통과할 정도로만 실제 코드를 작성한다.</p>
+<ol><li>실패하는 단위 테스트를 작성할 때까지 실제 코드를 작성하지 않는다.</li>
+<li>컴파일은 실패하지 않으면서 실행이 실패하는 정도로만 단위 테스트를 작성한다.</li>
+<li>현재 실패하는 테스트를 통과할 정도로만 실제 코드를 작성한다.</li></ol>
 <p>위 법칙을 따르면 엄청난 양의 테스트 코드가 등장한다. 사실상 모든 코드를 테스트 하는수준</p>
 <h3 id="깨끗한-테스트-코드-유지하기"><a href="#깨끗한-테스트-코드-유지하기">깨끗한 테스트 코드 유지하기</a></h3>
-<p>테스트 코드를 막짜선 안된다, 사실상 관리가 어려워서 폐기하는 코드가 나중에는 등장할것. 테스트 코드를 짜는 노력이 허사가 되지 않게 실제 코드 못지 않게 깨끗하게 짜야 한다. <strong>코드에 유연성, 유지보수성, 재사용성을 제공하는 버팀목이 단위 테스트이다.</strong> 테스트코드가 있으면 변경에 대한 공포도 줄어들고 유연성도 증가한다. 테스트 코드가 지저분하면 실제 코드도 망가진다</p>
+<p>테스트 코드를 막짜선 안된다, 사실상 관리가 어려워서 폐기하는 코드가 나중에는 등장할것.
+테스트 코드를 짜는 노력이 허사가 되지 않게 실제 코드 못지 않게 깨끗하게 짜야 한다.
+<strong>코드에 유연성, 유지보수성, 재사용성을 제공하는 버팀목이 단위 테스트이다.</strong>
+테스트코드가 있으면 변경에 대한 공포도 줄어들고 유연성도 증가한다.
+테스트가 지저분하면 실제 코드도 망가진다</p>
 <h3 id="깨끗한-테스트-코드"><a href="#깨끗한-테스트-코드">깨끗한 테스트 코드</a></h3>
 <p>깨끗한 코드를 만드려면 <strong>가독성</strong> 이 필요하다</p>
-<p><strong>BUILD-OPERATE-CHECK 패턴 → 테스트 자료 만들기, 자료 조작, 결과 확인</strong></p>
+<h4 id="build-operate-check-패턴"><a href="#build-operate-check-패턴">BUILD-OPERATE-CHECK 패턴</a></h4>
+<p>테스트 자료 만들기, 자료 조작, 결과 확인의 세단계로 나누자</p>
 <pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testGetPageHierarchyAsXml</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">&#123;</span>
-  <span class="token function">makePages</span><span class="token punctuation">(</span><span class="token string">"PageOne"</span><span class="token punctuation">,</span> <span class="token string">"PageOne.ChildOne"</span><span class="token punctuation">,</span> <span class="token string">"PageTwo"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">makePages</span><span class="token punctuation">(</span><span class="token string">"PageOne"</span><span class="token punctuation">,</span> <span class="token string">"PageOne.ChildOne"</span><span class="token punctuation">,</span> <span class="token string">"PageTwo"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="token function">submitRequest</span><span class="token punctuation">(</span><span class="token string">"root"</span><span class="token punctuation">,</span> <span class="token string">"type:pages"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">submitRequest</span><span class="token punctuation">(</span><span class="token string">"root"</span><span class="token punctuation">,</span> <span class="token string">"type:pages"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="token function">assertResponseIsXML</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token function">assertResponseContains</span><span class="token punctuation">(</span>
-    <span class="token string">"&lt;name>PageOne&lt;/name>"</span><span class="token punctuation">,</span> <span class="token string">"&lt;name>PageTwo&lt;/name>"</span><span class="token punctuation">,</span> <span class="token string">"&lt;name>ChildOne&lt;/name>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">assertResponseIsXML</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">assertResponseContains</span><span class="token punctuation">(</span>
+            <span class="token string">"&lt;name>PageOne&lt;/name>"</span><span class="token punctuation">,</span> <span class="token string">"&lt;name>PageTwo&lt;/name>"</span><span class="token punctuation">,</span> <span class="token string">"&lt;name>ChildOne&lt;/name>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testSymbolicLinksAreNotInXmlPageHierarchy</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">&#123;</span>
-  <span class="token class-name">WikiPage</span> page <span class="token operator">=</span> <span class="token function">makePage</span><span class="token punctuation">(</span><span class="token string">"PageOne"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token function">makePages</span><span class="token punctuation">(</span><span class="token string">"PageOne.ChildOne"</span><span class="token punctuation">,</span> <span class="token string">"PageTwo"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">WikiPage</span> page <span class="token operator">=</span> <span class="token function">makePage</span><span class="token punctuation">(</span><span class="token string">"PageOne"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">makePages</span><span class="token punctuation">(</span><span class="token string">"PageOne.ChildOne"</span><span class="token punctuation">,</span> <span class="token string">"PageTwo"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="token function">addLinkTo</span><span class="token punctuation">(</span>page<span class="token punctuation">,</span> <span class="token string">"PageTwo"</span><span class="token punctuation">,</span> <span class="token string">"SymPage"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">addLinkTo</span><span class="token punctuation">(</span>page<span class="token punctuation">,</span> <span class="token string">"PageTwo"</span><span class="token punctuation">,</span> <span class="token string">"SymPage"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="token function">submitRequest</span><span class="token punctuation">(</span><span class="token string">"root"</span><span class="token punctuation">,</span> <span class="token string">"type:pages"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">submitRequest</span><span class="token punctuation">(</span><span class="token string">"root"</span><span class="token punctuation">,</span> <span class="token string">"type:pages"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="token function">assertResponseIsXML</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token function">assertResponseContains</span><span class="token punctuation">(</span>
-    <span class="token string">"&lt;name>PageOne&lt;/name>"</span><span class="token punctuation">,</span> <span class="token string">"&lt;name>PageTwo&lt;/name>"</span><span class="token punctuation">,</span> <span class="token string">"&lt;name>ChildOne&lt;/name>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token function">assertResponseDoesNotContain</span><span class="token punctuation">(</span><span class="token string">"SymPage"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">assertResponseIsXML</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">assertResponseContains</span><span class="token punctuation">(</span>
+            <span class="token string">"&lt;name>PageOne&lt;/name>"</span><span class="token punctuation">,</span> <span class="token string">"&lt;name>PageTwo&lt;/name>"</span><span class="token punctuation">,</span> <span class="token string">"&lt;name>ChildOne&lt;/name>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">assertResponseDoesNotContain</span><span class="token punctuation">(</span><span class="token string">"SymPage"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testGetDataAsXml</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">&#123;</span>
-  <span class="token function">makePageWithContent</span><span class="token punctuation">(</span><span class="token string">"TestPageOne"</span><span class="token punctuation">,</span> <span class="token string">"test page"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">makePageWithContent</span><span class="token punctuation">(</span><span class="token string">"TestPageOne"</span><span class="token punctuation">,</span> <span class="token string">"test page"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="token function">submitRequest</span><span class="token punctuation">(</span><span class="token string">"TestPageOne"</span><span class="token punctuation">,</span> <span class="token string">"type:data"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">submitRequest</span><span class="token punctuation">(</span><span class="token string">"TestPageOne"</span><span class="token punctuation">,</span> <span class="token string">"type:data"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="token function">assertResponseIsXML</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token function">assertResponseContains</span><span class="token punctuation">(</span><span class="token string">"test page"</span><span class="token punctuation">,</span> <span class="token string">"&lt;Test"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">assertResponseIsXML</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">assertResponseContains</span><span class="token punctuation">(</span><span class="token string">"test page"</span><span class="token punctuation">,</span> <span class="token string">"&lt;Test"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
 <h3 id="도메인에-특화된-테스트-언어"><a href="#도메인에-특화된-테스트-언어">도메인에 특화된 테스트 언어</a></h3>
 <p>시스템 조작 API를 사용하기보단 테스트를 위한 함수와 유틸리티를 이용하면 보다 간결한 테스트 코드를 작성할수 있게된다.</p>
 <h3 id="이중-표준"><a href="#이중-표준">이중 표준</a></h3>
 <p>테스트 API에 적용하는 표준은 실제 코드에 들어가는 표준과는 다를수 있다. 실제 코드만큼 효율적인 필요는 없고 환경도 판이하게 다르기 때문이다.</p>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token annotation punctuation">@Test</span>
+<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java">
+<span class="token annotation punctuation">@Test</span>
 <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">turnOnLoTempAlarmAtThreashold</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">&#123;</span>
-  hw<span class="token punctuation">.</span><span class="token function">setTemp</span><span class="token punctuation">(</span><span class="token constant">WAY_TOO_COLD</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-  controller<span class="token punctuation">.</span><span class="token function">tic</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-  <span class="token function">assertTrue</span><span class="token punctuation">(</span>hw<span class="token punctuation">.</span><span class="token function">heaterState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   
-  <span class="token function">assertTrue</span><span class="token punctuation">(</span>hw<span class="token punctuation">.</span><span class="token function">blowerState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-  <span class="token function">assertFalse</span><span class="token punctuation">(</span>hw<span class="token punctuation">.</span><span class="token function">coolerState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-  <span class="token function">assertFalse</span><span class="token punctuation">(</span>hw<span class="token punctuation">.</span><span class="token function">hiTempAlarm</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       
-  <span class="token function">assertTrue</span><span class="token punctuation">(</span>hw<span class="token punctuation">.</span><span class="token function">loTempAlarm</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    hw<span class="token punctuation">.</span><span class="token function">setTemp</span><span class="token punctuation">(</span><span class="token constant">WAY_TOO_COLD</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    controller<span class="token punctuation">.</span><span class="token function">tic</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">assertTrue</span><span class="token punctuation">(</span>hw<span class="token punctuation">.</span><span class="token function">heaterState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">assertTrue</span><span class="token punctuation">(</span>hw<span class="token punctuation">.</span><span class="token function">blowerState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">assertFalse</span><span class="token punctuation">(</span>hw<span class="token punctuation">.</span><span class="token function">coolerState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">assertFalse</span><span class="token punctuation">(</span>hw<span class="token punctuation">.</span><span class="token function">hiTempAlarm</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">assertTrue</span><span class="token punctuation">(</span>hw<span class="token punctuation">.</span><span class="token function">loTempAlarm</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token annotation punctuation">@Test</span>
+<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java">
+<span class="token annotation punctuation">@Test</span>
 <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">turnOnLoTempAlarmAtThreshold</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">&#123;</span>
-  <span class="token function">wayTooCold</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token string">"HBchL"</span><span class="token punctuation">,</span> hw<span class="token punctuation">.</span><span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token function">wayTooCold</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token string">"HBchL"</span><span class="token punctuation">,</span> hw<span class="token punctuation">.</span><span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
 <h3 id="테스트-당-assert-하나"><a href="#테스트-당-assert-하나">테스트 당 assert 하나</a></h3>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testGetPageHierarchyAsXml</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">&#123;</span> 
-  <span class="token function">givenPages</span><span class="token punctuation">(</span><span class="token string">"PageOne"</span><span class="token punctuation">,</span> <span class="token string">"PageOne.ChildOne"</span><span class="token punctuation">,</span> <span class="token string">"PageTwo"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testGetPageHierarchyAsXml</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">givenPages</span><span class="token punctuation">(</span><span class="token string">"PageOne"</span><span class="token punctuation">,</span> <span class="token string">"PageOne.ChildOne"</span><span class="token punctuation">,</span> <span class="token string">"PageTwo"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="token function">whenRequestIsIssued</span><span class="token punctuation">(</span><span class="token string">"root"</span><span class="token punctuation">,</span> <span class="token string">"type:pages"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">whenRequestIsIssued</span><span class="token punctuation">(</span><span class="token string">"root"</span><span class="token punctuation">,</span> <span class="token string">"type:pages"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="token function">thenResponseShouldBeXML</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token function">thenResponseShouldBeXML</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
 
-<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testGetPageHierarchyHasRightTags</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">&#123;</span> 
-  <span class="token function">givenPages</span><span class="token punctuation">(</span><span class="token string">"PageOne"</span><span class="token punctuation">,</span> <span class="token string">"PageOne.ChildOne"</span><span class="token punctuation">,</span> <span class="token string">"PageTwo"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testGetPageHierarchyHasRightTags</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">givenPages</span><span class="token punctuation">(</span><span class="token string">"PageOne"</span><span class="token punctuation">,</span> <span class="token string">"PageOne.ChildOne"</span><span class="token punctuation">,</span> <span class="token string">"PageTwo"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="token function">whenRequestIsIssued</span><span class="token punctuation">(</span><span class="token string">"root"</span><span class="token punctuation">,</span> <span class="token string">"type:pages"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">whenRequestIsIssued</span><span class="token punctuation">(</span><span class="token string">"root"</span><span class="token punctuation">,</span> <span class="token string">"type:pages"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="token function">thenResponseShouldContain</span><span class="token punctuation">(</span>
-    <span class="token string">"&lt;name>PageOne&lt;/name>"</span><span class="token punctuation">,</span> <span class="token string">"&lt;name>PageTwo&lt;/name>"</span><span class="token punctuation">,</span> <span class="token string">"&lt;name>ChildOne&lt;/name>"</span>
-  <span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token function">thenResponseShouldContain</span><span class="token punctuation">(</span>
+            <span class="token string">"&lt;name>PageOne&lt;/name>"</span><span class="token punctuation">,</span> <span class="token string">"&lt;name>PageTwo&lt;/name>"</span><span class="token punctuation">,</span> <span class="token string">"&lt;name>ChildOne&lt;/name>"</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<p>위에서 보듯 테스트 코드를 분리하면 중복되는 경우가 많아진다</p>
-<p>이 부분은 템플릿 메서드를 사용하면 중복을 많이 줄일수 있다(given-when-then)</p>
+<p>위에서 보듯 테스트 코드를 분리하면 중복되는 경우가 많아진다. 템플릿 메서드를 사용하면 중복을 많이 줄일수 있다(given-when-then)</p>
 <h3 id="테스트당-개념-하나"><a href="#테스트당-개념-하나">테스트당 개념 하나</a></h3>
 <pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testAddMonths</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-  <span class="token class-name">SerialDate</span> d1 <span class="token operator">=</span> <span class="token class-name">SerialDate</span><span class="token punctuation">.</span><span class="token function">createInstance</span><span class="token punctuation">(</span><span class="token number">31</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">2004</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">SerialDate</span> d1 <span class="token operator">=</span> <span class="token class-name">SerialDate</span><span class="token punctuation">.</span><span class="token function">createInstance</span><span class="token punctuation">(</span><span class="token number">31</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">2004</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="token class-name">SerialDate</span> d2 <span class="token operator">=</span> <span class="token class-name">SerialDate</span><span class="token punctuation">.</span><span class="token function">addMonths</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> d1<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-  <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">,</span> d2<span class="token punctuation">.</span><span class="token function">getDayOfMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-  <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span> d2<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-  <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token number">2004</span><span class="token punctuation">,</span> d2<span class="token punctuation">.</span><span class="token function">getYYYY</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">SerialDate</span> d2 <span class="token operator">=</span> <span class="token class-name">SerialDate</span><span class="token punctuation">.</span><span class="token function">addMonths</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> d1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">,</span> d2<span class="token punctuation">.</span><span class="token function">getDayOfMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span> d2<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token number">2004</span><span class="token punctuation">,</span> d2<span class="token punctuation">.</span><span class="token function">getYYYY</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="token class-name">SerialDate</span> d3 <span class="token operator">=</span> <span class="token class-name">SerialDate</span><span class="token punctuation">.</span><span class="token function">addMonths</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> d1<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-  <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token number">31</span><span class="token punctuation">,</span> d3<span class="token punctuation">.</span><span class="token function">getDayOfMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-  <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> d3<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-  <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token number">2004</span><span class="token punctuation">,</span> d3<span class="token punctuation">.</span><span class="token function">getYYYY</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">SerialDate</span> d3 <span class="token operator">=</span> <span class="token class-name">SerialDate</span><span class="token punctuation">.</span><span class="token function">addMonths</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> d1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token number">31</span><span class="token punctuation">,</span> d3<span class="token punctuation">.</span><span class="token function">getDayOfMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> d3<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token number">2004</span><span class="token punctuation">,</span> d3<span class="token punctuation">.</span><span class="token function">getYYYY</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="token class-name">SerialDate</span> d4 <span class="token operator">=</span> <span class="token class-name">SerialDate</span><span class="token punctuation">.</span><span class="token function">addMonths</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token class-name">SerialDate</span><span class="token punctuation">.</span><span class="token function">addMonths</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> d1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-  <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">,</span> d4<span class="token punctuation">.</span><span class="token function">getDayOfMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> d4<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token number">2004</span><span class="token punctuation">,</span> d4<span class="token punctuation">.</span><span class="token function">getYYYY</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">SerialDate</span> d4 <span class="token operator">=</span> <span class="token class-name">SerialDate</span><span class="token punctuation">.</span><span class="token function">addMonths</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token class-name">SerialDate</span><span class="token punctuation">.</span><span class="token function">addMonths</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> d1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">,</span> d4<span class="token punctuation">.</span><span class="token function">getDayOfMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> d4<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">assertEquals</span><span class="token punctuation">(</span><span class="token number">2004</span><span class="token punctuation">,</span> d4<span class="token punctuation">.</span><span class="token function">getYYYY</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<p>테스트가 내포하는 의미</p>
-<ul><li>(5월처럼) 31일로 끝나는 달의 마지막 날짜가 주어지는 경우<ol><li>(6월처럼) 30일로 끝나는 한 달을 더하면 날짜는 30일이 되어야지 31일이 되어서는 안 된다.</li>
-<li>두 달을 더하면 그리고 두 번째 달이 31일로 끝나면 날짜는 31일이 되어야 한다.</li></ol></li>
-<li>(6월처럼) 30일로 끝나는 달의 마지막 날짜가 주어지는 경우<ol><li>31일로 끝나는 한 달을 더하면 날짜는 30일이 되어야지 31일이 되면 안 된다.</li></ol></li></ul>
+<h4 id="위-테스트가-내포하는-의미"><a href="#위-테스트가-내포하는-의미">위 테스트가 내포하는 의미</a></h4>
+<p>(5월처럼) 31일로 끝나는 달의 마지막 날짜가 주어지는 경우</p>
+<ul><li>(6월처럼) 30일로 끝나는 한 달을 더하면 날짜는 30일이 되어야지 31일이 되어서는 안 된다. </li>
+<li>두 달을 더하면 그리고 두 번째 달이 31일로 끝나면 날짜는 31일이 되어야 한다.</li></ul>
+<p>(6월처럼) 30일로 끝나는 달의 마지막 날짜가 주어지는 경우 </p>
+<ul><li>31일로 끝나는 한 달을 더하면 날짜는 30일이 되어야지 31일이 되면 안 된다.</li></ul>
 <p>이렇게 코드가 장황해지면 읽기에 불편할수 있다. 한 테스트에 한개의 개념만 채택하자</p>
 <h3 id="first"><a href="#first"><strong>F.I.R.S.T</strong></a></h3>
 <p>테스트는 아래 5가지 요소를 충족해야 한다</p>
-<p><strong>빠르게Fast</strong></p>
-<p><strong>독립적으로Independent → 테스트간 의존관계가 있으면 안된다</strong></p>
-<p><strong>반복가능하게Repeatable → 환경에 구애받지 않는</strong></p>
-<p><strong>자가검증하는Self-Validating → 테스트가 스스로 bool로 결론나야 한다</strong></p>
-<p><strong>적시에Timely → 테스트 코드를 만들고 운영코드를 작성하라</strong></p>
+<ol><li><strong>빠르게(Fast)</strong> 테스트는 빨라야 한다. 느리면 자주 돌리지 않게 된다. 느린 테스트는 개발자들의 생산성을 떨어뜨린다.</li>
+<li><strong>독립적으로(Independent)</strong> 테스트간 의존관계가 있으면 안된다 테스트가 서로 의존하면 한 테스트가 실패하면 다른 테스트도 실패하게 된다.</li>
+<li><strong>반복가능하게(Repeatable)</strong> 환경에 구애받지 않는 테스트를 작성하자 환경에 따라 테스트가 실패하면 안된다</li>
+<li><strong>자가검증하는(Self-Validating)</strong> 테스트가 스스로 bool로 결론나야 한다 테스트가 성공하면 테스트가 실패하면 테스트가 실패하게 만든 문제를 찾아야 한다.</li>
+<li><strong>적시에(Timely)</strong>: 테스트 코드를 만들고 운영코드를 작성하라.</li></ol>
 <h3 id="결론"><a href="#결론">결론</a></h3>
 <p>깨끗한 테스트코드는 실제 코드의 유지보수성, 재사용성의 보존을 강화하고 프로젝트를 건강하게 해준다. 지속적으로 코드를 꺠끗하게 관리하고 간결하게 정리하도록하자</p>
 </div></article>
-	<div id="utterances-comments" class="content-wrapper svelte-1ndlp0n"></div>
+	<div id="utterances-comments" class="content-wrapper svelte-1n6jnjx"></div>
 </main>
 		<footer class="w-full text-center py-2"><p class="text-xs">© 2024 dongpark. Powered by SvelteKit.
 			</p></footer></div>
@@ -167,7 +175,7 @@
 			
 			<script>
 				{
-					__sveltekit_hs35x5 = {
+					__sveltekit_gs6pme = {
 						base: new URL("../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -177,8 +185,8 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("../../_app/immutable/entry/start.669770ac.js"),
-						import("../../_app/immutable/entry/app.46967467.js")
+						import("../../_app/immutable/entry/start.c94ec967.js"),
+						import("../../_app/immutable/entry/app.28dfe1b8.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 14],
