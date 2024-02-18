@@ -9,11 +9,11 @@
 	export let nextContent = '클린코드 2장';
 
 	const commentOptions = {
-		src: "https://utteranc.es/client.js",
-		repo: "dong-park/dong-park.github.io",
-		'issue-term': "pathname",
-		theme: "github-light",
-		crossOrigin: "anonymous",
+		src: 'https://utteranc.es/client.js',
+		repo: 'dong-park/dong-park.github.io',
+		'issue-term': 'pathname',
+		theme: 'github-light',
+		crossOrigin: 'anonymous'
 	};
 	let headings = [];
 	let activeSection = '';
@@ -38,11 +38,11 @@
 			window.location.pathname = newPath;
 		} else {
 			// Optionally handle the case where there is no previous depth (e.g., navigate to home)
-			console.log("No previous depth. Stay on the current page or navigate to a default page.");
+			console.log('No previous depth. Stay on the current page or navigate to a default page.');
 		}
 	}
 
-	onMount(() => {
+	function addIndex() {
 		const h2Elements = Array.from(document.querySelectorAll('h2, h3'));
 		const utteranceScript = document.createElement('script');
 		const targetTag = document.getElementById('utterances-comments');
@@ -71,15 +71,22 @@
 		for (const prop in commentOptions) {
 			utteranceScript.setAttribute(prop, commentOptions[prop]);
 		}
-
 		targetTag.appendChild(utteranceScript);
+	}
 
+	onMount(() => {
+		addIndex();
 	});
+
 </script>
 
 <svelte:head>
 	<title>{title}</title>
 	<meta name="description" content={summary} />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={summary} />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="dongpark.land" />
 </svelte:head>
 <main>
 	<nav data-animate data-animate-speed="slow" class="fixed -translate-x-[230px] max-w-[200px] mt-6">
@@ -104,7 +111,7 @@
 			<slot />
 		</MarkDownLoader>
 	</article>
-	<div id="utterances-comments" class="content-wrapper"/>
+	<div id="utterances-comments" class="content-wrapper" />
 </main>
 
 <style lang="scss">
@@ -113,13 +120,13 @@
     @apply font-bold;
   }
 
-	.back-button {
-		@apply px-4 text-xs;
+  .back-button {
+    @apply px-4 text-xs;
 
-		@media (min-width: 1250px) {
-			display: none;
+    @media (min-width: 1250px) {
+      display: none;
     }
-	}
+  }
 
   .content-wrapper {
     @apply relative bg-white py-6 px-4;
@@ -130,9 +137,9 @@
     @apply mb-2;
   }
 
-	nav {
-		@media (max-width: 1250px) {
-			display: none;
-		}
-	}
+  nav {
+    @media (max-width: 1250px) {
+      display: none;
+    }
+  }
 </style>
