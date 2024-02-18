@@ -1,6 +1,9 @@
 <script>
 	import '../assets/global.scss';
+	import Analytics from '$lib/Analytics.svelte';
 </script>
+
+<Analytics />
 
 <div class="layout-container h-screen w-screen">
 	<div class="flex flex-col justify-between h-[100vh]">
