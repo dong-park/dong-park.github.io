@@ -254,18 +254,6 @@ img, video {
   --body-margin-right: max(24px, env(safe-area-inset-right));
 }
 
-//@media (max-width: var(--lg)) {
-//  :root {
-//    --page-top: 128px
-//  }
-//}
-//
-//@media (max-width: 768px) {
-//  :root {
-//    --page-top: 64px
-//  }
-//}
-
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--header-height);

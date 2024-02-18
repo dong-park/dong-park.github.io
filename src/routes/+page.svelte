@@ -2,6 +2,7 @@
     import {goto} from "$app/navigation";
 
     export let title = 'dongpark.land'
+    export let description = 'Just do anything.'
     export let summary = ''
     export let data;
 
@@ -18,8 +19,8 @@
 <main class="p-4">
     <div class="flex justify-between">
         <div class="flex-col items-end">
-            <h1 class="text-2xl">dongpark.log</h1>
-            <h2 class="text-xs">Just do anything.</h2>
+            <h1 class="text-2xl">{title}</h1>
+            <h2 class="text-xs">{description}</h2>
         </div>
         <div class="">
             <div data-animate="" class="flex gap-0.5">

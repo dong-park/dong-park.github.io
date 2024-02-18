@@ -25,7 +25,7 @@
 		return new Date(date).toLocaleDateString('en-US', options);
 	}
 
-	function back_page() {
+	function moveBack() {
 		const pathArray = window.location.pathname.split('/').filter(Boolean);
 		if (pathArray.length > 1) {
 			pathArray.pop();
@@ -82,12 +82,12 @@
 	<meta name="description" content={summary} />
 </svelte:head>
 <main>
-	<nav data-animate data-animate-speed="slow" class="fixed -translate-x-[180px] max-w-[150px] mt-6">
-		<button class="text-xs" on:click={back_page}>⬅</button>
+	<nav data-animate data-animate-speed="slow" class="fixed -translate-x-[230px] max-w-[200px] mt-6">
+		<button class="text-sm" on:click={moveBack}>⬅</button>
 		<ul>
 			{#each headings as { id, text, text_, tagName, top, el }}
 				<li class="truncate">
-					<a class="text-xs cursor-pointer {activeSection === text_ ? 'font-bold' : ''}"
+					<a class="text-sm cursor-pointer {activeSection === text_ ? 'font-bold' : ''}"
 						 on:click={() => el.scrollIntoView({ behavior: 'smooth' })}
 					>
 						{text}
@@ -96,7 +96,7 @@
 			{/each}
 		</ul>
 	</nav>
-	<button class="back-button" on:click={back_page}>⬅</button>
+	<button class="back-button" on:click={moveBack}>⬅</button>
 	<article class="content-wrapper" data-animate data-animate-speed="slow">
 		<h1>{title}</h1>
 		<div class="text-sm">{transformDate()}</div>
@@ -135,6 +135,4 @@
 			display: none;
 		}
 	}
-
-
 </style>

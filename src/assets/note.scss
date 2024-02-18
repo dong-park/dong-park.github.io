@@ -1,0 +1,131 @@
+// Define variables for colors and fonts
+$blockquote-background: #f9f9f9;
+$blockquote-border-color: #ccc;
+$code-text-color: #d14; // A shade of red for text
+$code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
+
+:global(li::marker) {
+  color: var(--gray-300);
+}
+
+.post-content {
+  :global(*) {
+    @apply font-sans;
+    @apply text-black;
+    letter-spacing: 0px;
+    line-height: 1.75;
+  }
+
+  :global(h1),
+  :global(h2),
+  :global(h3),
+  :global(h4),
+  :global(h5),
+  :global(h6) {
+    margin-top: 1.5em;
+    font-family: var(--font-sans);
+    margin-bottom: 0.5em;
+  }
+
+  :global(strong) {
+    font-size: 1em;
+    font-weight: 500;
+  }
+
+  :global(h1) {
+    font-size: 1em;
+  }
+
+  :global(h2) {
+    font-size: 1.1em;
+    //font-weight: 900;
+  }
+
+  :global(h3) {
+    font-size: 1em;
+    //font-weight: 700;
+  }
+
+  :global(h4) {
+    font-size: 0.9em;
+    @apply italic;
+  }
+
+  :global(h5) {
+    font-size: 1em;
+  }
+
+  :global(h6) {
+    font-size: 1em;
+  }
+
+  :global(p), :global(li) {
+    font-family: var(--font-sans);
+    font-weight: 200;
+  }
+
+  :global(blockquote) {
+    padding: 0.5em 10px;
+    background-color: $blockquote-background;
+    border-left: 5px solid $blockquote-border-color;
+  }
+
+  :global(pre) {
+    @apply font-mono;
+    @apply text-sm;
+    @apply bg-gray-100;
+    @apply p-4;
+    @apply rounded-md;
+    @apply overflow-x-auto;
+    @apply my-2;
+  }
+
+  :global(ul) {
+    @apply list-disc;
+    @apply pl-6;
+  }
+
+  :global(ol) {
+    @apply list-decimal;
+    @apply pl-4;
+  }
+
+  :global(ul) > :global(li) > :global(a) {
+    @apply underline;
+  }
+
+
+  // Apply styles globally to tokens
+  :global(.token) {
+    @apply text-sm;
+    @apply font-extralight;
+  }
+
+  :global(.token.keyword) {
+    @apply text-yellow-600;
+  }
+
+  :global(.token.class-name) {
+    @apply text-yellow-700 font-bold;
+  }
+
+  :global(.token.punctuation) {
+    @apply text-gray-500;
+  }
+
+  :global(.token.function) {
+
+  }
+
+  :global(.token.comment) {
+    @apply font-extralight text-gray-800;
+  }
+
+  :global(.language-name) {
+    @apply float-right;
+    @apply text-xs;
+    @apply font-mono;
+    @apply font-bold;
+    @apply text-gray-600;
+  }
+}
