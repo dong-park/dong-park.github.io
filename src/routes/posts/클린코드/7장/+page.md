@@ -31,14 +31,22 @@ published: false
 
 ```java
 LocalPort port = new LocalPort(12);
+
 try {
-	port.open();
+    port.open();
 } catch (PortDeviceFailure e) {
-	reportError(e);
-	logger.log(e.getMessage(), e);
+    reportPortError(e);
+    logger.log("Device error", e);
+} catch (GMXError e) {
+    reportError(e);
+    logger.log("GMX error", e);
+} catch (DeviceResponseException e) {
+    reportError(e);
+    logger.log("Response error", e);
+}
+```
 
-//////////////
-
+```java
 public class LocalPort {
 	private ACMEPort innerPort;
 	

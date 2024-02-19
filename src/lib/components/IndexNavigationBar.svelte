@@ -39,7 +39,9 @@
 
 
 <nav data-animate data-animate-speed="slow" class="fixed -translate-x-[230px] max-w-[200px] mt-6">
-	<button class="text-sm" on:click={moveBack}>⬅</button>
+	<button class="text-sm" on:click={moveBack}>
+		<img src="/back.svg" alt="back" class="w-4 h-4 inline-block mr-2" />
+	</button>
 	<ul>
 		{#each headings as { id, text, text_, tagName, top, el }}
 			<li class="truncate">

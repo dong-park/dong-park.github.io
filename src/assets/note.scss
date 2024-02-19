@@ -8,9 +8,9 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
   color: var(--gray-300);
 }
 
-.post-content {
+:global(.post-content) {
+
   :global(*) {
-    @apply font-sans;
     @apply text-black;
     letter-spacing: 0px;
     line-height: 1.75;
@@ -25,25 +25,23 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
     margin-top: 1.5em;
     font-family: var(--font-sans);
     margin-bottom: 0.5em;
+    font-weight: 600;
   }
 
   :global(strong) {
-    font-size: 1em;
-    font-weight: 500;
+    font-weight: 550;
   }
 
   :global(h1) {
-    font-size: 1em;
+    font-size: 1.2em;
   }
 
   :global(h2) {
-    font-size: 1.1em;
-    //font-weight: 900;
+    font-size: 1.2em;
   }
 
   :global(h3) {
-    font-size: 1em;
-    //font-weight: 700;
+    font-size: 1.05em;
   }
 
   :global(h4) {
@@ -51,17 +49,13 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
     @apply italic;
   }
 
-  :global(h5) {
-    font-size: 1em;
-  }
-
-  :global(h6) {
-    font-size: 1em;
+  :global(p) {
+    margin-top: 1em;;
   }
 
   :global(p), :global(li) {
     font-family: var(--font-sans);
-    font-weight: 200;
+    font-weight: 250;
   }
 
   :global(blockquote) {
@@ -95,7 +89,7 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
     text-decoration-color: var(--border);
     text-decoration-thickness: 1px;
     text-underline-offset: 4px;
-    @apply text-sm decoration-1;
+    @apply text-sm;
   }
 
   :global(p) > :global(a)::after {

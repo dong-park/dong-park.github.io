@@ -2,7 +2,7 @@
 
 	import { onMount } from 'svelte';
 
-	function addLangName() {
+	function addCodeLangName() {
 		document.querySelectorAll('.post-content pre > code').forEach((code) => {
 			const lang = code.className.match(/language-(\w+)/);
 			if (lang) {
@@ -26,7 +26,7 @@
 	}
 
 	onMount(() => {
-		addLangName();
+		addCodeLangName();
 		deleteATag();
 	});
 
