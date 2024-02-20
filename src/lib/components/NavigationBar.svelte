@@ -12,7 +12,7 @@
 			text: el.innerText,
 			text_: el.innerText.toLowerCase().replace(/ /g, '-'),
 			tagName: el.tagName,
-			top: el.offsetTop + 225,
+			top: el.offsetTop + 220,
 			el: el
 		}));
 	}
