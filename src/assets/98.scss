@@ -38,16 +38,16 @@ body {
   font-family: "Pixelated MS Sans Serif";
   font-style: normal;
   font-weight: 400;
-  src: url(ms_sans_serif.woff) format("woff");
-  src: url(ms_sans_serif.woff) format("woff2");
+  src: url(fonts/ms_sans_serif.woff) format("woff");
+  src: url(fonts/ms_sans_serif.woff) format("woff2");
 }
 
 @font-face {
   font-family: "Pixelated MS Sans Serif";
   font-style: normal;
   font-weight: 700;
-  src: url(ms_sans_serif_bold.woff) format("woff");
-  src: url(ms_sans_serif_bold.woff) format("woff2");
+  src: url(fonts/ms_sans_serif_bold.woff) format("woff");
+  src: url(fonts/ms_sans_serif_bold.woff) format("woff2");
 }
 
 .title-bar, .window, button, input, label, option, select, table, textarea, ul.tree-view {

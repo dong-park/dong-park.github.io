@@ -8,8 +8,6 @@
 		theme: 'github-light',
 		crossOrigin: 'anonymous'
 	};
-	let headings = [];
-	let activeSection = '';
 
 	onMount(() => {
 		const utteranceScript = document.createElement('script');
