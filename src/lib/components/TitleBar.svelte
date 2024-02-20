@@ -46,14 +46,14 @@
 				 target="_blank"
 				 on:click={() => {
 					const iframe = document.createElement('iframe');
-					iframe.style.display = 'hidden';
+					iframe.style.display = 'none';
 					iframe.src = '/resume';
 					iframe.onload = () => {
-						iframe.contentWindow.print();
+						iframe.contentWindow.print()
 					};
 					document.body.appendChild(iframe);
 				 }}>
-				PDF
+				Resume
 			</a>
 		</div>
 	</div>

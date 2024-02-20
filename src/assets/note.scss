@@ -89,7 +89,6 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
     text-decoration-color: var(--border);
     text-decoration-thickness: 1px;
     text-underline-offset: 4px;
-    @apply text-sm;
   }
 
   :global(p) > :global(a)::after {
