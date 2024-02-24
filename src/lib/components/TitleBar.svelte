@@ -1,6 +1,6 @@
 <script>
-	export let title = 'dongpark.log';
-	export let description = 'Just do anything.';
+	export let title = '글 모음집';
+	export let description = '소소하게 쌓아갑니다';
 	export let summary = '';
 </script>
 
@@ -12,7 +12,7 @@
 
 <div class="flex justify-between">
 	<div class="flex-col items-end">
-		<h1 class="text-xl">{title}</h1>
+		<h1 class="text-lg">{title}</h1>
 		<h2 class="text-xs">{description}</h2>
 	</div>
 	<div>

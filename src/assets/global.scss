@@ -248,10 +248,12 @@ img, video {
   --md: 768px;
   --sm: 640px;
   --page-top: 35px;
+  --page-top-desktop: 70px;
   --page-width: 1072px;
   --content-width: 700px;
   --body-margin-left: max(24px, env(safe-area-inset-left));
   --body-margin-right: max(24px, env(safe-area-inset-right));
+  --resume-width: 850px;
 }
 
 html {

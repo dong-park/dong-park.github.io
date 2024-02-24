@@ -10,3 +10,17 @@
 	<Tags tags="{data.tags}" />
 	<Posts posts="{data.posts}" />
 </main>
+
+<style lang="scss">
+  main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: var(--content-width);
+    padding-top: var(--page-top);
+
+    @media (min-width: 768px) {
+      padding-top: var(--page-top-desktop);
+    }
+  }
+</style>

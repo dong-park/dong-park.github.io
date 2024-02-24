@@ -17,7 +17,7 @@ const config = {
     remarkPlugins: [remarkMath, remarkAbbr],
     rehypePlugins: [rehypeKatexSvelte, rehypeSlug, [rehypeAutolinkHeadings, { behavior: 'wrap' }]],
     layout: {
-        _: path.join(__dirname, './src/lib/components/ArticleLayout.svelte'),
+        _: path.join(__dirname, './src/lib/layout/ArticleLayout.svelte'),
     },
 }
 

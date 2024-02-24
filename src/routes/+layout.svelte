@@ -26,11 +26,5 @@
     padding-right: var(--body--margin-right);
     padding-left: var(--body--margin-left);
 
-    & > :global(*) {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: var(--content-width);
-      padding-top: var(--page-top);
-    }
   }
 </style>
