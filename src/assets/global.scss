@@ -1501,25 +1501,9 @@ a.external-link:after {
   }
 }
 
-@font-face {
-  font-family: AritaBuri;
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  src: url(https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Medium.woff2) format("woff2")
-}
-
-@font-face {
-  font-family: AritaBuri;
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-  src: url(https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-SemiBold.woff2) format("woff2")
-}
-
 :root {
   --font-sans: "Pretendard Variable";
-  --font-serif: "AritaBuri";
+  --font-serif: "Noto Sans KR";
   --font-mono: "Source Code Pro"
 }
 

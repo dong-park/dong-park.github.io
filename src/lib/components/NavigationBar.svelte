@@ -21,7 +21,7 @@
 		window.addEventListener('scroll', () => {
 			const scrollPosition = window.pageYOffset;
 			let lastPassedSection = '';
-			headings.forEach(heading => {
+			headings.forEach((heading) => {
 				if (scrollPosition >= heading.top - window.innerHeight * 0.1) {
 					lastPassedSection = heading.text_;
 				}
@@ -37,19 +37,17 @@
 	});
 </script>
 
-
-<nav data-animate data-animate-speed="slow" class="fixed -translate-x-[230px] max-w-[200px] mt-6">
+<nav data-animate data-animate-speed="slow" class="fixed -translate-x-[240px] max-w-[230px] mt-6">
 	<button class="text-sm mb-5" on:click={moveBack}>
 		<img src="/icons/back.svg" alt="back" class="w-4 h-4 inline-block mr-2" />
 	</button>
-	<ul>
+	<ul class="mt-1 space-y-1">
 		{#each headings as { id, text, text_, tagName, top, el }}
-			<li class="truncate">
-				<button class="text-sm cursor-pointer {activeSection === text_ ? 'font-bold' : ''}"
-					 on:click={() => el.scrollIntoView({ behavior: 'smooth' })}
-				>
-					{text}
-				</button>
+			<li
+				class="truncate font-sans cursor-pointer {activeSection === text_ ? 'font-bold' : ''}"
+				on:click={() => el.scrollIntoView({ behavior: 'smooth' })}
+			>
+				{text}
 			</li>
 		{/each}
 	</ul>
@@ -58,17 +56,16 @@
 	<img src="/icons/back.svg" alt="back" class="w-4 h-4 inline-block mr-2" />
 </button>
 
-
 <style lang="scss">
-  .back-button {
-    @media (min-width: 1250px) {
-      display: none;
-    }
-  }
+	.back-button {
+		@media (min-width: 1250px) {
+			display: none;
+		}
+	}
 
-  nav {
-    @media (max-width: 1250px) {
-      display: none;
-    }
-  }
+	nav {
+		@media (max-width: 1250px) {
+			display: none;
+		}
+	}
 </style>
