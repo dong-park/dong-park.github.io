@@ -6,7 +6,12 @@
 	let currentTag;
 
 	function getTags(tag) {
-		goto(`/?tag=${tag}`);
+		if (tag === currentTag) {
+			goto('/');
+			return;
+		} else {
+			goto(`/?tag=${tag}`);
+		}
 	}
 
 	afterUpdate(() => {
