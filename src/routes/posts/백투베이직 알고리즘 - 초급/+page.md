@@ -380,6 +380,40 @@ public class main {
 }
 ```
 
+변형 숫자의 제곱근 찾기
+
+```java
+public class main {
+    public static void main(String[] args) {
+        int x1 = 4;
+        int x2 = 8;
+        
+        Solution solution = new Solution();
+        
+        System.out.println(x1 + "'s square root: " + solution.mySqrt(x1));
+        System.out.println(x2 + "'s square root: " + solution.mySqrt(x2));
+    }
+    
+    static class Solution {
+        public int mySqrt(int x) {
+            long start = 0, end = x;
+            while (start <= end) {
+                long mid = start + (end - start) / 2;
+                long sqrt = mid * mid;
+                if(sqrt == x){
+                    return (int) mid;
+                } else if(sqrt < x){
+                    start = mid + 1;
+                } else {
+                    end = mid - 1;
+                }
+            }
+            return (int)end;
+        }
+    }
+}
+```
+
 ### 두 수의 합 찾기
 
 정수 배열 nums와 타겟 숫자 target이 주어질 때, nums 배열 내 두 숫자의 합이 target이 되게 하는 두 숫자의 인덱스를 배열로 반환해야 해. 각 입력에 정확히 하나의 솔루션이 있다고 가정하며, 같은 요소를 두 번 사용할 수 없어.
@@ -456,7 +490,8 @@ public class Main {
 정수로 이루어진 배열이 주어졌을 때, 그 배열의 연속된 부분 배열(subarray) 중에서 합이 최대가 되는 부분 배열의 합을 찾아라.
 
 *문제 해결 방법*
-카데인 알고리즘(Kadane's Algorithm): 이 알고리즘은 현재까지의 부분 최대합을 계속 추적하면서 배열을 한 번만 순회해 최대 부분 배열의 합을 찾는 방법이야.
+
+*카데인 알고리즘(Kadane's Algorithm)* 사용해  이것은 현재까지의 부분 최대합을 계속 추적하면서 배열을 한 번만 순회해 최대 부분 배열의 합을 찾는 방법이야.
 각 단계에서, 현재 요소를 포함한 부분 배열의 최대 합을 계산하고, 이 값이 최대 합보다 큰지 비교해. 최대 합을 갱신해 가면서 배열의 끝에 도달할 때까지 이 과정을 반복해.
 
 ```java
@@ -497,37 +532,154 @@ maxSoFar를 maxEndingHere와 비교하여 필요한 경우 갱신해.
 
 #### 순회 방식
 
-```
-순회 시작
+```md
 초기 상태: maxEndingHere = 0, maxSoFar = -∞ (혹은 배열의 첫 번째 요소로 초기화할 수도 있음)
+
 순회 과정
-i=0 (요소: -2)
-maxEndingHere = max(-2, 0 + (-2)) = -2
-maxSoFar = max(-∞, -2) = -2
-i=1 (요소: 1)
-maxEndingHere = max(1, -2 + 1) = 1
-maxSoFar = max(-2, 1) = 1
-i=2 (요소: -3)
-maxEndingHere = max(-3, 1 + (-3)) = -2
-maxSoFar = max(1, -2) = 1
-i=3 (요소: 4)
-maxEndingHere = max(4, -2 + 4) = 4
-maxSoFar = max(1, 4) = 4
-i=4 (요소: -1)
-maxEndingHere = max(-1, 4 + (-1)) = 3
-maxSoFar = max(4, 3) = 4
-i=5 (요소: 2)
-maxEndingHere = max(2, 3 + 2) = 5
-maxSoFar = max(4, 5) = 5
-i=6 (요소: 1)
-maxEndingHere = max(1, 5 + 1) = 6
-maxSoFar = max(5, 6) = 6
-i=7 (요소: -5)
-maxEndingHere = max(-5, 6 + (-5)) = 1
-maxSoFar = max(6, 1) = 6
-i=8 (요소: 4)
-maxEndingHere = max(4, 1 + 4) = 5
-maxSoFar = max(6, 5) = 6
+i=0 (요소: -2), maxEndingHere = max(-2, 0 + (-2)) = -2, maxSoFar = max(-∞, -2) = -2
+i=1 (요소: 1), maxEndingHere = max(1, -2 + 1) = 1, maxSoFar = max(-2, 1) = 1
+i=2 (요소: -3), maxEndingHere = max(-3, 1 + (-3)) = -2, maxSoFar = max(1, -2) = 1
+i=3 (요소: 4), maxEndingHere = max(4, -2 + 4) = 4, maxSoFar = max(1, 4) = 4
+i=4 (요소: -1), maxEndingHere = max(-1, 4 + (-1)) = 3, maxSoFar = max(4, 3) = 4
+i=5 (요소: 2), maxEndingHere = max(2, 3 + 2) = 5, maxSoFar = max(4, 5) = 5
+i=6 (요소: 1), maxEndingHere = max(1, 5 + 1) = 6, maxSoFar = max(5, 6) = 6
+i=7 (요소: -5), maxEndingHere = max(-5, 6 + (-5)) = 1, maxSoFar = max(6, 1) = 6
+i=8 (요소: 4), maxEndingHere = max(4, 1 + 4) = 5, maxSoFar = max(6, 5) = 6
+
 순회 완료
 순회가 완료되었을 때, maxSoFar의 값이 6으로, 이는 주어진 배열의 연속된 부분 배열 중 최대 합을 나타내. 이 최대 합을 가진 연속된 부분 배열은 [4, -1, 2, 1]로, 합이 6이 되는 부분이야.
+```
+
+#### 기출변형
+
+**"최대 수익 구하기"**에 관한 문제입니다. 주식의 일일 가격이 주어졌을 때, 한 번의 거래로 얻을 수 있는 최대 수익을 계산해야 합니다. 여기서 한 번의 거래는 주식을 한 번 사고 팔아 수익을 얻는 것을 의미합니다.
+
+주어진 배열 prices는 여러 날에 걸친 주식의 가격을 나타냅니다. prices[i]는 주식이 i번째 날에 가지는 가격입니다. 단 한 번의 거래로 얻을 수 있는 최대 수익을 반환하세요. 만약 어떤 거래로도 수익을 얻을 수 없다면 0을 반환하세요.
+
+```java
+public class main {
+    public static void main(String[] args) {
+        int[] prices1 = {7, 1, 5, 3, 6, 4};
+        int[] prices2 = {7, 6, 4, 3, 1};
+        
+        Solution solution = new Solution();
+        
+        System.out.println("Maximum profit for prices1: " + solution.maxProfit(prices1));
+        System.out.println("Maximum profit for prices2: " + solution.maxProfit(prices2));
+    }
+    
+    static class Solution {
+        public int maxProfit(int[] prices) {
+            int minPrice = Integer.MAX_VALUE, maxProfit = 0;
+
+            for (int i=0; i < prices.length; i++){            
+                minPrice = Math.min(prices[i], minPrice);
+                int profit = prices[i] - minPrice;
+                maxProfit = Math.max(maxProfit, profit);
+            }
+
+            return maxProfit;
+        }
+    }
+}
+```
+
+### 회전된 정렬된 배열에서 최소값 찾기
+
+정렬된 배열이 있고, 이 배열이 미리 알려지지 않은 특정 피벗을 기준으로 회전되었다고 가정해. 예를 들어, 배열 [0,1,2,4,5,6,7]이 있을 때, 이 배열을 3번째 인덱스에서 회전시키면 [4,5,6,7,0,1,2]가 돼. 이런 회전된 배열에서 최소값을 찾는 함수를 작성해야 해.
+
+회전된 정렬된 배열에서는 배열의 일부가 여전히 정렬되어 있음을 이용할 수 있어. 이진 검색과 유사한 방식으로 문제를 접근하지만, 중간점(middle)을 기준으로 어느 쪽이 정렬된 상태인지 판별하고, 최소값이 포함될 가능성이 있는 쪽을 선택하여 검색 범위를 좁혀 나가야 해.
+시작점(start)과 종료점(end) 사이에서 중간점(middle)을 찾고, 중간점이 시작점보다 큰지, 또는 종료점보다 작은지를 검사하여 검색 범위를 좁혀 나가면서 최소값을 찾아야 해.
+
+```java
+public class FindMinimumInRotatedSortedArray {
+    public static void main(String[] args) {
+        int[] nums = {5,6,7,0,1,2,3};
+        int min = findMin(nums);
+        System.out.println("The minimum element is " + min);
+    }
+
+    public static int findMin(int[] nums) {
+        int start = 0, end = nums.length - 1;
+        while (start < end) {
+            int mid = start + (end - start) / 2;
+            if (nums[mid] > nums[end]) {
+                // 최소값은 mid보다 오른쪽에 있음
+                start = mid + 1;
+            } else {
+                // 최소값은 mid 이하에 있음
+                end = mid;
+            }
+        }
+        return nums[start]; // 또는 nums[end]; 둘 다 같은 위치를 가리킴
+    }
+}
+```
+
+### 정수를 로마 숫자로 변환하기
+
+로마 숫자는 일곱 개의 다른 기호로 나타납니다: I, V, X, L, C, D와 M입니다.
+
+기호 값
+I 1
+V 5
+X 10
+L 50
+C 100
+D 500
+M 1000
+예를 들어, 로마 숫자 2는 II로 쓰이며, 단순히 두 개의 1을 나란히 쓴 것과 같습니다. 12는 XII로 쓰이며, 이는 X + II입니다. 27은 XXVII, 즉 XX + V + II입니다.
+
+로마 숫자는 보통 왼쪽에서 오른쪽으로 큰 숫자에서 작은 숫자 순으로 쓰입니다. 하지만 네 가지 특별한 경우에는 작은 숫자가 큰 숫자의 왼쪽에 옵니다.
+
+IV (4)
+IX (9)
+XL (40)
+XC (90)
+CD (400)
+CM (900)
+주어진 정수를 로마 숫자로 변환하는 프로그램을 작성하세요.
+
+이 문제를 해결하기 위해, 가장 큰 값부터 시작하여 주어진 숫자를 줄여나갈 수 있는 로마 숫자의 값을 찾아 문자열에 추가하는 방식으로 접근할 수 있습니다. 각 단계에서 사용할 수 있는 가장 큰 값을 찾아 그 값을 주어진 숫자에서 빼고, 해당 로마 숫자를 결과 문자열에 추가합니다. 이 과정을 주어진 숫자가 0이 될 때까지 반복합니다.
+
+```java
+static class Solution {
+    public String intToRoman(int num) {
+        int[] values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        String[] symbols = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+        
+        StringBuilder roman = new StringBuilder();
+        
+        for (int i = 0; i < values.length; i++) {
+            while (num >= values[i]) {
+                num -= values[i];
+                roman.append(symbols[i]);
+            }
+        }
+        
+        return roman.toString();
+    }
+}
+```
+
+### 유효한 괄호 검사
+
+주어진 문자열 s가 유효한 괄호로만 구성되어 있는지 확인하세요. 유효한 괄호 문자열이란 다음과 같은 조건을 만족하는 문자열입니다:
+
+열린 괄호는 반드시 같은 타입의 괄호로만 닫혀야 합니다.
+열린 괄호는 올바른 순서로 닫혀야 합니다.
+
+```java
+static class Solution {
+    public boolean isValid(String s) {
+        Stack<Character> stack = new Stack<>();
+        for (char c : s.toCharArray()) {
+            if (c == '(') stack.push(')');
+            else if (c == '[') stack.push(']');
+            else if (c == '{') stack.push('}');
+            else if (stack.isEmpty() || stack.pop() != c) return false;
+        }
+        return stack.isEmpty();
+    }
+}
 ```

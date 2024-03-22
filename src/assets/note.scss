@@ -140,7 +140,7 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
   }
 
   :global(.language-name) {
-    @apply float-right;
+    @apply absolute right-3;
     @apply text-xs;
     @apply font-mono;
     @apply font-bold;
