@@ -1,115 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="utf-8" />
-	<link rel="icon" href="../favicon.ico" />
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-	<meta name="viewport" content="width=device-width" />
-	
-		<link href="../_app/immutable/assets/0.e9e16e8d.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/Sidebar.0cf17c9c.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/ArticleLayout.6b8a49c4.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.20d58d90.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index.bc93691c.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.48bfbe60.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/paths.c86cbeab.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.c28efcae.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/0.5971530f.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/Sidebar.svelte_svelte_type_style_lang.68ee1e4f.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/3.6c66d170.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/ArticleLayout.d89c6717.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/4.cb09e733.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/5.3a05d280.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/6.abc67613.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/7.54e5c767.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/stores.b7fed19d.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/4.4633b910.js"><title>백투베이직 알고리즘 - 초급</title><!-- HEAD_svelte-1qgbhjt_START --><link rel="icon" type="image/png" href="/favicon.ico"><!-- HEAD_svelte-1qgbhjt_END --><!-- HEAD_svelte-bklfkh_START --><script async src="https://www.googletagmanager.com/gtag/js?id=G-7WELFQJ9KV"></script><script>window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'G-7WELFQJ9KV');
-	</script><!-- HEAD_svelte-bklfkh_END --><!-- HEAD_svelte-12lcz3j_START --><meta name="description" content="초심으로 돌아가겠습니다."><meta property="og:title" content="백투베이직 알고리즘 - 초급"><meta property="og:description" content="초심으로 돌아가겠습니다."><meta property="og:type" content="article"><meta property="og:site_name" content="dongpark.land"><!-- HEAD_svelte-12lcz3j_END -->
-</head>
-
-<body data-sveltekit-preload-data="hover">
-	<div style="display: contents">
-
-
-
-
-
-<div class="layout-container flex h-screen w-screen order-1 flex-shrink svelte-28rl8s"><nav class="transition z-20 h-full w-[290px] p-3 bg-gray-100 "><div class="flex items-center p-1 justify-between"><h1>개발자 썰 모음집
-		</h1>
-		<button><svg class="hover:bg-gray-100" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m14 17l-5-5l5-5z"></path></svg></button></div>
-	<ul class=" svelte-1sjjih6"><li class="doc-group font-sans svelte-1sjjih6"><p>WIKI</p></li>
-		<li class="doc svelte-1sjjih6"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="svelte-1sjjih6"><path fill="currentColor" d="M8 13h8v-2H8Zm0 3h8v-2H8Zm0 3h5v-2H8Zm-2 3q-.825 0-1.412-.587Q4 20.825 4 20V4q0-.825.588-1.413Q5.175 2 6 2h8l6 6v12q0 .825-.587 1.413Q18.825 22 18 22Zm7-13h5l-5-5Z"></path></svg>
-					<p class="svelte-1sjjih6">백투베이직 알고리즘 - 초급</p>
-				</li><li class="doc svelte-1sjjih6"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="svelte-1sjjih6"><path fill="currentColor" d="M8 13h8v-2H8Zm0 3h8v-2H8Zm0 3h5v-2H8Zm-2 3q-.825 0-1.412-.587Q4 20.825 4 20V4q0-.825.588-1.413Q5.175 2 6 2h8l6 6v12q0 .825-.587 1.413Q18.825 22 18 22Zm7-13h5l-5-5Z"></path></svg>
-					<p class="svelte-1sjjih6">런린이 3년차 푸념</p>
-				</li><li class="doc svelte-1sjjih6"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="svelte-1sjjih6"><path fill="currentColor" d="M8 13h8v-2H8Zm0 3h8v-2H8Zm0 3h5v-2H8Zm-2 3q-.825 0-1.412-.587Q4 20.825 4 20V4q0-.825.588-1.413Q5.175 2 6 2h8l6 6v12q0 .825-.587 1.413Q18.825 22 18 22Zm7-13h5l-5-5Z"></path></svg>
-					<p class="svelte-1sjjih6">블로그 개설</p>
-				</li><li class="doc svelte-1sjjih6"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="svelte-1sjjih6"><path fill="currentColor" d="M8 13h8v-2H8Zm0 3h8v-2H8Zm0 3h5v-2H8Zm-2 3q-.825 0-1.412-.587Q4 20.825 4 20V4q0-.825.588-1.413Q5.175 2 6 2h8l6 6v12q0 .825-.587 1.413Q18.825 22 18 22Zm7-13h5l-5-5Z"></path></svg>
-					<p class="svelte-1sjjih6">클린코드</p>
-				</li><li class="doc svelte-1sjjih6"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="svelte-1sjjih6"><path fill="currentColor" d="M8 13h8v-2H8Zm0 3h8v-2H8Zm0 3h5v-2H8Zm-2 3q-.825 0-1.412-.587Q4 20.825 4 20V4q0-.825.588-1.413Q5.175 2 6 2h8l6 6v12q0 .825-.587 1.413Q18.825 22 18 22Zm7-13h5l-5-5Z"></path></svg>
-					<p class="svelte-1sjjih6">소켓통신 야매 클래스</p>
-				</li>
-
-
-
-
-
-
-</ul>
-</nav>
-	<div class="w-full h-[100vh] overflow-scroll "><div class="flex items-center bg-white w-full p-4"><button class="hidden"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M3 3h18v2H3zm0 16h18v2H3zm0-8h18v2H3z"></path></svg></button>
-	<b class="">/posts/백투베이직 알고리즘 - 초급</b></div>
-		
-
-<main class="svelte-1tp7ilo"><article class="relative bg-white py-6 px-4 " data-animate data-animate-speed="slow"><h1>백투베이직 알고리즘 - 초급</h1>
-
-		<div class="text-sm">Mar 20, 2024</div>
-		<div class="post-content"><div class="mt-[1.5em]"></div>
-	<h3 id="자바--코딩테스트에서-자주-쓰이는-함수"><a href="#자바--코딩테스트에서-자주-쓰이는-함수">자바  코딩테스트에서 자주 쓰이는 함수</a></h3>
-<h3 id="배열array"><a href="#배열array">배열(Array)</a></h3>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token operator">-</span> 배열 선언<span class="token operator">:</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+import{S as hm,i as gm,s as nf,m as ku,o as sf,p as af,q as pf,r as tf,u as Ar,v as of,w as ef,x as cf,y as Mr,e as t,t as k,a as l,c as o,b as e,d as i,f as s,g as u,z as r,h as p,j as c,n as lf}from"./index.bc93691c.js";import{A as uf}from"./ArticleLayout.d89c6717.js";function kf(Zn){let m,d,E,S,f,w,Jn,Ap,P,Tr=`<code class="language-java"><span class="token operator">-</span> 배열 선언<span class="token operator">:</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token operator">-</span> 배열 길이<span class="token operator">:</span> arr<span class="token punctuation">.</span>length
 <span class="token operator">-</span> 배열 출력<span class="token operator">:</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token class-name">Arrays</span> 클래스의 toString 메소드 사용<span class="token punctuation">)</span>
 <span class="token operator">-</span> 배열 복사<span class="token operator">:</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">copyOf</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">)</span> 또는 <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">arraycopy</span><span class="token punctuation">(</span>sourceArr<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> destArr<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> sourceArr<span class="token punctuation">,</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">-</span> 다차원 배열 출력<span class="token operator">:</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">deepToString</span><span class="token punctuation">(</span>multiDimArr<span class="token punctuation">)</span></code><!-- HTML_TAG_END --></pre>
-<h3 id="리스트list"><a href="#리스트list">리스트(List)</a></h3>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token operator">-</span> 리스트 선언<span class="token operator">:</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">-</span> 다차원 배열 출력<span class="token operator">:</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">deepToString</span><span class="token punctuation">(</span>multiDimArr<span class="token punctuation">)</span></code>`,Mp,H,Qn,je,Tp,L,Cr=`<code class="language-java"><span class="token operator">-</span> 리스트 선언<span class="token operator">:</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token operator">-</span> 요소 추가<span class="token operator">:</span> list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token operator">-</span> 요소 제거<span class="token operator">:</span> list<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span> 또는 객체 제거 list<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token operator">-</span> 리스트 크기<span class="token operator">:</span> list<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token operator">-</span> 리스트 정렬<span class="token operator">:</span> <span class="token class-name">Collections</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">-</span> 리스트 출력<span class="token operator">:</span> 리스트를 그대로 출력하면 됨 <span class="token punctuation">(</span>예<span class="token operator">:</span> <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">)</span></code><!-- HTML_TAG_END --></pre>
-<h3 id="문자열string"><a href="#문자열string">문자열(String)</a></h3>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token operator">-</span> 문자열 길이<span class="token operator">:</span> str<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">-</span> 리스트 출력<span class="token operator">:</span> 리스트를 그대로 출력하면 됨 <span class="token punctuation">(</span>예<span class="token operator">:</span> <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">)</span></code>`,Cp,j,Yn,Ae,Ip,A,Ir=`<code class="language-java"><span class="token operator">-</span> 문자열 길이<span class="token operator">:</span> str<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token operator">-</span> 부분 문자열<span class="token operator">:</span> str<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>startIndex<span class="token punctuation">,</span> endIndex<span class="token punctuation">)</span> <span class="token punctuation">(</span>startIndex부터 endIndex 전까지의 문자열 반환<span class="token punctuation">)</span>
 <span class="token operator">-</span> 문자열 비교<span class="token operator">:</span> str<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>otherStr<span class="token punctuation">)</span>
 <span class="token operator">-</span> 문자열을 문자 배열로<span class="token operator">:</span> <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> charArray <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token operator">-</span> 문자 찾기<span class="token operator">:</span> str<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token char">'a'</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>문자나 문자열이 처음으로 등장하는 인덱스 반환<span class="token punctuation">,</span> 없으면 <span class="token operator">-</span><span class="token number">1</span> 반환<span class="token punctuation">)</span>
-<span class="token operator">-</span> 문자열 분할<span class="token operator">:</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> parts <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">"delim"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
-<h3 id="기타-유용한-자바-팁"><a href="#기타-유용한-자바-팁">기타 유용한 자바 팁</a></h3>
-<ul><li>Scanner 클래스를 사용한 입력 처리:</li></ul>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token class-name">Copy</span> code
+<span class="token operator">-</span> 문자열 분할<span class="token operator">:</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> parts <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">"delim"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code>`,Np,M,hn,Me,Rp,gn,ep,Te,Bp,T,Nr=`<code class="language-java"><span class="token class-name">Copy</span> code
 <span class="token class-name">Scanner</span> scanner <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">int</span> number <span class="token operator">=</span> scanner<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token class-name">String</span> str <span class="token operator">=</span> scanner<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
-<ul><li>StringBuilder를 사용해 문자열을 더 효율적으로 다룸 (반복적인 문자열 연산에 유용):</li></ul>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token class-name">Copy</span> code
+<span class="token class-name">String</span> str <span class="token operator">=</span> scanner<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code>`,Fp,ns,cp,Ce,Dp,C,Rr=`<code class="language-java"><span class="token class-name">Copy</span> code
 <span class="token class-name">StringBuilder</span> sb <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 sb<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"Hello, "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 sb<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token class-name">String</span> result <span class="token operator">=</span> sb<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
-<ul><li>반복문과 조건문에서의 continue와 break 사용:
-continue는 반복문의 현재 반복을 건너뛰고 다음 반복으로 넘어가고,
-break는 반복문을 완전히 종료시킴.</li></ul>
-<h3 id="숫자-뒤집기"><a href="#숫자-뒤집기">숫자 뒤집기</a></h3>
-<p>이 코드는 사용자로부터 배열의 길이와 요소를 입력 받는 기본 틀을 제공해. 이제 남은 부분은 ‘역순 배열 만들기 로직 구현’ 부분을 완성하는 거야. 배열을 역순으로 만드는 로직을 직접 구현해보자. 배열을 뒤집는 가장 간단한 방법 중 하나는 배열의 처음과 끝을 서로 교환하는 것이야. 이 과정을 배열의 중간까지 반복하면 돼.</p>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> main
+<span class="token class-name">String</span> result <span class="token operator">=</span> sb<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code>`,Xp,ss,lp,Ie,Vp,I,as,Ne,Op,ps,Re,Wp,N,Br=`<code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> main
 <span class="token punctuation">&#123;</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token comment">// 초기 입력 배열 설정</span>
@@ -141,12 +51,7 @@ break는 반복문을 완전히 종료시킴.</li></ul>
             <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">?</span> <span class="token string">", "</span> <span class="token operator">:</span> <span class="token string">"&#92;n"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">&#125;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<p>원본 배열 내에서 요소의 위치를 직접 바꾸는 방법은 추가적인 메모리를 사용하지 않아서 더 효율적이야. 이 방법을 사용하면, 배열의 크기가 커져도 추가 메모리 사용이 없기 때문에 메모리 효율성 측면에서 우수해.</p>
-<h3 id="문자열-뒤집기"><a href="#문자열-뒤집기">문자열 뒤집기</a></h3>
-<p>주어진 문자열이 “hello”라면, 이를 뒤집어 “olleh”로 만들어야 해.</p>
-<p>문자열도 사실 문자의 배열과 같다고 볼 수 있어. 따라서, 문자열 내의 문자들의 위치를 역순으로 바꿔주면 돼. 자바에서는 StringBuilder 클래스를 사용해서 이 문제를 간단하게 해결할 수 있지만, 문자 배열을 이용해 직접 구현하는 방법도 중요한 학습 포인트가 될 거야.</p>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> main
+<span class="token punctuation">&#125;</span></code>`,qp,ts,Be,zp,R,os,Fe,Gp,es,De,$p,cs,Xe,Up,B,Fr=`<code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> main
 <span class="token punctuation">&#123;</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token class-name">String</span> str <span class="token operator">=</span> <span class="token string">"hello"</span><span class="token punctuation">;</span>
@@ -161,10 +66,7 @@ break는 반복문을 완전히 종료시킴.</li></ul>
         <span class="token punctuation">&#125;</span>
         str <span class="token operator">=</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">,</span> strSplit<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<p>접근 방법은 문자열을 문자 배열로 취급하고, 배열의 요소들을 직접 뒤집어서 문자열을 역순으로 만드는 것이었어. 이 방식은 효율적이고, 문자열을 처리하는 데 있어 유용한 방법 중 하나야. split(&quot;&quot;) 메소드를 사용해 문자열을 문자로 구성된 배열로 변환하고, 배열의 앞뒤를 교환하는 방식으로 역순을 만들었어. 마지막으로, String.join(&quot;&quot;, strSplit)을 사용하여 문자 배열을 다시 문자열로 합치는 과정을 거쳤어.</p>
-<p>StringBuilder를 사용하는 것도 좋은 방법 중 하나임을 기억해둬. 예를 들어, 이 문제를 StringBuilder를 사용해 해결한다면 다음과 같이 더 간단하게 작성할 수 있어</p>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> main
+<span class="token punctuation">&#125;</span></code>`,Kp,ls,Ve,Zp,us,Oe,Jp,F,Dr=`<code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> main
 <span class="token punctuation">&#123;</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token class-name">String</span> str <span class="token operator">=</span> <span class="token string">"hello"</span><span class="token punctuation">;</span>
@@ -172,13 +74,7 @@ break는 반복문을 완전히 종료시킴.</li></ul>
         <span class="token comment">//  StringBuilder를 이용해서 문자열 뒤집기</span>
         str <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h3 id="최소공배수-최대공약수-구하기"><a href="#최소공배수-최대공약수-구하기">최소공배수, 최대공약수 구하기</a></h3>
-<p>최대 공약수는 두 개 이상의 정수의 공통된 약수 중 가장 큰 값이야. 간단히 말해서, 두 수가 주어졌을 때, 이 두 수를 나눌 수 있는 가장 큰 수를 말해. 예를 들어, 48과 18의 공약수는 1, 2, 3, 6이 있는데, 이 중 가장 큰 수는 6이므로 48과 18의 최대 공약수는 6이 되겠지.</p>
-<p>최소 공배수는 두 개 이상의 정수의 공통된 배수 중 가장 작은 값이야. 두 수의 공통된 배수는 두 수 모두를 나눌 수 있는 수 중에서 가장 작은 수를 말해. 예를 들어, 48과 18의 배수 중 공통된 배수는 144, 288, 432 등이 있는데, 이 중 가장 작은 수는 144이므로 48과 18의 최소 공배수는 144가 되겠지.</p>
-<p>두 개의 자연수가 주어질 때, 이 두 수의 최대 공약수(Greatest Common Divisor, GCD)와 최소 공배수(Least Common Multiple, LCM)를 찾는 프로그램을 작성해야 해.</p>
-<p>최대 공약수를 찾는 전통적인 방법 중 하나는 유클리드 호제법을 사용하는 것이야. 두 수 a와 b(a &gt; b)의 최대 공약수는 a를 b로 나눈 나머지 r과 b의 최대 공약수와 같아. 즉, GCD(a, b) = GCD(b, r)이야. 이 과정을 r이 0이 될 때까지 반복하면, 그 때의 b가 최대 공약수가 돼.</p>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> main
+<span class="token punctuation">&#125;</span></code>`,Qp,D,ks,We,Yp,is,qe,hp,rs,ze,gp,ms,Ge,nt,fs,$e,st,X,Xr=`<code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> main
 <span class="token punctuation">&#123;</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">48</span><span class="token punctuation">;</span> <span class="token comment">// 첫 번째 숫자</span>
@@ -207,17 +103,7 @@ break는 반복문을 완전히 종료시킴.</li></ul>
         <span class="token keyword">return</span> <span class="token punctuation">(</span>a <span class="token operator">*</span> b<span class="token punctuation">)</span> <span class="token operator">/</span> gcdValue<span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span>
-</code><!-- HTML_TAG_END --></pre>
-<p>gcd 메소드는 유클리드 호제법을 사용해 최대 공약수를 계산해.
-lcm 메소드는 계산된 최대 공약수를 사용해 최소 공배수를 구해. 최소 공배수는 두 수의 곱을 최대 공약수로 나눈 값이야.
-메인 메소드에서는 두 수에 대한 최대 공약수와 최소 공배수를 계산하고 결과를 출력해.</p>
-<h3 id="소수찾기"><a href="#소수찾기">소수찾기</a></h3>
-<p>소수는 1과 자기 자신 외에는 어떤 수로도 나눌 수 없는 1보다 큰 자연수를 의미해. 예를 들어, 2, 3, 5, 7, 11, 13 등이 있지.</p>
-<p>소수를 찾는 문제는 여러 방법이 있지만, 가장 대표적인 방법 중 하나는 에라토스테네스의 체 알고리즘을 사용하는 것이야. 이 알고리즘의 기본 아이디어는 다음과 같아:</p>
-<h4 id="에라토스테네스의-체-알고리즘의-핵심-원리"><a href="#에라토스테네스의-체-알고리즘의-핵심-원리">에라토스테네스의 체 알고리즘의 핵심 원리</a></h4>
-<p>모든 숫자는 소수이거나, 소수의 배수 중 하나야. 그러므로, 소수의 배수를 제거하면 남는 숫자는 모두 소수가 돼.
-알고리즘의 핵심은 소수의 배수들을 순차적으로 제거해 나가는 것이야. 이 때, i의 제곱이 N보다 클 때까지만 반복하면 되는 이유는, i의 제곱 미만의 배수들은 이미 이전 소수들의 배수를 제거하는 과정에서 체크되었기 때문이야.</p>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">ArrayList</span></span><span class="token punctuation">;</span>
+</code>`,at,ys,Ue,pt,V,ws,Ke,tt,ds,Ze,ot,bs,Je,et,O,vs,Qe,ct,_s,Ye,lt,W,Vr=`<code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">ArrayList</span></span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span></span><span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">&#123;</span>
@@ -254,14 +140,7 @@ lcm 메소드는 계산된 최대 공약수를 사용해 최소 공배수를 구
 
         <span class="token keyword">return</span> primes<span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h3 id="피보나치-수열"><a href="#피보나치-수열">피보나치 수열</a></h3>
-<p>피보나치 수열의 N번째 수를 찾는 프로그램을 작성해야 해. 피보나치 수열은 첫 번째 수와 두 번째 수가 1이고, 그 이후의 모든 수는 바로 앞 두 수의 합으로 이루어진 수열이야.</p>
-<p>재귀 함수 사용: 간결하고 이해하기 쉽지만, 큰 N에 대해 성능 문제가 발생할 수 있어.
-반복문 사용: 재귀보다 효율적이며, 큰 N에 대해서도 빠르게 결과를 얻을 수 있어.</p>
-<h4 id="반복문을-이용한--피보나치-수열"><a href="#반복문을-이용한--피보나치-수열">반복문을 이용한  피보나치 수열</a></h4>
-<p>이 코드는 N번째 피보나치 수를 찾기 위해 반복문을 사용한 방법이야. 피보나치 수열의 특성상, 각 숫자는 바로 앞의 두 숫자의 합이기 때문에, 두 변수를 사용하여 이전 두 숫자를 저장하고 갱신해 나가며 N번째 수를 찾아가는 방식이야.</p>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> main  <span class="token punctuation">&#123;</span>
+<span class="token punctuation">&#125;</span></code>`,ut,q,Es,he,kt,Ss,ge,it,xs,nc,rt,z,Ps,sc,mt,Hs,ac,ft,G,Or=`<code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> main  <span class="token punctuation">&#123;</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token keyword">int</span> <span class="token class-name">N</span> <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span> <span class="token comment">// 찾고자 하는 피보나치 수열의 위치</span>
         
@@ -287,8 +166,7 @@ lcm 메소드는 계산된 최대 공약수를 사용해 최소 공배수를 구
         <span class="token punctuation">&#125;</span>
         <span class="token keyword">return</span> b<span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<pre class="language-python"><!-- HTML_TAG_START --><code class="language-python"><span class="token keyword">def</span> <span class="token function">fibonacci</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> memo<span class="token operator">=</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token punctuation">&#125;</span></code>`,yt,$,Wr=`<code class="language-python"><span class="token keyword">def</span> <span class="token function">fibonacci</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> memo<span class="token operator">=</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token comment"># 기본 조건</span>
     <span class="token keyword">if</span> n <span class="token keyword">in</span> memo<span class="token punctuation">:</span>
         <span class="token keyword">return</span> memo<span class="token punctuation">[</span>n<span class="token punctuation">]</span>
@@ -300,10 +178,7 @@ lcm 메소드는 계산된 최대 공약수를 사용해 최소 공배수를 구
 
 <span class="token comment"># 테스트 케이스</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>fibonacci<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 예상 출력: 2</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>fibonacci<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 예상 출력: 5</span></code><!-- HTML_TAG_END --></pre>
-<h4 id="행렬-거듭제곱을-이용한-피보나치-수열"><a href="#행렬-거듭제곱을-이용한-피보나치-수열">행렬 거듭제곱을 이용한 피보나치 수열</a></h4>
-<p>행렬 거듭제곱을 빠르게 계산하는 알고리즘(예: 분할 정복을 이용한 거듭제곱)으로 N번째 피보나치 수를 더 빠르게 구할 수 있어. 이 방법의 시간 복잡도는 O(log N)으로, 매우 큰 N에 대해서도 효율적으로 계산할 수 있어.</p>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">FibonacciMatrix</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>fibonacci<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 예상 출력: 5</span></code>`,wt,U,Ls,pc,dt,js,tc,bt,K,qr=`<code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">FibonacciMatrix</span> <span class="token punctuation">&#123;</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token keyword">int</span> <span class="token class-name">N</span> <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
         <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> result <span class="token operator">=</span> <span class="token function">fibonacci</span><span class="token punctuation">(</span><span class="token class-name">N</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -342,9 +217,7 @@ lcm 메소드는 계산된 최대 공약수를 사용해 최소 공배수를 구
         <span class="token keyword">return</span> result<span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span>
-</code><!-- HTML_TAG_END --></pre>
-<h4 id="메모이제이션-방법을-이용한-피보나치-수열"><a href="#메모이제이션-방법을-이용한-피보나치-수열">메모이제이션 방법을 이용한 피보나치 수열</a></h4>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> main <span class="token punctuation">&#123;</span>
+</code>`,vt,Z,As,oc,_t,J,zr=`<code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> main <span class="token punctuation">&#123;</span>
     <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> memo<span class="token punctuation">;</span>
 
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
@@ -376,18 +249,7 @@ lcm 메소드는 계산된 최대 공약수를 사용해 최소 공배수를 구
     <span class="token punctuation">&#125;</span>
 
     
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<p>메모이제이션 방법으로 계산하는 자바 코드야. doit 메소드에서 피보나치 수를 계산하기 전에 메모이제이션을 위한 배열 memo를 초기화하고, fib 메소드를 통해 실제 계산을 진행해. 이렇게 하면, 피보나치 수를 효율적으로 계산할 수 있어.</p>
-<h3 id="이진-검색-구현하기"><a href="#이진-검색-구현하기">이진 검색 구현하기</a></h3>
-<p>정렬된 배열과 타겟 숫자가 주어졌을 때, 이진 검색을 사용하여 타겟 숫자의 인덱스를 찾아라. 만약 타겟 숫자가 배열 내에 없다면 -1을 반환해라.</p>
-<p><em>문제 해결 방법</em></p>
-<ol><li>배열의 가장 낮은 인덱스를 low, 가장 높은 인덱스를 high로 설정한다.</li>
-<li>배열의 중간 지점을 mid로 정하고, mid 인덱스의 요소가 타겟 숫자인지 확인한다.</li>
-<li>만약 mid 인덱스의 요소가 타겟 숫자보다 크다면, 타겟 숫자는 mid의 왼쪽에 있으므로 high를 mid - 1로 조정한다.</li>
-<li>만약 mid 인덱스의 요소가 타겟 숫자보다 작다면, 타겟 숫자는 mid의 오른쪽에 있으므로 low를 mid + 1로 조정한다.</li>
-<li>low가 high보다 커지면, 타겟 숫자가 배열 내에 없는 것으로 간주하고 -1을 반환한다.</li>
-<li>위 과정을 반복하면서 타겟 숫자의 인덱스를 찾는다.</li></ol>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> main <span class="token punctuation">&#123;</span>
+<span class="token punctuation">&#125;</span></code>`,Et,Ms,ec,St,Q,Ts,cc,xt,Cs,lc,Pt,Is,up,uc,Ht,y,kp,kc,ic,ip,rc,mc,rp,fc,yc,mp,wc,dc,fp,bc,vc,yp,_c,Lt,Y,Gr=`<code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> main <span class="token punctuation">&#123;</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span> <span class="token comment">// 정렬된 배열</span>
         <span class="token keyword">int</span> target <span class="token operator">=</span> <span class="token number">9</span><span class="token punctuation">;</span> <span class="token comment">// 찾고자 하는 타겟 숫자</span>
@@ -413,9 +275,7 @@ lcm 메소드는 계산된 최대 공약수를 사용해 최소 공배수를 구
 
         <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<p>변형 숫자의 제곱근 찾기</p>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> main <span class="token punctuation">&#123;</span>
+<span class="token punctuation">&#125;</span></code>`,jt,Ns,Ec,At,h,$r=`<code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> main <span class="token punctuation">&#123;</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token keyword">int</span> x1 <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
         <span class="token keyword">int</span> x2 <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span>
@@ -443,15 +303,7 @@ lcm 메소드는 계산된 최대 공약수를 사용해 최소 공배수를 구
             <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>end<span class="token punctuation">;</span>
         <span class="token punctuation">&#125;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h3 id="두-수의-합-찾기"><a href="#두-수의-합-찾기">두 수의 합 찾기</a></h3>
-<p>정수 배열 nums와 타겟 숫자 target이 주어질 때, nums 배열 내 두 숫자의 합이 target이 되게 하는 두 숫자의 인덱스를 배열로 반환해야 해. 각 입력에 정확히 하나의 솔루션이 있다고 가정하며, 같은 요소를 두 번 사용할 수 없어.</p>
-<p><em>문제 해결 방법</em></p>
-<ol><li>배열을 순회하면서 각 요소를 검사해.</li>
-<li>현재 요소와 타겟 숫자 사이의 차이를 계산하고, 이 차이가 해시 테이블 내에 이미 존재하는지 확인해.</li>
-<li>만약 차이가 해시 테이블 내에 존재한다면, 현재 요소의 인덱스와 차이가 존재하는 요소의 인덱스를 배열로 반환해.</li>
-<li>그렇지 않다면, 현재 요소와 해당 인덱스를 해시 테이블에 저장해.</li></ol>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">HashMap</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code>`,Mt,g,Rs,Sc,Tt,Bs,xc,Ct,Fs,wp,Pc,It,b,dp,Hc,Lc,bp,jc,Ac,vp,Mc,Tc,_p,Cc,Nt,nn,Ur=`<code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">HashMap</span></span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Map</span></span><span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">class</span> main <span class="token punctuation">&#123;</span>
@@ -475,14 +327,7 @@ lcm 메소드는 계산된 최대 공약수를 사용해 최소 공배수를 구
 
         <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">IllegalArgumentException</span><span class="token punctuation">(</span><span class="token string">"error"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h3 id="회문-판별하기"><a href="#회문-판별하기">회문 판별하기</a></h3>
-<p>주어진 문자열이 회문인지 아닌지를 판별하는 함수를 작성해야 해. 여기서 고려해야 할 것은, 대소문자를 구분하지 않고, 영문자와 숫자만을 대상으로 판별한다는 점이야.</p>
-<p><em>문제 해결 방법</em></p>
-<ol><li>문자열을 전처리하여 영문자와 숫자만 남기고, 모두 소문자로 변환한다.</li>
-<li>전처리된 문자열의 앞뒤를 차례대로 비교해 나가면서 회문인지 확인한다.</li>
-<li>전체 문자열을 반으로 나누어 비교하면 충분하다. 문자열의 길이가 홀수라면 중앙 문자는 비교에서 제외한다.</li></ol>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">&#123;</span>
+<span class="token punctuation">&#125;</span></code>`,Rt,sn,Ds,Ic,Bt,Xs,Nc,Ft,Vs,Ep,Rc,Dt,_,Sp,Bc,Fc,xp,Dc,Xc,Pp,Vc,Xt,an,Kr=`<code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">&#123;</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token class-name">String</span> s <span class="token operator">=</span> <span class="token string">"A man, a plan, a canal: Panama"</span><span class="token punctuation">;</span>
         <span class="token keyword">boolean</span> isPalindrome <span class="token operator">=</span> <span class="token function">isPalindrome</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -500,13 +345,7 @@ lcm 메소드는 계산된 최대 공약수를 사용해 최소 공배수를 구
         
         <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token comment">// 회문임</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h3 id="연속된-부분-배열의-최대-합-찾기"><a href="#연속된-부분-배열의-최대-합-찾기">연속된 부분 배열의 최대 합 찾기</a></h3>
-<p>정수로 이루어진 배열이 주어졌을 때, 그 배열의 연속된 부분 배열(subarray) 중에서 합이 최대가 되는 부분 배열의 합을 찾아라.</p>
-<p><em>문제 해결 방법</em></p>
-<p><em>카데인 알고리즘(Kadane’s Algorithm)</em> 사용해  이것은 현재까지의 부분 최대합을 계속 추적하면서 배열을 한 번만 순회해 최대 부분 배열의 합을 찾는 방법이야.
-각 단계에서, 현재 요소를 포함한 부분 배열의 최대 합을 계산하고, 이 값이 최대 합보다 큰지 비교해. 최대 합을 갱신해 가면서 배열의 끝에 도달할 때까지 이 과정을 반복해.</p>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MaxSubarraySum</span> <span class="token punctuation">&#123;</span>
+<span class="token punctuation">&#125;</span></code>`,Vt,pn,Os,Oc,Ot,Ws,Wc,Wt,qs,Hp,qc,qt,tn,Lp,zc,Gc,zt,on,Zr=`<code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MaxSubarraySum</span> <span class="token punctuation">&#123;</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
         <span class="token keyword">int</span> maxSum <span class="token operator">=</span> <span class="token function">maxSubArray</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -523,19 +362,7 @@ lcm 메소드는 계산된 최대 공약수를 사용해 최소 공배수를 구
         <span class="token punctuation">&#125;</span>
         <span class="token keyword">return</span> maxSoFar<span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h4 id="카데인-알고리즘의-기본-원리"><a href="#카데인-알고리즘의-기본-원리">카데인 알고리즘의 기본 원리</a></h4>
-<p>카데인 알고리즘은 두 개의 변수를 사용해 배열을 한 번만 순회하면서 문제를 해결해:</p>
-<p>maxEndingHere: 배열의 각 위치에서 끝나는 최대 부분 배열의 합. 이 값은 현재까지의 최대 부분 배열의 합을 나타내며, 현재 요소를 포함하여 계산되어야 해. 만약 maxEndingHere가 음수가 되면, 새로운 부분 배열의 시작점을 고려할 수 있어. 즉, maxEndingHere = Math.max(nums[i], maxEndingHere + nums[i])를 통해 계산돼.
-maxSoFar: 지금까지 찾은 최대 부분 배열의 합. 이 값은 maxEndingHere의 값이 갱신될 때마다 최대값을 비교하여 업데이트될 수 있어. 즉, maxSoFar = Math.max(maxSoFar, maxEndingHere)로 계산돼.</p>
-<h4 id="알고리즘의-작동-방식"><a href="#알고리즘의-작동-방식">알고리즘의 작동 방식</a></h4>
-<p>배열의 첫 번째 요소를 maxEndingHere와 maxSoFar의 초기값으로 설정해.
-배열의 두 번째 요소부터 시작해 각 요소에 대해 다음을 수행해:
-현재 요소를 포함시킨 최대 부분 배열의 합(maxEndingHere)을 계산해. 여기서 현재 요소 자체와 현재 요소를 포함한 이전의 부분 배열의 합 중 더 큰 값을 선택해.
-maxSoFar를 maxEndingHere와 비교하여 필요한 경우 갱신해.
-모든 요소를 검사한 후 maxSoFar가 전체 배열의 최대 부분 배열의 합이 돼.</p>
-<h4 id="순회-방식"><a href="#순회-방식">순회 방식</a></h4>
-<pre class="language-md"><!-- HTML_TAG_START --><code class="language-md">초기 상태: maxEndingHere = 0, maxSoFar = -∞ (혹은 배열의 첫 번째 요소로 초기화할 수도 있음)
+<span class="token punctuation">&#125;</span></code>`,Gt,en,zs,$c,$t,Gs,Uc,Ut,$s,Kc,Kt,cn,Us,Zc,Zt,Ks,Jc,Jt,ln,Zs,Qc,Qt,un,Jr=`<code class="language-md">초기 상태: maxEndingHere = 0, maxSoFar = -∞ (혹은 배열의 첫 번째 요소로 초기화할 수도 있음)
 
 순회 과정
 i=0 (요소: -2), maxEndingHere = max(-2, 0 + (-2)) = -2, maxSoFar = max(-∞, -2) = -2
@@ -549,11 +376,7 @@ i=7 (요소: -5), maxEndingHere = max(-5, 6 + (-5)) = 1, maxSoFar = max(6, 1) = 
 i=8 (요소: 4), maxEndingHere = max(4, 1 + 4) = 5, maxSoFar = max(6, 5) = 6
 
 순회 완료
-순회가 완료되었을 때, maxSoFar의 값이 6으로, 이는 주어진 배열의 연속된 부분 배열 중 최대 합을 나타내. 이 최대 합을 가진 연속된 부분 배열은 [4, -1, 2, 1]로, 합이 6이 되는 부분이야.</code><!-- HTML_TAG_END --></pre>
-<h4 id="기출변형"><a href="#기출변형">기출변형</a></h4>
-<p><strong>“최대 수익 구하기”</strong>에 관한 문제입니다. 주식의 일일 가격이 주어졌을 때, 한 번의 거래로 얻을 수 있는 최대 수익을 계산해야 합니다. 여기서 한 번의 거래는 주식을 한 번 사고 팔아 수익을 얻는 것을 의미합니다.</p>
-<p>주어진 배열 prices는 여러 날에 걸친 주식의 가격을 나타냅니다. prices[i]는 주식이 i번째 날에 가지는 가격입니다. 단 한 번의 거래로 얻을 수 있는 최대 수익을 반환하세요. 만약 어떤 거래로도 수익을 얻을 수 없다면 0을 반환하세요.</p>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> main <span class="token punctuation">&#123;</span>
+순회가 완료되었을 때, maxSoFar의 값이 6으로, 이는 주어진 배열의 연속된 부분 배열 중 최대 합을 나타내. 이 최대 합을 가진 연속된 부분 배열은 [4, -1, 2, 1]로, 합이 6이 되는 부분이야.</code>`,Yt,kn,Js,Yc,ht,rn,jp,hc,gc,gt,Qs,nl,no,mn,Qr=`<code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> main <span class="token punctuation">&#123;</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> prices1 <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
         <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> prices2 <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
@@ -577,12 +400,7 @@ i=8 (요소: 4), maxEndingHere = max(4, 1 + 4) = 5, maxSoFar = max(6, 5) = 6
             <span class="token keyword">return</span> maxProfit<span class="token punctuation">;</span>
         <span class="token punctuation">&#125;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h3 id="회전된-정렬된-배열에서-최소값-찾기"><a href="#회전된-정렬된-배열에서-최소값-찾기">회전된 정렬된 배열에서 최소값 찾기</a></h3>
-<p>정렬된 배열이 있고, 이 배열이 미리 알려지지 않은 특정 피벗을 기준으로 회전되었다고 가정해. 예를 들어, 배열 [0,1,2,4,5,6,7]이 있을 때, 이 배열을 3번째 인덱스에서 회전시키면 [4,5,6,7,0,1,2]가 돼. 이런 회전된 배열에서 최소값을 찾는 함수를 작성해야 해.</p>
-<p>회전된 정렬된 배열에서는 배열의 일부가 여전히 정렬되어 있음을 이용할 수 있어. 이진 검색과 유사한 방식으로 문제를 접근하지만, 중간점(middle)을 기준으로 어느 쪽이 정렬된 상태인지 판별하고, 최소값이 포함될 가능성이 있는 쪽을 선택하여 검색 범위를 좁혀 나가야 해.
-시작점(start)과 종료점(end) 사이에서 중간점(middle)을 찾고, 중간점이 시작점보다 큰지, 또는 종료점보다 작은지를 검사하여 검색 범위를 좁혀 나가면서 최소값을 찾아야 해.</p>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">FindMinimumInRotatedSortedArray</span> <span class="token punctuation">&#123;</span>
+<span class="token punctuation">&#125;</span></code>`,so,fn,Ys,sl,ao,hs,al,po,gs,pl,to,yn,Yr=`<code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">FindMinimumInRotatedSortedArray</span> <span class="token punctuation">&#123;</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
         <span class="token keyword">int</span> min <span class="token operator">=</span> <span class="token function">findMin</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -603,28 +421,7 @@ i=8 (요소: 4), maxEndingHere = max(4, 1 + 4) = 5, maxSoFar = max(6, 5) = 6
         <span class="token punctuation">&#125;</span>
         <span class="token keyword">return</span> nums<span class="token punctuation">[</span>start<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 또는 nums[end]; 둘 다 같은 위치를 가리킴</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h3 id="정수를-로마-숫자로-변환하기"><a href="#정수를-로마-숫자로-변환하기">정수를 로마 숫자로 변환하기</a></h3>
-<p>로마 숫자는 일곱 개의 다른 기호로 나타납니다: I, V, X, L, C, D와 M입니다.</p>
-<p>기호 값
-I 1
-V 5
-X 10
-L 50
-C 100
-D 500
-M 1000
-예를 들어, 로마 숫자 2는 II로 쓰이며, 단순히 두 개의 1을 나란히 쓴 것과 같습니다. 12는 XII로 쓰이며, 이는 X + II입니다. 27은 XXVII, 즉 XX + V + II입니다.</p>
-<p>로마 숫자는 보통 왼쪽에서 오른쪽으로 큰 숫자에서 작은 숫자 순으로 쓰입니다. 하지만 네 가지 특별한 경우에는 작은 숫자가 큰 숫자의 왼쪽에 옵니다.</p>
-<p>IV (4)
-IX (9)
-XL (40)
-XC (90)
-CD (400)
-CM (900)
-주어진 정수를 로마 숫자로 변환하는 프로그램을 작성하세요.</p>
-<p>이 문제를 해결하기 위해, 가장 큰 값부터 시작하여 주어진 숫자를 줄여나갈 수 있는 로마 숫자의 값을 찾아 문자열에 추가하는 방식으로 접근할 수 있습니다. 각 단계에서 사용할 수 있는 가장 큰 값을 찾아 그 값을 주어진 숫자에서 빼고, 해당 로마 숫자를 결과 문자열에 추가합니다. 이 과정을 주어진 숫자가 0이 될 때까지 반복합니다.</p>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span>
+<span class="token punctuation">&#125;</span></code>`,oo,wn,na,tl,eo,sa,ol,co,aa,el,lo,pa,cl,uo,ta,ll,ko,oa,ul,io,dn,hr=`<code class="language-java"><span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span>
     <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">intToRoman</span><span class="token punctuation">(</span><span class="token keyword">int</span> num<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> values <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token number">1000</span><span class="token punctuation">,</span> <span class="token number">900</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">,</span> <span class="token number">400</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">90</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
         <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> symbols <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">"M"</span><span class="token punctuation">,</span> <span class="token string">"CM"</span><span class="token punctuation">,</span> <span class="token string">"D"</span><span class="token punctuation">,</span> <span class="token string">"CD"</span><span class="token punctuation">,</span> <span class="token string">"C"</span><span class="token punctuation">,</span> <span class="token string">"XC"</span><span class="token punctuation">,</span> <span class="token string">"L"</span><span class="token punctuation">,</span> <span class="token string">"XL"</span><span class="token punctuation">,</span> <span class="token string">"X"</span><span class="token punctuation">,</span> <span class="token string">"IX"</span><span class="token punctuation">,</span> <span class="token string">"V"</span><span class="token punctuation">,</span> <span class="token string">"IV"</span><span class="token punctuation">,</span> <span class="token string">"I"</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
@@ -640,12 +437,7 @@ CM (900)
         
         <span class="token keyword">return</span> roman<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h3 id="유효한-괄호-검사"><a href="#유효한-괄호-검사">유효한 괄호 검사</a></h3>
-<p>주어진 문자열 s가 유효한 괄호로만 구성되어 있는지 확인하세요. 유효한 괄호 문자열이란 다음과 같은 조건을 만족하는 문자열입니다:</p>
-<p>열린 괄호는 반드시 같은 타입의 괄호로만 닫혀야 합니다.
-열린 괄호는 올바른 순서로 닫혀야 합니다.</p>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span>
+<span class="token punctuation">&#125;</span></code>`,ro,bn,ea,kl,mo,ca,il,fo,la,rl,yo,vn,gr=`<code class="language-java"><span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span>
     <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isValid</span><span class="token punctuation">(</span><span class="token class-name">String</span> s<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token class-name">Stack</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Character</span><span class="token punctuation">></span></span> stack <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Stack</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">char</span> c <span class="token operator">:</span> s<span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
@@ -656,34 +448,7 @@ CM (900)
         <span class="token punctuation">&#125;</span>
         <span class="token keyword">return</span> stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h3 id="슬라이딩-윈도우sliding-window-알고리즘"><a href="#슬라이딩-윈도우sliding-window-알고리즘">슬라이딩 윈도우(Sliding Window) 알고리즘</a></h3>
-<p>슬라이딩 윈도우 알고리즘은 배열이나 리스트의 일정 범위의 요소들을 연속적으로 살펴보면서 문제를 해결하는 기법입니다. “윈도우”는 배열의 연속적인 부분을 의미하며, 이 윈도우를 배열 전체를 훑을 때까지 한 칸씩 “슬라이드”시키면서 각 위치에서의 문제(예: 최대합, 최소값, 특정 조건 만족 여부 등)를 해결합니다.</p>
-<p>슬라이딩 윈도우의 주요 특징:
-고정된 크기의 윈도우: 윈도우의 크기가 고정되어 있고, 이 윈도우를 배열의 시작부터 끝까지 이동시키면서 각 위치에서 문제를 해결합니다.
-가변 크기의 윈도우: 윈도우의 크기가 고정되어 있지 않고, 문제의 조건을 만족시키기 위해 윈도우의 시작점과 끝점을 동적으로 조정합니다.</p>
-<p>슬라이딩 윈도우 사용 예시:
-최대 합 구하기: 주어진 배열에서 크기가 k인 연속된 부분 배열의 최대 합을 찾습니다.
-최소 길이 부분 배열 찾기: 주어진 배열에서 합이 특정 값 s 이상이 되는 가장 짧은 연속된 부분 배열을 찾습니다.
-문자열에서 모든 문자 포함하는 최소 윈도우 찾기: 문자열 S에서 문자열 T의 모든 문자를 포함하는 최소 크기의 부분 문자열을 찾습니다.</p>
-<p>슬라이딩 윈도우 알고리즘의 장점:
-효율성: 특정 조건을 만족하는 최적의 해를 찾기 위해 배열이나 문자열을 한 번만 순회하므로, 일반적으로 시간 복잡도가 낮습니다.
-직관적: 윈도우를 슬라이딩하면서 문제를 해결하는 과정이 직관적이고 이해하기 쉽습니다.
-구현 방법:
-시작점과 끝점 초기화: 윈도우의 시작점과 끝점을 배열의 시작 부분에 초기화합니다.
-윈도우의 끝점 이동: 조건을 만족할 때까지 윈도우의 끝점을 이동시킵니다.
-윈도우의 시작점 이동: 조건을 만족하는 상태에서 더 최적의 해를 찾기 위해 윈도우의 시작점을 이동시킵니다.
-최적의 해 갱신: 윈도우를 이동시키면서 문제의 조건에 따라 최적의 해를 갱신합니다.</p>
-<h4 id="부분-문자열이-포함된-최소-윈도우-찾기"><a href="#부분-문자열이-포함된-최소-윈도우-찾기">부분 문자열이 포함된 최소 윈도우 찾기</a></h4>
-<p>이 문제에서는 문자열 S와 T가 주어졌을 때, S에서 T의 모든 문자를 포함하는 최소 크기의 부분 문자열을 찾아야 합니다. 만약 S 내에 T의 모든 문자를 포함하는 부분 문자열이 여러 개 있다면, 그 중 가장 짧은 부분 문자열을 반환합니다. 만약 그러한 부분 문자열이 없다면, 빈 문자열을 반환합니다.</p>
-<p>예시:</p>
-<p>입력: S = “ADOBECODEBANC”, T = “ABC”</p>
-<p>출력: “BANC”</p>
-<p>입력: S = “a”, T = “a”</p>
-<p>출력: “a”</p>
-<p>입력: S = “a”, T = “aa”</p>
-<p>출력: &quot;&quot;</p>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> main <span class="token punctuation">&#123;</span>
+<span class="token punctuation">&#125;</span></code>`,wo,_n,ua,ml,bo,ka,fl,vo,ia,yl,_o,ra,wl,Eo,ma,dl,So,En,fa,bl,xo,ya,vl,Po,wa,_l,Ho,da,El,Lo,ba,Sl,jo,va,xl,Ao,_a,Pl,Mo,Ea,Hl,To,Sa,Ll,Co,Sn,nm=`<code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> main <span class="token punctuation">&#123;</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token class-name">String</span> <span class="token constant">S1</span> <span class="token operator">=</span> <span class="token string">"ADOBECODEBANC"</span><span class="token punctuation">;</span>
         <span class="token class-name">String</span> <span class="token constant">T1</span> <span class="token operator">=</span> <span class="token string">"ABC"</span><span class="token punctuation">;</span>
@@ -707,8 +472,7 @@ CM (900)
         <span class="token punctuation">&#125;</span>
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span>
-</code><!-- HTML_TAG_END --></pre>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span></span><span class="token punctuation">;</span>
+</code>`,Io,xn,sm=`<code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span></span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">ArrayList</span></span><span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">class</span> main <span class="token punctuation">&#123;</span>
@@ -760,9 +524,7 @@ CM (900)
             <span class="token punctuation">&#125;</span>
         <span class="token punctuation">&#125;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h3 id="단어뒤집기2"><a href="#단어뒤집기2">단어뒤집기2</a></h3>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code>`,No,Pn,xa,jl,Ro,Hn,am=`<code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span></span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">ArrayList</span></span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span></span><span class="token class-name">StringBuilder</span></span><span class="token punctuation">;</span>
 
@@ -788,9 +550,7 @@ CM (900)
             <span class="token keyword">return</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">,</span> reverseWords<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">&#125;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h3 id="그리디-알고리즘"><a href="#그리디-알고리즘">그리디 알고리즘</a></h3>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> main <span class="token punctuation">&#123;</span>
+<span class="token punctuation">&#125;</span></code>`,Bo,Ln,Pa,Al,Fo,jn,pm=`<code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> main <span class="token punctuation">&#123;</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token comment">// 예시 입력</span>
         <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> coins <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span> <span class="token comment">// 사용할 수 있는 동전의 종류</span>
@@ -815,22 +575,7 @@ CM (900)
         
         <span class="token keyword">return</span> count<span class="token punctuation">;</span> <span class="token comment">// 계산된 최소 동전 개수를 반환</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h3 id="연속되는-숫자-합-찾기"><a href="#연속되는-숫자-합-찾기">연속되는 숫자 합 찾기</a></h3>
-<p>주어진 문자열 s 내에서 연속된 숫자를 포함하는 모든 부분 문자열을 찾아, 그 숫자들의 합을 구해라. 예를 들어, “abc1234xyz”라는 문자열이 주어지면, “1”, “2”, “3”, “4”, “12”, “23”, “34”, “123”, “234”, “1234”와 같은 모든 숫자의 부분 문자열의 합을 구해야 해.</p>
-<p>예시
-입력: s = “abc1234xyz”
-출력: 1670
-설명: 위에서 설명한 대로, 연속된 숫자의 부분 문자열을 모두 찾아 그 합을 구하면 1670이 됨.
-입력: s = “abcd”
-출력: 0
-설명: 숫자를 포함하지 않으므로 합은 0이 됨.</p>
-<p>이 문제를 해결하기 위한 접근 방법으로는 다음과 같은 단계를 고려할 수 있어:</p>
-<p>숫자 구분: 문자열을 순회하면서 숫자가 시작되는 지점과 끝나는 지점을 찾아내야 해.
-부분 문자열 처리: 각 숫자 구간에 대해, 가능한 모든 부분 문자열을 생성하고, 그것을 숫자로 변환해야 해.
-합 계산: 변환된 숫자들의 합을 계산해야 해.
-숫자의 연속된 부분 문자열을 찾고 그 합을 구하는 과정에 있어서 문자열 처리 기술과 반복문, 그리고 조건문을 적절히 활용해야 해. 또한, 각 숫자 부분 문자열에 대한 모든 가능한 조합을 고려하여 그 합을 계산하는 방식을 구현해야 한다는 점을 기억해야 해.</p>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code>`,Do,An,Ha,Ml,Xo,La,Tl,Vo,ja,Cl,Oo,Aa,Il,Wo,Ma,Nl,qo,Mn,tm=`<code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span></span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">ArrayList</span></span><span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">class</span> main <span class="token punctuation">&#123;</span>
@@ -873,11 +618,7 @@ CM (900)
         <span class="token punctuation">&#125;</span>
         <span class="token keyword">return</span> sum<span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h3 id="문자-합치기"><a href="#문자-합치기">문자 합치기</a></h3>
-<p>알파벳으로만 이루어진 문자열이 주어질 때, 같은 문자가 연속으로 반복되는 부분을 문자 그리고 그 반복된 횟수로 표현하여 압축하는 프로그램을 작성해야 해. 예를 들어, “aaabbcccc”라는 문자열이 있다면 “a3b2c4”로 압축되어야 해. 단, 문자가 한 번만 나타나는 경우는 숫자를 붙이지 않고 그대로 표현해야 해. 예를 들어, “abcd”는 “abcd”로 그대로 표현되어야 하며, “aabbcc”는 “a2b2c2”로 압축되어야 해.</p>
-<p>문자열을 순회하면서 현재 문자와 이전 문자가 같은지를 확인해야 해. 같다면 카운트를 증가시키고, 다르다면 이전 문자와 그 카운트를 결과 문자열에 추가해. 이 과정을 문자열의 끝까지 반복한 후, 마지막으로 카운트된 문자를 결과 문자열에 추가해야 해.</p>
-<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> main <span class="token punctuation">&#123;</span>
+<span class="token punctuation">&#125;</span></code>`,zo,Tn,Ta,Rl,Go,Ca,Bl,$o,Ia,Fl,Uo,Cn,om=`<code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> main <span class="token punctuation">&#123;</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token comment">// 예시 입력값</span>
         <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> inputs <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">"aaabbcccc"</span><span class="token punctuation">,</span> <span class="token string">"abcd"</span><span class="token punctuation">,</span> <span class="token string">"aabbcc"</span><span class="token punctuation">,</span> <span class="token string">"aabcccccaaa"</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
@@ -916,14 +657,7 @@ CM (900)
         
         <span class="token keyword">return</span> result<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<h3 id="버블소트"><a href="#버블소트">버블소트</a></h3>
-<p>버블 정렬(Bubble Sort)은 가장 간단하고 기초적인 정렬 알고리즘 중 하나로, 인접한 두 요소를 비교해서 잘못된 순서(예: 오름차순 정렬에서 큰 수가 앞에 오는 경우)가 있을 때 위치를 바꾸는 방식으로 작동해. 이 과정을 배열의 모든 요소가 올바른 순서로 정렬될 때까지 반복하며, 이름은 이 과정 중에 큰 값들이 배열의 끝으로 ‘떠오른다(bubble up)‘는 데서 유래했어.</p>
-<p>버블 정렬의 핵심은 두 가지 단계로 요약할 수 있어
-비교 단계: 배열을 처음부터 끝까지 순회하면서, 각각의 인접한 요소 쌍을 비교한다.
-교환 단계: 비교하는 두 요소가 잘못된 순서로 있으면, 이들의 위치를 서로 바꾼다.</p>
-<p>이 알고리즘의 시간 복잡도는 평균과 최악의 경우 모두 n의 제곱으로 n은 배열의 길이를 나타낸다. 배열이 이미 정렬되어 있거나 거의 정렬된 상태인 경우에는 상대적으로 빠르게 작동할 수 있지만, 대체로 크기가 큰 데이터셋에는 비효율적이야. 그럼에도 불구하고, 이해하기 쉽고 구현하기 간단해서 알고리즘 학습의 첫 단계로 자주 소개되곤 해.</p>
-<pre class="language-python"><!-- HTML_TAG_START --><code class="language-python"><span class="token keyword">def</span> <span class="token function">bubble_sort</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token punctuation">&#125;</span></code>`,Ko,In,Na,Dl,Zo,Ra,Xl,Jo,Ba,Vl,Qo,Fa,Ol,Yo,Nn,em=`<code class="language-python"><span class="token keyword">def</span> <span class="token function">bubble_sort</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token comment"># 여기에 코드를 작성하세요.</span>
     <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -933,14 +667,7 @@ CM (900)
             
 <span class="token comment"># 테스트 케이스</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>bubble_sort<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 예상 출력: [2, 3, 4, 5, 8]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>bubble_sort<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 예상 출력: [-5, 2, 3, 20]</span></code><!-- HTML_TAG_END --></pre>
-<h3 id="선택정렬"><a href="#선택정렬">선택정렬</a></h3>
-<p>선택 정렬도 기본적인 정렬 알고리즘 중 하나로, 각 단계에서 정렬되지 않은 부분에서 최소값(또는 최대값)을 찾아 선택한 뒤, 그 값을 정렬된 부분의 다음 위치로 이동시키는 방식으로 동작해. 선택 정렬은 구현이 간단하며, 안정 정렬이 아니라는 특징을 가지고 있어.</p>
-<p>선택 정렬 알고리즘 구현 방법
-배열 전체를 순회하며, 각 단계에서 현재 위치를 기준으로 가장 작은 요소를 찾아.
-가장 작은 요소를 현재 위치의 요소와 교환해.
-모든 요소가 올바르게 정렬될 때까지 이 과정을 반복해.</p>
-<pre class="language-python"><!-- HTML_TAG_START --><code class="language-python"><span class="token keyword">def</span> <span class="token function">selection_sort</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>bubble_sort<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 예상 출력: [-5, 2, 3, 20]</span></code>`,ho,Rn,Da,Wl,go,Xa,ql,ne,Va,zl,se,Bn,cm=`<code class="language-python"><span class="token keyword">def</span> <span class="token function">selection_sort</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
             <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">></span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -950,13 +677,7 @@ CM (900)
 
 <span class="token comment"># 테스트 케이스</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>selection_sort<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">29</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">,</span> <span class="token number">37</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 예상 출력: [10, 13, 14, 29, 37]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>selection_sort<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 예상 출력: [2, 3, 4, 5, 8]</span></code><!-- HTML_TAG_END --></pre>
-<h3 id="삽입정렬"><a href="#삽입정렬">삽입정렬</a></h3>
-<p>삽입 정렬도 기본적인 정렬 방법 중 하나로, 각 반복에서 요소를 적절한 위치에 ‘삽입’하여 전체 배열을 정렬하는 방식이야. 이 알고리즘은 작은 데이터 세트에 효율적이며, 특히 거의 정렬된 배열에 대해서는 매우 빠르게 동작해.</p>
-<p>배열의 모든 요소를 차례대로 순회한다.
-각 요소를, 이미 정렬된 배열 부분(요소의 왼쪽 부분)의 적절한 위치에 삽입한다.
-필요하면, 삽입될 위치를 찾기 위해 정렬된 부분의 요소들을 오른쪽으로 이동시킨다.</p>
-<pre class="language-python"><!-- HTML_TAG_START --><code class="language-python"><span class="token keyword">def</span> <span class="token function">insertion_sort</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>selection_sort<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 예상 출력: [2, 3, 4, 5, 8]</span></code>`,ae,Fn,Oa,Gl,pe,Wa,$l,te,qa,Ul,oe,Dn,lm=`<code class="language-python"><span class="token keyword">def</span> <span class="token function">insertion_sort</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token comment"># 여기에 코드를 작성하세요.</span>
     <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
         key <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
@@ -974,13 +695,7 @@ CM (900)
 
 <span class="token comment"># 테스트 케이스</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>insertion_sort<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 예상 출력: [2, 4, 5, 6, 8]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>insertion_sort<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 예상 출력: [1, 2, 3, 7, 9]</span></code><!-- HTML_TAG_END --></pre>
-<h3 id="하노이의-탑"><a href="#하노이의-탑">하노이의 탑</a></h3>
-<p>하노이의 탑 문제는 세 개의 기둥과 이 기둥 중 하나에 작은 것부터 큰 순서로 쌓인 n개의 원판으로 구성되어 있어. 문제의 목표는 첫 번째 기둥에서 세 번째 기둥으로 모든 원판을 옮기는 것인데, 다음의 규칙을 따라야 해:</p>
-<p>한 번에 하나의 원판만 이동할 수 있어.
-원판은 세 개의 기둥 중 하나의 맨 위에서만 추가하거나 제거할 수 있어.
-큰 원판이 작은 원판 위에 있어서는 안 돼.</p>
-<pre class="language-python"><!-- HTML_TAG_START --><code class="language-python"><span class="token keyword">def</span> <span class="token function">tower_of_hanoi</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>insertion_sort<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 예상 출력: [1, 2, 3, 7, 9]</span></code>`,ee,Xn,za,Kl,ce,Ga,Zl,le,$a,Jl,ue,Vn,um=`<code class="language-python"><span class="token keyword">def</span> <span class="token function">tower_of_hanoi</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token comment"># n개의 원판을 옮기기 위한 최소 이동 횟수 반환</span>
     <span class="token keyword">if</span> n <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span> <span class="token number">1</span>
@@ -990,13 +705,7 @@ CM (900)
         <span class="token keyword">return</span> <span class="token number">2</span> <span class="token operator">*</span> tower_of_hanoi<span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span>
 
 <span class="token comment"># 테스트 케이스</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>tower_of_hanoi<span class="token punctuation">(</span><span class="token number">6</span> <span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 예상 출력: 3</span></code><!-- HTML_TAG_END --></pre>
-<h3 id="이진-검색-트리binary-search-tree-bst"><a href="#이진-검색-트리binary-search-tree-bst">이진 검색 트리(Binary Search Tree, BST)</a></h3>
-<p>각 노드의 왼쪽 서브 트리에는 해당 노드보다 작은 값들만 존재해야 하며,
-각 노드의 오른쪽 서브 트리에는 해당 노드보다 큰 값들만 존재해야 해.
-왼쪽과 오른쪽 서브 트리도 이진 검색 트리여야 해.</p>
-<p>주어진 값 val을 가진 노드를 찾으면 그 노드를 반환하고, 그런 노드가 없으면 None을 반환해야 해.</p>
-<pre class="language-python"><!-- HTML_TAG_START --><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">TreeNode</span><span class="token punctuation">:</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>tower_of_hanoi<span class="token punctuation">(</span><span class="token number">6</span> <span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 예상 출력: 3</span></code>`,ke,On,Ua,Ql,ie,Ka,Yl,re,Za,hl,me,Wn,km=`<code class="language-python"><span class="token keyword">class</span> <span class="token class-name">TreeNode</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> val<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> left<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> right<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>val <span class="token operator">=</span> val
         self<span class="token punctuation">.</span>left <span class="token operator">=</span> left
@@ -1015,10 +724,7 @@ CM (900)
 <span class="token comment"># 테스트 케이스</span>
 root <span class="token operator">=</span> TreeNode<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> TreeNode<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> TreeNode<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> TreeNode<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> TreeNode<span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span> TreeNode<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span> TreeNode<span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 val <span class="token operator">=</span> <span class="token number">5</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>searchBST<span class="token punctuation">(</span>root<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">.</span>val<span class="token punctuation">)</span>  <span class="token comment"># 예상 출력: 노드 5</span></code><!-- HTML_TAG_END --></pre>
-<h3 id="계단-오르기-동적-계획법"><a href="#계단-오르기-동적-계획법">계단 오르기 동적 계획법</a></h3>
-<p>동적 계획법(Dynamic Programming, DP)을 사용하여 효율적으로 해결할 수 있어. 이 문제의 핵심은 각 계단에 도달하는 방법의 수를 작은 문제부터 시작해 점차적으로 구해나가는 것이야. 각 단계에서, n번째 계단에 도달하는 방법의 수는 n-1번째 계단에 도달하는 방법의 수와 n-2번째 계단에 도달하는 방법의 수의 합과 같아.</p>
-<pre class="language-python"><!-- HTML_TAG_START --><code class="language-python"><span class="token keyword">def</span> <span class="token function">climbStairs</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>searchBST<span class="token punctuation">(</span>root<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">.</span>val<span class="token punctuation">)</span>  <span class="token comment"># 예상 출력: 노드 5</span></code>`,fe,qn,Ja,gl,ye,Qa,nu,we,zn,im=`<code class="language-python"><span class="token keyword">def</span> <span class="token function">climbStairs</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">if</span> n <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span> <span class="token number">1</span>
         
@@ -1033,18 +739,7 @@ val <span class="token operator">=</span> <span class="token number">5</span>
 
 <span class="token comment"># 테스트 케이스</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>climbStairs<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 예상 출력: 2</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>climbStairs<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 예상 출력: 3</span></code><!-- HTML_TAG_END --></pre>
-<h3 id="백트래킹-문자조합"><a href="#백트래킹-문자조합">백트래킹 문자조합</a></h3>
-<p>주어진 숫자 배열 candidates와 타겟 숫자 target이 있을 때, candidates 내의 숫자를 중복 선택하여 target을 만들 수 있는 모든 조합을 찾아야 합니다. 같은 숫자를 무한히 반복해서 사용할 수 있으며, 조합의 순서가 다르면 다른 조합으로 간주합니다.</p>
-<p>“조합의 합(Combination Sum)” 문제를 살펴보겠습니다. 이 문제는 주어진 숫자 배열과 타겟 숫자가 있을 때, 배열 내의 숫자를 중복 사용하여 타겟 숫자를 만들 수 있는 모든 조합을 찾는 것입니다. 이 문제는 백트래킹(Backtracking) 알고리즘을 이해하고 적용하는 데 도움이 됩니다.</p>
-<p>기본 아이디어
-초기화: 결과를 저장할 리스트 result와 현재 조합을 저장할 리스트 combination을 준비합니다.
-DFS(깊이 우선 탐색) 함수 정의: dfs라는 이름의 재귀 함수를 정의합니다. 이 함수는 현재 인덱스(index)와 현재 조합의 합(current_sum)을 인자로 받습니다.
-만약 current_sum이 target과 같다면, 현재 조합을 result에 추가합니다.
-만약 current_sum이 target을 초과한다면, 더 이상 탐색하지 않고 반환합니다.
-DFS 실행: candidates 배열의 각 숫자에 대해 DFS를 실행하여, 모든 가능한 조합을 탐색합니다. 각 단계에서는 현재 숫자를 선택하거나 선택하지 않는 두 가지 경우를 고려합니다.
-결과 반환: 모든 탐색이 끝나면, result에 저장된 조합들을 반환합니다.</p>
-<pre class="language-python"><!-- HTML_TAG_START --><code class="language-python"><span class="token keyword">def</span> <span class="token function">combinationSum</span><span class="token punctuation">(</span>candidates<span class="token punctuation">,</span> target<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>climbStairs<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 예상 출력: 3</span></code>`,de,Gn,Ya,su,be,ha,au,ve,ga,pu,_e,np,tu,Ee,$n,rm=`<code class="language-python"><span class="token keyword">def</span> <span class="token function">combinationSum</span><span class="token punctuation">(</span>candidates<span class="token punctuation">,</span> target<span class="token punctuation">)</span><span class="token punctuation">:</span>
     result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
     
     <span class="token keyword">def</span> <span class="token function">dfs</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span> target<span class="token punctuation">,</span> ans<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -1058,10 +753,7 @@ DFS 실행: candidates 배열의 각 숫자에 대해 DFS를 실행하여, 모�
             dfs<span class="token punctuation">(</span>i<span class="token punctuation">,</span> target<span class="token punctuation">,</span> ans <span class="token operator">+</span> <span class="token punctuation">[</span>candidates<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
     
     dfs<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> target<span class="token punctuation">)</span>
-    <span class="token keyword">return</span> result</code><!-- HTML_TAG_END --></pre>
-<h3 id="주어진-문자열로-회문순열을-만들수-있는지-판단"><a href="#주어진-문자열로-회문순열을-만들수-있는지-판단">주어진 문자열로 회문순열을 만들수 있는지 판단</a></h3>
-<p>문자열이 주어졌을 때, 이 문자열의 순열 중 하나가 회문이 될 수 있는지를 판별하세요. 회문을 만들기 위해서는 문자열 내의 모든 문자를 사용할 필요는 없으며, 대소문자 구분이 없고, 공백은 무시합니다.</p>
-<pre class="language-python"><!-- HTML_TAG_START --><code class="language-python"><span class="token keyword">def</span> <span class="token function">canPermutePalindrome</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> result</code>`,Se,Un,sp,ou,xe,ap,eu,Pe,Kn,mm=`<code class="language-python"><span class="token keyword">def</span> <span class="token function">canPermutePalindrome</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">:</span>
     s <span class="token operator">=</span> s<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span>
     s <span class="token operator">=</span> s<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span>
     count_map <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
@@ -1079,45 +771,142 @@ DFS 실행: candidates 배열의 각 숫자에 대해 DFS를 실행하여, 모�
 
 <span class="token comment"># 테스트 케이스</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>canPermutePalindrome<span class="token punctuation">(</span><span class="token string">"Tact Coa"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 예상 출력: True</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>canPermutePalindrome<span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token comment"># 예상 출력: False</span></code><!-- HTML_TAG_END --></pre>
-<p>문자열을 소문자로 변환하고 공백을 제거하여, 대소문자 구분 없이 공백 무시하며 처리합니다.
+<span class="token keyword">print</span><span class="token punctuation">(</span>canPermutePalindrome<span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token comment"># 예상 출력: False</span></code>`,He,pp,cu,Le,tp;return{c(){m=t("h3"),d=t("a"),E=k("자바  코딩테스트에서 자주 쓰이는 함수"),S=l(),f=t("h3"),w=t("a"),Jn=k("배열(Array)"),Ap=l(),P=t("pre"),Mp=l(),H=t("h3"),Qn=t("a"),je=k("리스트(List)"),Tp=l(),L=t("pre"),Cp=l(),j=t("h3"),Yn=t("a"),Ae=k("문자열(String)"),Ip=l(),A=t("pre"),Np=l(),M=t("h3"),hn=t("a"),Me=k("기타 유용한 자바 팁"),Rp=l(),gn=t("ul"),ep=t("li"),Te=k("Scanner 클래스를 사용한 입력 처리:"),Bp=l(),T=t("pre"),Fp=l(),ns=t("ul"),cp=t("li"),Ce=k("StringBuilder를 사용해 문자열을 더 효율적으로 다룸 (반복적인 문자열 연산에 유용):"),Dp=l(),C=t("pre"),Xp=l(),ss=t("ul"),lp=t("li"),Ie=k(`반복문과 조건문에서의 continue와 break 사용:
+continue는 반복문의 현재 반복을 건너뛰고 다음 반복으로 넘어가고,
+break는 반복문을 완전히 종료시킴.`),Vp=l(),I=t("h3"),as=t("a"),Ne=k("숫자 뒤집기"),Op=l(),ps=t("p"),Re=k("이 코드는 사용자로부터 배열의 길이와 요소를 입력 받는 기본 틀을 제공해. 이제 남은 부분은 ‘역순 배열 만들기 로직 구현’ 부분을 완성하는 거야. 배열을 역순으로 만드는 로직을 직접 구현해보자. 배열을 뒤집는 가장 간단한 방법 중 하나는 배열의 처음과 끝을 서로 교환하는 것이야. 이 과정을 배열의 중간까지 반복하면 돼."),Wp=l(),N=t("pre"),qp=l(),ts=t("p"),Be=k("원본 배열 내에서 요소의 위치를 직접 바꾸는 방법은 추가적인 메모리를 사용하지 않아서 더 효율적이야. 이 방법을 사용하면, 배열의 크기가 커져도 추가 메모리 사용이 없기 때문에 메모리 효율성 측면에서 우수해."),zp=l(),R=t("h3"),os=t("a"),Fe=k("문자열 뒤집기"),Gp=l(),es=t("p"),De=k("주어진 문자열이 “hello”라면, 이를 뒤집어 “olleh”로 만들어야 해."),$p=l(),cs=t("p"),Xe=k("문자열도 사실 문자의 배열과 같다고 볼 수 있어. 따라서, 문자열 내의 문자들의 위치를 역순으로 바꿔주면 돼. 자바에서는 StringBuilder 클래스를 사용해서 이 문제를 간단하게 해결할 수 있지만, 문자 배열을 이용해 직접 구현하는 방법도 중요한 학습 포인트가 될 거야."),Up=l(),B=t("pre"),Kp=l(),ls=t("p"),Ve=k('접근 방법은 문자열을 문자 배열로 취급하고, 배열의 요소들을 직접 뒤집어서 문자열을 역순으로 만드는 것이었어. 이 방식은 효율적이고, 문자열을 처리하는 데 있어 유용한 방법 중 하나야. split("") 메소드를 사용해 문자열을 문자로 구성된 배열로 변환하고, 배열의 앞뒤를 교환하는 방식으로 역순을 만들었어. 마지막으로, String.join("", strSplit)을 사용하여 문자 배열을 다시 문자열로 합치는 과정을 거쳤어.'),Zp=l(),us=t("p"),Oe=k("StringBuilder를 사용하는 것도 좋은 방법 중 하나임을 기억해둬. 예를 들어, 이 문제를 StringBuilder를 사용해 해결한다면 다음과 같이 더 간단하게 작성할 수 있어"),Jp=l(),F=t("pre"),Qp=l(),D=t("h3"),ks=t("a"),We=k("최소공배수, 최대공약수 구하기"),Yp=l(),is=t("p"),qe=k("최대 공약수는 두 개 이상의 정수의 공통된 약수 중 가장 큰 값이야. 간단히 말해서, 두 수가 주어졌을 때, 이 두 수를 나눌 수 있는 가장 큰 수를 말해. 예를 들어, 48과 18의 공약수는 1, 2, 3, 6이 있는데, 이 중 가장 큰 수는 6이므로 48과 18의 최대 공약수는 6이 되겠지."),hp=l(),rs=t("p"),ze=k("최소 공배수는 두 개 이상의 정수의 공통된 배수 중 가장 작은 값이야. 두 수의 공통된 배수는 두 수 모두를 나눌 수 있는 수 중에서 가장 작은 수를 말해. 예를 들어, 48과 18의 배수 중 공통된 배수는 144, 288, 432 등이 있는데, 이 중 가장 작은 수는 144이므로 48과 18의 최소 공배수는 144가 되겠지."),gp=l(),ms=t("p"),Ge=k("두 개의 자연수가 주어질 때, 이 두 수의 최대 공약수(Greatest Common Divisor, GCD)와 최소 공배수(Least Common Multiple, LCM)를 찾는 프로그램을 작성해야 해."),nt=l(),fs=t("p"),$e=k("최대 공약수를 찾는 전통적인 방법 중 하나는 유클리드 호제법을 사용하는 것이야. 두 수 a와 b(a > b)의 최대 공약수는 a를 b로 나눈 나머지 r과 b의 최대 공약수와 같아. 즉, GCD(a, b) = GCD(b, r)이야. 이 과정을 r이 0이 될 때까지 반복하면, 그 때의 b가 최대 공약수가 돼."),st=l(),X=t("pre"),at=l(),ys=t("p"),Ue=k(`gcd 메소드는 유클리드 호제법을 사용해 최대 공약수를 계산해.
+lcm 메소드는 계산된 최대 공약수를 사용해 최소 공배수를 구해. 최소 공배수는 두 수의 곱을 최대 공약수로 나눈 값이야.
+메인 메소드에서는 두 수에 대한 최대 공약수와 최소 공배수를 계산하고 결과를 출력해.`),pt=l(),V=t("h3"),ws=t("a"),Ke=k("소수찾기"),tt=l(),ds=t("p"),Ze=k("소수는 1과 자기 자신 외에는 어떤 수로도 나눌 수 없는 1보다 큰 자연수를 의미해. 예를 들어, 2, 3, 5, 7, 11, 13 등이 있지."),ot=l(),bs=t("p"),Je=k("소수를 찾는 문제는 여러 방법이 있지만, 가장 대표적인 방법 중 하나는 에라토스테네스의 체 알고리즘을 사용하는 것이야. 이 알고리즘의 기본 아이디어는 다음과 같아:"),et=l(),O=t("h4"),vs=t("a"),Qe=k("에라토스테네스의 체 알고리즘의 핵심 원리"),ct=l(),_s=t("p"),Ye=k(`모든 숫자는 소수이거나, 소수의 배수 중 하나야. 그러므로, 소수의 배수를 제거하면 남는 숫자는 모두 소수가 돼.
+알고리즘의 핵심은 소수의 배수들을 순차적으로 제거해 나가는 것이야. 이 때, i의 제곱이 N보다 클 때까지만 반복하면 되는 이유는, i의 제곱 미만의 배수들은 이미 이전 소수들의 배수를 제거하는 과정에서 체크되었기 때문이야.`),lt=l(),W=t("pre"),ut=l(),q=t("h3"),Es=t("a"),he=k("피보나치 수열"),kt=l(),Ss=t("p"),ge=k("피보나치 수열의 N번째 수를 찾는 프로그램을 작성해야 해. 피보나치 수열은 첫 번째 수와 두 번째 수가 1이고, 그 이후의 모든 수는 바로 앞 두 수의 합으로 이루어진 수열이야."),it=l(),xs=t("p"),nc=k(`재귀 함수 사용: 간결하고 이해하기 쉽지만, 큰 N에 대해 성능 문제가 발생할 수 있어.
+반복문 사용: 재귀보다 효율적이며, 큰 N에 대해서도 빠르게 결과를 얻을 수 있어.`),rt=l(),z=t("h4"),Ps=t("a"),sc=k("반복문을 이용한  피보나치 수열"),mt=l(),Hs=t("p"),ac=k("이 코드는 N번째 피보나치 수를 찾기 위해 반복문을 사용한 방법이야. 피보나치 수열의 특성상, 각 숫자는 바로 앞의 두 숫자의 합이기 때문에, 두 변수를 사용하여 이전 두 숫자를 저장하고 갱신해 나가며 N번째 수를 찾아가는 방식이야."),ft=l(),G=t("pre"),yt=l(),$=t("pre"),wt=l(),U=t("h4"),Ls=t("a"),pc=k("행렬 거듭제곱을 이용한 피보나치 수열"),dt=l(),js=t("p"),tc=k("행렬 거듭제곱을 빠르게 계산하는 알고리즘(예: 분할 정복을 이용한 거듭제곱)으로 N번째 피보나치 수를 더 빠르게 구할 수 있어. 이 방법의 시간 복잡도는 O(log N)으로, 매우 큰 N에 대해서도 효율적으로 계산할 수 있어."),bt=l(),K=t("pre"),vt=l(),Z=t("h4"),As=t("a"),oc=k("메모이제이션 방법을 이용한 피보나치 수열"),_t=l(),J=t("pre"),Et=l(),Ms=t("p"),ec=k("메모이제이션 방법으로 계산하는 자바 코드야. doit 메소드에서 피보나치 수를 계산하기 전에 메모이제이션을 위한 배열 memo를 초기화하고, fib 메소드를 통해 실제 계산을 진행해. 이렇게 하면, 피보나치 수를 효율적으로 계산할 수 있어."),St=l(),Q=t("h3"),Ts=t("a"),cc=k("이진 검색 구현하기"),xt=l(),Cs=t("p"),lc=k("정렬된 배열과 타겟 숫자가 주어졌을 때, 이진 검색을 사용하여 타겟 숫자의 인덱스를 찾아라. 만약 타겟 숫자가 배열 내에 없다면 -1을 반환해라."),Pt=l(),Is=t("p"),up=t("em"),uc=k("문제 해결 방법"),Ht=l(),y=t("ol"),kp=t("li"),kc=k("배열의 가장 낮은 인덱스를 low, 가장 높은 인덱스를 high로 설정한다."),ic=l(),ip=t("li"),rc=k("배열의 중간 지점을 mid로 정하고, mid 인덱스의 요소가 타겟 숫자인지 확인한다."),mc=l(),rp=t("li"),fc=k("만약 mid 인덱스의 요소가 타겟 숫자보다 크다면, 타겟 숫자는 mid의 왼쪽에 있으므로 high를 mid - 1로 조정한다."),yc=l(),mp=t("li"),wc=k("만약 mid 인덱스의 요소가 타겟 숫자보다 작다면, 타겟 숫자는 mid의 오른쪽에 있으므로 low를 mid + 1로 조정한다."),dc=l(),fp=t("li"),bc=k("low가 high보다 커지면, 타겟 숫자가 배열 내에 없는 것으로 간주하고 -1을 반환한다."),vc=l(),yp=t("li"),_c=k("위 과정을 반복하면서 타겟 숫자의 인덱스를 찾는다."),Lt=l(),Y=t("pre"),jt=l(),Ns=t("p"),Ec=k("변형 숫자의 제곱근 찾기"),At=l(),h=t("pre"),Mt=l(),g=t("h3"),Rs=t("a"),Sc=k("두 수의 합 찾기"),Tt=l(),Bs=t("p"),xc=k("정수 배열 nums와 타겟 숫자 target이 주어질 때, nums 배열 내 두 숫자의 합이 target이 되게 하는 두 숫자의 인덱스를 배열로 반환해야 해. 각 입력에 정확히 하나의 솔루션이 있다고 가정하며, 같은 요소를 두 번 사용할 수 없어."),Ct=l(),Fs=t("p"),wp=t("em"),Pc=k("문제 해결 방법"),It=l(),b=t("ol"),dp=t("li"),Hc=k("배열을 순회하면서 각 요소를 검사해."),Lc=l(),bp=t("li"),jc=k("현재 요소와 타겟 숫자 사이의 차이를 계산하고, 이 차이가 해시 테이블 내에 이미 존재하는지 확인해."),Ac=l(),vp=t("li"),Mc=k("만약 차이가 해시 테이블 내에 존재한다면, 현재 요소의 인덱스와 차이가 존재하는 요소의 인덱스를 배열로 반환해."),Tc=l(),_p=t("li"),Cc=k("그렇지 않다면, 현재 요소와 해당 인덱스를 해시 테이블에 저장해."),Nt=l(),nn=t("pre"),Rt=l(),sn=t("h3"),Ds=t("a"),Ic=k("회문 판별하기"),Bt=l(),Xs=t("p"),Nc=k("주어진 문자열이 회문인지 아닌지를 판별하는 함수를 작성해야 해. 여기서 고려해야 할 것은, 대소문자를 구분하지 않고, 영문자와 숫자만을 대상으로 판별한다는 점이야."),Ft=l(),Vs=t("p"),Ep=t("em"),Rc=k("문제 해결 방법"),Dt=l(),_=t("ol"),Sp=t("li"),Bc=k("문자열을 전처리하여 영문자와 숫자만 남기고, 모두 소문자로 변환한다."),Fc=l(),xp=t("li"),Dc=k("전처리된 문자열의 앞뒤를 차례대로 비교해 나가면서 회문인지 확인한다."),Xc=l(),Pp=t("li"),Vc=k("전체 문자열을 반으로 나누어 비교하면 충분하다. 문자열의 길이가 홀수라면 중앙 문자는 비교에서 제외한다."),Xt=l(),an=t("pre"),Vt=l(),pn=t("h3"),Os=t("a"),Oc=k("연속된 부분 배열의 최대 합 찾기"),Ot=l(),Ws=t("p"),Wc=k("정수로 이루어진 배열이 주어졌을 때, 그 배열의 연속된 부분 배열(subarray) 중에서 합이 최대가 되는 부분 배열의 합을 찾아라."),Wt=l(),qs=t("p"),Hp=t("em"),qc=k("문제 해결 방법"),qt=l(),tn=t("p"),Lp=t("em"),zc=k("카데인 알고리즘(Kadane’s Algorithm)"),Gc=k(` 사용해  이것은 현재까지의 부분 최대합을 계속 추적하면서 배열을 한 번만 순회해 최대 부분 배열의 합을 찾는 방법이야.
+각 단계에서, 현재 요소를 포함한 부분 배열의 최대 합을 계산하고, 이 값이 최대 합보다 큰지 비교해. 최대 합을 갱신해 가면서 배열의 끝에 도달할 때까지 이 과정을 반복해.`),zt=l(),on=t("pre"),Gt=l(),en=t("h4"),zs=t("a"),$c=k("카데인 알고리즘의 기본 원리"),$t=l(),Gs=t("p"),Uc=k("카데인 알고리즘은 두 개의 변수를 사용해 배열을 한 번만 순회하면서 문제를 해결해:"),Ut=l(),$s=t("p"),Kc=k(`maxEndingHere: 배열의 각 위치에서 끝나는 최대 부분 배열의 합. 이 값은 현재까지의 최대 부분 배열의 합을 나타내며, 현재 요소를 포함하여 계산되어야 해. 만약 maxEndingHere가 음수가 되면, 새로운 부분 배열의 시작점을 고려할 수 있어. 즉, maxEndingHere = Math.max(nums[i], maxEndingHere + nums[i])를 통해 계산돼.
+maxSoFar: 지금까지 찾은 최대 부분 배열의 합. 이 값은 maxEndingHere의 값이 갱신될 때마다 최대값을 비교하여 업데이트될 수 있어. 즉, maxSoFar = Math.max(maxSoFar, maxEndingHere)로 계산돼.`),Kt=l(),cn=t("h4"),Us=t("a"),Zc=k("알고리즘의 작동 방식"),Zt=l(),Ks=t("p"),Jc=k(`배열의 첫 번째 요소를 maxEndingHere와 maxSoFar의 초기값으로 설정해.
+배열의 두 번째 요소부터 시작해 각 요소에 대해 다음을 수행해:
+현재 요소를 포함시킨 최대 부분 배열의 합(maxEndingHere)을 계산해. 여기서 현재 요소 자체와 현재 요소를 포함한 이전의 부분 배열의 합 중 더 큰 값을 선택해.
+maxSoFar를 maxEndingHere와 비교하여 필요한 경우 갱신해.
+모든 요소를 검사한 후 maxSoFar가 전체 배열의 최대 부분 배열의 합이 돼.`),Jt=l(),ln=t("h4"),Zs=t("a"),Qc=k("순회 방식"),Qt=l(),un=t("pre"),Yt=l(),kn=t("h4"),Js=t("a"),Yc=k("기출변형"),ht=l(),rn=t("p"),jp=t("strong"),hc=k("“최대 수익 구하기”"),gc=k("에 관한 문제입니다. 주식의 일일 가격이 주어졌을 때, 한 번의 거래로 얻을 수 있는 최대 수익을 계산해야 합니다. 여기서 한 번의 거래는 주식을 한 번 사고 팔아 수익을 얻는 것을 의미합니다."),gt=l(),Qs=t("p"),nl=k("주어진 배열 prices는 여러 날에 걸친 주식의 가격을 나타냅니다. prices[i]는 주식이 i번째 날에 가지는 가격입니다. 단 한 번의 거래로 얻을 수 있는 최대 수익을 반환하세요. 만약 어떤 거래로도 수익을 얻을 수 없다면 0을 반환하세요."),no=l(),mn=t("pre"),so=l(),fn=t("h3"),Ys=t("a"),sl=k("회전된 정렬된 배열에서 최소값 찾기"),ao=l(),hs=t("p"),al=k("정렬된 배열이 있고, 이 배열이 미리 알려지지 않은 특정 피벗을 기준으로 회전되었다고 가정해. 예를 들어, 배열 [0,1,2,4,5,6,7]이 있을 때, 이 배열을 3번째 인덱스에서 회전시키면 [4,5,6,7,0,1,2]가 돼. 이런 회전된 배열에서 최소값을 찾는 함수를 작성해야 해."),po=l(),gs=t("p"),pl=k(`회전된 정렬된 배열에서는 배열의 일부가 여전히 정렬되어 있음을 이용할 수 있어. 이진 검색과 유사한 방식으로 문제를 접근하지만, 중간점(middle)을 기준으로 어느 쪽이 정렬된 상태인지 판별하고, 최소값이 포함될 가능성이 있는 쪽을 선택하여 검색 범위를 좁혀 나가야 해.
+시작점(start)과 종료점(end) 사이에서 중간점(middle)을 찾고, 중간점이 시작점보다 큰지, 또는 종료점보다 작은지를 검사하여 검색 범위를 좁혀 나가면서 최소값을 찾아야 해.`),to=l(),yn=t("pre"),oo=l(),wn=t("h3"),na=t("a"),tl=k("정수를 로마 숫자로 변환하기"),eo=l(),sa=t("p"),ol=k("로마 숫자는 일곱 개의 다른 기호로 나타납니다: I, V, X, L, C, D와 M입니다."),co=l(),aa=t("p"),el=k(`기호 값
+I 1
+V 5
+X 10
+L 50
+C 100
+D 500
+M 1000
+예를 들어, 로마 숫자 2는 II로 쓰이며, 단순히 두 개의 1을 나란히 쓴 것과 같습니다. 12는 XII로 쓰이며, 이는 X + II입니다. 27은 XXVII, 즉 XX + V + II입니다.`),lo=l(),pa=t("p"),cl=k("로마 숫자는 보통 왼쪽에서 오른쪽으로 큰 숫자에서 작은 숫자 순으로 쓰입니다. 하지만 네 가지 특별한 경우에는 작은 숫자가 큰 숫자의 왼쪽에 옵니다."),uo=l(),ta=t("p"),ll=k(`IV (4)
+IX (9)
+XL (40)
+XC (90)
+CD (400)
+CM (900)
+주어진 정수를 로마 숫자로 변환하는 프로그램을 작성하세요.`),ko=l(),oa=t("p"),ul=k("이 문제를 해결하기 위해, 가장 큰 값부터 시작하여 주어진 숫자를 줄여나갈 수 있는 로마 숫자의 값을 찾아 문자열에 추가하는 방식으로 접근할 수 있습니다. 각 단계에서 사용할 수 있는 가장 큰 값을 찾아 그 값을 주어진 숫자에서 빼고, 해당 로마 숫자를 결과 문자열에 추가합니다. 이 과정을 주어진 숫자가 0이 될 때까지 반복합니다."),io=l(),dn=t("pre"),ro=l(),bn=t("h3"),ea=t("a"),kl=k("유효한 괄호 검사"),mo=l(),ca=t("p"),il=k("주어진 문자열 s가 유효한 괄호로만 구성되어 있는지 확인하세요. 유효한 괄호 문자열이란 다음과 같은 조건을 만족하는 문자열입니다:"),fo=l(),la=t("p"),rl=k(`열린 괄호는 반드시 같은 타입의 괄호로만 닫혀야 합니다.
+열린 괄호는 올바른 순서로 닫혀야 합니다.`),yo=l(),vn=t("pre"),wo=l(),_n=t("h3"),ua=t("a"),ml=k("슬라이딩 윈도우(Sliding Window) 알고리즘"),bo=l(),ka=t("p"),fl=k("슬라이딩 윈도우 알고리즘은 배열이나 리스트의 일정 범위의 요소들을 연속적으로 살펴보면서 문제를 해결하는 기법입니다. “윈도우”는 배열의 연속적인 부분을 의미하며, 이 윈도우를 배열 전체를 훑을 때까지 한 칸씩 “슬라이드”시키면서 각 위치에서의 문제(예: 최대합, 최소값, 특정 조건 만족 여부 등)를 해결합니다."),vo=l(),ia=t("p"),yl=k(`슬라이딩 윈도우의 주요 특징:
+고정된 크기의 윈도우: 윈도우의 크기가 고정되어 있고, 이 윈도우를 배열의 시작부터 끝까지 이동시키면서 각 위치에서 문제를 해결합니다.
+가변 크기의 윈도우: 윈도우의 크기가 고정되어 있지 않고, 문제의 조건을 만족시키기 위해 윈도우의 시작점과 끝점을 동적으로 조정합니다.`),_o=l(),ra=t("p"),wl=k(`슬라이딩 윈도우 사용 예시:
+최대 합 구하기: 주어진 배열에서 크기가 k인 연속된 부분 배열의 최대 합을 찾습니다.
+최소 길이 부분 배열 찾기: 주어진 배열에서 합이 특정 값 s 이상이 되는 가장 짧은 연속된 부분 배열을 찾습니다.
+문자열에서 모든 문자 포함하는 최소 윈도우 찾기: 문자열 S에서 문자열 T의 모든 문자를 포함하는 최소 크기의 부분 문자열을 찾습니다.`),Eo=l(),ma=t("p"),dl=k(`슬라이딩 윈도우 알고리즘의 장점:
+효율성: 특정 조건을 만족하는 최적의 해를 찾기 위해 배열이나 문자열을 한 번만 순회하므로, 일반적으로 시간 복잡도가 낮습니다.
+직관적: 윈도우를 슬라이딩하면서 문제를 해결하는 과정이 직관적이고 이해하기 쉽습니다.
+구현 방법:
+시작점과 끝점 초기화: 윈도우의 시작점과 끝점을 배열의 시작 부분에 초기화합니다.
+윈도우의 끝점 이동: 조건을 만족할 때까지 윈도우의 끝점을 이동시킵니다.
+윈도우의 시작점 이동: 조건을 만족하는 상태에서 더 최적의 해를 찾기 위해 윈도우의 시작점을 이동시킵니다.
+최적의 해 갱신: 윈도우를 이동시키면서 문제의 조건에 따라 최적의 해를 갱신합니다.`),So=l(),En=t("h4"),fa=t("a"),bl=k("부분 문자열이 포함된 최소 윈도우 찾기"),xo=l(),ya=t("p"),vl=k("이 문제에서는 문자열 S와 T가 주어졌을 때, S에서 T의 모든 문자를 포함하는 최소 크기의 부분 문자열을 찾아야 합니다. 만약 S 내에 T의 모든 문자를 포함하는 부분 문자열이 여러 개 있다면, 그 중 가장 짧은 부분 문자열을 반환합니다. 만약 그러한 부분 문자열이 없다면, 빈 문자열을 반환합니다."),Po=l(),wa=t("p"),_l=k("예시:"),Ho=l(),da=t("p"),El=k("입력: S = “ADOBECODEBANC”, T = “ABC”"),Lo=l(),ba=t("p"),Sl=k("출력: “BANC”"),jo=l(),va=t("p"),xl=k("입력: S = “a”, T = “a”"),Ao=l(),_a=t("p"),Pl=k("출력: “a”"),Mo=l(),Ea=t("p"),Hl=k("입력: S = “a”, T = “aa”"),To=l(),Sa=t("p"),Ll=k('출력: ""'),Co=l(),Sn=t("pre"),Io=l(),xn=t("pre"),No=l(),Pn=t("h3"),xa=t("a"),jl=k("단어뒤집기2"),Ro=l(),Hn=t("pre"),Bo=l(),Ln=t("h3"),Pa=t("a"),Al=k("그리디 알고리즘"),Fo=l(),jn=t("pre"),Do=l(),An=t("h3"),Ha=t("a"),Ml=k("연속되는 숫자 합 찾기"),Xo=l(),La=t("p"),Tl=k("주어진 문자열 s 내에서 연속된 숫자를 포함하는 모든 부분 문자열을 찾아, 그 숫자들의 합을 구해라. 예를 들어, “abc1234xyz”라는 문자열이 주어지면, “1”, “2”, “3”, “4”, “12”, “23”, “34”, “123”, “234”, “1234”와 같은 모든 숫자의 부분 문자열의 합을 구해야 해."),Vo=l(),ja=t("p"),Cl=k(`예시
+입력: s = “abc1234xyz”
+출력: 1670
+설명: 위에서 설명한 대로, 연속된 숫자의 부분 문자열을 모두 찾아 그 합을 구하면 1670이 됨.
+입력: s = “abcd”
+출력: 0
+설명: 숫자를 포함하지 않으므로 합은 0이 됨.`),Oo=l(),Aa=t("p"),Il=k("이 문제를 해결하기 위한 접근 방법으로는 다음과 같은 단계를 고려할 수 있어:"),Wo=l(),Ma=t("p"),Nl=k(`숫자 구분: 문자열을 순회하면서 숫자가 시작되는 지점과 끝나는 지점을 찾아내야 해.
+부분 문자열 처리: 각 숫자 구간에 대해, 가능한 모든 부분 문자열을 생성하고, 그것을 숫자로 변환해야 해.
+합 계산: 변환된 숫자들의 합을 계산해야 해.
+숫자의 연속된 부분 문자열을 찾고 그 합을 구하는 과정에 있어서 문자열 처리 기술과 반복문, 그리고 조건문을 적절히 활용해야 해. 또한, 각 숫자 부분 문자열에 대한 모든 가능한 조합을 고려하여 그 합을 계산하는 방식을 구현해야 한다는 점을 기억해야 해.`),qo=l(),Mn=t("pre"),zo=l(),Tn=t("h3"),Ta=t("a"),Rl=k("문자 합치기"),Go=l(),Ca=t("p"),Bl=k("알파벳으로만 이루어진 문자열이 주어질 때, 같은 문자가 연속으로 반복되는 부분을 문자 그리고 그 반복된 횟수로 표현하여 압축하는 프로그램을 작성해야 해. 예를 들어, “aaabbcccc”라는 문자열이 있다면 “a3b2c4”로 압축되어야 해. 단, 문자가 한 번만 나타나는 경우는 숫자를 붙이지 않고 그대로 표현해야 해. 예를 들어, “abcd”는 “abcd”로 그대로 표현되어야 하며, “aabbcc”는 “a2b2c2”로 압축되어야 해."),$o=l(),Ia=t("p"),Fl=k("문자열을 순회하면서 현재 문자와 이전 문자가 같은지를 확인해야 해. 같다면 카운트를 증가시키고, 다르다면 이전 문자와 그 카운트를 결과 문자열에 추가해. 이 과정을 문자열의 끝까지 반복한 후, 마지막으로 카운트된 문자를 결과 문자열에 추가해야 해."),Uo=l(),Cn=t("pre"),Ko=l(),In=t("h3"),Na=t("a"),Dl=k("버블소트"),Zo=l(),Ra=t("p"),Xl=k("버블 정렬(Bubble Sort)은 가장 간단하고 기초적인 정렬 알고리즘 중 하나로, 인접한 두 요소를 비교해서 잘못된 순서(예: 오름차순 정렬에서 큰 수가 앞에 오는 경우)가 있을 때 위치를 바꾸는 방식으로 작동해. 이 과정을 배열의 모든 요소가 올바른 순서로 정렬될 때까지 반복하며, 이름은 이 과정 중에 큰 값들이 배열의 끝으로 ‘떠오른다(bubble up)‘는 데서 유래했어."),Jo=l(),Ba=t("p"),Vl=k(`버블 정렬의 핵심은 두 가지 단계로 요약할 수 있어
+비교 단계: 배열을 처음부터 끝까지 순회하면서, 각각의 인접한 요소 쌍을 비교한다.
+교환 단계: 비교하는 두 요소가 잘못된 순서로 있으면, 이들의 위치를 서로 바꾼다.`),Qo=l(),Fa=t("p"),Ol=k("이 알고리즘의 시간 복잡도는 평균과 최악의 경우 모두 n의 제곱으로 n은 배열의 길이를 나타낸다. 배열이 이미 정렬되어 있거나 거의 정렬된 상태인 경우에는 상대적으로 빠르게 작동할 수 있지만, 대체로 크기가 큰 데이터셋에는 비효율적이야. 그럼에도 불구하고, 이해하기 쉽고 구현하기 간단해서 알고리즘 학습의 첫 단계로 자주 소개되곤 해."),Yo=l(),Nn=t("pre"),ho=l(),Rn=t("h3"),Da=t("a"),Wl=k("선택정렬"),go=l(),Xa=t("p"),ql=k("선택 정렬도 기본적인 정렬 알고리즘 중 하나로, 각 단계에서 정렬되지 않은 부분에서 최소값(또는 최대값)을 찾아 선택한 뒤, 그 값을 정렬된 부분의 다음 위치로 이동시키는 방식으로 동작해. 선택 정렬은 구현이 간단하며, 안정 정렬이 아니라는 특징을 가지고 있어."),ne=l(),Va=t("p"),zl=k(`선택 정렬 알고리즘 구현 방법
+배열 전체를 순회하며, 각 단계에서 현재 위치를 기준으로 가장 작은 요소를 찾아.
+가장 작은 요소를 현재 위치의 요소와 교환해.
+모든 요소가 올바르게 정렬될 때까지 이 과정을 반복해.`),se=l(),Bn=t("pre"),ae=l(),Fn=t("h3"),Oa=t("a"),Gl=k("삽입정렬"),pe=l(),Wa=t("p"),$l=k("삽입 정렬도 기본적인 정렬 방법 중 하나로, 각 반복에서 요소를 적절한 위치에 ‘삽입’하여 전체 배열을 정렬하는 방식이야. 이 알고리즘은 작은 데이터 세트에 효율적이며, 특히 거의 정렬된 배열에 대해서는 매우 빠르게 동작해."),te=l(),qa=t("p"),Ul=k(`배열의 모든 요소를 차례대로 순회한다.
+각 요소를, 이미 정렬된 배열 부분(요소의 왼쪽 부분)의 적절한 위치에 삽입한다.
+필요하면, 삽입될 위치를 찾기 위해 정렬된 부분의 요소들을 오른쪽으로 이동시킨다.`),oe=l(),Dn=t("pre"),ee=l(),Xn=t("h3"),za=t("a"),Kl=k("하노이의 탑"),ce=l(),Ga=t("p"),Zl=k("하노이의 탑 문제는 세 개의 기둥과 이 기둥 중 하나에 작은 것부터 큰 순서로 쌓인 n개의 원판으로 구성되어 있어. 문제의 목표는 첫 번째 기둥에서 세 번째 기둥으로 모든 원판을 옮기는 것인데, 다음의 규칙을 따라야 해:"),le=l(),$a=t("p"),Jl=k(`한 번에 하나의 원판만 이동할 수 있어.
+원판은 세 개의 기둥 중 하나의 맨 위에서만 추가하거나 제거할 수 있어.
+큰 원판이 작은 원판 위에 있어서는 안 돼.`),ue=l(),Vn=t("pre"),ke=l(),On=t("h3"),Ua=t("a"),Ql=k("이진 검색 트리(Binary Search Tree, BST)"),ie=l(),Ka=t("p"),Yl=k(`각 노드의 왼쪽 서브 트리에는 해당 노드보다 작은 값들만 존재해야 하며,
+각 노드의 오른쪽 서브 트리에는 해당 노드보다 큰 값들만 존재해야 해.
+왼쪽과 오른쪽 서브 트리도 이진 검색 트리여야 해.`),re=l(),Za=t("p"),hl=k("주어진 값 val을 가진 노드를 찾으면 그 노드를 반환하고, 그런 노드가 없으면 None을 반환해야 해."),me=l(),Wn=t("pre"),fe=l(),qn=t("h3"),Ja=t("a"),gl=k("계단 오르기 동적 계획법"),ye=l(),Qa=t("p"),nu=k("동적 계획법(Dynamic Programming, DP)을 사용하여 효율적으로 해결할 수 있어. 이 문제의 핵심은 각 계단에 도달하는 방법의 수를 작은 문제부터 시작해 점차적으로 구해나가는 것이야. 각 단계에서, n번째 계단에 도달하는 방법의 수는 n-1번째 계단에 도달하는 방법의 수와 n-2번째 계단에 도달하는 방법의 수의 합과 같아."),we=l(),zn=t("pre"),de=l(),Gn=t("h3"),Ya=t("a"),su=k("백트래킹 문자조합"),be=l(),ha=t("p"),au=k("주어진 숫자 배열 candidates와 타겟 숫자 target이 있을 때, candidates 내의 숫자를 중복 선택하여 target을 만들 수 있는 모든 조합을 찾아야 합니다. 같은 숫자를 무한히 반복해서 사용할 수 있으며, 조합의 순서가 다르면 다른 조합으로 간주합니다."),ve=l(),ga=t("p"),pu=k("“조합의 합(Combination Sum)” 문제를 살펴보겠습니다. 이 문제는 주어진 숫자 배열과 타겟 숫자가 있을 때, 배열 내의 숫자를 중복 사용하여 타겟 숫자를 만들 수 있는 모든 조합을 찾는 것입니다. 이 문제는 백트래킹(Backtracking) 알고리즘을 이해하고 적용하는 데 도움이 됩니다."),_e=l(),np=t("p"),tu=k(`기본 아이디어
+초기화: 결과를 저장할 리스트 result와 현재 조합을 저장할 리스트 combination을 준비합니다.
+DFS(깊이 우선 탐색) 함수 정의: dfs라는 이름의 재귀 함수를 정의합니다. 이 함수는 현재 인덱스(index)와 현재 조합의 합(current_sum)을 인자로 받습니다.
+만약 current_sum이 target과 같다면, 현재 조합을 result에 추가합니다.
+만약 current_sum이 target을 초과한다면, 더 이상 탐색하지 않고 반환합니다.
+DFS 실행: candidates 배열의 각 숫자에 대해 DFS를 실행하여, 모든 가능한 조합을 탐색합니다. 각 단계에서는 현재 숫자를 선택하거나 선택하지 않는 두 가지 경우를 고려합니다.
+결과 반환: 모든 탐색이 끝나면, result에 저장된 조합들을 반환합니다.`),Ee=l(),$n=t("pre"),Se=l(),Un=t("h3"),sp=t("a"),ou=k("주어진 문자열로 회문순열을 만들수 있는지 판단"),xe=l(),ap=t("p"),eu=k("문자열이 주어졌을 때, 이 문자열의 순열 중 하나가 회문이 될 수 있는지를 판별하세요. 회문을 만들기 위해서는 문자열 내의 모든 문자를 사용할 필요는 없으며, 대소문자 구분이 없고, 공백은 무시합니다."),Pe=l(),Kn=t("pre"),He=l(),pp=t("p"),cu=k(`문자열을 소문자로 변환하고 공백을 제거하여, 대소문자 구분 없이 공백 무시하며 처리합니다.
 count_map을 사용하여 각 문자의 등장 횟수를 세어 저장합니다.
 odd_count를 세어 홀수 번 등장하는 문자의 수를 계산하고, 이 값이 1 이하인 경우에만 회문 순열을 만들 수 있다고 판단합니다.
-이 로직에 따라, “Tact Coa”는 “taco cat”과 같이 순열 중 하나가 회문이 될 수 있으므로 True를 반환하며, “hello”는 어떤 순열도 회문이 될 수 없으므로 False를 반환합니다.</p>
-<h3 id></h3>
-</div></article>
-	<div id="utterances-comments" class="content-wrapper"></div>
-</main></div>
-
-</div>
-
-
-			
-			<script>
-				{
-					__sveltekit_1c5t3ow = {
-						base: new URL("..", location).pathname.slice(0, -1),
-						env: {}
-					};
-
-					const element = document.currentScript.parentElement;
-
-					const data = [null,null];
-
-					Promise.all([
-						import("../_app/immutable/entry/start.20d58d90.js"),
-						import("../_app/immutable/entry/app.c28efcae.js")
-					]).then(([kit, app]) => {
-						kit.start(app, element, {
-							node_ids: [0, 4],
-							data,
-							form: null,
-							error: null
-						});
-					});
-				}
-			</script>
-		</div>
-</body>
-
-</html>
+이 로직에 따라, “Tact Coa”는 “taco cat”과 같이 순열 중 하나가 회문이 될 수 있으므로 True를 반환하며, “hello”는 어떤 순열도 회문이 될 수 없으므로 False를 반환합니다.`),Le=l(),tp=t("h3"),this.h()},l(n){m=o(n,"H3",{id:!0});var a=e(m);d=o(a,"A",{href:!0});var ru=e(d);E=i(ru,"자바  코딩테스트에서 자주 쓰이는 함수"),ru.forEach(s),a.forEach(s),S=u(n),f=o(n,"H3",{id:!0});var mu=e(f);w=o(mu,"A",{href:!0});var fu=e(w);Jn=i(fu,"배열(Array)"),fu.forEach(s),mu.forEach(s),Ap=u(n),P=o(n,"PRE",{class:!0});var fm=e(P);fm.forEach(s),Mp=u(n),H=o(n,"H3",{id:!0});var yu=e(H);Qn=o(yu,"A",{href:!0});var wu=e(Qn);je=i(wu,"리스트(List)"),wu.forEach(s),yu.forEach(s),Tp=u(n),L=o(n,"PRE",{class:!0});var ym=e(L);ym.forEach(s),Cp=u(n),j=o(n,"H3",{id:!0});var du=e(j);Yn=o(du,"A",{href:!0});var bu=e(Yn);Ae=i(bu,"문자열(String)"),bu.forEach(s),du.forEach(s),Ip=u(n),A=o(n,"PRE",{class:!0});var wm=e(A);wm.forEach(s),Np=u(n),M=o(n,"H3",{id:!0});var vu=e(M);hn=o(vu,"A",{href:!0});var _u=e(hn);Me=i(_u,"기타 유용한 자바 팁"),_u.forEach(s),vu.forEach(s),Rp=u(n),gn=o(n,"UL",{});var Eu=e(gn);ep=o(Eu,"LI",{});var Su=e(ep);Te=i(Su,"Scanner 클래스를 사용한 입력 처리:"),Su.forEach(s),Eu.forEach(s),Bp=u(n),T=o(n,"PRE",{class:!0});var dm=e(T);dm.forEach(s),Fp=u(n),ns=o(n,"UL",{});var xu=e(ns);cp=o(xu,"LI",{});var Pu=e(cp);Ce=i(Pu,"StringBuilder를 사용해 문자열을 더 효율적으로 다룸 (반복적인 문자열 연산에 유용):"),Pu.forEach(s),xu.forEach(s),Dp=u(n),C=o(n,"PRE",{class:!0});var bm=e(C);bm.forEach(s),Xp=u(n),ss=o(n,"UL",{});var Hu=e(ss);lp=o(Hu,"LI",{});var Lu=e(lp);Ie=i(Lu,`반복문과 조건문에서의 continue와 break 사용:
+continue는 반복문의 현재 반복을 건너뛰고 다음 반복으로 넘어가고,
+break는 반복문을 완전히 종료시킴.`),Lu.forEach(s),Hu.forEach(s),Vp=u(n),I=o(n,"H3",{id:!0});var ju=e(I);as=o(ju,"A",{href:!0});var Au=e(as);Ne=i(Au,"숫자 뒤집기"),Au.forEach(s),ju.forEach(s),Op=u(n),ps=o(n,"P",{});var Mu=e(ps);Re=i(Mu,"이 코드는 사용자로부터 배열의 길이와 요소를 입력 받는 기본 틀을 제공해. 이제 남은 부분은 ‘역순 배열 만들기 로직 구현’ 부분을 완성하는 거야. 배열을 역순으로 만드는 로직을 직접 구현해보자. 배열을 뒤집는 가장 간단한 방법 중 하나는 배열의 처음과 끝을 서로 교환하는 것이야. 이 과정을 배열의 중간까지 반복하면 돼."),Mu.forEach(s),Wp=u(n),N=o(n,"PRE",{class:!0});var vm=e(N);vm.forEach(s),qp=u(n),ts=o(n,"P",{});var Tu=e(ts);Be=i(Tu,"원본 배열 내에서 요소의 위치를 직접 바꾸는 방법은 추가적인 메모리를 사용하지 않아서 더 효율적이야. 이 방법을 사용하면, 배열의 크기가 커져도 추가 메모리 사용이 없기 때문에 메모리 효율성 측면에서 우수해."),Tu.forEach(s),zp=u(n),R=o(n,"H3",{id:!0});var Cu=e(R);os=o(Cu,"A",{href:!0});var Iu=e(os);Fe=i(Iu,"문자열 뒤집기"),Iu.forEach(s),Cu.forEach(s),Gp=u(n),es=o(n,"P",{});var Nu=e(es);De=i(Nu,"주어진 문자열이 “hello”라면, 이를 뒤집어 “olleh”로 만들어야 해."),Nu.forEach(s),$p=u(n),cs=o(n,"P",{});var Ru=e(cs);Xe=i(Ru,"문자열도 사실 문자의 배열과 같다고 볼 수 있어. 따라서, 문자열 내의 문자들의 위치를 역순으로 바꿔주면 돼. 자바에서는 StringBuilder 클래스를 사용해서 이 문제를 간단하게 해결할 수 있지만, 문자 배열을 이용해 직접 구현하는 방법도 중요한 학습 포인트가 될 거야."),Ru.forEach(s),Up=u(n),B=o(n,"PRE",{class:!0});var _m=e(B);_m.forEach(s),Kp=u(n),ls=o(n,"P",{});var Bu=e(ls);Ve=i(Bu,'접근 방법은 문자열을 문자 배열로 취급하고, 배열의 요소들을 직접 뒤집어서 문자열을 역순으로 만드는 것이었어. 이 방식은 효율적이고, 문자열을 처리하는 데 있어 유용한 방법 중 하나야. split("") 메소드를 사용해 문자열을 문자로 구성된 배열로 변환하고, 배열의 앞뒤를 교환하는 방식으로 역순을 만들었어. 마지막으로, String.join("", strSplit)을 사용하여 문자 배열을 다시 문자열로 합치는 과정을 거쳤어.'),Bu.forEach(s),Zp=u(n),us=o(n,"P",{});var Fu=e(us);Oe=i(Fu,"StringBuilder를 사용하는 것도 좋은 방법 중 하나임을 기억해둬. 예를 들어, 이 문제를 StringBuilder를 사용해 해결한다면 다음과 같이 더 간단하게 작성할 수 있어"),Fu.forEach(s),Jp=u(n),F=o(n,"PRE",{class:!0});var Em=e(F);Em.forEach(s),Qp=u(n),D=o(n,"H3",{id:!0});var Du=e(D);ks=o(Du,"A",{href:!0});var Xu=e(ks);We=i(Xu,"최소공배수, 최대공약수 구하기"),Xu.forEach(s),Du.forEach(s),Yp=u(n),is=o(n,"P",{});var Vu=e(is);qe=i(Vu,"최대 공약수는 두 개 이상의 정수의 공통된 약수 중 가장 큰 값이야. 간단히 말해서, 두 수가 주어졌을 때, 이 두 수를 나눌 수 있는 가장 큰 수를 말해. 예를 들어, 48과 18의 공약수는 1, 2, 3, 6이 있는데, 이 중 가장 큰 수는 6이므로 48과 18의 최대 공약수는 6이 되겠지."),Vu.forEach(s),hp=u(n),rs=o(n,"P",{});var Ou=e(rs);ze=i(Ou,"최소 공배수는 두 개 이상의 정수의 공통된 배수 중 가장 작은 값이야. 두 수의 공통된 배수는 두 수 모두를 나눌 수 있는 수 중에서 가장 작은 수를 말해. 예를 들어, 48과 18의 배수 중 공통된 배수는 144, 288, 432 등이 있는데, 이 중 가장 작은 수는 144이므로 48과 18의 최소 공배수는 144가 되겠지."),Ou.forEach(s),gp=u(n),ms=o(n,"P",{});var Wu=e(ms);Ge=i(Wu,"두 개의 자연수가 주어질 때, 이 두 수의 최대 공약수(Greatest Common Divisor, GCD)와 최소 공배수(Least Common Multiple, LCM)를 찾는 프로그램을 작성해야 해."),Wu.forEach(s),nt=u(n),fs=o(n,"P",{});var qu=e(fs);$e=i(qu,"최대 공약수를 찾는 전통적인 방법 중 하나는 유클리드 호제법을 사용하는 것이야. 두 수 a와 b(a > b)의 최대 공약수는 a를 b로 나눈 나머지 r과 b의 최대 공약수와 같아. 즉, GCD(a, b) = GCD(b, r)이야. 이 과정을 r이 0이 될 때까지 반복하면, 그 때의 b가 최대 공약수가 돼."),qu.forEach(s),st=u(n),X=o(n,"PRE",{class:!0});var Sm=e(X);Sm.forEach(s),at=u(n),ys=o(n,"P",{});var zu=e(ys);Ue=i(zu,`gcd 메소드는 유클리드 호제법을 사용해 최대 공약수를 계산해.
+lcm 메소드는 계산된 최대 공약수를 사용해 최소 공배수를 구해. 최소 공배수는 두 수의 곱을 최대 공약수로 나눈 값이야.
+메인 메소드에서는 두 수에 대한 최대 공약수와 최소 공배수를 계산하고 결과를 출력해.`),zu.forEach(s),pt=u(n),V=o(n,"H3",{id:!0});var Gu=e(V);ws=o(Gu,"A",{href:!0});var $u=e(ws);Ke=i($u,"소수찾기"),$u.forEach(s),Gu.forEach(s),tt=u(n),ds=o(n,"P",{});var Uu=e(ds);Ze=i(Uu,"소수는 1과 자기 자신 외에는 어떤 수로도 나눌 수 없는 1보다 큰 자연수를 의미해. 예를 들어, 2, 3, 5, 7, 11, 13 등이 있지."),Uu.forEach(s),ot=u(n),bs=o(n,"P",{});var Ku=e(bs);Je=i(Ku,"소수를 찾는 문제는 여러 방법이 있지만, 가장 대표적인 방법 중 하나는 에라토스테네스의 체 알고리즘을 사용하는 것이야. 이 알고리즘의 기본 아이디어는 다음과 같아:"),Ku.forEach(s),et=u(n),O=o(n,"H4",{id:!0});var Zu=e(O);vs=o(Zu,"A",{href:!0});var Ju=e(vs);Qe=i(Ju,"에라토스테네스의 체 알고리즘의 핵심 원리"),Ju.forEach(s),Zu.forEach(s),ct=u(n),_s=o(n,"P",{});var Qu=e(_s);Ye=i(Qu,`모든 숫자는 소수이거나, 소수의 배수 중 하나야. 그러므로, 소수의 배수를 제거하면 남는 숫자는 모두 소수가 돼.
+알고리즘의 핵심은 소수의 배수들을 순차적으로 제거해 나가는 것이야. 이 때, i의 제곱이 N보다 클 때까지만 반복하면 되는 이유는, i의 제곱 미만의 배수들은 이미 이전 소수들의 배수를 제거하는 과정에서 체크되었기 때문이야.`),Qu.forEach(s),lt=u(n),W=o(n,"PRE",{class:!0});var xm=e(W);xm.forEach(s),ut=u(n),q=o(n,"H3",{id:!0});var Yu=e(q);Es=o(Yu,"A",{href:!0});var hu=e(Es);he=i(hu,"피보나치 수열"),hu.forEach(s),Yu.forEach(s),kt=u(n),Ss=o(n,"P",{});var gu=e(Ss);ge=i(gu,"피보나치 수열의 N번째 수를 찾는 프로그램을 작성해야 해. 피보나치 수열은 첫 번째 수와 두 번째 수가 1이고, 그 이후의 모든 수는 바로 앞 두 수의 합으로 이루어진 수열이야."),gu.forEach(s),it=u(n),xs=o(n,"P",{});var nk=e(xs);nc=i(nk,`재귀 함수 사용: 간결하고 이해하기 쉽지만, 큰 N에 대해 성능 문제가 발생할 수 있어.
+반복문 사용: 재귀보다 효율적이며, 큰 N에 대해서도 빠르게 결과를 얻을 수 있어.`),nk.forEach(s),rt=u(n),z=o(n,"H4",{id:!0});var sk=e(z);Ps=o(sk,"A",{href:!0});var ak=e(Ps);sc=i(ak,"반복문을 이용한  피보나치 수열"),ak.forEach(s),sk.forEach(s),mt=u(n),Hs=o(n,"P",{});var pk=e(Hs);ac=i(pk,"이 코드는 N번째 피보나치 수를 찾기 위해 반복문을 사용한 방법이야. 피보나치 수열의 특성상, 각 숫자는 바로 앞의 두 숫자의 합이기 때문에, 두 변수를 사용하여 이전 두 숫자를 저장하고 갱신해 나가며 N번째 수를 찾아가는 방식이야."),pk.forEach(s),ft=u(n),G=o(n,"PRE",{class:!0});var Pm=e(G);Pm.forEach(s),yt=u(n),$=o(n,"PRE",{class:!0});var Hm=e($);Hm.forEach(s),wt=u(n),U=o(n,"H4",{id:!0});var tk=e(U);Ls=o(tk,"A",{href:!0});var ok=e(Ls);pc=i(ok,"행렬 거듭제곱을 이용한 피보나치 수열"),ok.forEach(s),tk.forEach(s),dt=u(n),js=o(n,"P",{});var ek=e(js);tc=i(ek,"행렬 거듭제곱을 빠르게 계산하는 알고리즘(예: 분할 정복을 이용한 거듭제곱)으로 N번째 피보나치 수를 더 빠르게 구할 수 있어. 이 방법의 시간 복잡도는 O(log N)으로, 매우 큰 N에 대해서도 효율적으로 계산할 수 있어."),ek.forEach(s),bt=u(n),K=o(n,"PRE",{class:!0});var Lm=e(K);Lm.forEach(s),vt=u(n),Z=o(n,"H4",{id:!0});var ck=e(Z);As=o(ck,"A",{href:!0});var lk=e(As);oc=i(lk,"메모이제이션 방법을 이용한 피보나치 수열"),lk.forEach(s),ck.forEach(s),_t=u(n),J=o(n,"PRE",{class:!0});var jm=e(J);jm.forEach(s),Et=u(n),Ms=o(n,"P",{});var uk=e(Ms);ec=i(uk,"메모이제이션 방법으로 계산하는 자바 코드야. doit 메소드에서 피보나치 수를 계산하기 전에 메모이제이션을 위한 배열 memo를 초기화하고, fib 메소드를 통해 실제 계산을 진행해. 이렇게 하면, 피보나치 수를 효율적으로 계산할 수 있어."),uk.forEach(s),St=u(n),Q=o(n,"H3",{id:!0});var kk=e(Q);Ts=o(kk,"A",{href:!0});var ik=e(Ts);cc=i(ik,"이진 검색 구현하기"),ik.forEach(s),kk.forEach(s),xt=u(n),Cs=o(n,"P",{});var rk=e(Cs);lc=i(rk,"정렬된 배열과 타겟 숫자가 주어졌을 때, 이진 검색을 사용하여 타겟 숫자의 인덱스를 찾아라. 만약 타겟 숫자가 배열 내에 없다면 -1을 반환해라."),rk.forEach(s),Pt=u(n),Is=o(n,"P",{});var mk=e(Is);up=o(mk,"EM",{});var fk=e(up);uc=i(fk,"문제 해결 방법"),fk.forEach(s),mk.forEach(s),Ht=u(n),y=o(n,"OL",{});var v=e(y);kp=o(v,"LI",{});var yk=e(kp);kc=i(yk,"배열의 가장 낮은 인덱스를 low, 가장 높은 인덱스를 high로 설정한다."),yk.forEach(s),ic=u(v),ip=o(v,"LI",{});var wk=e(ip);rc=i(wk,"배열의 중간 지점을 mid로 정하고, mid 인덱스의 요소가 타겟 숫자인지 확인한다."),wk.forEach(s),mc=u(v),rp=o(v,"LI",{});var dk=e(rp);fc=i(dk,"만약 mid 인덱스의 요소가 타겟 숫자보다 크다면, 타겟 숫자는 mid의 왼쪽에 있으므로 high를 mid - 1로 조정한다."),dk.forEach(s),yc=u(v),mp=o(v,"LI",{});var bk=e(mp);wc=i(bk,"만약 mid 인덱스의 요소가 타겟 숫자보다 작다면, 타겟 숫자는 mid의 오른쪽에 있으므로 low를 mid + 1로 조정한다."),bk.forEach(s),dc=u(v),fp=o(v,"LI",{});var vk=e(fp);bc=i(vk,"low가 high보다 커지면, 타겟 숫자가 배열 내에 없는 것으로 간주하고 -1을 반환한다."),vk.forEach(s),vc=u(v),yp=o(v,"LI",{});var _k=e(yp);_c=i(_k,"위 과정을 반복하면서 타겟 숫자의 인덱스를 찾는다."),_k.forEach(s),v.forEach(s),Lt=u(n),Y=o(n,"PRE",{class:!0});var Am=e(Y);Am.forEach(s),jt=u(n),Ns=o(n,"P",{});var Ek=e(Ns);Ec=i(Ek,"변형 숫자의 제곱근 찾기"),Ek.forEach(s),At=u(n),h=o(n,"PRE",{class:!0});var Mm=e(h);Mm.forEach(s),Mt=u(n),g=o(n,"H3",{id:!0});var Sk=e(g);Rs=o(Sk,"A",{href:!0});var xk=e(Rs);Sc=i(xk,"두 수의 합 찾기"),xk.forEach(s),Sk.forEach(s),Tt=u(n),Bs=o(n,"P",{});var Pk=e(Bs);xc=i(Pk,"정수 배열 nums와 타겟 숫자 target이 주어질 때, nums 배열 내 두 숫자의 합이 target이 되게 하는 두 숫자의 인덱스를 배열로 반환해야 해. 각 입력에 정확히 하나의 솔루션이 있다고 가정하며, 같은 요소를 두 번 사용할 수 없어."),Pk.forEach(s),Ct=u(n),Fs=o(n,"P",{});var Hk=e(Fs);wp=o(Hk,"EM",{});var Lk=e(wp);Pc=i(Lk,"문제 해결 방법"),Lk.forEach(s),Hk.forEach(s),It=u(n),b=o(n,"OL",{});var x=e(b);dp=o(x,"LI",{});var jk=e(dp);Hc=i(jk,"배열을 순회하면서 각 요소를 검사해."),jk.forEach(s),Lc=u(x),bp=o(x,"LI",{});var Ak=e(bp);jc=i(Ak,"현재 요소와 타겟 숫자 사이의 차이를 계산하고, 이 차이가 해시 테이블 내에 이미 존재하는지 확인해."),Ak.forEach(s),Ac=u(x),vp=o(x,"LI",{});var Mk=e(vp);Mc=i(Mk,"만약 차이가 해시 테이블 내에 존재한다면, 현재 요소의 인덱스와 차이가 존재하는 요소의 인덱스를 배열로 반환해."),Mk.forEach(s),Tc=u(x),_p=o(x,"LI",{});var Tk=e(_p);Cc=i(Tk,"그렇지 않다면, 현재 요소와 해당 인덱스를 해시 테이블에 저장해."),Tk.forEach(s),x.forEach(s),Nt=u(n),nn=o(n,"PRE",{class:!0});var Tm=e(nn);Tm.forEach(s),Rt=u(n),sn=o(n,"H3",{id:!0});var Ck=e(sn);Ds=o(Ck,"A",{href:!0});var Ik=e(Ds);Ic=i(Ik,"회문 판별하기"),Ik.forEach(s),Ck.forEach(s),Bt=u(n),Xs=o(n,"P",{});var Nk=e(Xs);Nc=i(Nk,"주어진 문자열이 회문인지 아닌지를 판별하는 함수를 작성해야 해. 여기서 고려해야 할 것은, 대소문자를 구분하지 않고, 영문자와 숫자만을 대상으로 판별한다는 점이야."),Nk.forEach(s),Ft=u(n),Vs=o(n,"P",{});var Rk=e(Vs);Ep=o(Rk,"EM",{});var Bk=e(Ep);Rc=i(Bk,"문제 해결 방법"),Bk.forEach(s),Rk.forEach(s),Dt=u(n),_=o(n,"OL",{});var op=e(_);Sp=o(op,"LI",{});var Fk=e(Sp);Bc=i(Fk,"문자열을 전처리하여 영문자와 숫자만 남기고, 모두 소문자로 변환한다."),Fk.forEach(s),Fc=u(op),xp=o(op,"LI",{});var Dk=e(xp);Dc=i(Dk,"전처리된 문자열의 앞뒤를 차례대로 비교해 나가면서 회문인지 확인한다."),Dk.forEach(s),Xc=u(op),Pp=o(op,"LI",{});var Xk=e(Pp);Vc=i(Xk,"전체 문자열을 반으로 나누어 비교하면 충분하다. 문자열의 길이가 홀수라면 중앙 문자는 비교에서 제외한다."),Xk.forEach(s),op.forEach(s),Xt=u(n),an=o(n,"PRE",{class:!0});var Cm=e(an);Cm.forEach(s),Vt=u(n),pn=o(n,"H3",{id:!0});var Vk=e(pn);Os=o(Vk,"A",{href:!0});var Ok=e(Os);Oc=i(Ok,"연속된 부분 배열의 최대 합 찾기"),Ok.forEach(s),Vk.forEach(s),Ot=u(n),Ws=o(n,"P",{});var Wk=e(Ws);Wc=i(Wk,"정수로 이루어진 배열이 주어졌을 때, 그 배열의 연속된 부분 배열(subarray) 중에서 합이 최대가 되는 부분 배열의 합을 찾아라."),Wk.forEach(s),Wt=u(n),qs=o(n,"P",{});var qk=e(qs);Hp=o(qk,"EM",{});var zk=e(Hp);qc=i(zk,"문제 해결 방법"),zk.forEach(s),qk.forEach(s),qt=u(n),tn=o(n,"P",{});var lu=e(tn);Lp=o(lu,"EM",{});var Gk=e(Lp);zc=i(Gk,"카데인 알고리즘(Kadane’s Algorithm)"),Gk.forEach(s),Gc=i(lu,` 사용해  이것은 현재까지의 부분 최대합을 계속 추적하면서 배열을 한 번만 순회해 최대 부분 배열의 합을 찾는 방법이야.
+각 단계에서, 현재 요소를 포함한 부분 배열의 최대 합을 계산하고, 이 값이 최대 합보다 큰지 비교해. 최대 합을 갱신해 가면서 배열의 끝에 도달할 때까지 이 과정을 반복해.`),lu.forEach(s),zt=u(n),on=o(n,"PRE",{class:!0});var Im=e(on);Im.forEach(s),Gt=u(n),en=o(n,"H4",{id:!0});var $k=e(en);zs=o($k,"A",{href:!0});var Uk=e(zs);$c=i(Uk,"카데인 알고리즘의 기본 원리"),Uk.forEach(s),$k.forEach(s),$t=u(n),Gs=o(n,"P",{});var Kk=e(Gs);Uc=i(Kk,"카데인 알고리즘은 두 개의 변수를 사용해 배열을 한 번만 순회하면서 문제를 해결해:"),Kk.forEach(s),Ut=u(n),$s=o(n,"P",{});var Zk=e($s);Kc=i(Zk,`maxEndingHere: 배열의 각 위치에서 끝나는 최대 부분 배열의 합. 이 값은 현재까지의 최대 부분 배열의 합을 나타내며, 현재 요소를 포함하여 계산되어야 해. 만약 maxEndingHere가 음수가 되면, 새로운 부분 배열의 시작점을 고려할 수 있어. 즉, maxEndingHere = Math.max(nums[i], maxEndingHere + nums[i])를 통해 계산돼.
+maxSoFar: 지금까지 찾은 최대 부분 배열의 합. 이 값은 maxEndingHere의 값이 갱신될 때마다 최대값을 비교하여 업데이트될 수 있어. 즉, maxSoFar = Math.max(maxSoFar, maxEndingHere)로 계산돼.`),Zk.forEach(s),Kt=u(n),cn=o(n,"H4",{id:!0});var Jk=e(cn);Us=o(Jk,"A",{href:!0});var Qk=e(Us);Zc=i(Qk,"알고리즘의 작동 방식"),Qk.forEach(s),Jk.forEach(s),Zt=u(n),Ks=o(n,"P",{});var Yk=e(Ks);Jc=i(Yk,`배열의 첫 번째 요소를 maxEndingHere와 maxSoFar의 초기값으로 설정해.
+배열의 두 번째 요소부터 시작해 각 요소에 대해 다음을 수행해:
+현재 요소를 포함시킨 최대 부분 배열의 합(maxEndingHere)을 계산해. 여기서 현재 요소 자체와 현재 요소를 포함한 이전의 부분 배열의 합 중 더 큰 값을 선택해.
+maxSoFar를 maxEndingHere와 비교하여 필요한 경우 갱신해.
+모든 요소를 검사한 후 maxSoFar가 전체 배열의 최대 부분 배열의 합이 돼.`),Yk.forEach(s),Jt=u(n),ln=o(n,"H4",{id:!0});var hk=e(ln);Zs=o(hk,"A",{href:!0});var gk=e(Zs);Qc=i(gk,"순회 방식"),gk.forEach(s),hk.forEach(s),Qt=u(n),un=o(n,"PRE",{class:!0});var Nm=e(un);Nm.forEach(s),Yt=u(n),kn=o(n,"H4",{id:!0});var ni=e(kn);Js=o(ni,"A",{href:!0});var si=e(Js);Yc=i(si,"기출변형"),si.forEach(s),ni.forEach(s),ht=u(n),rn=o(n,"P",{});var uu=e(rn);jp=o(uu,"STRONG",{});var ai=e(jp);hc=i(ai,"“최대 수익 구하기”"),ai.forEach(s),gc=i(uu,"에 관한 문제입니다. 주식의 일일 가격이 주어졌을 때, 한 번의 거래로 얻을 수 있는 최대 수익을 계산해야 합니다. 여기서 한 번의 거래는 주식을 한 번 사고 팔아 수익을 얻는 것을 의미합니다."),uu.forEach(s),gt=u(n),Qs=o(n,"P",{});var pi=e(Qs);nl=i(pi,"주어진 배열 prices는 여러 날에 걸친 주식의 가격을 나타냅니다. prices[i]는 주식이 i번째 날에 가지는 가격입니다. 단 한 번의 거래로 얻을 수 있는 최대 수익을 반환하세요. 만약 어떤 거래로도 수익을 얻을 수 없다면 0을 반환하세요."),pi.forEach(s),no=u(n),mn=o(n,"PRE",{class:!0});var Rm=e(mn);Rm.forEach(s),so=u(n),fn=o(n,"H3",{id:!0});var ti=e(fn);Ys=o(ti,"A",{href:!0});var oi=e(Ys);sl=i(oi,"회전된 정렬된 배열에서 최소값 찾기"),oi.forEach(s),ti.forEach(s),ao=u(n),hs=o(n,"P",{});var ei=e(hs);al=i(ei,"정렬된 배열이 있고, 이 배열이 미리 알려지지 않은 특정 피벗을 기준으로 회전되었다고 가정해. 예를 들어, 배열 [0,1,2,4,5,6,7]이 있을 때, 이 배열을 3번째 인덱스에서 회전시키면 [4,5,6,7,0,1,2]가 돼. 이런 회전된 배열에서 최소값을 찾는 함수를 작성해야 해."),ei.forEach(s),po=u(n),gs=o(n,"P",{});var ci=e(gs);pl=i(ci,`회전된 정렬된 배열에서는 배열의 일부가 여전히 정렬되어 있음을 이용할 수 있어. 이진 검색과 유사한 방식으로 문제를 접근하지만, 중간점(middle)을 기준으로 어느 쪽이 정렬된 상태인지 판별하고, 최소값이 포함될 가능성이 있는 쪽을 선택하여 검색 범위를 좁혀 나가야 해.
+시작점(start)과 종료점(end) 사이에서 중간점(middle)을 찾고, 중간점이 시작점보다 큰지, 또는 종료점보다 작은지를 검사하여 검색 범위를 좁혀 나가면서 최소값을 찾아야 해.`),ci.forEach(s),to=u(n),yn=o(n,"PRE",{class:!0});var Bm=e(yn);Bm.forEach(s),oo=u(n),wn=o(n,"H3",{id:!0});var li=e(wn);na=o(li,"A",{href:!0});var ui=e(na);tl=i(ui,"정수를 로마 숫자로 변환하기"),ui.forEach(s),li.forEach(s),eo=u(n),sa=o(n,"P",{});var ki=e(sa);ol=i(ki,"로마 숫자는 일곱 개의 다른 기호로 나타납니다: I, V, X, L, C, D와 M입니다."),ki.forEach(s),co=u(n),aa=o(n,"P",{});var ii=e(aa);el=i(ii,`기호 값
+I 1
+V 5
+X 10
+L 50
+C 100
+D 500
+M 1000
+예를 들어, 로마 숫자 2는 II로 쓰이며, 단순히 두 개의 1을 나란히 쓴 것과 같습니다. 12는 XII로 쓰이며, 이는 X + II입니다. 27은 XXVII, 즉 XX + V + II입니다.`),ii.forEach(s),lo=u(n),pa=o(n,"P",{});var ri=e(pa);cl=i(ri,"로마 숫자는 보통 왼쪽에서 오른쪽으로 큰 숫자에서 작은 숫자 순으로 쓰입니다. 하지만 네 가지 특별한 경우에는 작은 숫자가 큰 숫자의 왼쪽에 옵니다."),ri.forEach(s),uo=u(n),ta=o(n,"P",{});var mi=e(ta);ll=i(mi,`IV (4)
+IX (9)
+XL (40)
+XC (90)
+CD (400)
+CM (900)
+주어진 정수를 로마 숫자로 변환하는 프로그램을 작성하세요.`),mi.forEach(s),ko=u(n),oa=o(n,"P",{});var fi=e(oa);ul=i(fi,"이 문제를 해결하기 위해, 가장 큰 값부터 시작하여 주어진 숫자를 줄여나갈 수 있는 로마 숫자의 값을 찾아 문자열에 추가하는 방식으로 접근할 수 있습니다. 각 단계에서 사용할 수 있는 가장 큰 값을 찾아 그 값을 주어진 숫자에서 빼고, 해당 로마 숫자를 결과 문자열에 추가합니다. 이 과정을 주어진 숫자가 0이 될 때까지 반복합니다."),fi.forEach(s),io=u(n),dn=o(n,"PRE",{class:!0});var Fm=e(dn);Fm.forEach(s),ro=u(n),bn=o(n,"H3",{id:!0});var yi=e(bn);ea=o(yi,"A",{href:!0});var wi=e(ea);kl=i(wi,"유효한 괄호 검사"),wi.forEach(s),yi.forEach(s),mo=u(n),ca=o(n,"P",{});var di=e(ca);il=i(di,"주어진 문자열 s가 유효한 괄호로만 구성되어 있는지 확인하세요. 유효한 괄호 문자열이란 다음과 같은 조건을 만족하는 문자열입니다:"),di.forEach(s),fo=u(n),la=o(n,"P",{});var bi=e(la);rl=i(bi,`열린 괄호는 반드시 같은 타입의 괄호로만 닫혀야 합니다.
+열린 괄호는 올바른 순서로 닫혀야 합니다.`),bi.forEach(s),yo=u(n),vn=o(n,"PRE",{class:!0});var Dm=e(vn);Dm.forEach(s),wo=u(n),_n=o(n,"H3",{id:!0});var vi=e(_n);ua=o(vi,"A",{href:!0});var _i=e(ua);ml=i(_i,"슬라이딩 윈도우(Sliding Window) 알고리즘"),_i.forEach(s),vi.forEach(s),bo=u(n),ka=o(n,"P",{});var Ei=e(ka);fl=i(Ei,"슬라이딩 윈도우 알고리즘은 배열이나 리스트의 일정 범위의 요소들을 연속적으로 살펴보면서 문제를 해결하는 기법입니다. “윈도우”는 배열의 연속적인 부분을 의미하며, 이 윈도우를 배열 전체를 훑을 때까지 한 칸씩 “슬라이드”시키면서 각 위치에서의 문제(예: 최대합, 최소값, 특정 조건 만족 여부 등)를 해결합니다."),Ei.forEach(s),vo=u(n),ia=o(n,"P",{});var Si=e(ia);yl=i(Si,`슬라이딩 윈도우의 주요 특징:
+고정된 크기의 윈도우: 윈도우의 크기가 고정되어 있고, 이 윈도우를 배열의 시작부터 끝까지 이동시키면서 각 위치에서 문제를 해결합니다.
+가변 크기의 윈도우: 윈도우의 크기가 고정되어 있지 않고, 문제의 조건을 만족시키기 위해 윈도우의 시작점과 끝점을 동적으로 조정합니다.`),Si.forEach(s),_o=u(n),ra=o(n,"P",{});var xi=e(ra);wl=i(xi,`슬라이딩 윈도우 사용 예시:
+최대 합 구하기: 주어진 배열에서 크기가 k인 연속된 부분 배열의 최대 합을 찾습니다.
+최소 길이 부분 배열 찾기: 주어진 배열에서 합이 특정 값 s 이상이 되는 가장 짧은 연속된 부분 배열을 찾습니다.
+문자열에서 모든 문자 포함하는 최소 윈도우 찾기: 문자열 S에서 문자열 T의 모든 문자를 포함하는 최소 크기의 부분 문자열을 찾습니다.`),xi.forEach(s),Eo=u(n),ma=o(n,"P",{});var Pi=e(ma);dl=i(Pi,`슬라이딩 윈도우 알고리즘의 장점:
+효율성: 특정 조건을 만족하는 최적의 해를 찾기 위해 배열이나 문자열을 한 번만 순회하므로, 일반적으로 시간 복잡도가 낮습니다.
+직관적: 윈도우를 슬라이딩하면서 문제를 해결하는 과정이 직관적이고 이해하기 쉽습니다.
+구현 방법:
+시작점과 끝점 초기화: 윈도우의 시작점과 끝점을 배열의 시작 부분에 초기화합니다.
+윈도우의 끝점 이동: 조건을 만족할 때까지 윈도우의 끝점을 이동시킵니다.
+윈도우의 시작점 이동: 조건을 만족하는 상태에서 더 최적의 해를 찾기 위해 윈도우의 시작점을 이동시킵니다.
+최적의 해 갱신: 윈도우를 이동시키면서 문제의 조건에 따라 최적의 해를 갱신합니다.`),Pi.forEach(s),So=u(n),En=o(n,"H4",{id:!0});var Hi=e(En);fa=o(Hi,"A",{href:!0});var Li=e(fa);bl=i(Li,"부분 문자열이 포함된 최소 윈도우 찾기"),Li.forEach(s),Hi.forEach(s),xo=u(n),ya=o(n,"P",{});var ji=e(ya);vl=i(ji,"이 문제에서는 문자열 S와 T가 주어졌을 때, S에서 T의 모든 문자를 포함하는 최소 크기의 부분 문자열을 찾아야 합니다. 만약 S 내에 T의 모든 문자를 포함하는 부분 문자열이 여러 개 있다면, 그 중 가장 짧은 부분 문자열을 반환합니다. 만약 그러한 부분 문자열이 없다면, 빈 문자열을 반환합니다."),ji.forEach(s),Po=u(n),wa=o(n,"P",{});var Ai=e(wa);_l=i(Ai,"예시:"),Ai.forEach(s),Ho=u(n),da=o(n,"P",{});var Mi=e(da);El=i(Mi,"입력: S = “ADOBECODEBANC”, T = “ABC”"),Mi.forEach(s),Lo=u(n),ba=o(n,"P",{});var Ti=e(ba);Sl=i(Ti,"출력: “BANC”"),Ti.forEach(s),jo=u(n),va=o(n,"P",{});var Ci=e(va);xl=i(Ci,"입력: S = “a”, T = “a”"),Ci.forEach(s),Ao=u(n),_a=o(n,"P",{});var Ii=e(_a);Pl=i(Ii,"출력: “a”"),Ii.forEach(s),Mo=u(n),Ea=o(n,"P",{});var Ni=e(Ea);Hl=i(Ni,"입력: S = “a”, T = “aa”"),Ni.forEach(s),To=u(n),Sa=o(n,"P",{});var Ri=e(Sa);Ll=i(Ri,'출력: ""'),Ri.forEach(s),Co=u(n),Sn=o(n,"PRE",{class:!0});var Xm=e(Sn);Xm.forEach(s),Io=u(n),xn=o(n,"PRE",{class:!0});var Vm=e(xn);Vm.forEach(s),No=u(n),Pn=o(n,"H3",{id:!0});var Bi=e(Pn);xa=o(Bi,"A",{href:!0});var Fi=e(xa);jl=i(Fi,"단어뒤집기2"),Fi.forEach(s),Bi.forEach(s),Ro=u(n),Hn=o(n,"PRE",{class:!0});var Om=e(Hn);Om.forEach(s),Bo=u(n),Ln=o(n,"H3",{id:!0});var Di=e(Ln);Pa=o(Di,"A",{href:!0});var Xi=e(Pa);Al=i(Xi,"그리디 알고리즘"),Xi.forEach(s),Di.forEach(s),Fo=u(n),jn=o(n,"PRE",{class:!0});var Wm=e(jn);Wm.forEach(s),Do=u(n),An=o(n,"H3",{id:!0});var Vi=e(An);Ha=o(Vi,"A",{href:!0});var Oi=e(Ha);Ml=i(Oi,"연속되는 숫자 합 찾기"),Oi.forEach(s),Vi.forEach(s),Xo=u(n),La=o(n,"P",{});var Wi=e(La);Tl=i(Wi,"주어진 문자열 s 내에서 연속된 숫자를 포함하는 모든 부분 문자열을 찾아, 그 숫자들의 합을 구해라. 예를 들어, “abc1234xyz”라는 문자열이 주어지면, “1”, “2”, “3”, “4”, “12”, “23”, “34”, “123”, “234”, “1234”와 같은 모든 숫자의 부분 문자열의 합을 구해야 해."),Wi.forEach(s),Vo=u(n),ja=o(n,"P",{});var qi=e(ja);Cl=i(qi,`예시
+입력: s = “abc1234xyz”
+출력: 1670
+설명: 위에서 설명한 대로, 연속된 숫자의 부분 문자열을 모두 찾아 그 합을 구하면 1670이 됨.
+입력: s = “abcd”
+출력: 0
+설명: 숫자를 포함하지 않으므로 합은 0이 됨.`),qi.forEach(s),Oo=u(n),Aa=o(n,"P",{});var zi=e(Aa);Il=i(zi,"이 문제를 해결하기 위한 접근 방법으로는 다음과 같은 단계를 고려할 수 있어:"),zi.forEach(s),Wo=u(n),Ma=o(n,"P",{});var Gi=e(Ma);Nl=i(Gi,`숫자 구분: 문자열을 순회하면서 숫자가 시작되는 지점과 끝나는 지점을 찾아내야 해.
+부분 문자열 처리: 각 숫자 구간에 대해, 가능한 모든 부분 문자열을 생성하고, 그것을 숫자로 변환해야 해.
+합 계산: 변환된 숫자들의 합을 계산해야 해.
+숫자의 연속된 부분 문자열을 찾고 그 합을 구하는 과정에 있어서 문자열 처리 기술과 반복문, 그리고 조건문을 적절히 활용해야 해. 또한, 각 숫자 부분 문자열에 대한 모든 가능한 조합을 고려하여 그 합을 계산하는 방식을 구현해야 한다는 점을 기억해야 해.`),Gi.forEach(s),qo=u(n),Mn=o(n,"PRE",{class:!0});var qm=e(Mn);qm.forEach(s),zo=u(n),Tn=o(n,"H3",{id:!0});var $i=e(Tn);Ta=o($i,"A",{href:!0});var Ui=e(Ta);Rl=i(Ui,"문자 합치기"),Ui.forEach(s),$i.forEach(s),Go=u(n),Ca=o(n,"P",{});var Ki=e(Ca);Bl=i(Ki,"알파벳으로만 이루어진 문자열이 주어질 때, 같은 문자가 연속으로 반복되는 부분을 문자 그리고 그 반복된 횟수로 표현하여 압축하는 프로그램을 작성해야 해. 예를 들어, “aaabbcccc”라는 문자열이 있다면 “a3b2c4”로 압축되어야 해. 단, 문자가 한 번만 나타나는 경우는 숫자를 붙이지 않고 그대로 표현해야 해. 예를 들어, “abcd”는 “abcd”로 그대로 표현되어야 하며, “aabbcc”는 “a2b2c2”로 압축되어야 해."),Ki.forEach(s),$o=u(n),Ia=o(n,"P",{});var Zi=e(Ia);Fl=i(Zi,"문자열을 순회하면서 현재 문자와 이전 문자가 같은지를 확인해야 해. 같다면 카운트를 증가시키고, 다르다면 이전 문자와 그 카운트를 결과 문자열에 추가해. 이 과정을 문자열의 끝까지 반복한 후, 마지막으로 카운트된 문자를 결과 문자열에 추가해야 해."),Zi.forEach(s),Uo=u(n),Cn=o(n,"PRE",{class:!0});var zm=e(Cn);zm.forEach(s),Ko=u(n),In=o(n,"H3",{id:!0});var Ji=e(In);Na=o(Ji,"A",{href:!0});var Qi=e(Na);Dl=i(Qi,"버블소트"),Qi.forEach(s),Ji.forEach(s),Zo=u(n),Ra=o(n,"P",{});var Yi=e(Ra);Xl=i(Yi,"버블 정렬(Bubble Sort)은 가장 간단하고 기초적인 정렬 알고리즘 중 하나로, 인접한 두 요소를 비교해서 잘못된 순서(예: 오름차순 정렬에서 큰 수가 앞에 오는 경우)가 있을 때 위치를 바꾸는 방식으로 작동해. 이 과정을 배열의 모든 요소가 올바른 순서로 정렬될 때까지 반복하며, 이름은 이 과정 중에 큰 값들이 배열의 끝으로 ‘떠오른다(bubble up)‘는 데서 유래했어."),Yi.forEach(s),Jo=u(n),Ba=o(n,"P",{});var hi=e(Ba);Vl=i(hi,`버블 정렬의 핵심은 두 가지 단계로 요약할 수 있어
+비교 단계: 배열을 처음부터 끝까지 순회하면서, 각각의 인접한 요소 쌍을 비교한다.
+교환 단계: 비교하는 두 요소가 잘못된 순서로 있으면, 이들의 위치를 서로 바꾼다.`),hi.forEach(s),Qo=u(n),Fa=o(n,"P",{});var gi=e(Fa);Ol=i(gi,"이 알고리즘의 시간 복잡도는 평균과 최악의 경우 모두 n의 제곱으로 n은 배열의 길이를 나타낸다. 배열이 이미 정렬되어 있거나 거의 정렬된 상태인 경우에는 상대적으로 빠르게 작동할 수 있지만, 대체로 크기가 큰 데이터셋에는 비효율적이야. 그럼에도 불구하고, 이해하기 쉽고 구현하기 간단해서 알고리즘 학습의 첫 단계로 자주 소개되곤 해."),gi.forEach(s),Yo=u(n),Nn=o(n,"PRE",{class:!0});var Gm=e(Nn);Gm.forEach(s),ho=u(n),Rn=o(n,"H3",{id:!0});var nr=e(Rn);Da=o(nr,"A",{href:!0});var sr=e(Da);Wl=i(sr,"선택정렬"),sr.forEach(s),nr.forEach(s),go=u(n),Xa=o(n,"P",{});var ar=e(Xa);ql=i(ar,"선택 정렬도 기본적인 정렬 알고리즘 중 하나로, 각 단계에서 정렬되지 않은 부분에서 최소값(또는 최대값)을 찾아 선택한 뒤, 그 값을 정렬된 부분의 다음 위치로 이동시키는 방식으로 동작해. 선택 정렬은 구현이 간단하며, 안정 정렬이 아니라는 특징을 가지고 있어."),ar.forEach(s),ne=u(n),Va=o(n,"P",{});var pr=e(Va);zl=i(pr,`선택 정렬 알고리즘 구현 방법
+배열 전체를 순회하며, 각 단계에서 현재 위치를 기준으로 가장 작은 요소를 찾아.
+가장 작은 요소를 현재 위치의 요소와 교환해.
+모든 요소가 올바르게 정렬될 때까지 이 과정을 반복해.`),pr.forEach(s),se=u(n),Bn=o(n,"PRE",{class:!0});var $m=e(Bn);$m.forEach(s),ae=u(n),Fn=o(n,"H3",{id:!0});var tr=e(Fn);Oa=o(tr,"A",{href:!0});var or=e(Oa);Gl=i(or,"삽입정렬"),or.forEach(s),tr.forEach(s),pe=u(n),Wa=o(n,"P",{});var er=e(Wa);$l=i(er,"삽입 정렬도 기본적인 정렬 방법 중 하나로, 각 반복에서 요소를 적절한 위치에 ‘삽입’하여 전체 배열을 정렬하는 방식이야. 이 알고리즘은 작은 데이터 세트에 효율적이며, 특히 거의 정렬된 배열에 대해서는 매우 빠르게 동작해."),er.forEach(s),te=u(n),qa=o(n,"P",{});var cr=e(qa);Ul=i(cr,`배열의 모든 요소를 차례대로 순회한다.
+각 요소를, 이미 정렬된 배열 부분(요소의 왼쪽 부분)의 적절한 위치에 삽입한다.
+필요하면, 삽입될 위치를 찾기 위해 정렬된 부분의 요소들을 오른쪽으로 이동시킨다.`),cr.forEach(s),oe=u(n),Dn=o(n,"PRE",{class:!0});var Um=e(Dn);Um.forEach(s),ee=u(n),Xn=o(n,"H3",{id:!0});var lr=e(Xn);za=o(lr,"A",{href:!0});var ur=e(za);Kl=i(ur,"하노이의 탑"),ur.forEach(s),lr.forEach(s),ce=u(n),Ga=o(n,"P",{});var kr=e(Ga);Zl=i(kr,"하노이의 탑 문제는 세 개의 기둥과 이 기둥 중 하나에 작은 것부터 큰 순서로 쌓인 n개의 원판으로 구성되어 있어. 문제의 목표는 첫 번째 기둥에서 세 번째 기둥으로 모든 원판을 옮기는 것인데, 다음의 규칙을 따라야 해:"),kr.forEach(s),le=u(n),$a=o(n,"P",{});var ir=e($a);Jl=i(ir,`한 번에 하나의 원판만 이동할 수 있어.
+원판은 세 개의 기둥 중 하나의 맨 위에서만 추가하거나 제거할 수 있어.
+큰 원판이 작은 원판 위에 있어서는 안 돼.`),ir.forEach(s),ue=u(n),Vn=o(n,"PRE",{class:!0});var Km=e(Vn);Km.forEach(s),ke=u(n),On=o(n,"H3",{id:!0});var rr=e(On);Ua=o(rr,"A",{href:!0});var mr=e(Ua);Ql=i(mr,"이진 검색 트리(Binary Search Tree, BST)"),mr.forEach(s),rr.forEach(s),ie=u(n),Ka=o(n,"P",{});var fr=e(Ka);Yl=i(fr,`각 노드의 왼쪽 서브 트리에는 해당 노드보다 작은 값들만 존재해야 하며,
+각 노드의 오른쪽 서브 트리에는 해당 노드보다 큰 값들만 존재해야 해.
+왼쪽과 오른쪽 서브 트리도 이진 검색 트리여야 해.`),fr.forEach(s),re=u(n),Za=o(n,"P",{});var yr=e(Za);hl=i(yr,"주어진 값 val을 가진 노드를 찾으면 그 노드를 반환하고, 그런 노드가 없으면 None을 반환해야 해."),yr.forEach(s),me=u(n),Wn=o(n,"PRE",{class:!0});var Zm=e(Wn);Zm.forEach(s),fe=u(n),qn=o(n,"H3",{id:!0});var wr=e(qn);Ja=o(wr,"A",{href:!0});var dr=e(Ja);gl=i(dr,"계단 오르기 동적 계획법"),dr.forEach(s),wr.forEach(s),ye=u(n),Qa=o(n,"P",{});var br=e(Qa);nu=i(br,"동적 계획법(Dynamic Programming, DP)을 사용하여 효율적으로 해결할 수 있어. 이 문제의 핵심은 각 계단에 도달하는 방법의 수를 작은 문제부터 시작해 점차적으로 구해나가는 것이야. 각 단계에서, n번째 계단에 도달하는 방법의 수는 n-1번째 계단에 도달하는 방법의 수와 n-2번째 계단에 도달하는 방법의 수의 합과 같아."),br.forEach(s),we=u(n),zn=o(n,"PRE",{class:!0});var Jm=e(zn);Jm.forEach(s),de=u(n),Gn=o(n,"H3",{id:!0});var vr=e(Gn);Ya=o(vr,"A",{href:!0});var _r=e(Ya);su=i(_r,"백트래킹 문자조합"),_r.forEach(s),vr.forEach(s),be=u(n),ha=o(n,"P",{});var Er=e(ha);au=i(Er,"주어진 숫자 배열 candidates와 타겟 숫자 target이 있을 때, candidates 내의 숫자를 중복 선택하여 target을 만들 수 있는 모든 조합을 찾아야 합니다. 같은 숫자를 무한히 반복해서 사용할 수 있으며, 조합의 순서가 다르면 다른 조합으로 간주합니다."),Er.forEach(s),ve=u(n),ga=o(n,"P",{});var Sr=e(ga);pu=i(Sr,"“조합의 합(Combination Sum)” 문제를 살펴보겠습니다. 이 문제는 주어진 숫자 배열과 타겟 숫자가 있을 때, 배열 내의 숫자를 중복 사용하여 타겟 숫자를 만들 수 있는 모든 조합을 찾는 것입니다. 이 문제는 백트래킹(Backtracking) 알고리즘을 이해하고 적용하는 데 도움이 됩니다."),Sr.forEach(s),_e=u(n),np=o(n,"P",{});var xr=e(np);tu=i(xr,`기본 아이디어
+초기화: 결과를 저장할 리스트 result와 현재 조합을 저장할 리스트 combination을 준비합니다.
+DFS(깊이 우선 탐색) 함수 정의: dfs라는 이름의 재귀 함수를 정의합니다. 이 함수는 현재 인덱스(index)와 현재 조합의 합(current_sum)을 인자로 받습니다.
+만약 current_sum이 target과 같다면, 현재 조합을 result에 추가합니다.
+만약 current_sum이 target을 초과한다면, 더 이상 탐색하지 않고 반환합니다.
+DFS 실행: candidates 배열의 각 숫자에 대해 DFS를 실행하여, 모든 가능한 조합을 탐색합니다. 각 단계에서는 현재 숫자를 선택하거나 선택하지 않는 두 가지 경우를 고려합니다.
+결과 반환: 모든 탐색이 끝나면, result에 저장된 조합들을 반환합니다.`),xr.forEach(s),Ee=u(n),$n=o(n,"PRE",{class:!0});var Qm=e($n);Qm.forEach(s),Se=u(n),Un=o(n,"H3",{id:!0});var Pr=e(Un);sp=o(Pr,"A",{href:!0});var Hr=e(sp);ou=i(Hr,"주어진 문자열로 회문순열을 만들수 있는지 판단"),Hr.forEach(s),Pr.forEach(s),xe=u(n),ap=o(n,"P",{});var Lr=e(ap);eu=i(Lr,"문자열이 주어졌을 때, 이 문자열의 순열 중 하나가 회문이 될 수 있는지를 판별하세요. 회문을 만들기 위해서는 문자열 내의 모든 문자를 사용할 필요는 없으며, 대소문자 구분이 없고, 공백은 무시합니다."),Lr.forEach(s),Pe=u(n),Kn=o(n,"PRE",{class:!0});var Ym=e(Kn);Ym.forEach(s),He=u(n),pp=o(n,"P",{});var jr=e(pp);cu=i(jr,`문자열을 소문자로 변환하고 공백을 제거하여, 대소문자 구분 없이 공백 무시하며 처리합니다.
+count_map을 사용하여 각 문자의 등장 횟수를 세어 저장합니다.
+odd_count를 세어 홀수 번 등장하는 문자의 수를 계산하고, 이 값이 1 이하인 경우에만 회문 순열을 만들 수 있다고 판단합니다.
+이 로직에 따라, “Tact Coa”는 “taco cat”과 같이 순열 중 하나가 회문이 될 수 있으므로 True를 반환하며, “hello”는 어떤 순열도 회문이 될 수 없으므로 False를 반환합니다.`),jr.forEach(s),Le=u(n),tp=o(n,"H3",{id:!0}),e(tp).forEach(s),this.h()},h(){r(d,"href","#자바--코딩테스트에서-자주-쓰이는-함수"),r(m,"id","자바--코딩테스트에서-자주-쓰이는-함수"),r(w,"href","#배열array"),r(f,"id","배열array"),r(P,"class","language-java"),r(Qn,"href","#리스트list"),r(H,"id","리스트list"),r(L,"class","language-java"),r(Yn,"href","#문자열string"),r(j,"id","문자열string"),r(A,"class","language-java"),r(hn,"href","#기타-유용한-자바-팁"),r(M,"id","기타-유용한-자바-팁"),r(T,"class","language-java"),r(C,"class","language-java"),r(as,"href","#숫자-뒤집기"),r(I,"id","숫자-뒤집기"),r(N,"class","language-java"),r(os,"href","#문자열-뒤집기"),r(R,"id","문자열-뒤집기"),r(B,"class","language-java"),r(F,"class","language-java"),r(ks,"href","#최소공배수-최대공약수-구하기"),r(D,"id","최소공배수-최대공약수-구하기"),r(X,"class","language-java"),r(ws,"href","#소수찾기"),r(V,"id","소수찾기"),r(vs,"href","#에라토스테네스의-체-알고리즘의-핵심-원리"),r(O,"id","에라토스테네스의-체-알고리즘의-핵심-원리"),r(W,"class","language-java"),r(Es,"href","#피보나치-수열"),r(q,"id","피보나치-수열"),r(Ps,"href","#반복문을-이용한--피보나치-수열"),r(z,"id","반복문을-이용한--피보나치-수열"),r(G,"class","language-java"),r($,"class","language-python"),r(Ls,"href","#행렬-거듭제곱을-이용한-피보나치-수열"),r(U,"id","행렬-거듭제곱을-이용한-피보나치-수열"),r(K,"class","language-java"),r(As,"href","#메모이제이션-방법을-이용한-피보나치-수열"),r(Z,"id","메모이제이션-방법을-이용한-피보나치-수열"),r(J,"class","language-java"),r(Ts,"href","#이진-검색-구현하기"),r(Q,"id","이진-검색-구현하기"),r(Y,"class","language-java"),r(h,"class","language-java"),r(Rs,"href","#두-수의-합-찾기"),r(g,"id","두-수의-합-찾기"),r(nn,"class","language-java"),r(Ds,"href","#회문-판별하기"),r(sn,"id","회문-판별하기"),r(an,"class","language-java"),r(Os,"href","#연속된-부분-배열의-최대-합-찾기"),r(pn,"id","연속된-부분-배열의-최대-합-찾기"),r(on,"class","language-java"),r(zs,"href","#카데인-알고리즘의-기본-원리"),r(en,"id","카데인-알고리즘의-기본-원리"),r(Us,"href","#알고리즘의-작동-방식"),r(cn,"id","알고리즘의-작동-방식"),r(Zs,"href","#순회-방식"),r(ln,"id","순회-방식"),r(un,"class","language-md"),r(Js,"href","#기출변형"),r(kn,"id","기출변형"),r(mn,"class","language-java"),r(Ys,"href","#회전된-정렬된-배열에서-최소값-찾기"),r(fn,"id","회전된-정렬된-배열에서-최소값-찾기"),r(yn,"class","language-java"),r(na,"href","#정수를-로마-숫자로-변환하기"),r(wn,"id","정수를-로마-숫자로-변환하기"),r(dn,"class","language-java"),r(ea,"href","#유효한-괄호-검사"),r(bn,"id","유효한-괄호-검사"),r(vn,"class","language-java"),r(ua,"href","#슬라이딩-윈도우sliding-window-알고리즘"),r(_n,"id","슬라이딩-윈도우sliding-window-알고리즘"),r(fa,"href","#부분-문자열이-포함된-최소-윈도우-찾기"),r(En,"id","부분-문자열이-포함된-최소-윈도우-찾기"),r(Sn,"class","language-java"),r(xn,"class","language-java"),r(xa,"href","#단어뒤집기2"),r(Pn,"id","단어뒤집기2"),r(Hn,"class","language-java"),r(Pa,"href","#그리디-알고리즘"),r(Ln,"id","그리디-알고리즘"),r(jn,"class","language-java"),r(Ha,"href","#연속되는-숫자-합-찾기"),r(An,"id","연속되는-숫자-합-찾기"),r(Mn,"class","language-java"),r(Ta,"href","#문자-합치기"),r(Tn,"id","문자-합치기"),r(Cn,"class","language-java"),r(Na,"href","#버블소트"),r(In,"id","버블소트"),r(Nn,"class","language-python"),r(Da,"href","#선택정렬"),r(Rn,"id","선택정렬"),r(Bn,"class","language-python"),r(Oa,"href","#삽입정렬"),r(Fn,"id","삽입정렬"),r(Dn,"class","language-python"),r(za,"href","#하노이의-탑"),r(Xn,"id","하노이의-탑"),r(Vn,"class","language-python"),r(Ua,"href","#이진-검색-트리binary-search-tree-bst"),r(On,"id","이진-검색-트리binary-search-tree-bst"),r(Wn,"class","language-python"),r(Ja,"href","#계단-오르기-동적-계획법"),r(qn,"id","계단-오르기-동적-계획법"),r(zn,"class","language-python"),r(Ya,"href","#백트래킹-문자조합"),r(Gn,"id","백트래킹-문자조합"),r($n,"class","language-python"),r(sp,"href","#주어진-문자열로-회문순열을-만들수-있는지-판단"),r(Un,"id","주어진-문자열로-회문순열을-만들수-있는지-판단"),r(Kn,"class","language-python"),r(tp,"id","")},m(n,a){p(n,m,a),c(m,d),c(d,E),p(n,S,a),p(n,f,a),c(f,w),c(w,Jn),p(n,Ap,a),p(n,P,a),P.innerHTML=Tr,p(n,Mp,a),p(n,H,a),c(H,Qn),c(Qn,je),p(n,Tp,a),p(n,L,a),L.innerHTML=Cr,p(n,Cp,a),p(n,j,a),c(j,Yn),c(Yn,Ae),p(n,Ip,a),p(n,A,a),A.innerHTML=Ir,p(n,Np,a),p(n,M,a),c(M,hn),c(hn,Me),p(n,Rp,a),p(n,gn,a),c(gn,ep),c(ep,Te),p(n,Bp,a),p(n,T,a),T.innerHTML=Nr,p(n,Fp,a),p(n,ns,a),c(ns,cp),c(cp,Ce),p(n,Dp,a),p(n,C,a),C.innerHTML=Rr,p(n,Xp,a),p(n,ss,a),c(ss,lp),c(lp,Ie),p(n,Vp,a),p(n,I,a),c(I,as),c(as,Ne),p(n,Op,a),p(n,ps,a),c(ps,Re),p(n,Wp,a),p(n,N,a),N.innerHTML=Br,p(n,qp,a),p(n,ts,a),c(ts,Be),p(n,zp,a),p(n,R,a),c(R,os),c(os,Fe),p(n,Gp,a),p(n,es,a),c(es,De),p(n,$p,a),p(n,cs,a),c(cs,Xe),p(n,Up,a),p(n,B,a),B.innerHTML=Fr,p(n,Kp,a),p(n,ls,a),c(ls,Ve),p(n,Zp,a),p(n,us,a),c(us,Oe),p(n,Jp,a),p(n,F,a),F.innerHTML=Dr,p(n,Qp,a),p(n,D,a),c(D,ks),c(ks,We),p(n,Yp,a),p(n,is,a),c(is,qe),p(n,hp,a),p(n,rs,a),c(rs,ze),p(n,gp,a),p(n,ms,a),c(ms,Ge),p(n,nt,a),p(n,fs,a),c(fs,$e),p(n,st,a),p(n,X,a),X.innerHTML=Xr,p(n,at,a),p(n,ys,a),c(ys,Ue),p(n,pt,a),p(n,V,a),c(V,ws),c(ws,Ke),p(n,tt,a),p(n,ds,a),c(ds,Ze),p(n,ot,a),p(n,bs,a),c(bs,Je),p(n,et,a),p(n,O,a),c(O,vs),c(vs,Qe),p(n,ct,a),p(n,_s,a),c(_s,Ye),p(n,lt,a),p(n,W,a),W.innerHTML=Vr,p(n,ut,a),p(n,q,a),c(q,Es),c(Es,he),p(n,kt,a),p(n,Ss,a),c(Ss,ge),p(n,it,a),p(n,xs,a),c(xs,nc),p(n,rt,a),p(n,z,a),c(z,Ps),c(Ps,sc),p(n,mt,a),p(n,Hs,a),c(Hs,ac),p(n,ft,a),p(n,G,a),G.innerHTML=Or,p(n,yt,a),p(n,$,a),$.innerHTML=Wr,p(n,wt,a),p(n,U,a),c(U,Ls),c(Ls,pc),p(n,dt,a),p(n,js,a),c(js,tc),p(n,bt,a),p(n,K,a),K.innerHTML=qr,p(n,vt,a),p(n,Z,a),c(Z,As),c(As,oc),p(n,_t,a),p(n,J,a),J.innerHTML=zr,p(n,Et,a),p(n,Ms,a),c(Ms,ec),p(n,St,a),p(n,Q,a),c(Q,Ts),c(Ts,cc),p(n,xt,a),p(n,Cs,a),c(Cs,lc),p(n,Pt,a),p(n,Is,a),c(Is,up),c(up,uc),p(n,Ht,a),p(n,y,a),c(y,kp),c(kp,kc),c(y,ic),c(y,ip),c(ip,rc),c(y,mc),c(y,rp),c(rp,fc),c(y,yc),c(y,mp),c(mp,wc),c(y,dc),c(y,fp),c(fp,bc),c(y,vc),c(y,yp),c(yp,_c),p(n,Lt,a),p(n,Y,a),Y.innerHTML=Gr,p(n,jt,a),p(n,Ns,a),c(Ns,Ec),p(n,At,a),p(n,h,a),h.innerHTML=$r,p(n,Mt,a),p(n,g,a),c(g,Rs),c(Rs,Sc),p(n,Tt,a),p(n,Bs,a),c(Bs,xc),p(n,Ct,a),p(n,Fs,a),c(Fs,wp),c(wp,Pc),p(n,It,a),p(n,b,a),c(b,dp),c(dp,Hc),c(b,Lc),c(b,bp),c(bp,jc),c(b,Ac),c(b,vp),c(vp,Mc),c(b,Tc),c(b,_p),c(_p,Cc),p(n,Nt,a),p(n,nn,a),nn.innerHTML=Ur,p(n,Rt,a),p(n,sn,a),c(sn,Ds),c(Ds,Ic),p(n,Bt,a),p(n,Xs,a),c(Xs,Nc),p(n,Ft,a),p(n,Vs,a),c(Vs,Ep),c(Ep,Rc),p(n,Dt,a),p(n,_,a),c(_,Sp),c(Sp,Bc),c(_,Fc),c(_,xp),c(xp,Dc),c(_,Xc),c(_,Pp),c(Pp,Vc),p(n,Xt,a),p(n,an,a),an.innerHTML=Kr,p(n,Vt,a),p(n,pn,a),c(pn,Os),c(Os,Oc),p(n,Ot,a),p(n,Ws,a),c(Ws,Wc),p(n,Wt,a),p(n,qs,a),c(qs,Hp),c(Hp,qc),p(n,qt,a),p(n,tn,a),c(tn,Lp),c(Lp,zc),c(tn,Gc),p(n,zt,a),p(n,on,a),on.innerHTML=Zr,p(n,Gt,a),p(n,en,a),c(en,zs),c(zs,$c),p(n,$t,a),p(n,Gs,a),c(Gs,Uc),p(n,Ut,a),p(n,$s,a),c($s,Kc),p(n,Kt,a),p(n,cn,a),c(cn,Us),c(Us,Zc),p(n,Zt,a),p(n,Ks,a),c(Ks,Jc),p(n,Jt,a),p(n,ln,a),c(ln,Zs),c(Zs,Qc),p(n,Qt,a),p(n,un,a),un.innerHTML=Jr,p(n,Yt,a),p(n,kn,a),c(kn,Js),c(Js,Yc),p(n,ht,a),p(n,rn,a),c(rn,jp),c(jp,hc),c(rn,gc),p(n,gt,a),p(n,Qs,a),c(Qs,nl),p(n,no,a),p(n,mn,a),mn.innerHTML=Qr,p(n,so,a),p(n,fn,a),c(fn,Ys),c(Ys,sl),p(n,ao,a),p(n,hs,a),c(hs,al),p(n,po,a),p(n,gs,a),c(gs,pl),p(n,to,a),p(n,yn,a),yn.innerHTML=Yr,p(n,oo,a),p(n,wn,a),c(wn,na),c(na,tl),p(n,eo,a),p(n,sa,a),c(sa,ol),p(n,co,a),p(n,aa,a),c(aa,el),p(n,lo,a),p(n,pa,a),c(pa,cl),p(n,uo,a),p(n,ta,a),c(ta,ll),p(n,ko,a),p(n,oa,a),c(oa,ul),p(n,io,a),p(n,dn,a),dn.innerHTML=hr,p(n,ro,a),p(n,bn,a),c(bn,ea),c(ea,kl),p(n,mo,a),p(n,ca,a),c(ca,il),p(n,fo,a),p(n,la,a),c(la,rl),p(n,yo,a),p(n,vn,a),vn.innerHTML=gr,p(n,wo,a),p(n,_n,a),c(_n,ua),c(ua,ml),p(n,bo,a),p(n,ka,a),c(ka,fl),p(n,vo,a),p(n,ia,a),c(ia,yl),p(n,_o,a),p(n,ra,a),c(ra,wl),p(n,Eo,a),p(n,ma,a),c(ma,dl),p(n,So,a),p(n,En,a),c(En,fa),c(fa,bl),p(n,xo,a),p(n,ya,a),c(ya,vl),p(n,Po,a),p(n,wa,a),c(wa,_l),p(n,Ho,a),p(n,da,a),c(da,El),p(n,Lo,a),p(n,ba,a),c(ba,Sl),p(n,jo,a),p(n,va,a),c(va,xl),p(n,Ao,a),p(n,_a,a),c(_a,Pl),p(n,Mo,a),p(n,Ea,a),c(Ea,Hl),p(n,To,a),p(n,Sa,a),c(Sa,Ll),p(n,Co,a),p(n,Sn,a),Sn.innerHTML=nm,p(n,Io,a),p(n,xn,a),xn.innerHTML=sm,p(n,No,a),p(n,Pn,a),c(Pn,xa),c(xa,jl),p(n,Ro,a),p(n,Hn,a),Hn.innerHTML=am,p(n,Bo,a),p(n,Ln,a),c(Ln,Pa),c(Pa,Al),p(n,Fo,a),p(n,jn,a),jn.innerHTML=pm,p(n,Do,a),p(n,An,a),c(An,Ha),c(Ha,Ml),p(n,Xo,a),p(n,La,a),c(La,Tl),p(n,Vo,a),p(n,ja,a),c(ja,Cl),p(n,Oo,a),p(n,Aa,a),c(Aa,Il),p(n,Wo,a),p(n,Ma,a),c(Ma,Nl),p(n,qo,a),p(n,Mn,a),Mn.innerHTML=tm,p(n,zo,a),p(n,Tn,a),c(Tn,Ta),c(Ta,Rl),p(n,Go,a),p(n,Ca,a),c(Ca,Bl),p(n,$o,a),p(n,Ia,a),c(Ia,Fl),p(n,Uo,a),p(n,Cn,a),Cn.innerHTML=om,p(n,Ko,a),p(n,In,a),c(In,Na),c(Na,Dl),p(n,Zo,a),p(n,Ra,a),c(Ra,Xl),p(n,Jo,a),p(n,Ba,a),c(Ba,Vl),p(n,Qo,a),p(n,Fa,a),c(Fa,Ol),p(n,Yo,a),p(n,Nn,a),Nn.innerHTML=em,p(n,ho,a),p(n,Rn,a),c(Rn,Da),c(Da,Wl),p(n,go,a),p(n,Xa,a),c(Xa,ql),p(n,ne,a),p(n,Va,a),c(Va,zl),p(n,se,a),p(n,Bn,a),Bn.innerHTML=cm,p(n,ae,a),p(n,Fn,a),c(Fn,Oa),c(Oa,Gl),p(n,pe,a),p(n,Wa,a),c(Wa,$l),p(n,te,a),p(n,qa,a),c(qa,Ul),p(n,oe,a),p(n,Dn,a),Dn.innerHTML=lm,p(n,ee,a),p(n,Xn,a),c(Xn,za),c(za,Kl),p(n,ce,a),p(n,Ga,a),c(Ga,Zl),p(n,le,a),p(n,$a,a),c($a,Jl),p(n,ue,a),p(n,Vn,a),Vn.innerHTML=um,p(n,ke,a),p(n,On,a),c(On,Ua),c(Ua,Ql),p(n,ie,a),p(n,Ka,a),c(Ka,Yl),p(n,re,a),p(n,Za,a),c(Za,hl),p(n,me,a),p(n,Wn,a),Wn.innerHTML=km,p(n,fe,a),p(n,qn,a),c(qn,Ja),c(Ja,gl),p(n,ye,a),p(n,Qa,a),c(Qa,nu),p(n,we,a),p(n,zn,a),zn.innerHTML=im,p(n,de,a),p(n,Gn,a),c(Gn,Ya),c(Ya,su),p(n,be,a),p(n,ha,a),c(ha,au),p(n,ve,a),p(n,ga,a),c(ga,pu),p(n,_e,a),p(n,np,a),c(np,tu),p(n,Ee,a),p(n,$n,a),$n.innerHTML=rm,p(n,Se,a),p(n,Un,a),c(Un,sp),c(sp,ou),p(n,xe,a),p(n,ap,a),c(ap,eu),p(n,Pe,a),p(n,Kn,a),Kn.innerHTML=mm,p(n,He,a),p(n,pp,a),c(pp,cu),p(n,Le,a),p(n,tp,a)},p:lf,d(n){n&&s(m),n&&s(S),n&&s(f),n&&s(Ap),n&&s(P),n&&s(Mp),n&&s(H),n&&s(Tp),n&&s(L),n&&s(Cp),n&&s(j),n&&s(Ip),n&&s(A),n&&s(Np),n&&s(M),n&&s(Rp),n&&s(gn),n&&s(Bp),n&&s(T),n&&s(Fp),n&&s(ns),n&&s(Dp),n&&s(C),n&&s(Xp),n&&s(ss),n&&s(Vp),n&&s(I),n&&s(Op),n&&s(ps),n&&s(Wp),n&&s(N),n&&s(qp),n&&s(ts),n&&s(zp),n&&s(R),n&&s(Gp),n&&s(es),n&&s($p),n&&s(cs),n&&s(Up),n&&s(B),n&&s(Kp),n&&s(ls),n&&s(Zp),n&&s(us),n&&s(Jp),n&&s(F),n&&s(Qp),n&&s(D),n&&s(Yp),n&&s(is),n&&s(hp),n&&s(rs),n&&s(gp),n&&s(ms),n&&s(nt),n&&s(fs),n&&s(st),n&&s(X),n&&s(at),n&&s(ys),n&&s(pt),n&&s(V),n&&s(tt),n&&s(ds),n&&s(ot),n&&s(bs),n&&s(et),n&&s(O),n&&s(ct),n&&s(_s),n&&s(lt),n&&s(W),n&&s(ut),n&&s(q),n&&s(kt),n&&s(Ss),n&&s(it),n&&s(xs),n&&s(rt),n&&s(z),n&&s(mt),n&&s(Hs),n&&s(ft),n&&s(G),n&&s(yt),n&&s($),n&&s(wt),n&&s(U),n&&s(dt),n&&s(js),n&&s(bt),n&&s(K),n&&s(vt),n&&s(Z),n&&s(_t),n&&s(J),n&&s(Et),n&&s(Ms),n&&s(St),n&&s(Q),n&&s(xt),n&&s(Cs),n&&s(Pt),n&&s(Is),n&&s(Ht),n&&s(y),n&&s(Lt),n&&s(Y),n&&s(jt),n&&s(Ns),n&&s(At),n&&s(h),n&&s(Mt),n&&s(g),n&&s(Tt),n&&s(Bs),n&&s(Ct),n&&s(Fs),n&&s(It),n&&s(b),n&&s(Nt),n&&s(nn),n&&s(Rt),n&&s(sn),n&&s(Bt),n&&s(Xs),n&&s(Ft),n&&s(Vs),n&&s(Dt),n&&s(_),n&&s(Xt),n&&s(an),n&&s(Vt),n&&s(pn),n&&s(Ot),n&&s(Ws),n&&s(Wt),n&&s(qs),n&&s(qt),n&&s(tn),n&&s(zt),n&&s(on),n&&s(Gt),n&&s(en),n&&s($t),n&&s(Gs),n&&s(Ut),n&&s($s),n&&s(Kt),n&&s(cn),n&&s(Zt),n&&s(Ks),n&&s(Jt),n&&s(ln),n&&s(Qt),n&&s(un),n&&s(Yt),n&&s(kn),n&&s(ht),n&&s(rn),n&&s(gt),n&&s(Qs),n&&s(no),n&&s(mn),n&&s(so),n&&s(fn),n&&s(ao),n&&s(hs),n&&s(po),n&&s(gs),n&&s(to),n&&s(yn),n&&s(oo),n&&s(wn),n&&s(eo),n&&s(sa),n&&s(co),n&&s(aa),n&&s(lo),n&&s(pa),n&&s(uo),n&&s(ta),n&&s(ko),n&&s(oa),n&&s(io),n&&s(dn),n&&s(ro),n&&s(bn),n&&s(mo),n&&s(ca),n&&s(fo),n&&s(la),n&&s(yo),n&&s(vn),n&&s(wo),n&&s(_n),n&&s(bo),n&&s(ka),n&&s(vo),n&&s(ia),n&&s(_o),n&&s(ra),n&&s(Eo),n&&s(ma),n&&s(So),n&&s(En),n&&s(xo),n&&s(ya),n&&s(Po),n&&s(wa),n&&s(Ho),n&&s(da),n&&s(Lo),n&&s(ba),n&&s(jo),n&&s(va),n&&s(Ao),n&&s(_a),n&&s(Mo),n&&s(Ea),n&&s(To),n&&s(Sa),n&&s(Co),n&&s(Sn),n&&s(Io),n&&s(xn),n&&s(No),n&&s(Pn),n&&s(Ro),n&&s(Hn),n&&s(Bo),n&&s(Ln),n&&s(Fo),n&&s(jn),n&&s(Do),n&&s(An),n&&s(Xo),n&&s(La),n&&s(Vo),n&&s(ja),n&&s(Oo),n&&s(Aa),n&&s(Wo),n&&s(Ma),n&&s(qo),n&&s(Mn),n&&s(zo),n&&s(Tn),n&&s(Go),n&&s(Ca),n&&s($o),n&&s(Ia),n&&s(Uo),n&&s(Cn),n&&s(Ko),n&&s(In),n&&s(Zo),n&&s(Ra),n&&s(Jo),n&&s(Ba),n&&s(Qo),n&&s(Fa),n&&s(Yo),n&&s(Nn),n&&s(ho),n&&s(Rn),n&&s(go),n&&s(Xa),n&&s(ne),n&&s(Va),n&&s(se),n&&s(Bn),n&&s(ae),n&&s(Fn),n&&s(pe),n&&s(Wa),n&&s(te),n&&s(qa),n&&s(oe),n&&s(Dn),n&&s(ee),n&&s(Xn),n&&s(ce),n&&s(Ga),n&&s(le),n&&s($a),n&&s(ue),n&&s(Vn),n&&s(ke),n&&s(On),n&&s(ie),n&&s(Ka),n&&s(re),n&&s(Za),n&&s(me),n&&s(Wn),n&&s(fe),n&&s(qn),n&&s(ye),n&&s(Qa),n&&s(we),n&&s(zn),n&&s(de),n&&s(Gn),n&&s(be),n&&s(ha),n&&s(ve),n&&s(ga),n&&s(_e),n&&s(np),n&&s(Ee),n&&s($n),n&&s(Se),n&&s(Un),n&&s(xe),n&&s(ap),n&&s(Pe),n&&s(Kn),n&&s(He),n&&s(pp),n&&s(Le),n&&s(tp)}}}function rf(Zn){let m,d;const E=[Zn[0],iu];let S={$$slots:{default:[kf]},$$scope:{ctx:Zn}};for(let f=0;f<E.length;f+=1)S=ku(S,E[f]);return m=new uf({props:S}),{c(){sf(m.$$.fragment)},l(f){af(m.$$.fragment,f)},m(f,w){pf(m,f,w),d=!0},p(f,[w]){const Jn=w&1?tf(E,[w&1&&Ar(f[0]),w&0&&Ar(iu)]):{};w&2&&(Jn.$$scope={dirty:w,ctx:f}),m.$set(Jn)},i(f){d||(of(m.$$.fragment,f),d=!0)},o(f){ef(m.$$.fragment,f),d=!1},d(f){cf(m,f)}}}const iu={title:"백투베이직 알고리즘 - 초급",summary:"초심으로 돌아가겠습니다.",date:"2024-03-20",tags:["코딩테스트"]};function mf(Zn,m,d){return Zn.$$set=E=>{d(0,m=ku(ku({},m),Mr(E)))},m=Mr(m),[m]}class ff extends hm{constructor(m){super(),gm(this,m,mf,rf,nf,{})}}const df=Object.freeze(Object.defineProperty({__proto__:null,default:ff,metadata:iu},Symbol.toStringTag,{value:"Module"}));export{ff as P,df as _};
