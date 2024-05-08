@@ -1,22 +1,36 @@
 <script>
 	import { isHide } from '$lib/store.js';
 	import { page } from '$app/stores';
-
-	$: currentPath = decodeURIComponent($page.url.pathname);
+	import { goto } from '$app/navigation';
 
 	function hide() {
 		$isHide = !$isHide;
 	}
 
+	$: paths = decodeURIComponent($page.url.pathname).split('/').filter(Boolean);
+
+	function navigateTo(index) {
+		const pathToNavigate = '/' + paths.slice(0, index + 1).join('/');
+		goto(pathToNavigate);
+	}
+
 </script>
 
-<div class="flex items-center 	bg-white w-full p-4">
-	<button class="{$isHide ? '' : 'hidden'}" on:click="{hide}">
+<div class="flex items-center bg-white w-full p-6 space-x-2">
+	<button class="{$isHide ? '' : 'hidden'} hover:bg-gray-100" on:click="{hide}">
 		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
 			<path fill="currentColor" d="M3 3h18v2H3zm0 16h18v2H3zm0-8h18v2H3z" />
 		</svg>
 	</button>
-	<b class="{$isHide ? 'ml-4' : ''}">
-		{currentPath}
-	</b>
+	<div class="ml-{isHide ? '4' : ''} flex space-x-1 items-center text-sm">
+		{#each paths as path, index}
+			<b class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans"
+				 on:click={() => navigateTo(index)}>
+				{path}
+			</b>
+			{#if paths.length - 1 !== index }
+				<b>/</b>
+			{/if}
+		{/each}
+	</div>
 </div>

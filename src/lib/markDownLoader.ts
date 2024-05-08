@@ -6,7 +6,7 @@ export class MarkDownLoader {
     tags = [];
 
     constructor() {
-        this.modules = Object.entries(import.meta.glob(`/src/routes/posts/*/*.{md,svx,svelte.md}`, {eager: true}));
+        this.modules = Object.entries(import.meta.glob(`/src/routes/posts/**/*.{md,svx,svelte.md}`, {eager: true}));
     }
 
     public loadPosts(): Post[] {
@@ -15,9 +15,18 @@ export class MarkDownLoader {
             // @ts-ignore
             let metadata = module.metadata;
             metadata.path = this.getFileName(path);
-            posts.push(this.parseMarkdown(metadata));
+            let post = this.parseMarkdown(metadata)
+            posts.push(post);
         });
-        return this.sortPosts(posts);
+
+        posts = this.sortPosts(posts)
+        posts.forEach(post => {
+            if(post.parent !== ''){
+                let parentPost = posts.find((v) => v.path === post.parent)
+                parentPost.childs.push(post)
+            }
+        })
+        return posts;
     }
 
     public loadPostsByTag(tag: any): Post[] {
@@ -27,7 +36,10 @@ export class MarkDownLoader {
             let metadata = module.metadata;
             if (metadata.tags && metadata.tags.includes(tag)) {
                 metadata.path = this.getFileName(path);
-                posts.push(this.parseMarkdown(metadata));
+                let post = this.parseMarkdown(metadata)
+                if(post.parent == ''){
+                    posts.push(post);
+                }
             }
         });
         return this.sortPosts(posts);
@@ -42,17 +54,21 @@ export class MarkDownLoader {
 
     public getFileName(path: string): string {
         let pathArray = path.split('/');
-        return pathArray[pathArray.length - 2];
+        return pathArray.slice(4, -1).join('/');
     }
 
     private parseMarkdown(metadata: any): Post {
+        // console.log(metadata)
+        let pathArray = metadata.path.split("/")
         metadata = new Post({
             title: metadata.title,
             slug: metadata.slug,
             date: metadata.date,
             content: metadata.content,
             summary: metadata.summary,
-            path: metadata.path
+            path: metadata.path,
+            isOrigin: pathArray.length == 1,
+            parent: pathArray.slice(0,-1).join("/"),
         });
         return metadata;
     }

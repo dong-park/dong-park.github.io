@@ -7,10 +7,10 @@
 
 	function getTags(tag) {
 		if (tag === currentTag) {
-			goto('/');
+			goto('?tag=');
 			return;
 		} else {
-			goto(`/?tag=${tag}`);
+			goto(`?tag=${tag}`);
 		}
 	}
 
@@ -21,7 +21,7 @@
 	});
 </script>
 
-<div class="mt-6">
+<div class="">
 	{#if tags}
 		<div class="flex gap-1">
 			{#each tags as tag}
