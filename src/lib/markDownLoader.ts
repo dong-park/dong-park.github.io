@@ -81,4 +81,8 @@ export class MarkDownLoader {
         });
         return tagList;
     }
+
+    public loadMarkdownFiles() :Post[] {
+        return [];
+    }
 }

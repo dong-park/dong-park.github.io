@@ -17,9 +17,10 @@
 </svelte:head>
 
 <main>
-	<IndexNavigationBar />
+
 	<article class="relative bg-white py-6 px-4 " data-animate data-animate-speed="slow">
 		<h1>{title}</h1>
+<!--		<IndexNavigationBar />-->
 		<div class="text-sm">{transformDate(date)}</div>
 		<MarkDownLoader>
 			<slot />
@@ -34,10 +35,10 @@
     margin-right: auto;
 		width: 100%;
     max-width: var(--content-width);
-    padding-top: var(--page-top);
+    //padding-top: var(--page-top);
 
     @media (min-width: 768px) {
-      padding-top: var(--page-top-desktop);
+      //padding-top: var(--page-top-desktop);
     }
 	}
 

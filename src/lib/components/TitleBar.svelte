@@ -1,6 +1,6 @@
 <script>
 	export let title = '개발자 썰 모음집';
-	export let description = '소소하게 쌓아갑니다';
+	export let description = '';
 	export let summary = '';
 </script>
 

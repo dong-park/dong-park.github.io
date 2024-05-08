@@ -37,7 +37,8 @@
 	});
 </script>
 
-<nav data-animate data-animate-speed="slow" class="fixed -translate-x-[240px] max-w-[230px] mt-6">
+<!--<nav data-animate data-animate-speed="slow" class="fixed -translate-x-[240px] max-w-[230px] mt-6">-->
+<nav data-animate data-animate-speed="slow" class="max-w-[230px] mt-6">
 	<button class="text-sm mb-5" on:click={moveBack}>
 		<img src="/icons/back.svg" alt="back" class="w-4 h-4 inline-block mr-2" />
 	</button>

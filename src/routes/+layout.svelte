@@ -1,6 +1,12 @@
 <script>
 	import '../assets/global.scss';
 	import Analytics from '$lib/components/Analytics.svelte';
+	import Sidebar from '$lib/components/Sidebar.svelte';
+	import LocationBar from '$lib/components/LocationBar.svelte';
+	import { isHide } from '$lib/store';
+
+	export let data;
+
 </script>
 
 <svelte:head>
@@ -8,15 +14,13 @@
 </svelte:head>
 
 <Analytics />
-<div class="layout-container h-screen w-screen">
-	<div class="flex flex-col justify-between h-[100vh]">
-		<slot></slot>
-		<footer class="w-full text-center py-2">
-			<p class="text-xs">
-				&copy; 2024 dongpark. Powered by SvelteKit.
-			</p>
-		</footer>
+<div class="layout-container flex h-screen w-screen order-1 flex-shrink">
+	<Sidebar posts="{data.posts}" />
+	<div class="w-full h-[100vh] overflow-scroll ">
+		<LocationBar />
+		<slot />
 	</div>
+
 </div>
 
 
@@ -25,6 +29,5 @@
     width: 100%;
     padding-right: var(--body--margin-right);
     padding-left: var(--body--margin-left);
-
   }
 </style>
