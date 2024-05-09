@@ -26,6 +26,7 @@ export class MarkDownLoader {
                 parentPost.childs.push(post)
             }
         })
+
         return posts;
     }
 
