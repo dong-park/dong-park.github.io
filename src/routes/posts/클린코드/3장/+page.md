@@ -1,5 +1,5 @@
 ---
-title: 3장 의미있는 이름
+title: 3장 함수
 summary: ''
 date: '2024-01-08'
 published: false
