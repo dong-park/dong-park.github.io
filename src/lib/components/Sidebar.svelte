@@ -5,8 +5,16 @@
 
 	export let posts;
 
+	const title = '개발자 썰 모음집';
+	let isMobile = false; // 초기값 설정
+	let mediaQuery;
+	$: className = $isHide ? 'hidden fixed bg-white duration-300' : 'z-20 h-full p-3 bg-gray-100 overflow-scroll flex-shrink-0';
+	$: barWidth = isMobile ? 'w-full' : 'w-[290px]';
 
 	function gotoPost(title) {
+		if(isMobile){
+			hide()
+		}
 		goto(`/posts/${title}`);
 	}
 
@@ -24,17 +32,28 @@
 			p.childs.reverse();
 			return p;
 		});
+
+		mediaQuery = window.matchMedia('(max-width: 768px)');
+		isMobile = mediaQuery.matches;
+
+		function updateMobileStatus(e) {
+			isMobile = e.matches;
+		}
+		mediaQuery.addListener(updateMobileStatus);
+
+		// 컴포넌트가 언마운트될 때 리스너 제거
+		return () => {
+			mediaQuery.removeListener(updateMobileStatus);
+		};
 	});
-	// Reactive statement to check hide state
-	$: className = $isHide ? '-translate-x-[290px] fixed bg-white duration-300' : '';
 </script>
 
 <nav
-	class="{className} transition z-20 h-full w-[290px] p-3 bg-gray-100 overflow-scroll">
+	class="{className} {barWidth}">
 	<div class="flex items-center p-1 justify-between">
 		<h1>
 			<a href="/">
-				개발자 썰 모음집
+				{title}
 			</a>
 		</h1>
 		<button on:click="{hide}">
@@ -92,10 +111,8 @@
 				{/if}
 			{/key}
 		{/each}
-
 	</ul>
 </nav>
-
 
 <style lang="scss">
   ul {

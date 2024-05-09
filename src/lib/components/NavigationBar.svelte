@@ -37,15 +37,11 @@
 	});
 </script>
 
-<!--<nav data-animate data-animate-speed="slow" class="fixed -translate-x-[240px] max-w-[230px] mt-6">-->
-<nav data-animate data-animate-speed="slow" class="max-w-[230px] mt-6">
-<!--	<button class="text-sm mb-5" on:click={moveBack}>-->
-<!--		<img src="/icons/back.svg" alt="back" class="w-4 h-4 inline-block mr-2" />-->
-<!--	</button>-->
-	<ul class="mt-1 space-y-1">
+<nav data-animate data-animate-speed="slow" class="mt-6">
+	<ul class="mt-1 space-y-1 text-sm underline">
 		{#each headings as { id, text, text_, tagName, top, el }}
 			<li
-				class="truncate font-sans cursor-pointer {activeSection === text_ ? 'font-bold' : ''}"
+				class="truncate font-sans cursor-pointer hover:bg-gray-100 {activeSection === text_ ? 'font-bold' : ''}"
 				on:click={() => el.scrollIntoView({ behavior: 'smooth' })}
 			>
 				{text}
@@ -53,20 +49,3 @@
 		{/each}
 	</ul>
 </nav>
-<button class="back-button px-4 text-xs" on:click={moveBack}>
-	<img src="/icons/back.svg" alt="back" class="w-4 h-4 inline-block mr-2" />
-</button>
-
-<style lang="scss">
-	.back-button {
-		@media (min-width: 1250px) {
-			display: none;
-		}
-	}
-
-	nav {
-		@media (max-width: 1250px) {
-			display: none;
-		}
-	}
-</style>

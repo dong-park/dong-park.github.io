@@ -1,69 +1,10 @@
 ---
-title: 백투베이직 알고리즘 - 초급
-summary: 초심으로 돌아가겠습니다.
+title: 알고리즘
+summary:
 date: '2024-03-20'
 tags: ['코딩테스트']
 ---
 
-
-### 자바  코딩테스트에서 자주 쓰이는 함수
-
-### 배열(Array)
-
-```java
-- 배열 선언: int[] arr = new int[5];
-- 배열 길이: arr.length
-- 배열 출력: Arrays.toString(arr) (Arrays 클래스의 toString 메소드 사용)
-- 배열 복사: Arrays.copyOf(arr, arr.length) 또는 System.arraycopy(sourceArr, 0, destArr, 0, sourceArr,length);
-- 다차원 배열 출력: Arrays.deepToString(multiDimArr)
-```
-
-### 리스트(List)
-
-```java
-- 리스트 선언: List<Integer> list = new ArrayList<>();
-- 요소 추가: list.add(value);
-- 요소 제거: list.remove(index); 또는 객체 제거 list.remove(Integer.valueOf(value));
-- 리스트 크기: list.size()
-- 리스트 정렬: Collections.sort(list);
-- 리스트 출력: 리스트를 그대로 출력하면 됨 (예: System.out.println(list);)
-```
-
-### 문자열(String)
-
-```java
-- 문자열 길이: str.length()
-- 부분 문자열: str.substring(startIndex, endIndex) (startIndex부터 endIndex 전까지의 문자열 반환)
-- 문자열 비교: str.equals(otherStr)
-- 문자열을 문자 배열로: char[] charArray = str.toCharArray();
-- 문자 찾기: str.indexOf('a') (문자나 문자열이 처음으로 등장하는 인덱스 반환, 없으면 -1 반환)
-- 문자열 분할: String[] parts = str.split("delim");
-```
-
-### 기타 유용한 자바 팁
-
-- Scanner 클래스를 사용한 입력 처리:
-
-```java
-Copy code
-Scanner scanner = new Scanner(System.in);
-int number = scanner.nextInt();
-String str = scanner.nextLine();
-```
-
-- StringBuilder를 사용해 문자열을 더 효율적으로 다룸 (반복적인 문자열 연산에 유용):
-
-``` java
-Copy code
-StringBuilder sb = new StringBuilder();
-sb.append("Hello, ");
-sb.append("World!");
-String result = sb.toString();
-```
-
-- 반복문과 조건문에서의 continue와 break 사용:
-continue는 반복문의 현재 반복을 건너뛰고 다음 반복으로 넘어가고,
-break는 반복문을 완전히 종료시킴.
 
 ### 숫자 뒤집기
 
@@ -1040,82 +981,6 @@ public class main {
 }
 ```
 
-### 버블소트
-
-버블 정렬(Bubble Sort)은 가장 간단하고 기초적인 정렬 알고리즘 중 하나로, 인접한 두 요소를 비교해서 잘못된 순서(예: 오름차순 정렬에서 큰 수가 앞에 오는 경우)가 있을 때 위치를 바꾸는 방식으로 작동해. 이 과정을 배열의 모든 요소가 올바른 순서로 정렬될 때까지 반복하며, 이름은 이 과정 중에 큰 값들이 배열의 끝으로 '떠오른다(bubble up)'는 데서 유래했어.
-
-버블 정렬의 핵심은 두 가지 단계로 요약할 수 있어
-비교 단계: 배열을 처음부터 끝까지 순회하면서, 각각의 인접한 요소 쌍을 비교한다.
-교환 단계: 비교하는 두 요소가 잘못된 순서로 있으면, 이들의 위치를 서로 바꾼다.
-
-이 알고리즘의 시간 복잡도는 평균과 최악의 경우 모두 n의 제곱으로 n은 배열의 길이를 나타낸다. 배열이 이미 정렬되어 있거나 거의 정렬된 상태인 경우에는 상대적으로 빠르게 작동할 수 있지만, 대체로 크기가 큰 데이터셋에는 비효율적이야. 그럼에도 불구하고, 이해하기 쉽고 구현하기 간단해서 알고리즘 학습의 첫 단계로 자주 소개되곤 해.
-
-```Python
-def bubble_sort(nums):
-    # 여기에 코드를 작성하세요.
-    for i in range(len(nums)-1, 0, -1):
-        for j in range(i):
-            if(nums[i] < nums[j]): nums[j], nums[j+1] = nums[j+1], nums[j]
-            
-    return nums
-            
-# 테스트 케이스
-print(bubble_sort([5, 3, 8, 4, 2]))  # 예상 출력: [2, 3, 4, 5, 8]
-print(bubble_sort([20, -5, 3, 2]))  # 예상 출력: [-5, 2, 3, 20]
-```
-
-### 선택정렬
-
-선택 정렬도 기본적인 정렬 알고리즘 중 하나로, 각 단계에서 정렬되지 않은 부분에서 최소값(또는 최대값)을 찾아 선택한 뒤, 그 값을 정렬된 부분의 다음 위치로 이동시키는 방식으로 동작해. 선택 정렬은 구현이 간단하며, 안정 정렬이 아니라는 특징을 가지고 있어.
-
-선택 정렬 알고리즘 구현 방법
-배열 전체를 순회하며, 각 단계에서 현재 위치를 기준으로 가장 작은 요소를 찾아.
-가장 작은 요소를 현재 위치의 요소와 교환해.
-모든 요소가 올바르게 정렬될 때까지 이 과정을 반복해.
-
-```python
-def selection_sort(nums):
-    for i in range(0, len(nums)):
-        for j in range(i, len(nums)):
-            if(nums[i] > nums[j]):
-                nums[i], nums[j] = nums[j], nums[i]
-                
-    return nums
-
-# 테스트 케이스
-print(selection_sort([29, 10, 14, 37, 13]))  # 예상 출력: [10, 13, 14, 29, 37]
-print(selection_sort([5, 3, 8, 4, 2]))  # 예상 출력: [2, 3, 4, 5, 8]
-```
-
-### 삽입정렬
-
-삽입 정렬도 기본적인 정렬 방법 중 하나로, 각 반복에서 요소를 적절한 위치에 '삽입'하여 전체 배열을 정렬하는 방식이야. 이 알고리즘은 작은 데이터 세트에 효율적이며, 특히 거의 정렬된 배열에 대해서는 매우 빠르게 동작해.
-
-배열의 모든 요소를 차례대로 순회한다.
-각 요소를, 이미 정렬된 배열 부분(요소의 왼쪽 부분)의 적절한 위치에 삽입한다.
-필요하면, 삽입될 위치를 찾기 위해 정렬된 부분의 요소들을 오른쪽으로 이동시킨다.
-
-```python
-def insertion_sort(nums):
-    # 여기에 코드를 작성하세요.
-    for i in range(1, len(nums)):
-        key = int(nums[i])
-        j = i - 1
-        # 현재 요소(key)보다 큰 요소들을 한 칸씩 오른쪽으로 이동
-        while j >= 0 and key < nums[j]:
-            nums[j + 1] = nums[j]
-            j -= 1
-        # 현재 요소를 적절한 위치에 삽입
-        nums[j + 1] = key
-        
-        
-                
-    return nums
-
-# 테스트 케이스
-print(insertion_sort([8, 5, 6, 2, 4]))  # 예상 출력: [2, 4, 5, 6, 8]
-print(insertion_sort([1, 3, 7, 9, 2]))  # 예상 출력: [1, 2, 3, 7, 9]
-```
 
 ### 하노이의 탑
 
@@ -1255,5 +1120,3 @@ print(canPermutePalindrome("hello"))    # 예상 출력: False
 count_map을 사용하여 각 문자의 등장 횟수를 세어 저장합니다.
 odd_count를 세어 홀수 번 등장하는 문자의 수를 계산하고, 이 값이 1 이하인 경우에만 회문 순열을 만들 수 있다고 판단합니다.
 이 로직에 따라, "Tact Coa"는 "taco cat"과 같이 순열 중 하나가 회문이 될 수 있으므로 True를 반환하며, "hello"는 어떤 순열도 회문이 될 수 없으므로 False를 반환합니다.
-
-###

@@ -3,6 +3,7 @@
 	import Comments from '$lib/components/Comments.svelte';
 	import { transformDate } from '$lib/utils/dates.ts';
 	import IndexNavigationBar from '$lib/components/NavigationBar.svelte';
+
 	export let title, summary, date;
 
 </script>
@@ -17,7 +18,6 @@
 </svelte:head>
 
 <main>
-
 	<article class="relative bg-white py-6 px-4 " data-animate data-animate-speed="slow">
 		<h1>{title}</h1>
 		<div class="text-sm">{transformDate(date)}</div>
@@ -35,11 +35,6 @@
     margin-right: auto;
 		width: 100%;
     max-width: var(--content-width);
-    //padding-top: var(--page-top);
-
-    @media (min-width: 768px) {
-      //padding-top: var(--page-top-desktop);
-    }
 	}
 
 </style>

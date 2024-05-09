@@ -2,6 +2,8 @@
 
 	import { onMount } from 'svelte';
 
+	export let tags;
+
 	function addCodeLangName() {
 		document.querySelectorAll('.post-content pre > code').forEach((code) => {
 			const lang = code.className.match(/language-(\w+)/);
@@ -33,8 +35,8 @@
 </script>
 
 <div class="post-content">
-	<div class="mt-[1.5em]"/>
-	<slot/>
+	<div class="mt-[1.5em]" />
+	<slot />
 </div>
 
 <style lang="scss">

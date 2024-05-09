@@ -20,7 +20,6 @@
 		<LocationBar />
 		<slot />
 	</div>
-
 </div>
 
 

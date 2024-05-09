@@ -16,7 +16,7 @@
 
 </script>
 
-<div class="flex items-center bg-white w-full p-6 space-x-2">
+<div class="flex items-center bg-white w-full p-4 space-x-2">
 	<button class="{$isHide ? '' : 'hidden'} hover:bg-gray-100" on:click="{hide}">
 		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
 			<path fill="currentColor" d="M3 3h18v2H3zm0 16h18v2H3zm0-8h18v2H3z" />

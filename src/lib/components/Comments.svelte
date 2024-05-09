@@ -18,7 +18,14 @@
 			utteranceScript.setAttribute(prop, commentOptions[prop]);
 		}
 		targetTag.appendChild(utteranceScript);
-	})
+	});
 </script>
 
-<div id="utterances-comments" class="content-wrapper" />
+<div id="utterances-comments" class="content-wrapper px-4" />
+
+<style lang="scss">
+  :global(.utterances) {
+    max-width: 100%;
+    padding: 1rem;
+  }
+</style>
