@@ -1,9 +1,7 @@
 <script>
-	import TitleBar from '$lib/components/TitleBar.svelte';
 	import Posts from '$lib/components/Posts.svelte';
 	import Tags from '$lib/components/Tags.svelte';
-	import Sidebar from '$lib/components/Sidebar.svelte';
-	import { onMount } from 'svelte';
+
 	export let data;
 
 
