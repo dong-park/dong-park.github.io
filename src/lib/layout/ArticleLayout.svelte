@@ -1,8 +1,8 @@
 <script>
-	import MarkDownLoader from '$lib/components/MarkDownArea.svelte';
+	import MarkDownLoader from '$lib/components/markdown/MarkDownArea.svelte';
 	import Comments from '$lib/components/Comments.svelte';
 	import { transformDate } from '$lib/utils/dates';
-	import IndexNavigationBar from '$lib/components/NavigationBar.svelte';
+	import IndexNavigationBar from '$lib/components/markdown/NavigationBar.svelte';
 
 	export let title, summary, date;
 

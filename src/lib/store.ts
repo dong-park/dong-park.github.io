@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
 
-function persist(key, value) {
+function persist(key: string, value: any) {
 	// Initialize the store with the default value
 	const store = writable(value);
 

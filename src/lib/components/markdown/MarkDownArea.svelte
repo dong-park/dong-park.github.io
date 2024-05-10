@@ -39,5 +39,5 @@
 </div>
 
 <style lang="scss">
-  @import '$assets/note.scss';
+	@import "./note.scss";
 </style>

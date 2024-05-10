@@ -5,7 +5,7 @@
 	export let posts;
 
 	function gotoPost(title: string): boolean {
-		goto(`/posts/${title}`);
+		goto(`/wikis/${title}`);
 		return true;
 	}
 

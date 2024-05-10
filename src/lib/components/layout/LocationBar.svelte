@@ -1,5 +1,6 @@
-<script>
-	import { isHide } from '$lib/store.js';
+<script lang="ts">
+	import { isHide } from '$lib/store';
+	import { MarkDownLoader } from '$lib/markDownLoader';
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 
@@ -9,15 +10,14 @@
 
 	$: paths = decodeURIComponent($page.url.pathname).split('/').filter(Boolean);
 
-	function navigateTo(index) {
+	function navigateTo(index: number) {
 		const pathToNavigate = '/' + paths.slice(0, index + 1).join('/');
 		goto(pathToNavigate);
 	}
-
 </script>
 
 <div class="flex items-center bg-white w-full p-4 space-x-2">
-	<button class="hover:bg-gray-100" on:click="{hide}">
+	<button class="hover:bg-gray-100" on:click={(e) => {hide()}}>
 		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
 			<path fill="currentColor" d="M3 3h18v2H3zm0 16h18v2H3zm0-8h18v2H3z" />
 		</svg>

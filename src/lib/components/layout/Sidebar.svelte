@@ -9,12 +9,13 @@
 	const title = '개발자 썰 모음집';
 	let isMobile = true;
 	$: className = $isHide ? 'hidden fixed bg-white duration-300' : 'z-20 h-full p-3 bg-gray-100 overflow-scroll flex-shrink-0';
+	$: width = isMobile ? 'w-full' : 'w-[290px]';
 
 	function gotoPost(title: string) {
 		if (isMobile) {
-			reverseHideStatus();
+			$isHide = true;
 		}
-		goto(`/posts/${title}`);
+		goto(`/wikis/${title}`);
 	}
 
 	function reverseHideStatus() {
@@ -46,7 +47,7 @@
 	});
 </script>
 
-<nav class="w-[250px] {className}">
+<nav class="shadow {width} {className} ">
 	<div class="flex items-center p-1 justify-between">
 		<h1>
 			<a href="/">
@@ -56,7 +57,9 @@
 	</div>
 	<ul>
 		<li class="doc-group font-sans">
-			<p>WIKI</p>
+			<button on:click={() => goto("/wikis")}>
+				<b>WIKI</b>
+			</button>
 		</li>
 		{#each posts as post}
 			{#key post}
@@ -111,33 +114,5 @@
 </nav>
 
 <style lang="scss">
-  ul {
-    @apply space-y-2;
-    @apply list-none;
-  }
-
-  li {
-    @apply p-1;
-  }
-
-  .doc-group {
-    @apply text-xs;
-  }
-
-  .doc {
-    @apply flex justify-between space-x-1.5 items-center;
-    @apply text-sm font-bold;
-    @apply hover:bg-gray-100;
-    @apply cursor-pointer;
-
-    p {
-      @apply truncate;
-    }
-
-  }
-
-  .sub-doc {
-    @apply doc;
-    @apply pl-3;
-  }
+  @import "layout.scss";
 </style>

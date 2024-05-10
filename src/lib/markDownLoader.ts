@@ -6,7 +6,7 @@ export class MarkDownLoader {
     tags = [];
 
     constructor() {
-        this.modules = Object.entries(import.meta.glob(`/src/routes/posts/**/*.{md,svx,svelte.md}`, {eager: true}));
+        this.modules = Object.entries(import.meta.glob(`/src/routes/wikis/**/*.{md,svx,svelte.md}`, {eager: true}));
     }
 
     public loadPosts(): Post[] {
@@ -96,9 +96,5 @@ export class MarkDownLoader {
             tagList.push(key);
         });
         return tagList;
-    }
-
-    public loadMarkdownFiles() :Post[] {
-        return [];
     }
 }

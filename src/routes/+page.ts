@@ -1,8 +1,8 @@
 import { MarkDownLoader } from '$lib/markDownLoader';
+import type { PageLoad } from './$types';
 import { browser } from '$app/environment';
-import type { Post } from '$lib/model/post';
 
-export const load: ({ e }: { e: any }) => Promise<{ postCount: number; posts: Post[]; tags: string[] }> = async ({ e }: { e: any }) => {
+export const load: PageLoad = async (e) => {
     const loader = new MarkDownLoader();
     const searchParams = browser && e.url.searchParams;
     const selectedTag = searchParams ? searchParams.get('tag') : '';

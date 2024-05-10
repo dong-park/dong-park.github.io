@@ -1,8 +1,8 @@
 <script>
 	import '../assets/global.scss';
 	import Analytics from '$lib/components/Analytics.svelte';
-	import Sidebar from '$lib/components/Sidebar.svelte';
-	import LocationBar from '$lib/components/LocationBar.svelte';
+	import Sidebar from '$lib/components/layout/Sidebar.svelte';
+	import LocationBar from '$lib/components/layout/LocationBar.svelte';
 
 	export let data;
 </script>

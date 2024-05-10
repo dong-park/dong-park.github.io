@@ -1,0 +1,26 @@
+ul {
+  @apply space-y-2;
+  @apply list-none;
+}
+
+li {
+  @apply p-1;
+}
+
+.doc-group {
+  @apply text-xs;
+}
+
+button {
+  @apply hover:bg-gray-100;
+}
+
+.doc {
+  @apply flex justify-between space-x-1.5 items-center;
+  @apply text-sm font-bold;
+}
+
+.sub-doc {
+  @apply doc;
+  @apply pl-3;
+}
