@@ -18,7 +18,7 @@
 </svelte:head>
 
 <main>
-	<article class="relative bg-white mt-2 py-6 px-4" data-animate data-animate-speed="slow">
+	<article class="relative bg-white mt-7 py-6 px-4" data-animate data-animate-speed="slow">
 		<h1>{title}</h1>
 		<div class="text-sm">{transformDate(date)}</div>
 		<IndexNavigationBar />
