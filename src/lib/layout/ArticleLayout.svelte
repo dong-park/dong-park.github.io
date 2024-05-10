@@ -40,5 +40,6 @@
 
   .main-height {
     height: calc(100vh - 52px);
+    //height: -webkit-fill-available;
   }
 </style>
