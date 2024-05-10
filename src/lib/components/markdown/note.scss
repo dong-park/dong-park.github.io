@@ -113,7 +113,7 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
   }
 
   :global(.token) {
-    @apply text-xs;
+    @apply text-sm;
     @apply font-extralight;
   }
 
