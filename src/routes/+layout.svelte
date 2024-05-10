@@ -16,7 +16,7 @@
 <Analytics />
 <div class="layout-container flex h-screen w-screen order-1 flex-shrink">
 	<Sidebar posts="{data.posts}" />
-	<div class="{($isMobile && $isHide) || !$isMobile ? 'w-full' : 'hidden'}">
+	<div class="{($isMobile && $isHide) || !$isMobile ? 'w-full' : 'hidden'} overflow-scroll">
 		<LocationBar />
 		<div class="mt-[52px]">
 			<slot />
