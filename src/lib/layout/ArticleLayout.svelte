@@ -6,6 +6,8 @@
 	import Comments from '$lib/components/Comments.svelte';
 
 	export let title, summary, date;
+
+
 </script>
 
 <svelte:head>
@@ -40,6 +42,6 @@
 
   .main-height {
     height: calc(100vh - 52px);
-    //height: -webkit-fill-available;
+    min-height: -webkit-fill-available;
   }
 </style>
