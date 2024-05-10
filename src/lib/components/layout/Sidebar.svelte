@@ -1,13 +1,12 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { isHide } from '$lib/store';
+	import { isHide, isMobile } from '$lib/store';
 	import { onMount } from 'svelte';
 	import type { Post } from '$lib/model/post';
 
 	export let posts: Post[];
 
 	const title = '개발자 썰 모음집';
-	let isMobile = true;
 	$: className = $isHide ? 'hidden fixed bg-white duration-300' : 'z-20 h-full p-3 bg-gray-100 overflow-scroll flex-shrink-0';
 	$: width = isMobile ? 'w-full' : 'w-[290px]';
 
@@ -15,17 +14,10 @@
 		if (isMobile) {
 			$isHide = true;
 		}
-		goto(`/wikis/${title}`, {
-			noScroll: true,
-			// keepFocus: false,
-			// invalidateAll: true,
-			replaceState: true
-		})
+
+		goto(`/wikis/${title}`);
 	}
 
-	function reverseHideStatus() {
-		$isHide = !$isHide;
-	}
 
 	function show(post: Post) {
 		post.show = !post.show;
@@ -34,10 +26,10 @@
 
 	function getMediaQuery() {
 		let mediaQuery = window.matchMedia('(max-width: 768px)');
-		isMobile = mediaQuery.matches;
+		$isMobile = mediaQuery.matches;
 
 		function updateMobileStatus(e: any) {
-			isMobile = e.matches;
+			$isMobile = e.matches;
 		}
 
 		mediaQuery.addEventListener('change', (e) => updateMobileStatus(e));
@@ -86,7 +78,7 @@
 								<span>
 									{post.title}
 								</span>
-						</span>
+							</span>
 							{#if post.childs.length > 0}
 								<button on:click={() => show(post)}>
 									{#if !post.show}

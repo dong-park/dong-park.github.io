@@ -3,6 +3,7 @@
 	import Analytics from '$lib/components/Analytics.svelte';
 	import Sidebar from '$lib/components/layout/Sidebar.svelte';
 	import LocationBar from '$lib/components/layout/LocationBar.svelte';
+	import {isHide, isMobile} from '$lib/store';
 
 	export let data;
 
@@ -15,9 +16,11 @@
 <Analytics />
 <div class="layout-container flex h-screen w-screen order-1 flex-shrink">
 	<Sidebar posts="{data.posts}" />
-	<div class="w-full overflow-hidden">
+	<div class="{$isMobile && $isHide ? 'w-full' : 'hidden'}">
 		<LocationBar />
-		<slot />
+		<div class="mt-[52px]">
+			<slot />
+		</div>
 	</div>
 </div>
 

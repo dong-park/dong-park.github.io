@@ -2,12 +2,9 @@
 	import MarkDownLoader from '$lib/components/markdown/MarkDownArea.svelte';
 	import { transformDate } from '$lib/utils/dates';
 	import IndexNavigationBar from '$lib/components/markdown/NavigationBar.svelte';
-	import { afterNavigate } from '$app/navigation';
 	import Comments from '$lib/components/Comments.svelte';
 
 	export let title, summary, date;
-
-
 </script>
 
 <svelte:head>
@@ -19,7 +16,7 @@
 	<meta property="og:site_name" content="dongpark.land" />
 </svelte:head>
 
-<main class="overflow-scroll main-height">
+<main class="main-height">
 	<article class="relative bg-white pt-2 px-4" data-animate data-animate-speed="slow">
 		<h1>{title}</h1>
 		<div class="text-sm">{transformDate(date)}</div>

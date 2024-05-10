@@ -21,3 +21,4 @@ function persist(key: string, value: any) {
 
 export const isHide = persist('isHide', true);
 export const currentPath = persist('currentPath', '');
+export const isMobile = writable(false)
