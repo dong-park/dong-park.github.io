@@ -32,7 +32,7 @@
 
 	onMount(() => {
 		initHeadings();
-		addScrollEvent();
+		// addScrollEvent();
 	});
 </script>
 
