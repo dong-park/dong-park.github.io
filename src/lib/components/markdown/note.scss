@@ -22,7 +22,9 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
   :global(h4),
   :global(h5),
   :global(h6) {
-    margin-top: 1.5em;
+    //margin-top: 1.5em;
+    margin-top: -52px;
+    padding-top: 62px;
     font-family: var(--font-sans);
     margin-bottom: 0.5em;
     font-weight: 600;

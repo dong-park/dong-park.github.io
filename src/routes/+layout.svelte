@@ -7,6 +7,9 @@
 
 	export let data;
 
+	$: width = $isMobile ? 'w-full' : 'w-[290px]';
+	$: hidden = $isHide ? 'hidden' : '';
+
 </script>
 
 <svelte:head>
@@ -14,21 +17,14 @@
 </svelte:head>
 
 <Analytics />
-<div class="layout-container flex h-screen w-screen order-1 flex-shrink">
-	<Sidebar posts="{data.posts}" />
-	<div class="{($isMobile && $isHide) || !$isMobile ? 'w-full' : 'hidden'} overflow-scroll">
+<div class="flex h-full">
+	<div class="h-[100vh] {width} {hidden}">
+		<Sidebar posts="{data.posts}" />
+	</div>
+
+	<div class="{($isMobile && $isHide) || !$isMobile ? 'w-full' : 'hidden'}">
 		<LocationBar />
-		<div class="mt-[52px]">
-			<slot />
-		</div>
+		<div class="mt-[52px]"/>
+		<slot />
 	</div>
 </div>
-
-
-<style lang="scss">
-  .layout-container {
-    width: 100%;
-    padding-right: var(--body--margin-right);
-    padding-left: var(--body--margin-left);
-  }
-</style>

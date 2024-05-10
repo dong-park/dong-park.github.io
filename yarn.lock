@@ -287,7 +287,7 @@
 
 "@types/gtag.js@^0.0.19":
   version "0.0.19"
-  resolved "https://registry.yarnpkg.com/@types/gtag.js/-/gtag.js-0.0.19.tgz#40ebbef85c8b2915df164d16304d3fbdfdaa1a41"
+  resolved "https://registry.npmjs.org/@types/gtag.js/-/gtag.js-0.0.19.tgz"
   integrity sha512-KHoDzrf9rSd0mooKN576PjExpdk/XRrNu4RQnmigsScSTSidwyOUe9kDrHz9UPKjiBrx2QEsSkexbJSgS0j72w==
 
 "@types/hast@^2.0.0":
@@ -2233,10 +2233,17 @@ svelte-preprocess@^4.0.0:
 
 svelte-scrolling@^1.4.0:
   version "1.4.0"
-  resolved "https://registry.yarnpkg.com/svelte-scrolling/-/svelte-scrolling-1.4.0.tgz#799dfc1da8e1e3d451222250494252c84823f071"
+  resolved "https://registry.npmjs.org/svelte-scrolling/-/svelte-scrolling-1.4.0.tgz"
   integrity sha512-1721UrmTODAIhybCR5p/l6lQNSmuk66VgtgxdAEdQiGuYU1wCcKB/9kba0VXlxIeh5vhEaoODAOCizRRtHKQoQ==
 
-svelte@^3.54.0:
+svelte-scrollto@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/svelte-scrollto/-/svelte-scrollto-0.2.0.tgz#a1da47876466796bba4533a4346537f752f01680"
+  integrity sha512-l4K2E4jr6dXCODtZDCkpp/TzknVVoq8gecHM0UOOmihvLosczdyLuyDUhZ+U2HkhLWi7nnimuOstZSFKtXSpmA==
+  dependencies:
+    svelte "3.x"
+
+svelte@3.x, svelte@^3.54.0:
   version "3.59.2"
   resolved "https://registry.npmjs.org/svelte/-/svelte-3.59.2.tgz"
   integrity sha512-vzSyuGr3eEoAtT/A6bmajosJZIUWySzY2CzB3w2pgPvnkUjGqlDnsNnA0PMO+mMAhuyMul6C2uuZzY6ELSkzyA==

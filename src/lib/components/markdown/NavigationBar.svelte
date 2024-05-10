@@ -11,7 +11,6 @@
 			text: el.innerText,
 			text_: el.innerText.toLowerCase().replace(/ /g, '-'),
 			tagName: el.tagName,
-			top: el.offsetTop + 220,
 			el: el
 		}));
 	}
@@ -19,6 +18,8 @@
 	onMount(() => {
 		initHeadings();
 	});
+
+
 </script>
 
 <nav class="mt-6">
@@ -28,8 +29,9 @@
 				<button
 					class="hover:bg-gray-100 w-full text-left"
 					on:click={() =>{
-					el.scrollIntoView({ behavior: 'smooth',  })
-				}}>
+						el.scrollIntoView({ behavior: 'smooth',  })
+					}}
+				>
 					{text}
 				</button>
 			</li>

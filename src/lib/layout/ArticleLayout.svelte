@@ -3,8 +3,15 @@
 	import { transformDate } from '$lib/utils/dates';
 	import IndexNavigationBar from '$lib/components/markdown/NavigationBar.svelte';
 	import Comments from '$lib/components/Comments.svelte';
+	import { afterNavigate } from '$app/navigation';
 
 	export let title, summary, date;
+
+	let element;
+
+	afterNavigate(() => {
+		element.scrollIntoView({ behavior: 'smooth',  })
+	})
 </script>
 
 <svelte:head>
@@ -17,8 +24,8 @@
 </svelte:head>
 
 <main class="main-height">
-	<article class="relative bg-white pt-2 px-4" data-animate data-animate-speed="slow">
-		<h1>{title}</h1>
+	<article id="slot" class="relative bg-white pt-2 px-4" data-animate data-animate-speed="slow">
+		<h1 bind:this={element}>{title}</h1>
 		<div class="text-sm">{transformDate(date)}</div>
 		<IndexNavigationBar />
 		<MarkDownLoader>
@@ -26,10 +33,16 @@
 		</MarkDownLoader>
 	</article>
 	<Comments />
+
 </main>
 
 
 <style lang="scss">
+	h1 {
+		margin-top: -60px;
+		padding-top: 60px;
+	}
+
   main {
     margin-left: auto;
     margin-right: auto;

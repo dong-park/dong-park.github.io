@@ -12,15 +12,25 @@
 </head>
 
 <body data-sveltekit-preload-data="hover">
-<div style="display: contents">%sveltekit.body%</div>
+	<div style="display: contents">
+		%sveltekit.body%
+	</div>
 </body>
 
 <style>
     body {
-        min-height: 100vh;
+        min-height: 100%;
         /* mobile viewport bug fix */
         min-height: -webkit-fill-available;
+
+        -ms-overflow-style: none;  /* IE and 엣지 */
+        scrollbar-width: none;  /* 파이어폭스 */
     }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
 
     html {
         height: -webkit-fill-available;

@@ -7,8 +7,7 @@
 	export let posts: Post[];
 
 	const title = '개발자 썰 모음집';
-	$: className = $isHide ? 'hidden fixed bg-white duration-300' : 'z-20 h-full p-3 bg-gray-100 overflow-scroll flex-shrink-0';
-	$: width = $isMobile ? 'w-full' : 'w-[290px]';
+	// $: className = $isHide ? 'hidden fixed bg-white duration-300' : 'h-full p-3 bg-gray-100 overflow-scroll';
 
 	function gotoPost(title: string) {
 		if ($isMobile) {
@@ -42,10 +41,12 @@
 			return p;
 		});
 	});
+
+	$: width = $isMobile ? 'w-full' : 'w-[240px]';
 </script>
 
-<nav class="shadow {width} {className} ">
-	<div class="flex items-center px-1 justify-between">
+<nav class="{width} fixed flex-shrink-0 shadow bg-gray-100 h-full p-3">
+	<div class="flex items-center justify-between">
 		<h1>
 			<a href="/">
 				{title}
