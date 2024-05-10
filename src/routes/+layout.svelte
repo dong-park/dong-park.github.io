@@ -3,8 +3,16 @@
 	import Analytics from '$lib/components/Analytics.svelte';
 	import Sidebar from '$lib/components/layout/Sidebar.svelte';
 	import LocationBar from '$lib/components/layout/LocationBar.svelte';
+	import { afterNavigate } from '$app/navigation';
 
 	export let data;
+
+
+	let element;
+
+	afterNavigate(() => {
+		element.scrollIntoView({block: 'nearest'});
+	});
 </script>
 
 <svelte:head>
@@ -14,7 +22,7 @@
 <Analytics />
 <div class="layout-container flex h-screen w-screen order-1 flex-shrink">
 	<Sidebar posts="{data.posts}" />
-	<div class="w-full overflow-hidden">
+	<div bind:this={element} class="w-full overflow-hidden">
 		<LocationBar />
 		<slot />
 	</div>
