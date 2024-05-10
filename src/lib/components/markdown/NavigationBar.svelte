@@ -24,8 +24,10 @@
 <nav class="mt-6">
 	<ul class="mt-1 space-y-1 text-sm underline">
 		{#each headings as { id, text, text_, tagName, top, el }}
-			<li class="truncate font-sans cursor-pointer hover:bg-gray-100 {activeSection === text_ ? 'font-bold' : ''}">
-				<button on:click={() =>{
+			<li class="truncate font-sans cursor-pointer {activeSection === text_ ? 'font-bold' : ''}">
+				<button
+					class="hover:bg-gray-100 w-full text-left"
+					on:click={() =>{
 					el.scrollIntoView({ behavior: 'smooth',  })
 				}}>
 					{text}

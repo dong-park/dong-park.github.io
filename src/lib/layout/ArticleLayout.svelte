@@ -7,11 +7,7 @@
 
 	export let title, summary, date;
 
-	let element;
 
-	afterNavigate(() => {
-		element.scrollIntoView();
-	});
 </script>
 
 <svelte:head>
@@ -23,10 +19,11 @@
 	<meta property="og:site_name" content="dongpark.land" />
 </svelte:head>
 
-<main>
-	<article bind:this={element} class="relative bg-white py-12 px-4" data-animate data-animate-speed="slow">
+<main class="overflow-scroll main-height">
+	<article class="relative bg-white pt-2 px-4" data-animate data-animate-speed="slow">
 		<h1>{title}</h1>
 		<div class="text-sm">{transformDate(date)}</div>
+		<IndexNavigationBar />
 		<MarkDownLoader>
 			<slot />
 		</MarkDownLoader>
@@ -41,5 +38,10 @@
     margin-right: auto;
     width: 100%;
     max-width: var(--content-width);
+  }
+
+  .main-height {
+    height: calc(100vh - 52px);
+    min-height: -webkit-fill-available;
   }
 </style>
