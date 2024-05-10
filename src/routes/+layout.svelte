@@ -14,9 +14,11 @@
 <Analytics />
 <div class="layout-container flex h-screen w-screen order-1 flex-shrink">
 	<Sidebar posts="{data.posts}" />
-	<div class="w-full overflow-scroll">
+	<div class="w-full overflow-hidden">
 		<LocationBar />
-		<slot />
+		<div class="overflow-scroll main-height">
+			<slot />
+		</div>
 	</div>
 </div>
 
@@ -27,4 +29,7 @@
     padding-right: var(--body--margin-right);
     padding-left: var(--body--margin-left);
   }
+	.main-height {
+		height: calc(100vh - 52px);
+	}
 </style>
