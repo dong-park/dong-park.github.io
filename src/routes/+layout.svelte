@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import '../assets/global.scss';
 	import Analytics from '$lib/components/Analytics.svelte';
 	import Sidebar from '$lib/components/layout/Sidebar.svelte';
@@ -14,7 +14,7 @@
 <Analytics />
 <div class="layout-container flex h-screen w-screen order-1 flex-shrink">
 	<Sidebar posts="{data.posts}" />
-	<div class="w-full h-[100vh] overflow-scroll ">
+	<div class="w-full overflow-scroll">
 		<LocationBar />
 		<slot />
 	</div>

@@ -15,7 +15,12 @@
 		if (isMobile) {
 			$isHide = true;
 		}
-		goto(`/wikis/${title}`);
+		goto(`/wikis/${title}`, {
+			noScroll: true,
+			// keepFocus: false,
+			// invalidateAll: true,
+			replaceState: true
+		})
 	}
 
 	function reverseHideStatus() {

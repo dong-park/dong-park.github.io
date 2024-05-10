@@ -1,11 +1,17 @@
-<script>
+<script lang="ts">
 	import MarkDownLoader from '$lib/components/markdown/MarkDownArea.svelte';
-	import Comments from '$lib/components/Comments.svelte';
 	import { transformDate } from '$lib/utils/dates';
 	import IndexNavigationBar from '$lib/components/markdown/NavigationBar.svelte';
+	import { afterNavigate } from '$app/navigation';
+	import Comments from '$lib/components/Comments.svelte';
 
 	export let title, summary, date;
 
+	let element: any;
+
+	afterNavigate(() => {
+		element.scrollIntoView();
+	});
 </script>
 
 <svelte:head>
@@ -18,10 +24,10 @@
 </svelte:head>
 
 <main>
-	<article class="relative bg-white mt-7 py-6 px-4" data-animate data-animate-speed="slow">
+	<article bind:this={element} class="relative bg-white py-12 px-4" data-animate data-animate-speed="slow">
 		<h1>{title}</h1>
 		<div class="text-sm">{transformDate(date)}</div>
-		<IndexNavigationBar />
+<!--		<IndexNavigationBar />-->
 		<MarkDownLoader>
 			<slot />
 		</MarkDownLoader>
@@ -29,12 +35,12 @@
 	<Comments />
 </main>
 
+
 <style lang="scss">
   main {
     margin-left: auto;
     margin-right: auto;
-		width: 100%;
+    width: 100%;
     max-width: var(--content-width);
-	}
-
+  }
 </style>

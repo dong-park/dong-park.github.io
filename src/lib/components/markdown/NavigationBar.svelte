@@ -16,23 +16,8 @@
 		}));
 	}
 
-	function addScrollEvent() {
-		window.addEventListener('scroll', () => {
-			const scrollPosition = window.pageYOffset;
-			let lastPassedSection = '';
-			headings.forEach((heading) => {
-				if (scrollPosition >= heading.top - window.innerHeight * 0.1) {
-					lastPassedSection = heading.text_;
-				}
-			});
-
-			activeSection = lastPassedSection;
-		});
-	}
-
 	onMount(() => {
 		initHeadings();
-		// addScrollEvent();
 	});
 </script>
 
@@ -40,7 +25,9 @@
 	<ul class="mt-1 space-y-1 text-sm underline">
 		{#each headings as { id, text, text_, tagName, top, el }}
 			<li class="truncate font-sans cursor-pointer hover:bg-gray-100 {activeSection === text_ ? 'font-bold' : ''}">
-				<button on:click={() => el.scrollIntoView({ behavior: 'smooth' })}>
+				<button on:click={() =>{
+					el.scrollIntoView({ behavior: 'smooth',  })
+				}}>
 					{text}
 				</button>
 			</li>
