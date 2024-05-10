@@ -16,9 +16,7 @@
 	<Sidebar posts="{data.posts}" />
 	<div class="w-full overflow-hidden">
 		<LocationBar />
-		<div class="overflow-scroll main-height">
-			<slot />
-		</div>
+		<slot />
 	</div>
 </div>
 
@@ -29,7 +27,4 @@
     padding-right: var(--body--margin-right);
     padding-left: var(--body--margin-left);
   }
-	.main-height {
-		height: calc(100vh - 52px);
-	}
 </style>
