@@ -7,7 +7,7 @@
 
 	export let title, summary, date;
 
-	let element: any;
+	let element;
 
 	afterNavigate(() => {
 		element.scrollIntoView();
@@ -27,7 +27,6 @@
 	<article bind:this={element} class="relative bg-white py-12 px-4" data-animate data-animate-speed="slow">
 		<h1>{title}</h1>
 		<div class="text-sm">{transformDate(date)}</div>
-<!--		<IndexNavigationBar />-->
 		<MarkDownLoader>
 			<slot />
 		</MarkDownLoader>
