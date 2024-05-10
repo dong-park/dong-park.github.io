@@ -26,12 +26,12 @@
 		<div class="flex gap-1">
 			{#each tags as tag}
 				{#key tag}
-					<span class="text-xs rounded p-1 cursor-pointer"
+					<button class="text-xs rounded p-1 cursor-pointer"
 								class:bg-blue-500={tag === currentTag} class:text-white={tag === currentTag} class:hover:bg-blue-400={tag === currentTag}
 								class:bg-gray-200={tag !== currentTag} class:text-gray-700={tag !== currentTag} class:hover:bg-gray-300={tag !== currentTag}
-								on:click={getTags(tag)}>
+								on:click={() => getTags(tag)}>
 						#{tag}
-					</span>
+					</button>
 				{/key}
 			{/each}
 		</div>

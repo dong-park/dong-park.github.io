@@ -59,7 +59,7 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
     :global(a) {
       line-height: 2.1;
     }
-    
+
   }
 
   :global(p), :global(li) {
@@ -112,10 +112,8 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
     @apply text-center p-1;
   }
 
-
-  // Apply styles globally to tokens
   :global(.token) {
-    @apply text-sm;
+    @apply text-xs;
     @apply font-extralight;
   }
 

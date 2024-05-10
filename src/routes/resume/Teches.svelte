@@ -23,10 +23,6 @@
 </div>
 
 <style lang="scss">
-  h3 {
-    font-weight: 500;
-  }
-
   li {
     @apply pl-4;
   }

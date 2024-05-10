@@ -13,13 +13,13 @@
 	</div>
 	<div>
 		<div class="flex gap-1 content-center mt-1">
-			<img src="/icons/phone.svg" class="w-6">
+			<img src="/icons/phone.svg" class="w-6" alt="">
 			<p class="text-md">
 				rakddh@gmail.com
 			</p>
 		</div>
 		<div class="flex gap-1 content-center mt-1">
-			<img src="/icons/mail.svg" class="w-6">
+			<img src="/icons/mail.svg" class="w-6" alt="">
 			<p class="text-md">
 				+82 (0)10-6551-4419
 			</p>
