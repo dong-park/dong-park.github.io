@@ -10,7 +10,7 @@
 	let element;
 
 	afterNavigate(() => {
-		element.scrollIntoView();
+		element.scrollIntoView({block: 'nearest'});
 	});
 </script>
 
