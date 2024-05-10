@@ -6,12 +6,6 @@
 	import Comments from '$lib/components/Comments.svelte';
 
 	export let title, summary, date;
-
-	let element;
-
-	afterNavigate(() => {
-		element.scrollIntoView({block: 'nearest'});
-	});
 </script>
 
 <svelte:head>
@@ -24,7 +18,7 @@
 </svelte:head>
 
 <main class="overflow-scroll main-height">
-	<article bind:this={element} class="relative bg-white pt-2 px-4" data-animate data-animate-speed="slow">
+	<article class="relative bg-white pt-2 px-4" data-animate data-animate-speed="slow">
 		<h1>{title}</h1>
 		<div class="text-sm">{transformDate(date)}</div>
 		<IndexNavigationBar />
