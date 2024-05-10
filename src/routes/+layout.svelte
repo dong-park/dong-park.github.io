@@ -5,6 +5,7 @@
 	import LocationBar from '$lib/components/layout/LocationBar.svelte';
 
 	export let data;
+
 </script>
 
 <svelte:head>
@@ -14,7 +15,7 @@
 <Analytics />
 <div class="layout-container flex h-screen w-screen order-1 flex-shrink">
 	<Sidebar posts="{data.posts}" />
-	<div class="w-full overflow-scroll">
+	<div class="w-full overflow-hidden">
 		<LocationBar />
 		<slot />
 	</div>
