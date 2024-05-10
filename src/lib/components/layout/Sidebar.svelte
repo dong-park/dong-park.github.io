@@ -114,5 +114,5 @@
 </nav>
 
 <style lang="scss">
-  @import "layout.scss";
+  @import "./layout.scss";
 </style>
