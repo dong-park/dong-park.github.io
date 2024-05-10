@@ -7,11 +7,11 @@
 
 	export let title, summary, date;
 
-	let element: any;
+	let element;
 
-	// afterNavigate(() => {
-	// 	element.scrollIntoView();
-	// });
+	afterNavigate(() => {
+		element.scrollIntoView();
+	});
 </script>
 
 <svelte:head>
