@@ -3,10 +3,8 @@
 	import Analytics from '$lib/components/Analytics.svelte';
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import LocationBar from '$lib/components/LocationBar.svelte';
-	import { isHide } from '$lib/store';
 
 	export let data;
-
 </script>
 
 <svelte:head>

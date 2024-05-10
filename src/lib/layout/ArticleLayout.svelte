@@ -1,7 +1,7 @@
 <script>
 	import MarkDownLoader from '$lib/components/MarkDownArea.svelte';
 	import Comments from '$lib/components/Comments.svelte';
-	import { transformDate } from '$lib/utils/dates.ts';
+	import { transformDate } from '$lib/utils/dates';
 	import IndexNavigationBar from '$lib/components/NavigationBar.svelte';
 
 	export let title, summary, date;
@@ -18,7 +18,7 @@
 </svelte:head>
 
 <main>
-	<article class="relative bg-white py-6 px-4 " data-animate data-animate-speed="slow">
+	<article class="relative bg-white py-6 px-4" data-animate data-animate-speed="slow">
 		<h1>{title}</h1>
 		<div class="text-sm">{transformDate(date)}</div>
 		<IndexNavigationBar />

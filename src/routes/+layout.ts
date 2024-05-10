@@ -1,10 +1,9 @@
 import { MarkDownLoader } from '$lib/markDownLoader';
 import type { PageLoad } from '../../.svelte-kit/types/src/routes/$types';
-import { browser } from '$app/environment';
 
 export const prerender = true;
 
-export const load: PageLoad = async ({ url }) => {
+export const load: PageLoad = async () => {
 	const loader = new MarkDownLoader();
 	const posts = loader.loadPosts();
 

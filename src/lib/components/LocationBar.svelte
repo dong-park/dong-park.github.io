@@ -17,17 +17,17 @@
 </script>
 
 <div class="flex items-center bg-white w-full p-4 space-x-2">
-	<button class="{$isHide ? '' : 'hidden'} hover:bg-gray-100" on:click="{hide}">
+	<button class="hover:bg-gray-100" on:click="{hide}">
 		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
 			<path fill="currentColor" d="M3 3h18v2H3zm0 16h18v2H3zm0-8h18v2H3z" />
 		</svg>
 	</button>
 	<div class="ml-{isHide ? '4' : ''} flex space-x-1 items-center text-sm">
 		{#each paths as path, index}
-			<b class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans"
+			<button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans"
 				 on:click={() => navigateTo(index)}>
 				{path}
-			</b>
+			</button>
 			{#if paths.length - 1 !== index }
 				<b>/</b>
 			{/if}

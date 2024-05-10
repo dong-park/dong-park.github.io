@@ -1,8 +1,6 @@
-<script>
+<script lang="ts">
 
 	import { onMount } from 'svelte';
-
-	export let tags;
 
 	function addCodeLangName() {
 		document.querySelectorAll('.post-content pre > code').forEach((code) => {
@@ -13,14 +11,15 @@
 				const langEl = document.createElement('div');
 				langEl.className = 'language-name';
 				langEl.textContent = langName;
-				code.parentElement.insertBefore(langEl, code);
+				if(code.parentElement){
+					code.parentElement.insertBefore(langEl, code);
+				}
 			}
 		});
 	}
 
 	function deleteATag() {
-		document.querySelectorAll('.post-content a').forEach((a) => {
-			// 리터럴 링크는 삭제한다
+		document.querySelectorAll('.post-content a').forEach((a: any) => {
 			if (a.href === a.textContent) {
 				a.remove();
 			}

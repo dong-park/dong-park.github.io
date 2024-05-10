@@ -19,5 +19,5 @@ function persist(key, value) {
 	return store;
 }
 
-export const isHide = persist('isHide', false);
+export const isHide = persist('isHide', true);
 export const currentPath = persist('currentPath', '');

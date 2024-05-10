@@ -7,7 +7,7 @@ export class Post {
 	private _path: string;
 	private _isOrigin: boolean;
 	private _parent: string;
-	private _childs: string[];
+	private _childs: Post[];
 	private _show: boolean;
 
 	get title(): string {
@@ -74,14 +74,13 @@ export class Post {
 		this._parent = value;
 	}
 
-	get childs(): string[] {
+	get childs(): Post[] {
 		return this._childs;
 	}
 
-	set childs(value: string[]) {
+	set childs(value: Post[]) {
 		this._childs = value;
 	}
-
 
 	get show(): boolean {
 		return this._show;

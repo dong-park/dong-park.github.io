@@ -1,11 +1,12 @@
-<script>
+<script lang="ts">
 	import { goto } from '$app/navigation';
-	import { transformDate } from '$lib/utils/dates.ts';
+	import { transformDate } from '$lib/utils/dates';
 
 	export let posts;
 
-	function gotoPost(title) {
+	function gotoPost(title: string): boolean {
 		goto(`/posts/${title}`);
+		return true;
 	}
 
 </script>
@@ -13,7 +14,10 @@
 <div class="mt-6 space-y-5">
 	{#each posts as post}
 		{#key post}
-			<button class="hover:bg-gray-100 hover:cursor-pointer block text-left w-full py-1" on:click={gotoPost(post.path)} data-animate="" data-animate-speed="fast">
+			<button class="hover:bg-gray-100 hover:cursor-pointer block text-left w-full py-1"
+							data-animate="" data-animate-speed="fast"
+							on:click={() => gotoPost(post.path)}
+			>
 				<p class="font-serif title text-md">{post.title}</p>
 				<p class="text-sm">{post.summary}</p>
 				<p class="text-sm">{transformDate(post.date)}</p>

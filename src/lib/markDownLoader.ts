@@ -1,4 +1,4 @@
-import {Post} from "$lib/dto/post";
+import {Post} from "$lib/model/post";
 
 export class MarkDownLoader {
     modules;
@@ -91,7 +91,6 @@ export class MarkDownLoader {
             }
         });
 
-        // tag를 list로 변환
         let tagList:string[] = [];
         tags.forEach((value, key) => {
             tagList.push(key);
