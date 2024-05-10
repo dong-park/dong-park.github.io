@@ -8,10 +8,10 @@
 
 	const title = '개발자 썰 모음집';
 	$: className = $isHide ? 'hidden fixed bg-white duration-300' : 'z-20 h-full p-3 bg-gray-100 overflow-scroll flex-shrink-0';
-	$: width = isMobile ? 'w-full' : 'w-[290px]';
+	$: width = $isMobile ? 'w-full' : 'w-[290px]';
 
 	function gotoPost(title: string) {
-		if (isMobile) {
+		if ($isMobile) {
 			$isHide = true;
 		}
 
@@ -45,13 +45,13 @@
 </script>
 
 <nav class="shadow {width} {className} ">
-	<div class="flex items-center p-1 justify-between">
+	<div class="flex items-center px-1 justify-between">
 		<h1>
 			<a href="/">
 				{title}
 			</a>
 		</h1>
-		{#if isMobile}
+		{#if $isMobile}
 			<button on:click={() => {$isHide = true}}>
 				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
 					<path fill="currentColor" d="M3 3h18v2H3zm0 16h18v2H3zm0-8h18v2H3z" />
