@@ -23,7 +23,7 @@
 	<meta property="og:site_name" content="dongpark.land" />
 </svelte:head>
 
-<main class="main-height">
+<main class="flex flex-col main-height">
 
 	<article id="slot" class="relative bg-white pt-2 px-4" data-animate data-animate-speed="slow">
 		<h1 bind:this={element}>{title}</h1>
