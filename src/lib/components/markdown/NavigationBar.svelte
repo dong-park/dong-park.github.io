@@ -22,7 +22,7 @@
 
 </script>
 
-<nav class="mt-6">
+<nav class="relative z-20 mt-6">
 	<ul class="mt-1 space-y-1 text-sm underline">
 		{#each headings as { id, text, text_, tagName, top, el }}
 			<li class="truncate font-sans cursor-pointer {activeSection === text_ ? 'font-bold' : ''}">

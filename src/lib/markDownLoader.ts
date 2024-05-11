@@ -38,11 +38,10 @@ export class MarkDownLoader {
             if (metadata.tags && metadata.tags.includes(tag)) {
                 metadata.path = this.getFileName(path);
                 let post = this.parseMarkdown(metadata)
-                if(post.parent == ''){
-                    posts.push(post);
-                }
+                posts.push(post);
             }
         });
+
         return this.sortPosts(posts);
     }
 

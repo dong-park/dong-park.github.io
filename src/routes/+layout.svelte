@@ -7,7 +7,7 @@
 
 	export let data;
 
-	$: width = $isMobile ? 'w-full' : 'w-[290px]';
+	$: width = $isMobile ? 'w-full' : 'w-[240px]';
 	$: hidden = $isHide ? 'hidden' : '';
 
 </script>
@@ -18,12 +18,16 @@
 
 <Analytics />
 <div class="flex h-full">
-	<div class="h-[100vh] {width} {hidden}">
-		<Sidebar posts="{data.posts}" />
+	<div class="h-[100vh]">
+		<div class="z-40 {width} {hidden}">
+			<Sidebar posts="{data.posts}" />
+		</div>
+		<div class="z-30">
+			<LocationBar />
+		</div>
 	</div>
 
 	<div class="{($isMobile && $isHide) || !$isMobile ? 'w-full' : 'hidden'}">
-		<LocationBar />
 		<div class="mt-[52px]"/>
 		<slot />
 	</div>

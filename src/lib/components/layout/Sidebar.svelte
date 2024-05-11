@@ -7,7 +7,6 @@
 	export let posts: Post[];
 
 	const title = '개발자 썰 모음집';
-	// $: className = $isHide ? 'hidden fixed bg-white duration-300' : 'h-full p-3 bg-gray-100 overflow-scroll';
 
 	function gotoPost(title: string) {
 		if ($isMobile) {
@@ -24,7 +23,7 @@
 	}
 
 	function getMediaQuery() {
-		let mediaQuery = window.matchMedia('(max-width: 768px)');
+		let mediaQuery = window.matchMedia('(max-width: 600px)');
 		$isMobile = mediaQuery.matches;
 
 		function updateMobileStatus(e: any) {
@@ -42,11 +41,11 @@
 		});
 	});
 
-	$: width = $isMobile ? 'w-full' : 'w-[240px]';
+	$: width = $isMobile ? 'w-full' : 'w-[230px]';
 </script>
 
-<nav class="{width} fixed flex-shrink-0 shadow bg-gray-100 h-full p-3">
-	<div class="flex items-center justify-between">
+<nav class="{width} fixed flex-shrink-0 shadow bg-gray-100 h-full p-2 z-40">
+	<div class="flex items-center justify-between p-1">
 		<h1>
 			<a href="/">
 				{title}

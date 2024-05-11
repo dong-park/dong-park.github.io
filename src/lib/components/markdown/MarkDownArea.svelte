@@ -38,5 +38,5 @@
 </div>
 
 <style lang="scss">
-	@import "./note.scss";
+  @import "./note.scss";
 </style>

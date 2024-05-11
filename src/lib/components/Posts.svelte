@@ -14,12 +14,11 @@
 <div class="mt-6 space-y-5">
 	{#each posts as post}
 		{#key post}
-			<button class="hover:bg-gray-100 hover:cursor-pointer block text-left w-full py-1"
+			<button class="flex items-center  hover:bg-gray-100 hover:cursor-pointer text-left w-full py-1"
 							data-animate="" data-animate-speed="fast"
 							on:click={() => gotoPost(post.path)}
 			>
 				<p class="font-serif title text-md">{post.title}</p>
-				<p class="text-sm">{post.summary}</p>
 				<p class="text-sm">{transformDate(post.date)}</p>
 			</button>
 		{/key}
