@@ -16,7 +16,7 @@
 	}
 </script>
 
-<div class="truncate fixed z-30 flex items-center bg-white w-full p-4 px-2 space-x-2 ">
+<div class="truncate fixed z-30 flex items-center bg-white w-full p-4 space-x-2 ">
 	<div class="w-[220px] {hidden}" style="min-width: 220px">
 	</div>
 	<button class="hover:bg-gray-100" on:click={(e) => {hide()}}>

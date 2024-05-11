@@ -14,7 +14,7 @@
 <div class="mt-6 space-y-5">
 	{#each posts as post}
 		{#key post}
-			<button class="flex items-center  hover:bg-gray-100 hover:cursor-pointer text-left w-full py-1"
+			<button class="flex items-center space-x-2 hover:bg-gray-100 hover:cursor-pointer text-left w-full py-1"
 							data-animate="" data-animate-speed="fast"
 							on:click={() => gotoPost(post.path)}
 			>
