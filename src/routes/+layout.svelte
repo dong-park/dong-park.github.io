@@ -3,9 +3,11 @@
 	import Analytics from '$lib/components/Analytics.svelte';
 	import Sidebar from '$lib/components/layout/Sidebar.svelte';
 	import LocationBar from '$lib/components/layout/LocationBar.svelte';
-	import {isHide, isMobile} from '$lib/store';
+	import { isHide, isMobile } from '$lib/store';
 
 	export let data;
+
+	let mainEl;
 
 	$: width = $isMobile ? 'w-full' : 'w-[240px]';
 	$: hidden = $isHide ? 'hidden' : '';
@@ -27,8 +29,15 @@
 		</div>
 	</div>
 
-	<div class="{($isMobile && $isHide) || !$isMobile ? 'w-full' : 'hidden'}">
-		<div class="mt-[52px]"/>
+	<div bind:this={mainEl} class="{($isMobile && $isHide) || !$isMobile ? 'w-full' : 'hidden'}">
+		<div class="mt-[52px]" />
 		<slot />
 	</div>
+
+	<button class="fixed p-6 z-30 bottom-0 right-0" on:click={() => mainEl.scrollIntoView({ behavior: 'smooth',  })}>
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+			<path fill="currentColor"
+						d="M11 5.825L6.4 10.4L5 9l7-7l7 7l-1.4 1.425l-4.6-4.6V13h-2zM11 18v-3h2v3zm0 4v-2h2v2z" />
+		</svg>
+	</button>
 </div>

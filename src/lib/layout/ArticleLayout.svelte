@@ -24,7 +24,6 @@
 </svelte:head>
 
 <main class="flex flex-col main-height">
-
 	<article id="slot" class="relative bg-white pt-2 px-4" data-animate data-animate-speed="slow">
 		<h1 bind:this={element}>{title}</h1>
 		<div class="text-sm">{transformDate(date)}</div>
@@ -34,7 +33,6 @@
 		</MarkDownLoader>
 	</article>
 	<Comments />
-
 </main>
 
 
