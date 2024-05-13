@@ -41,7 +41,7 @@
 		});
 	});
 
-	$: width = $isMobile ? 'w-full' : 'w-[230px]';
+	$: width = $isMobile ? 'w-full' : 'w-[220px]';
 </script>
 
 <nav class="{width} fixed flex-shrink-0 shadow bg-gray-100 h-full p-2 z-40">
