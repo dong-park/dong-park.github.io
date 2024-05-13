@@ -4,10 +4,15 @@
 	import IndexNavigationBar from '$lib/components/markdown/NavigationBar.svelte';
 	import Comments from '$lib/components/Comments.svelte';
 	import { afterNavigate } from '$app/navigation';
+	import {page} from "$app/stores";
 
 	export let title, summary, date, data, form, tags, path;
 
 	let element;
+
+	const rootPage = `https://dong-park.github.io`
+	$: canonical = rootPage + decodeURIComponent($page.url.pathname)
+	$: favicon = rootPage + "/imgs/favicon.ico"
 
 
 	afterNavigate(() => {
@@ -18,11 +23,17 @@
 <svelte:head>
 	<title>{title}</title>
 	<meta name="description" content={summary} />
-	<meta name="keyword" content="" />
+	<meta name="keyword" content="{tags}" />
+	<link rel="canonical" href="{canonical}">
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={summary} />
 	<meta property="og:type" content="article" />
 	<meta property="og:site_name" content="dongpark.land" />
+	<meta property="og:url" content="{canonical}" />
+	<meta name="twitter:card" content="{favicon}">
+	<meta name="twitter:title" content="{title}">
+	<meta name="twitter:description" content="{summary}">
+	<meta name="twitter:image" content="{favicon}">
 </svelte:head>
 
 <main class="flex flex-col main-height">
