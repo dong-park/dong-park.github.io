@@ -11,16 +11,12 @@
 	const rootPage = `https://dong-park.github.io`
 
 	let element;
-	let ogImage = rootPage + "/imgs/favicon.ico"
+	let favicon = rootPage + "/imgs/favicon.png"
 
 	$: canonical = rootPage + decodeURIComponent($page.url.pathname)
 
 	afterNavigate(() => {
 		element.scrollIntoView({ behavior: 'smooth' });
-		let img = document.querySelector("main img")
-		if(img){
-			ogImage = img.src
-		}
 	});
 </script>
 
@@ -34,8 +30,8 @@
 	<meta property="og:url" content="{canonical}" />
 	<meta property="og:type" content="article" />
 	<meta property="og:site_name" content="dongpark.land" />
-	<meta property="og:image" content="{ogImage}" />
-	<meta name="twitter:card" content="summary_large_image">
+	<meta property="og:image" content="{favicon}" />
+	<meta name="twitter:card" content="summary">
 </svelte:head>
 
 <main class="flex flex-col main-height">
