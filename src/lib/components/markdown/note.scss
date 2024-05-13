@@ -55,11 +55,14 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
   }
 
   :global(p) {
-    margin-bottom: 1em;
+    @apply mb-2.5;
     :global(a) {
       line-height: 2.1;
     }
+  }
 
+  :global(ul) {
+    @apply mb-2.5;
   }
 
   :global(p), :global(li) {

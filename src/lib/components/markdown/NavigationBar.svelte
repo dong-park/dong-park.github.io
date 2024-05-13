@@ -13,13 +13,12 @@
 			tagName: el.tagName,
 			el: el
 		}));
+		console.log(headings);
 	}
 
 	onMount(() => {
 		initHeadings();
 	});
-
-
 </script>
 
 <nav class="relative z-20 mt-6">
@@ -27,7 +26,7 @@
 		{#each headings as { id, text, text_, tagName, top, el }}
 			<li class="truncate font-sans cursor-pointer {activeSection === text_ ? 'font-bold' : ''}">
 				<button
-					class="hover:bg-gray-100 w-full text-left"
+					class="hover:bg-gray-100 w-full text-left {tagName}"
 					on:click={() =>{
 						el.scrollIntoView({ behavior: 'smooth',  })
 					}}
@@ -38,3 +37,17 @@
 		{/each}
 	</ul>
 </nav>
+
+<style lang="scss">
+	.H2 {
+		@apply ml-0;
+	}
+
+	.H3:before {
+    content: "•";
+			color: #888888;
+			//display: inline-block;
+			width: 1em;
+			//margin-left: -1em;
+	}
+</style>
