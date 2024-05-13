@@ -22,11 +22,9 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
   :global(h4),
   :global(h5),
   :global(h6) {
-    //margin-top: 1.5em;
     margin-top: -52px;
     padding-top: 62px;
     font-family: var(--font-sans);
-    margin-bottom: 0.5em;
     font-weight: 600;
   }
 
@@ -57,7 +55,7 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
   }
 
   :global(p) {
-    margin-top: 1em;
+    margin-bottom: 1em;
     :global(a) {
       line-height: 2.1;
     }
@@ -82,7 +80,10 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
     @apply p-4;
     @apply rounded-md;
     @apply overflow-x-auto;
-    @apply my-2;
+    @apply mb-4;
+    width: 100%;
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 
   :global(ul) {
