@@ -1,6 +1,6 @@
 ---
 title: OOP
-summary: ''
+summary: 객체지향 프로그래밍의 핵심 원칙과 이를 통한 효율적인 소프트웨어 개발 방법을 설명합니다. SRP, OCP, LSP, DIP, ISP 원칙 탐구.
 date: '2020-09-21'
 tags: [ '개발' ]
 ---

@@ -9,6 +9,7 @@
 
 	let element;
 
+
 	afterNavigate(() => {
 		element.scrollIntoView({ behavior: 'smooth' });
 	});
@@ -17,6 +18,7 @@
 <svelte:head>
 	<title>{title}</title>
 	<meta name="description" content={summary} />
+	<meta name="keyword" content="" />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={summary} />
 	<meta property="og:type" content="article" />

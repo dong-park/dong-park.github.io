@@ -1,6 +1,6 @@
 ---
 title: 코딩테스트 팁
-summary: 
+summary: 자주 사용되는 Java 코딩 테스트 함수와 메소드를 설명합니다. 배열, 리스트, 문자열 관리와 Scanner, StringBuilder 클래스의 활용법을 포함하여 Java 프로그래밍의 기본을 다룹니다.
 date: '2024-03-20'
 tags: ['코딩테스트']
 ---
