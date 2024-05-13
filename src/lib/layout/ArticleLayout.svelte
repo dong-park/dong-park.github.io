@@ -17,6 +17,10 @@
 
 	afterNavigate(() => {
 		element.scrollIntoView({ behavior: 'smooth' });
+		let img = document.querySelector("main img")
+		if(img){
+			favicon = img.src
+		}
 	});
 </script>
 
