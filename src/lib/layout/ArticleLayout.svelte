@@ -6,7 +6,6 @@
 	import { afterNavigate, goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { MarkDownPostLoader } from '$lib/markDownPostLoader';
-	import { each } from 'svelte/internal';
 	import { onMount } from 'svelte';
 
 	export let title, summary, date, data, form, tags, path;
@@ -18,6 +17,7 @@
 	let childrenPosts = [];
 
 	$: canonical = rootPage + decodeURIComponent($page.url.pathname);
+	$: parentPost = path.split("/").slice(0, -1).join("/");
 
 	afterNavigate(() => {
 		element.scrollIntoView({ behavior: 'smooth' });
@@ -46,17 +46,24 @@
 
 <main class="flex flex-col main-height">
 	<article id="slot" class="relative bg-white pt-2 px-4" data-animate data-animate-speed="slow">
-		<h1 bind:this={element}>{title}</h1>
+		<div class="flex w-full justify-between">
+			<h1 bind:this={element}>{title}</h1>
+			<button class="cursor-pointer hover:bg-gray-100" on:click={() => goto('/wikis/' + parentPost)}>
+				<svg width="16px" height="16px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<path d="M15 7.5c0 3.033-2.467 5.5-5.5 5.5h-2.912l2.646 2.646-0.707 0.707-3.853-3.853 3.854-3.854 0.707 0.707-2.647 2.647h2.912c2.481 0 4.5-2.019 4.5-4.5s-2.019-4.5-4.5-4.5h-7.083v-1h7.083c3.033 0 5.5 2.467 5.5 5.5z" fill="#000000" />
+				</svg>
+			</button>
+		</div>
 		<div class="text-sm">{transformDate(date)}</div>
 		<IndexNavigationBar />
 		<MarkDownLoader>
 			<slot />
 		</MarkDownLoader>
-		<ul class="children space-y-1 mt-2">
+		<ul class="children space-y-1 mt-4">
 			{#each childrenPosts as children}
-				<li class="cursor-pointer hover:bg-gray-100">
-					<button on:click={() => goto(children.path)}>
-						{children.path}
+				<li class="">
+					<button class="link w-full text-left cursor-pointer hover:bg-gray-100" on:click={() => goto('/wikis/' + children.path)}>
+						{children.path.split('/').slice(-1)}
 					</button>
 				</li>
 			{/each}
@@ -84,14 +91,14 @@
     min-height: -webkit-fill-available;
   }
 
-  .children li {
+  .link {
     text-decoration-line: underline;
     text-decoration-color: var(--border);
     text-decoration-thickness: 1px;
     text-underline-offset: 4px;
   }
 
-  .children li::after {
+  .link::after {
     margin: 0;
     content: "";
     display: inline-block;

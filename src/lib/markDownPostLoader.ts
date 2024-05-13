@@ -37,9 +37,10 @@ export class MarkDownPostLoader {
 
     public loadPostsChildren(pathName: string = ""): Post[] {
         let posts: any[] = [];
+        const regex = new RegExp(`^${pathName}/[^/]+$`);
         this.modules.forEach(([path, module]) => {
             let moudelPath = module.metadata.path
-            if(moudelPath.match(`${pathName}/*.`)) {
+            if(moudelPath.match(regex)) {
                 posts.push(this.parseMarkdown(module.metadata))
             }
         });
