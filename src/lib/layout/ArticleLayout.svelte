@@ -8,15 +8,19 @@
 
 	export let title, summary, date, data, form, tags, path;
 
-	let element;
-
 	const rootPage = `https://dong-park.github.io`
-	$: canonical = rootPage + decodeURIComponent($page.url.pathname)
-	$: favicon = rootPage + "/imgs/favicon.ico"
 
+	let element;
+	let favicon = rootPage + "/imgs/favicon.ico"
+
+	$: canonical = rootPage + decodeURIComponent($page.url.pathname)
 
 	afterNavigate(() => {
 		element.scrollIntoView({ behavior: 'smooth' });
+		let img = document.querySelector("main img")
+		if(img){
+			favicon = rootPage + "/" + img.src
+		}
 	});
 </script>
 
@@ -30,7 +34,7 @@
 	<meta property="og:type" content="article" />
 	<meta property="og:site_name" content="dongpark.land" />
 	<meta property="og:url" content="{canonical}" />
-	<meta name="twitter:card" content="{favicon}">
+	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="{title}">
 	<meta name="twitter:description" content="{summary}">
 	<meta name="twitter:image" content="{favicon}">
