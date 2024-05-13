@@ -31,13 +31,11 @@
 	<link rel="canonical" href="{canonical}">
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={summary} />
+	<meta property="og:url" content="{canonical}" />
 	<meta property="og:type" content="article" />
 	<meta property="og:site_name" content="dongpark.land" />
-	<meta property="og:url" content="{canonical}" />
+	<meta property="og:image" content="{favicon}" />
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="{title}">
-	<meta name="twitter:description" content="{summary}">
-	<meta name="twitter:image" content="{favicon}">
 </svelte:head>
 
 <main class="flex flex-col main-height">
