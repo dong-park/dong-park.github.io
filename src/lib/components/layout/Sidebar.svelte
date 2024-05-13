@@ -47,9 +47,9 @@
 <nav class="{width} fixed flex-shrink-0 shadow bg-gray-100 h-full p-2 z-40">
 	<div class="flex items-center justify-between p-1">
 		<h1>
-			<a href="/">
+			<button on:click={() => goto("/")}>
 				{title}
-			</a>
+			</button>
 		</h1>
 		{#if $isMobile}
 			<button on:click={() => {$isHide = true}}>

@@ -1,10 +1,10 @@
-import { MarkDownLoader } from '$lib/markDownLoader';
+import { MarkDownPostLoader } from '$lib/markDownPostLoader';
 import type { PageLoad } from '../../.svelte-kit/types/src/routes/$types';
 
 export const prerender = true;
 
 export const load: PageLoad = async () => {
-	const loader = new MarkDownLoader();
+	const loader = new MarkDownPostLoader();
 	const posts = loader.loadPosts();
 
 	return {

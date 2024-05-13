@@ -1,6 +1,6 @@
 import {Post} from "$lib/model/post";
 
-export class MarkDownLoader {
+export class MarkDownPostLoader {
     modules;
     posts = [];
     tags = [];
@@ -9,13 +9,18 @@ export class MarkDownLoader {
         this.modules = Object.entries(import.meta.glob(`/src/routes/wikis/**/*.{md,svx,svelte.md}`, {eager: true}));
     }
 
-    public loadPosts(): Post[] {
+    public loadPosts(pathName: string = ""): Post[] {
         let posts: any[] = [];
         this.modules.forEach(([path, module]) => {
             // @ts-ignore
             let metadata = module.metadata;
-            metadata.path = this.getFileName(path);
-            let post = this.parseMarkdown(metadata)
+
+            let post;
+            if(path.includes(`src/routes/${pathName}`)) {
+                metadata.path = this.getFileName(path);
+                post = this.parseMarkdown(metadata)
+            }
+
             posts.push(post);
         });
 
@@ -28,6 +33,18 @@ export class MarkDownLoader {
         })
 
         return posts;
+    }
+
+    public loadPostsChildren(pathName: string = ""): Post[] {
+        let posts: any[] = [];
+        this.modules.forEach(([path, module]) => {
+            let moudelPath = module.metadata.path
+            if(moudelPath.match(`${pathName}/*.`)) {
+                posts.push(this.parseMarkdown(module.metadata))
+            }
+        });
+
+        return this.sortPosts(posts).reverse();
     }
 
     public loadPostsByTag(tag: any): Post[] {

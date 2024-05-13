@@ -3,25 +3,31 @@
 	import { transformDate } from '$lib/utils/dates';
 	import IndexNavigationBar from '$lib/components/markdown/NavigationBar.svelte';
 	import Comments from '$lib/components/Comments.svelte';
-	import { afterNavigate } from '$app/navigation';
-	import {page} from "$app/stores";
+	import { afterNavigate, goto } from '$app/navigation';
+	import { page } from '$app/stores';
+	import { MarkDownPostLoader } from '$lib/markDownPostLoader';
+	import { each } from 'svelte/internal';
+	import { onMount } from 'svelte';
 
 	export let title, summary, date, data, form, tags, path;
 
-	const rootPage = `https://dong-park.github.io`
+	const rootPage = `https://dong-park.github.io`;
 
 	let element;
-	let favicon = rootPage + "/imgs/favicon.png"
+	let favicon = rootPage + '/imgs/favicon.png';
+	let childrenPosts = [];
 
-	$: canonical = rootPage + decodeURIComponent($page.url.pathname)
+	$: canonical = rootPage + decodeURIComponent($page.url.pathname);
 
 	afterNavigate(() => {
 		element.scrollIntoView({ behavior: 'smooth' });
-		let img = document.querySelector("main img")
-		if(img){
-			favicon = img.src
-		}
+		childrenPosts = new MarkDownPostLoader().loadPostsChildren(path);
 	});
+
+	onMount(() => {
+		childrenPosts = new MarkDownPostLoader().loadPostsChildren(path);
+	});
+
 </script>
 
 <svelte:head>
@@ -46,6 +52,15 @@
 		<MarkDownLoader>
 			<slot />
 		</MarkDownLoader>
+		<ul class="children space-y-1 mt-2">
+			{#each childrenPosts as children}
+				<li class="cursor-pointer hover:bg-gray-100">
+					<button on:click={() => goto(children.path)}>
+						{children.path}
+					</button>
+				</li>
+			{/each}
+		</ul>
 	</article>
 	<Comments />
 </main>
@@ -68,4 +83,25 @@
     height: calc(100vh - 52px);
     min-height: -webkit-fill-available;
   }
+
+  .children li {
+    text-decoration-line: underline;
+    text-decoration-color: var(--border);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
+
+  .children li::after {
+    margin: 0;
+    content: "";
+    display: inline-block;
+    width: 0.85rem;
+    height: 0.85rem;
+    background: url(/icons/link.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0.25rem;
+    text-align: center;
+  }
+
 </style>
