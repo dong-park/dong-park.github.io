@@ -23,18 +23,6 @@
 </main>
 
 <style lang="scss">
-  :global(h1) {
-    @apply text-4xl
-  }
-
-  :global(h2) {
-    @apply text-3xl;
-  }
-
-  :global(h3) {
-    @apply text-2xl;
-  }
-
   .resume {
     @apply px-6 mt-1;
 
@@ -45,8 +33,4 @@
       padding-top: var(--page-top);
     }
   }
-
-	:global(.block-underline) {
-		@apply border-b-2 border-gray-300;
-	}
 </style>

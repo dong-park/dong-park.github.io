@@ -3,8 +3,6 @@
 	import Tags from '$lib/components/Tags.svelte';
 
 	export let data;
-
-
 </script>
 <main class="p-4 h-full overflow-scroll">
 		<Tags tags="{data.tags}" />

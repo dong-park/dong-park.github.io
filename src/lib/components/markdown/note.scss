@@ -115,6 +115,15 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
     @apply text-center p-1;
   }
 
+  :global(hr) {
+    @apply my-5;
+  }
+
+  :global(img) {
+    @apply shadow my-2;
+    @apply md:max-w-sm;
+  }
+
   :global(.token) {
     @apply text-sm;
     @apply font-extralight;

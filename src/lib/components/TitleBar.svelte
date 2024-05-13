@@ -10,10 +10,10 @@
 </svelte:head>
 
 <div class="flex justify-between">
-	<div class="flex-col items-end">
-		<h1 class="text-lg">{title}</h1>
-		<h2 class="text-xs">{description}</h2>
-	</div>
+<!--	<div class="flex-col items-end">-->
+<!--		<h1 class="text-lg">{title}</h1>-->
+<!--		<h2 class="text-xs">{description}</h2>-->
+<!--	</div>-->
 	<div>
 		<div class="flex gap-0.5">
 			<a

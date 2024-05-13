@@ -21,7 +21,7 @@
 	});
 </script>
 
-<div id="utterances-comments" class="content-wrapper px-4 py-6 mt-auto" />
+<div id="utterances-comments" class="content-wrapper mt-auto" />
 
 <style lang="scss">
   :global(.utterances) {

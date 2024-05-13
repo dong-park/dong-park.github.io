@@ -19,7 +19,7 @@
 							on:click={() => gotoPost(post.path)}
 			>
 				<p class="font-serif title text-md">{post.title}</p>
-				<p class="text-sm">{transformDate(post.date)}</p>
+				<p class="text-sm mt-1">{transformDate(post.date)}</p>
 			</button>
 		{/key}
 	{/each}

@@ -3,19 +3,23 @@
 	import { isHide, isMobile } from '$lib/store';
 	import { onMount } from 'svelte';
 	import type { Post } from '$lib/model/post';
+	import TitleBar from '$lib/components/TitleBar.svelte';
 
 	export let posts: Post[];
 
 	const title = '개발자 썰 모음집';
 
-	function gotoPost(title: string) {
+	function gotoMenu(title: string) {
 		if ($isMobile) {
 			$isHide = true;
 		}
 
-		goto(`/wikis/${title}`);
+		goto(`${title}`);
 	}
 
+	function gotoPost(title: string) {
+		gotoMenu(`/wikis/${title}`);
+	}
 
 	function show(post: Post) {
 		post.show = !post.show;
@@ -47,10 +51,13 @@
 <nav class="{width} fixed flex-shrink-0 shadow bg-gray-100 h-full p-2 z-40">
 	<div class="flex items-center justify-between p-1">
 		<h1>
-			<button on:click={() => goto("/")}>
+			<button on:click={() => {
+				gotoMenu("/")
+			}}>
 				{title}
 			</button>
 		</h1>
+
 		{#if $isMobile}
 			<button on:click={() => {$isHide = true}}>
 				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
@@ -59,9 +66,17 @@
 			</button>
 		{/if}
 	</div>
+	<TitleBar/>
 	<ul>
+		<li class="doc-group font-sans mt-2">
+			<button on:click={() => {
+				gotoMenu("/resume")
+			}}>
+				<b>RESUME</b>
+			</button>
+		</li>
 		<li class="doc-group font-sans">
-			<button on:click={() => goto("/wikis")}>
+			<button on:click={() => gotoMenu("/wikis")}>
 				<b>WIKI</b>
 			</button>
 		</li>

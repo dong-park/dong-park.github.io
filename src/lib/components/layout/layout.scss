@@ -8,7 +8,11 @@ li {
 }
 
 .doc-group {
-  @apply text-xs;
+  @apply text-xs p-1;
+
+  button {
+    @apply w-full text-left
+  }
 }
 
 button {
