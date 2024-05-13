@@ -26,7 +26,7 @@
 					<path fill="currentColor" d="M3 3h18v2H3zm0 16h18v2H3zm0-8h18v2H3z" />
 				</svg>
 			</button>
-			<div class="ml-{isHide ? '4' : ''} flex space-x-1 text-sm">
+			<div class="ml-{isHide ? '4' : ''} flex space-x-1 text-sm pt-0.5">
 				{#each paths as path, index}
 					<button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans"
 									on:click={() => navigateTo(index)}>
