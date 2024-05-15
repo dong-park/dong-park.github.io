@@ -2,11 +2,10 @@
 	import { page } from '$app/stores';
 
 	const isDev = process.env.NODE_ENV === 'development';
-	const G_TAG = import.meta.env.VITE_G_TAG;
 
 	$: {
 		if (typeof gtag !== 'undefined') {
-			gtag('config', G_TAG, {
+			gtag('config', 'MEASUREMENT_ID', {
 				page_title: document.title,
 				page_path: $page.url.pathname
 			});
@@ -17,7 +16,7 @@
 <svelte:head>
 	{#if (!isDev)}
 		<!-- Google tag (gtag.js) -->
-		<script async src={`https://www.googletagmanager.com/gtag/js?id=${G_TAG}`}></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WELFQJ9KV"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
 
@@ -26,7 +25,7 @@
 			}
 
 			gtag('js', new Date());
-			gtag('config', '${G_TAG}');
+			gtag('config', 'G-7WELFQJ9KV');
 		</script>
 	{/if}
 </svelte:head>
