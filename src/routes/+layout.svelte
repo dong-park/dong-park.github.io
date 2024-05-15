@@ -21,12 +21,8 @@
 <Analytics />
 <div class="flex h-full">
 	<div class="h-[100vh]">
-		<div class="z-40 {width} {hidden}">
-			<Sidebar posts="{data.posts}" />
-		</div>
-		<div class="z-30">
-			<LocationBar />
-		</div>
+		<Sidebar posts="{data.posts}" />
+		<LocationBar />
 	</div>
 
 	<div bind:this={mainEl} class="main pt-2 px-4 {($isMobile && $isHide) || !$isMobile ? 'w-full' : 'hidden'} mb-12"

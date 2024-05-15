@@ -1,6 +1,6 @@
 import { Post } from '$lib/model/post';
 
-export class MarkDownPostLoader {
+export class MarkDownFactory {
 	modules;
 	posts = [];
 	tags = [];

@@ -5,7 +5,7 @@
 	import Comments from '$lib/components/Comments.svelte';
 	import { afterNavigate, goto } from '$app/navigation';
 	import { page } from '$app/stores';
-	import { MarkDownPostLoader } from '$lib/markDownPostLoader';
+	import { MarkDownFactory } from '$lib/utils/markdown';
 	import { onMount } from 'svelte';
 
 	export let title, summary, date, data, form, tags, path;
@@ -21,11 +21,11 @@
 
 	afterNavigate(() => {
 		element.scrollIntoView({ behavior: 'smooth' });
-		childrenPosts = new MarkDownPostLoader().loadPostsChildren(path);
+		childrenPosts = new MarkDownFactory().loadPostsChildren(path);
 	});
 
 	onMount(() => {
-		childrenPosts = new MarkDownPostLoader().loadPostsChildren(path);
+		childrenPosts = new MarkDownFactory().loadPostsChildren(path);
 	});
 
 </script>
