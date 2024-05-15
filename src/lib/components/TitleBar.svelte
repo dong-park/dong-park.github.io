@@ -1,6 +1,5 @@
 <script>
 	export let title = '개발자 썰 모음집';
-	export let description = '';
 	export let summary = '';
 </script>
 
@@ -67,7 +66,7 @@
 					/>
 				</svg>
 			</a>
-			<a
+			<button
 				style="--lv-wait: 1;"
 				class="flex items-center gap-1 rounded p-1 transition-colors hover:bg-selection hover:text-body text-xs cursor-pointer"
 				target="_blank"
@@ -82,7 +81,7 @@
 				}}
 			>
 				Resume
-			</a>
+			</button>
 		</div>
 	</div>
 </div>
