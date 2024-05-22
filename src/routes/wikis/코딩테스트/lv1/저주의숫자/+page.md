@@ -1,6 +1,6 @@
 ---
 title: 저주의 숫자 3
-summary: "123"
+summary: ""
 date: '2024-05-20'
 tags: [ '' ]
 ---
