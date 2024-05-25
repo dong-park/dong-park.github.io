@@ -12,8 +12,8 @@ startIndex, endIndex를 지정해서 한칸씩 이동시키며 원하는 합이�
 
 ## 투포인터 이동 원칙
 
-- sum > N : sum = sum - startIndex; startIndex++;
-- sum < N: endIndex++; sum = sum + endIndex;
+- sum \> N : sum = sum - startIndex; startIndex++;
+- sum \< N: endIndex++; sum = sum + endIndex;
 - sum == N: endIndex++; sum = sum + endIndex; count++;
 
 
