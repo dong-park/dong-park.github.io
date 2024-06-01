@@ -38,6 +38,7 @@ public class BubbleSort2 {
             int val = beforeIdx.get(sArray[i]) - i;
             maxLength = Math.max(val, maxLength);
         }
+        maxLength = maxLength + 1;
 
         System.out.println(maxLength);
     }
