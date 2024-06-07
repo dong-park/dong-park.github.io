@@ -63,9 +63,9 @@ tags: [ '' ]
 
 피벗을 정하는 방법
 
-- pivot \= K: K번째 수를 찾았으므로 알고리즘을 종료합니다.
-- pivot \> K: pivot의 왼쪽 부분에 K가 있으므로 왼쪽 부분(start ~ pivot-1)만 정렬합니다.
-- pivot \< K: pivot의 오른쪽 부분에 K가 있으므로 오른쪽 부분(pivot+1 ~ end)만 정렬합니다.
+- pivot이 같을경우: K번째 수를 찾았으므로 알고리즘을 종료합니다.
+- pivot이 큰경우: pivot의 왼쪽 부분에 K가 있으므로 왼쪽 부분(start ~ pivot-1)만 정렬합니다.
+- pivot이 작은경우: pivot의 오른쪽 부분에 K가 있으므로 오른쪽 부분(pivot+1 ~ end)만 정렬합니다.
 
 # 병합 정렬
 

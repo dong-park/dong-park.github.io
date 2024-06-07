@@ -46,46 +46,47 @@
 	});
 
 	$: width = $isMobile ? 'w-full' : 'w-[220px]';
-	$: hidden = $isHide ? 'hidden' : '';
+	$: hidden = $isHide ? 'hidden w-0' : '';
 </script>
-<div class="{width}">
-	<nav class="{width} {hidden} fixed flex-shrink-0 shadow bg-gray-100 h-full p-2 z-40 ">
-		<div class="flex items-center justify-between p-1">
-			<h1>
-				<button on:click={() => {
+{#if (!hidden)}
+	<div class="{width}">
+		<nav class="{width} fixed flex-shrink-0 shadow bg-gray-100 h-full p-2 z-40 ">
+			<div class="flex items-center justify-between p-1">
+				<h1>
+					<button on:click={() => {
 				gotoMenu("/")
 			}}>
-					{title}
-				</button>
-			</h1>
+						{title}
+					</button>
+				</h1>
 
-			{#if $isMobile}
-				<button on:click={() => {$isHide = true}}>
-					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-						<path fill="currentColor" d="M3 3h18v2H3zm0 16h18v2H3zm0-8h18v2H3z" />
-					</svg>
-				</button>
-			{/if}
-		</div>
-		<TitleBar />
-		<ul>
-			<li class="doc-group font-sans mt-2">
-				<button on:click={() => {
+				{#if $isMobile}
+					<button on:click={() => {$isHide = true}}>
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+							<path fill="currentColor" d="M3 3h18v2H3zm0 16h18v2H3zm0-8h18v2H3z" />
+						</svg>
+					</button>
+				{/if}
+			</div>
+			<TitleBar />
+			<ul>
+				<li class="doc-group font-sans mt-2">
+					<button on:click={() => {
 				gotoMenu("/resume")
 			}}>
-					<b>RESUME</b>
-				</button>
-			</li>
-			<li class="doc-group font-sans">
-				<button on:click={() => gotoMenu("/wikis")}>
-					<b>WIKI</b>
-				</button>
-			</li>
-			{#each posts as post}
-				{#key post}
-					{#if post.isOrigin}
-						<li class="doc">
-							<button class="w-full flex items-center justify-between" on:click={() => gotoPost(post.path)}>
+						<b>RESUME</b>
+					</button>
+				</li>
+				<li class="doc-group font-sans">
+					<button on:click={() => gotoMenu("/wikis")}>
+						<b>WIKI</b>
+					</button>
+				</li>
+				{#each posts as post}
+					{#key post}
+						{#if post.isOrigin}
+							<li class="doc">
+								<button class="w-full flex items-center justify-between" on:click={() => gotoPost(post.path)}>
 							<span class="flex">
 								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
 									<path fill="currentColor"
@@ -95,27 +96,27 @@
 									{post.title}
 								</span>
 							</span>
-								{#if post.childs.length > 0}
-									<button on:click={() => show(post)}>
-										{#if !post.show}
-											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-												<path fill="currentColor"
-															d="M11 14.175V7q0-.425.288-.713T12 6q.425 0 .713.288T13 7v7.175l2.9-2.875q.275-.275.688-.288t.712.288q.275.275.275.7t-.275.7l-4.6 4.6q-.3.3-.7.3t-.7-.3l-4.6-4.6q-.275-.275-.288-.687T6.7 11.3q.275-.275.7-.275t.7.275l2.9 2.875Z" />
-											</svg>
-										{/if}
-										{#if post.show}
-											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-												<path fill="currentColor" d="M11 18V9.825L7.4 13.4L6 12l6-6l6 6l-1.4 1.4L13 9.825V18h-2Z" />
-											</svg>
-										{/if}
-									</button>
-								{/if}
-							</button>
-						</li>
-						{#if post.show === true}
-							{#each post.childs as child}
-								<li class="sub-doc">
-									<button class="w-full" on:click={() => gotoPost(child.path)}>
+									{#if post.childs.length > 0}
+										<button on:click={() => show(post)}>
+											{#if !post.show}
+												<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+													<path fill="currentColor"
+																d="M11 14.175V7q0-.425.288-.713T12 6q.425 0 .713.288T13 7v7.175l2.9-2.875q.275-.275.688-.288t.712.288q.275.275.275.7t-.275.7l-4.6 4.6q-.3.3-.7.3t-.7-.3l-4.6-4.6q-.275-.275-.288-.687T6.7 11.3q.275-.275.7-.275t.7.275l2.9 2.875Z" />
+												</svg>
+											{/if}
+											{#if post.show}
+												<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+													<path fill="currentColor" d="M11 18V9.825L7.4 13.4L6 12l6-6l6 6l-1.4 1.4L13 9.825V18h-2Z" />
+												</svg>
+											{/if}
+										</button>
+									{/if}
+								</button>
+							</li>
+							{#if post.show === true}
+								{#each post.childs as child}
+									<li class="sub-doc">
+										<button class="w-full" on:click={() => gotoPost(child.path)}>
 									<span class="flex">
 										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
 											<path fill="currentColor"
@@ -123,16 +124,18 @@
 										</svg>
 										{child.title}
 									</span>
-									</button>
-								</li>
-							{/each}
+										</button>
+									</li>
+								{/each}
+							{/if}
 						{/if}
-					{/if}
-				{/key}
-			{/each}
-		</ul>
-	</nav>
-</div>
+					{/key}
+				{/each}
+			</ul>
+		</nav>
+	</div>
+{/if}
+
 
 <style lang="scss">
   @import "./layout.scss";
