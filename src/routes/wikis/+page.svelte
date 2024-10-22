@@ -6,7 +6,7 @@
 </script>
 <main class="p-4 h-full overflow-scroll">
 		<Tags tags="{data.tags}" />
-		<Posts posts="{data.posts}" />
+		<Posts posts="{data.posts}" origin="wikis"/>
 </main>
 
 <style lang="scss">

@@ -21,12 +21,11 @@
 <Analytics />
 <div class="flex h-full">
 	<div class="h-[100vh]">
-		<Sidebar posts="{data.posts}" />
+<!--		<Sidebar posts="{data.posts}" />-->
 		<LocationBar />
 	</div>
 
 	<div bind:this={mainEl} class="main pt-2 px-4 {($isMobile && $isHide) || !$isMobile ? 'w-full' : 'hidden'} mb-12"
-			 data-animate data-animate-speed="slow"
 	>
 		<div class="mt-[52px]" />
 		<slot />

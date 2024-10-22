@@ -6,7 +6,7 @@ export const load: PageLoad = async ({ url }) => {
     const loader = new MarkDownFactory();
     const searchParams = browser && url.searchParams;
     const selectedTag = searchParams ? searchParams.get('tag') : '';
-    const posts = selectedTag ? loader.loadPostsByTag(selectedTag) : loader.loadPosts();
+    const posts = selectedTag ? loader.loadPostsByTag(selectedTag) : loader.loadPosts('wikis');
 
     return {
         postCount: posts.length,

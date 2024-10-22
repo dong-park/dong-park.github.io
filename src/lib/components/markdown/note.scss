@@ -5,7 +5,7 @@ $code-text-color: #d14; // A shade of red for text
 $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
 
 :global(li::marker) {
-  color: var(--gray-300);
+  color: var(--gray-500);
 }
 
 :global(.post-content) {
@@ -22,7 +22,7 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
   :global(h4),
   :global(h5),
   :global(h6) {
-    margin-top: -52px;
+    margin-top: -30px;
     padding-top: 62px;
     font-family: var(--font-sans);
     font-weight: 600;
@@ -38,23 +38,24 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
   }
 
   :global(h1) {
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
 
   :global(h2) {
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
 
   :global(h3) {
-    font-size: 1.05em;
+    font-size: 1.25em;
   }
 
   :global(h4) {
-    font-size: 0.9em;
+    font-size: 1.1em;
     @apply italic;
   }
 
   :global(p) {
+    font-size: 1.2em;
     @apply mb-2.5;
     :global(a) {
       line-height: 2.1;
@@ -66,8 +67,8 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
   }
 
   :global(p), :global(li) {
-    font-family: var(--font-sans);
-    font-weight: 250;
+    font-family: var(--font-serif);
+    font-weight: 350;
   }
 
   :global(blockquote) {
@@ -96,7 +97,7 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
 
   :global(ol) {
     @apply list-decimal;
-    @apply pl-4;
+    @apply pl-6;
   }
 
   :global(p) > :global(a) {

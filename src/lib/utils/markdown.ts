@@ -6,7 +6,7 @@ export class MarkDownFactory {
 	tags = [];
 
 	constructor() {
-		this.modules = Object.entries(import.meta.glob(`/src/routes/wikis/**/*.{md,svx,svelte.md}`, { eager: true }));
+		this.modules = Object.entries(import.meta.glob(`/src/routes/**/**/*.{md,svx,svelte.md}`, { eager: true }));
 	}
 
 	public loadPosts(pathName: string = ''): Post[] {
@@ -21,7 +21,10 @@ export class MarkDownFactory {
 				post = this.parseMarkdown(metadata);
 			}
 
-			posts.push(post);
+			if(post != null && post.parent == '') {
+				posts.push(post);
+
+			}
 		});
 
 		posts = this.sortPosts(posts);

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="../../favicon.ico" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width" />
+	
+		<link href="../../_app/immutable/assets/0.47fa921a.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/33.a8d28ff9.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.6ea13d5f.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.1b37d555.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.2406774b.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.352bd974.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.ffb511a5.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/33.799e13e1.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/stores.ccd8b5be.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/22.5917daf1.js"><title>개발자 썰 모음집 : 10장 자료체계</title><!-- HEAD_svelte-1qgbhjt_START --><link rel="icon" type="image/png" href="/favicon.ico"><!-- HEAD_svelte-1qgbhjt_END --><!-- HEAD_svelte-1lz8nxv_START -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WELFQJ9KV"></script>
+		<script>window.dataLayer = window.dataLayer || [];
+
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+
+			gtag('js', new Date());
+			gtag('config', 'G-7WELFQJ9KV');
+		</script><!-- HEAD_svelte-1lz8nxv_END --><!-- HEAD_svelte-i0rv3r_START --><meta name="description" content="클래스 설계의 중요 원칙과 이를 통한 유지보수성, 재사용성, 유연성의 향상을 설명합니다. 클래스 크기와 책임의 중요성, 응집도 높은 클래스의 구현, 그리고 클래스 변경의 용이성을 증진시키는 디자인 방식에 대해 논의합니다. 클래스는 단일 책임 원칙을 따라야 하며, 이는 시스템의 변화에 대응하는 능력을 향상시킵니다."><meta name="keyword"><link rel="canonical" href="https://dong-park.github.io/wikis/클린코드/10장"><meta property="og:title" content="10장 자료체계"><meta property="og:description" content="클래스 설계의 중요 원칙과 이를 통한 유지보수성, 재사용성, 유연성의 향상을 설명합니다. 클래스 크기와 책임의 중요성, 응집도 높은 클래스의 구현, 그리고 클래스 변경의 용이성을 증진시키는 디자인 방식에 대해 논의합니다. 클래스는 단일 책임 원칙을 따라야 하며, 이는 시스템의 변화에 대응하는 능력을 향상시킵니다."><meta property="og:url" content="https://dong-park.github.io/wikis/클린코드/10장"><meta property="og:type" content="article"><meta property="og:site_name" content="dongpark.land"><meta property="og:image" content="https://dong-park.github.io/imgs/favicon.png"><meta name="twitter:card" content="summary"><!-- HEAD_svelte-i0rv3r_END -->
+</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div style="display: contents">
+		
+
+
+
+
+
+<div class="flex h-full"><div class="h-[100vh]">
+		<div class="truncate fixed z-30 flex items-center bg-white w-full py-4 px-2 space-x-2"><div class="w-[220px] hidden" style="min-width: 220px"></div>
+	<div class="flex items-center w-full justify-between"><div class="flex space-x-2">
+
+
+
+
+			<div class="ml-4 flex space-x-1 text-sm pt-0.5"><button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans">wikis</button>
+					<b>/</b><button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans">클린코드</button>
+					<b>/</b><button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans">10장</button>
+					</div></div>
+		<button class=" cursor-pointer hover:bg-gray-100 mr-4"><svg width="15px" height="15px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M15 7.5c0 3.033-2.467 5.5-5.5 5.5h-2.912l2.646 2.646-0.707 0.707-3.853-3.853 3.854-3.854 0.707 0.707-2.647 2.647h2.912c2.481 0 4.5-2.019 4.5-4.5s-2.019-4.5-4.5-4.5h-7.083v-1h7.083c3.033 0 5.5 2.467 5.5 5.5z" fill="#000000"></path></svg></button></div></div></div>
+
+	<div class="main pt-2 px-4 w-full mb-12 svelte-1bubhdm"><div class="mt-[52px]"></div>
+		
+
+<main class="flex flex-col main-height svelte-d38ujb"><article id="slot" class="relative bg-white"><h1 class="svelte-d38ujb">10장 자료체계</h1>
+		<div class="">Feb 13, 2024</div>
+		<nav class="relative z-20 mt-6"><ul class="mt-1 space-y-1 text-sm underline"></ul>
+</nav>
+		<div class="post-content"><div class="mt-[1.5em]"></div>
+	<h3 id="클래스-체계"><a href="#클래스-체계">클래스 체계</a></h3>
+<p>표준 자바 관례에 따름 첫째로 변수목록, 정적 공개 상수가 있다면 맨 위층에 나온다, 다음에 정적 비공개 변수 이어서 비공개 인스턴스 변수가 나온다. 비공개 함수는 자신을 호출하는 공개 함수 직후에 넣는다. 즉 추상화 단계가 순차적으로 내려간다.</p>
+<p><em>캡슐화</em>는 변수와 유틸리티 함수는 공개하지 않는 편이 낫지만 반드시 숨겨야한다는 법칙도 없다.</p>
+<h3 id="클래스는-작아야-한다"><a href="#클래스는-작아야-한다">클래스는 작아야 한다!</a></h3>
+<p>클래스를 만들 때 첫 번째 규칙은 크기다. 두번째 규칙도 크기다, 더 작아야 한다. 그렇다면 얼마나 작아야 하는가 함수는 물리적인 행 수로 크기를 측정했다. 하지만 클래스는 다른 척도를 사용한다. 클래스가 맡은 책임을 센다. 클래스 이름은 해당 클래스 책임을 기술해야 한다. 간결한 이름이 떠오르지 않는다면 필경 클래스 크기가 너무 커서 그렇다. Processor, Manager, Super등과 같이 모호한 단어가 있다면 클래스에다 여러 책임을 떠안겼다는 증거다. 클래스 설명은 if,and,or,but을 사용하지 않고서 25단어 내외로 가능해야 한다.</p>
+<p><em>단일 책임 원칙</em>은 클래스나 모듈을 변경할 이유가 하나, 단 하나뿐이어야 한다는 원칙이다. 책임, 즉 변경할 이유를 파악하려 애쓰다 보면 코드를 추상화하기도 쉬워진다. 더 좋은 추상화가 더 쉽게 떠오른다.</p>
+<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token class-name">SuperDashboard</span> <span class="token class-name">Class</span> 책임
+<span class="token operator">-</span> 소프트웨어 버전 정보 추적
+<span class="token operator">-</span> 스윙 컴포넌트 관리
+단일 책임 규칙에 위배<span class="token operator">!</span>
+
+<span class="token class-name">Version</span> <span class="token class-name">Class</span>으로 버전정보 추적의 관심을 분리한다</code><!-- HTML_TAG_END --></pre>
+<p>단일 책임 클래스가 많아지면 큰 그림을 이해하기 어려워진다고 우려한다, 큰 그림을 이해하려면 이 클래스 저 클래스를 수없이 넘나들어야 한다고 걱정하지만 명확한 컴포넌트로 나눠담아 관리하고 싶지 않은가?</p>
+<p>일반적으로 메서드가 변수를 많이 사용할수록 <em>응집도</em>가 높다. 모든 인스턴스 변수를 메서드마다 사용하는 클래스는 으집도가 가장 높다. 바람직하지 않다. 응집도를 유지하면 작은 클래스가 여럿이 나온다. 큰 함수를 작은 함수 여럿으로 나누기만 해도 클래스 수가 많아진다. 클래스가 응집력을 잃는다면 쪼개라!</p>
+<h3 id="변경하기-쉬운-클래스"><a href="#변경하기-쉬운-클래스">변경하기 쉬운 클래스</a></h3>
+<p>깨끗한 시스템은 클래스를 체계적으로 정리해 변경에 수반하는 위험을 낮춘다. 어떤 변경이든 클래스에 손대면 다른 코드를 망가뜨릴 잠정적인 위험이 존재한다.</p>
+<p>클래스 일부에서만 사용되는 함수나 책임을 각 클래스별로 나누라, 코드는 순시간에 이해되고 망가질 위험도 사라진다.</p>
+<p>요구사항은 변하기 마련이다. 인터페이스와 추상 클래스를 사용해 구현에 미치는 영향을 격리한다. 상세한 구현에 의존하는 코드는 테스트가 어렵다.</p>
+<p>아래 예시는 Porfolio클래스가 상시로 변하는 TokyoStockExchange API를 사용해 포트폴리오 값을 계산할때 결합도를 내리는 예시다.</p>
+<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">StockExchange</span> <span class="token punctuation">&#123;</span>
+	<span class="token class-name">Money</span> <span class="token function">currentPrice</span><span class="token punctuation">(</span><span class="token class-name">String</span> symbol<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+다음으로 <span class="token class-name">StockExchange</span> 인터페이스를 구현하는 <span class="token class-name">TokyoStockExchange</span> 클래스를 구현한다<span class="token punctuation">.</span>
+이후 <span class="token class-name">Portfolio</span> 생성자를 수정해 <span class="token class-name">StockExchange</span> 참조라를 인수로 받는다<span class="token punctuation">.</span></code><!-- HTML_TAG_END --></pre>
+<p>이렇게 구현하면 클래스는 주가로 언제나 100불을 반환하는 인터페이스를 구현한것이다.</p>
+<p>위와 같이 테스트가 가능할 정도로 시스템의 결합도를 낮추면 유연성과 재사용성도 더욱 높아진다. 자연스럽게 DIP를 따르는 클래스가 나온다.</p>
+</div>
+		<ul class="children space-y-1 mt-4"></ul></article>
+	<div id="utterances-comments" class="content-wrapper mt-auto"></div>
+</main></div>
+
+	<button class="fixed rounded-2xl z-30 bottom-7 right-7 bg-white shadow-2xl"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M11 5.825L6.4 10.4L5 9l7-7l7 7l-1.4 1.425l-4.6-4.6V13h-2zM11 18v-3h2v3zm0 4v-2h2v2z"></path></svg></button>
+</div>
+
+
+			
+			<script>
+				{
+					__sveltekit_rv7q6v = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.6ea13d5f.js"),
+						import("../../_app/immutable/entry/app.352bd974.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 22],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		
+	</div>
+</body>
+
+<style>
+    body {
+        min-height: 100%;
+        /* mobile viewport bug fix */
+        min-height: -webkit-fill-available;
+
+        -ms-overflow-style: none;  /* IE and 엣지 */
+        scrollbar-width: none;  /* 파이어폭스 */
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    html {
+        height: -webkit-fill-available;
+    }
+</style>
+
+</html>

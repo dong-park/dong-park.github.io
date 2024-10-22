@@ -2,10 +2,11 @@
 	import { goto } from '$app/navigation';
 	import { transformDate } from '$lib/utils/dates';
 
+	export let origin;
 	export let posts;
 
 	function gotoPost(title: string): boolean {
-		goto(`/wikis/${title}`);
+		goto(`/${origin}/${title}`);
 		return true;
 	}
 
@@ -15,7 +16,6 @@
 	{#each posts as post}
 		{#key post}
 			<button class="flex items-center space-x-2 hover:bg-gray-100 hover:cursor-pointer text-left w-full py-1"
-							data-animate="" data-animate-speed="fast"
 							on:click={() => gotoPost(post.path)}
 			>
 				<p class="font-serif title text-md">{post.title}</p>

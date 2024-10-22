@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="../../favicon.ico" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width" />
+	
+		<link href="../../_app/immutable/assets/0.47fa921a.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/33.a8d28ff9.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.6ea13d5f.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.1b37d555.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.2406774b.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.352bd974.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.ffb511a5.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/33.799e13e1.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/stores.ccd8b5be.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/15.e2f55752.js"><title>개발자 썰 모음집 : Bean</title><!-- HEAD_svelte-1qgbhjt_START --><link rel="icon" type="image/png" href="/favicon.ico"><!-- HEAD_svelte-1qgbhjt_END --><!-- HEAD_svelte-1lz8nxv_START -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WELFQJ9KV"></script>
+		<script>window.dataLayer = window.dataLayer || [];
+
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+
+			gtag('js', new Date());
+			gtag('config', 'G-7WELFQJ9KV');
+		</script><!-- HEAD_svelte-1lz8nxv_END --><!-- HEAD_svelte-i0rv3r_START --><meta name="description" content=""><meta name="keyword" content="JAVA"><link rel="canonical" href="https://dong-park.github.io/wikis/JAVA/Bean"><meta property="og:title" content="Bean"><meta property="og:description" content=""><meta property="og:url" content="https://dong-park.github.io/wikis/JAVA/Bean"><meta property="og:type" content="article"><meta property="og:site_name" content="dongpark.land"><meta property="og:image" content="https://dong-park.github.io/imgs/favicon.png"><meta name="twitter:card" content="summary"><!-- HEAD_svelte-i0rv3r_END -->
+</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div style="display: contents">
+		
+
+
+
+
+
+<div class="flex h-full"><div class="h-[100vh]">
+		<div class="truncate fixed z-30 flex items-center bg-white w-full py-4 px-2 space-x-2"><div class="w-[220px] hidden" style="min-width: 220px"></div>
+	<div class="flex items-center w-full justify-between"><div class="flex space-x-2">
+
+
+
+
+			<div class="ml-4 flex space-x-1 text-sm pt-0.5"><button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans">wikis</button>
+					<b>/</b><button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans">JAVA</button>
+					<b>/</b><button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans">Bean</button>
+					</div></div>
+		<button class=" cursor-pointer hover:bg-gray-100 mr-4"><svg width="15px" height="15px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M15 7.5c0 3.033-2.467 5.5-5.5 5.5h-2.912l2.646 2.646-0.707 0.707-3.853-3.853 3.854-3.854 0.707 0.707-2.647 2.647h2.912c2.481 0 4.5-2.019 4.5-4.5s-2.019-4.5-4.5-4.5h-7.083v-1h7.083c3.033 0 5.5 2.467 5.5 5.5z" fill="#000000"></path></svg></button></div></div></div>
+
+	<div class="main pt-2 px-4 w-full mb-12 svelte-1bubhdm"><div class="mt-[52px]"></div>
+		
+
+<main class="flex flex-col main-height svelte-d38ujb"><article id="slot" class="relative bg-white"><h1 class="svelte-d38ujb">Bean</h1>
+		<div class="">May 13, 2024</div>
+		<nav class="relative z-20 mt-6"><ul class="mt-1 space-y-1 text-sm underline"></ul>
+</nav>
+		<div class="post-content"><div class="mt-[1.5em]"></div>
+	<h2 id="java-beans"><a href="#java-beans">Java Beans</a></h2>
+<p>Java Beans는 Java로 작성된 소프트웨어 컴포넌트이다.
+자바빈즈의 사양은 썬 마이크로시스템즈에서 다음과 같이 정의되었다. 빌더 형식의 개발도구에서 가시적으로 조작이 가능하고 또한 재사용이 가능한 소프트웨어 컴포넌트이다.
+EJB와 혼동하지 말아야 할것이 Java EE의 일부로서 서버 계열의 컴포넌트 이다.</p>
+<h2 id="일반적인-관례"><a href="#일반적인-관례">일반적인 관례</a></h2>
+<p>Java Beans 클래스로서 작동하기 위해서, 객체 클래스는 명명법, 생성법 그리고 행동에 관련된 일련의 관례를 따라야만 한다. 이러한 관례는 (빌더 형식의) 개발 도구에서 자바빈즈와의 연결을 통해 클래스의 사용과
+재사용 그리고 클래스의 재배치를 가능하게 한다.</p>
+<ul><li>클래스는 직렬화되어야 한다.</li>
+<li>클래스는 기본 생성자를 가지고 있어야 한다.</li>
+<li>클래스의 속성들을 get, set 혹은 표준 명명법을 따르는 메서드들을 사용해 접근할 수 있어야 한다.</li>
+<li>클래스는 필요한 이벤트 처리 메서드들을 포함하고 있어야 한다.</li></ul>
+<p>오히려 인터페이스의 구현보다 다양한 관례로서 표현된 요구 사항들로 인해 일부 개발자들은 자바빈즈를 확실한</p>
+<p>출처: <a href="https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94%EB%B9%88%EC%A6%88" rel="nofollow">위키피디아</a></p>
+<h2 id="키워드"><a href="#키워드">키워드</a></h2>
+<ul><li>Java로 작성된 소프트웨어 컴포넌트</li>
+<li>명명법, 생성법, 메서드</li>
+<li>직렬화, 생성자, get/set 명명법을 따른 접근자, 이벤트 처리를 위한 메서드</li></ul>
+</div>
+		<ul class="children space-y-1 mt-4"></ul></article>
+	<div id="utterances-comments" class="content-wrapper mt-auto"></div>
+</main></div>
+
+	<button class="fixed rounded-2xl z-30 bottom-7 right-7 bg-white shadow-2xl"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M11 5.825L6.4 10.4L5 9l7-7l7 7l-1.4 1.425l-4.6-4.6V13h-2zM11 18v-3h2v3zm0 4v-2h2v2z"></path></svg></button>
+</div>
+
+
+			
+			<script>
+				{
+					__sveltekit_rv7q6v = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.6ea13d5f.js"),
+						import("../../_app/immutable/entry/app.352bd974.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 15],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		
+	</div>
+</body>
+
+<style>
+    body {
+        min-height: 100%;
+        /* mobile viewport bug fix */
+        min-height: -webkit-fill-available;
+
+        -ms-overflow-style: none;  /* IE and 엣지 */
+        scrollbar-width: none;  /* 파이어폭스 */
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    html {
+        height: -webkit-fill-available;
+    }
+</style>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="../../favicon.ico" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width" />
+	
+		<link href="../../_app/immutable/assets/0.47fa921a.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/33.a8d28ff9.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.6ea13d5f.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.1b37d555.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.2406774b.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.352bd974.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.ffb511a5.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/33.799e13e1.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/stores.ccd8b5be.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/23.65c5dfb3.js"><title>개발자 썰 모음집 : 11장 시스템</title><!-- HEAD_svelte-1qgbhjt_START --><link rel="icon" type="image/png" href="/favicon.ico"><!-- HEAD_svelte-1qgbhjt_END --><!-- HEAD_svelte-1lz8nxv_START -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WELFQJ9KV"></script>
+		<script>window.dataLayer = window.dataLayer || [];
+
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+
+			gtag('js', new Date());
+			gtag('config', 'G-7WELFQJ9KV');
+		</script><!-- HEAD_svelte-1lz8nxv_END --><!-- HEAD_svelte-i0rv3r_START --><meta name="description" content="소프트웨어 시스템을 설계할 때 모듈화와 책임의 분리는 마치 도시 인프라처럼 필수적입니다. 이 가이드에서는 시스템의 제작과 사용을 분리하는 방법, Main 분리, 팩토리 사용, 그리고 의존성 주입을 통해 높은 모듈성과 유지 관리 용이성을 달성하는 방법을 설명합니다. 각 섹션은 시스템 설계의 추상화와 모듈화를 통해 변경이 용이하고, 테스트 가능하며, 유연한 소프트웨어를 개발하는 데 필요한 전략을 제공합니다."><meta name="keyword"><link rel="canonical" href="https://dong-park.github.io/wikis/클린코드/11장"><meta property="og:title" content="11장 시스템"><meta property="og:description" content="소프트웨어 시스템을 설계할 때 모듈화와 책임의 분리는 마치 도시 인프라처럼 필수적입니다. 이 가이드에서는 시스템의 제작과 사용을 분리하는 방법, Main 분리, 팩토리 사용, 그리고 의존성 주입을 통해 높은 모듈성과 유지 관리 용이성을 달성하는 방법을 설명합니다. 각 섹션은 시스템 설계의 추상화와 모듈화를 통해 변경이 용이하고, 테스트 가능하며, 유연한 소프트웨어를 개발하는 데 필요한 전략을 제공합니다."><meta property="og:url" content="https://dong-park.github.io/wikis/클린코드/11장"><meta property="og:type" content="article"><meta property="og:site_name" content="dongpark.land"><meta property="og:image" content="https://dong-park.github.io/imgs/favicon.png"><meta name="twitter:card" content="summary"><!-- HEAD_svelte-i0rv3r_END -->
+</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div style="display: contents">
+		
+
+
+
+
+
+<div class="flex h-full"><div class="h-[100vh]">
+		<div class="truncate fixed z-30 flex items-center bg-white w-full py-4 px-2 space-x-2"><div class="w-[220px] hidden" style="min-width: 220px"></div>
+	<div class="flex items-center w-full justify-between"><div class="flex space-x-2">
+
+
+
+
+			<div class="ml-4 flex space-x-1 text-sm pt-0.5"><button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans">wikis</button>
+					<b>/</b><button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans">클린코드</button>
+					<b>/</b><button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans">11장</button>
+					</div></div>
+		<button class=" cursor-pointer hover:bg-gray-100 mr-4"><svg width="15px" height="15px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M15 7.5c0 3.033-2.467 5.5-5.5 5.5h-2.912l2.646 2.646-0.707 0.707-3.853-3.853 3.854-3.854 0.707 0.707-2.647 2.647h2.912c2.481 0 4.5-2.019 4.5-4.5s-2.019-4.5-4.5-4.5h-7.083v-1h7.083c3.033 0 5.5 2.467 5.5 5.5z" fill="#000000"></path></svg></button></div></div></div>
+
+	<div class="main pt-2 px-4 w-full mb-12 svelte-1bubhdm"><div class="mt-[52px]"></div>
+		
+
+<main class="flex flex-col main-height svelte-d38ujb"><article id="slot" class="relative bg-white"><h1 class="svelte-d38ujb">11장 시스템</h1>
+		<div class="">Feb 18, 2024</div>
+		<nav class="relative z-20 mt-6"><ul class="mt-1 space-y-1 text-sm underline"></ul>
+</nav>
+		<div class="post-content"><div class="mt-[1.5em]"></div>
+	<h3 id="도시를-세운다면"><a href="#도시를-세운다면">도시를 세운다면?</a></h3>
+<p>도시가 돌아가는 이유는 수도 관리 팀 등 여러 인프라를 관리하는 팀이 있기 때문이면서, 적절한 추상화와 모듈화 때문이다.
+소프트웨어 팀도 도시처럼 구성한다. 시스템은 비슷한 수준으로 관심사를 분리하거나 추상화를 이뤄내지 못한다.
+<strong>시스템 수준</strong>에서도 깨끗함을 유지하는 방법은 무엇일까.</p>
+<h3 id="시스템-제작과-시스템-사용을-분리하라"><a href="#시스템-제작과-시스템-사용을-분리하라">시스템 제작과 시스템 사용을 분리하라</a></h3>
+<p><strong>제작(construction)</strong>은 <strong>사용(use)</strong>과 아주 다르다.
+호텔의 공사 시기에 있던 기중기와 승강기가 사라지고 호텔에 근무하고 체류하는 사람들로 채워 지듯이 말이다.
+소프트웨어 시스템은 객체를 제작하고 의존성을 연결하는 준비과정과 런타임 로직을 분리해야 한다.</p>
+<p>시작단계는 모든 애플리케이션이 풀어야 할 관심사다. 관심사 분리는 우리 분야에서 가장 오래되고 가장 중요한 설계 기법이다.</p>
+<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">Service</span> <span class="token function">getService</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>service <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        service <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyServiceImpl</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">return</span> service<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
+<p>위는 <strong>초기화 지연</strong> 혹은 <strong>계산 지연</strong>이라는 기법이다. 실제로 필요할 떄까지 객체를 생성하지 않으므로 불필요한 부하가 걸리지 않고 Null 포인터를 반환하지 않는다.
+하지만 첫째 MyServiceImpl 의존성을 해결하지 않으면 컴파일이 되지 않고, 단위 테스트에서 테스트 전용 객체가 필요할것이다.
+또한 일반 런타임 로직에다 객체 생성 로직을 섞어 놓은탓에 모든 경로를 감안한 테스트를 해야한다. <strong>단일 책임 원칙 위반</strong>이다.</p>
+<p>체계적이고 탄탄한 시스템을 위해서라면 흔히 쓰이는 손쉬운 기법으로 모듈성을 깨서는 절대로 안 된다.
+객체를 생성하거나 의존성을 연결할때, 설정 논리와 일반 실행 논리를 분리해야 모듈성이 높아진다.</p>
+<h3 id="main-분리"><a href="#main-분리">Main 분리</a></h3>
+<p>시스템 생성과 시스템 사용을 분리하는 한 가지 방법은 <strong>main 분리</strong>이다.
+제어 흐름은 main 함수에서 시스템에 필요한 객체를 생성한 후 이를 애플리케이션에 넘긴다. 애플리케이션은 그저 객체를 사용할 뿐이다.
+main과 애플리케이션 사이에 표시된 의존성 화살표의 방향에 주목하자. 모든 화살표가 main 쪽에서 애플리케이션 쪽을 향한다.
+즉 애플리케이션은 객체가 생성되는 과정을 전혀 모른다는 뜻이다.</p>
+<h3 id="팩토리"><a href="#팩토리">팩토리</a></h3>
+<p>때로는 객체를 생성하는 책임을 다른 객체에게 넘기는 것이 좋다. 이를 <strong>팩토리</strong>라고 부른다.
+주문 처리 시스템에서 애플리케이션은 LineItem 인스턴스를 생성해 Order에 추가한다. 이때는 AbstractFactory 패턴을 사용하면 좋다.
+그러면 생성시점은 애플리케이션이 결정하지만 생성코드는 애플리케이션이 모른다.</p>
+<h3 id="의존성-주입"><a href="#의존성-주입">의존성 주입</a></h3>
+<p>의존성 주입은 제어 역전의 한 형태다. 제어 역전은 프레임워크가 프로그램의 제어 흐름을 전적으로 가져가는 것을 말한다.</p>
+</div>
+		<ul class="children space-y-1 mt-4"></ul></article>
+	<div id="utterances-comments" class="content-wrapper mt-auto"></div>
+</main></div>
+
+	<button class="fixed rounded-2xl z-30 bottom-7 right-7 bg-white shadow-2xl"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M11 5.825L6.4 10.4L5 9l7-7l7 7l-1.4 1.425l-4.6-4.6V13h-2zM11 18v-3h2v3zm0 4v-2h2v2z"></path></svg></button>
+</div>
+
+
+			
+			<script>
+				{
+					__sveltekit_rv7q6v = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.6ea13d5f.js"),
+						import("../../_app/immutable/entry/app.352bd974.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 23],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		
+	</div>
+</body>
+
+<style>
+    body {
+        min-height: 100%;
+        /* mobile viewport bug fix */
+        min-height: -webkit-fill-available;
+
+        -ms-overflow-style: none;  /* IE and 엣지 */
+        scrollbar-width: none;  /* 파이어폭스 */
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    html {
+        height: -webkit-fill-available;
+    }
+</style>
+
+</html>

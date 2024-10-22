@@ -17,7 +17,7 @@
 	let childrenPosts = [];
 
 	$: canonical = rootPage + decodeURIComponent($page.url.pathname);
-	$: parentPost = path.split("/").slice(0, -1).join("/");
+	$: parentPost = path.split('/').slice(0, -1).join('/');
 
 	afterNavigate(() => {
 		element.scrollIntoView({ behavior: 'smooth' });
@@ -47,7 +47,7 @@
 <main class="flex flex-col main-height">
 	<article id="slot" class="relative bg-white">
 		<h1 bind:this={element}>{title}</h1>
-		<div class="text-sm">{transformDate(date)}</div>
+		<div class="">{transformDate(date)}</div>
 		<IndexNavigationBar />
 		<MarkDownLoader>
 			<slot />
@@ -55,7 +55,8 @@
 		<ul class="children space-y-1 mt-4">
 			{#each childrenPosts as children}
 				<li>
-					<button class="link w-full text-left cursor-pointer hover:bg-gray-100" on:click={() => goto('/wikis/' + children.path)}>
+					<button class="link w-full text-left cursor-pointer hover:bg-gray-100"
+									on:click={() => goto(children.path)}>
 						{children.title}
 					</button>
 				</li>

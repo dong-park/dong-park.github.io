@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="../../favicon.ico" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width" />
+	
+		<link href="../../_app/immutable/assets/0.47fa921a.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/33.a8d28ff9.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.6ea13d5f.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.1b37d555.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.2406774b.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.352bd974.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.ffb511a5.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/33.799e13e1.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/stores.ccd8b5be.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/28.b0ea506c.js"><title>개발자 썰 모음집 : 5장 형식 맞추기</title><!-- HEAD_svelte-1qgbhjt_START --><link rel="icon" type="image/png" href="/favicon.ico"><!-- HEAD_svelte-1qgbhjt_END --><!-- HEAD_svelte-1lz8nxv_START -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WELFQJ9KV"></script>
+		<script>window.dataLayer = window.dataLayer || [];
+
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+
+			gtag('js', new Date());
+			gtag('config', 'G-7WELFQJ9KV');
+		</script><!-- HEAD_svelte-1lz8nxv_END --><!-- HEAD_svelte-i0rv3r_START --><meta name="description" content="코드 작성 시 형식을 일관되게 유지하는 것은 개발 팀이 코드베이스를 보다 효과적으로 관리하고 이해할 수 있게 하는 핵심적인 요소입니다. 이 가이드에서는 코드 형식의 중요성과 이를 효과적으로 구현하는 방법에 대해 자세히 설명합니다."><meta name="keyword"><link rel="canonical" href="https://dong-park.github.io/wikis/클린코드/5장"><meta property="og:title" content="5장 형식 맞추기"><meta property="og:description" content="코드 작성 시 형식을 일관되게 유지하는 것은 개발 팀이 코드베이스를 보다 효과적으로 관리하고 이해할 수 있게 하는 핵심적인 요소입니다. 이 가이드에서는 코드 형식의 중요성과 이를 효과적으로 구현하는 방법에 대해 자세히 설명합니다."><meta property="og:url" content="https://dong-park.github.io/wikis/클린코드/5장"><meta property="og:type" content="article"><meta property="og:site_name" content="dongpark.land"><meta property="og:image" content="https://dong-park.github.io/imgs/favicon.png"><meta name="twitter:card" content="summary"><!-- HEAD_svelte-i0rv3r_END -->
+</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div style="display: contents">
+		
+
+
+
+
+
+<div class="flex h-full"><div class="h-[100vh]">
+		<div class="truncate fixed z-30 flex items-center bg-white w-full py-4 px-2 space-x-2"><div class="w-[220px] hidden" style="min-width: 220px"></div>
+	<div class="flex items-center w-full justify-between"><div class="flex space-x-2">
+
+
+
+
+			<div class="ml-4 flex space-x-1 text-sm pt-0.5"><button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans">wikis</button>
+					<b>/</b><button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans">클린코드</button>
+					<b>/</b><button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans">5장</button>
+					</div></div>
+		<button class=" cursor-pointer hover:bg-gray-100 mr-4"><svg width="15px" height="15px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M15 7.5c0 3.033-2.467 5.5-5.5 5.5h-2.912l2.646 2.646-0.707 0.707-3.853-3.853 3.854-3.854 0.707 0.707-2.647 2.647h2.912c2.481 0 4.5-2.019 4.5-4.5s-2.019-4.5-4.5-4.5h-7.083v-1h7.083c3.033 0 5.5 2.467 5.5 5.5z" fill="#000000"></path></svg></button></div></div></div>
+
+	<div class="main pt-2 px-4 w-full mb-12 svelte-1bubhdm"><div class="mt-[52px]"></div>
+		
+
+<main class="flex flex-col main-height svelte-d38ujb"><article id="slot" class="relative bg-white"><h1 class="svelte-d38ujb">5장 형식 맞추기</h1>
+		<div class="">Jan 15, 2024</div>
+		<nav class="relative z-20 mt-6"><ul class="mt-1 space-y-1 text-sm underline"></ul>
+</nav>
+		<div class="post-content"><div class="mt-[1.5em]"></div>
+	<p>개발자로서 우리는 코드 작성이 단지 무언가를 작동하게 만드는 것만이 아니라는 것을 알고 있습니다. 또한 자신과 팀이 코드베이스를 유지 관리하고, 읽을 수 있고, 이해할 수 있도록 만드는 것입니다. 이를 달성하기 위한
+기본 요소 중 하나는 일관되고 깔끔한 코드 형식을 사용하는 것입니다. 이 가이드에서는 적절한 코드 형식을 유지하는 이유와 방법을 살펴보겠습니다.</p>
+<h2 id="코드-형식의-중요성"><a href="#코드-형식의-중요성"><strong>코드 형식의 중요성</strong></a></h2>
+<p>코드 형식 지정은 어떤 사람들에게는 사소해 보일 수도 있지만 매우 중요합니다. 현재 구현하고 있는 기능은 향후 변경될 가능성이 높습니다. 형식에 따라 결정되는 코드의 가독성과 품질은 이러한 변경을 촉진하는 데 중요한
+역할을 합니다. 형식이 잘 지정된 코드베이스는 이해, 디버깅 및 확장이 더 쉽습니다.</p>
+<h2 id="줄-길이-확인하기"><a href="#줄-길이-확인하기"><strong>줄 길이 확인하기</strong></a></h2>
+<p>대부분의 파일이 500줄을 초과하지 않고 대부분이 200줄 정도를 맴돌도록 시스템을 구축하는 것을 목표로 합니다. 이 접근 방식은 신문 기사 작성과 일치합니다. 상단에 내용을 요약하는 간결한 제목을 배치하고 기사의
+본질을 요약하는 첫 번째 문단을 추가합니다. 마찬가지로, 소스 파일의 이름은 목적을 반영하도록 정확하게 지정되어야 하며, 높은 수준의 개념부터 시작하여 점차 자세한 설명으로 이동해야 합니다.</p>
+<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token comment">// 나쁜 예: 지나치게 긴 줄</span>
+<span class="token class-name">String</span> userDetails <span class="token operator">=</span> userRepository<span class="token punctuation">.</span><span class="token function">findByName</span><span class="token punctuation">(</span><span class="token string">"John Doe"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">orElseThrow</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token keyword">new</span> <span class="token class-name">UserNotFoundException</span><span class="token punctuation">(</span><span class="token string">"사용자를 찾을 수 없습니다."</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDetails</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 좋은 예: 가독성을 위해 나눈 문장</span>
+<span class="token class-name">String</span> userDetails <span class="token operator">=</span> userRepository<span class="token punctuation">.</span><span class="token function">findByName</span><span class="token punctuation">(</span><span class="token string">"John Doe"</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">orElseThrow</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token keyword">new</span> <span class="token class-name">UserNotFoundException</span><span class="token punctuation">(</span><span class="token string">"사용자를 찾을 수 없습니다."</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">getDetails</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code><!-- HTML_TAG_END --></pre>
+<h3 id="개념-분리"><a href="#개념-분리"><strong>개념 분리</strong></a></h3>
+<p>기사의 단락과 마찬가지로 코드 개념을 빈 줄로 구분하여 가독성을 높입니다. 일련의 각 줄은 왼쪽에서 오른쪽으로, 위에서 아래로 읽혀 완전한 아이디어를 나타내야 합니다.</p>
+<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserManagement</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">private</span> <span class="token class-name">UserRepository</span> userRepository<span class="token punctuation">;</span>
+
+    <span class="token comment">// 생성자와 메소드 사이에 빈 줄을 사용하여 구분</span>
+    <span class="token keyword">public</span> <span class="token class-name">UserManagement</span><span class="token punctuation">(</span><span class="token class-name">UserRepository</span> userRepository<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>userRepository <span class="token operator">=</span> userRepository<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token comment">// 메소드 사이에 빈 줄을 사용하여 명확성 향상</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addUser</span><span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token function">validateUser</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        userRepository<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">validateUser</span><span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">// 메소드 구현</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+</code><!-- HTML_TAG_END --></pre>
+<h3 id="수직-밀도-및-거리"><a href="#수직-밀도-및-거리"><strong>수직 밀도 및 거리</strong></a></h3>
+<p>수직 밀도는 밀접하게 관련된 코드 줄의 근접성을 나타내며, 관련 코드가 수직으로 함께 그룹화되어야 함을 나타냅니다. 반대로, 수직 거리는 개념적 일관성을 유지하기 위해 밀접하게 관련된 개념이 서로 가까이 배치되어야
+한다는 원칙을 강조합니다. 여기에는 다음이 포함됩니다.</p>
+<ul><li><strong>변수 선언</strong>: 변수를 가능한 한 용도에 가깝게 배치합니다.</li>
+<li><strong>인스턴스 변수</strong>: 일반적으로 클래스 시작 부분에 선언됩니다.</li>
+<li><strong>종속 함수</strong>: 서로 호출하는 함수는 코드에서 밀접하게 배치되어야 합니다.</li>
+<li><strong>개념적 유사성</strong>: 유사한 기능이나 종속성을 가진 코드는 함께 그룹화되어야 합니다</li></ul>
+<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Authentication</span> <span class="token punctuation">&#123;</span>
+
+    <span class="token comment">// 관련 메소드를 수직으로 그룹화</span>
+    <span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">login</span><span class="token punctuation">(</span><span class="token class-name">String</span> username<span class="token punctuation">,</span> <span class="token class-name">String</span> password<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">// 로그인 로직</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">boolean</span> <span class="token function">isValidCredential</span><span class="token punctuation">(</span><span class="token class-name">String</span> username<span class="token punctuation">,</span> <span class="token class-name">String</span> password<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">// 검증 로직</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
+<h3 id="세로-순서"><a href="#세로-순서"><strong>세로 순서</strong></a></h3>
+<p>가장 중요한 개념부터 시작하여 불필요한 세부 사항을 초기에 피하세요. 이는 세부 사항을 살펴보기 전에 더 넓은 그림을 이해하는 데 도움이 됩니다.</p>
+<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ProductService</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 가장 중요한 메소드를 상단에 배치</span>
+    <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Product</span><span class="token punctuation">></span></span> <span class="token function">findAllProducts</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">// 모든 제품 찾기 로직</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token comment">// 기본 기능 아래에 보조 메소드 배치</span>
+    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">updateInventory</span><span class="token punctuation">(</span><span class="token class-name">Product</span> product<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">// 재고 업데이트 로직</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
+<h2 id="가로-서식-관행"><a href="#가로-서식-관행"><strong>가로 서식 관행</strong></a></h2>
+<p>프로그래머는 더 짧은 줄을 선호하는 경향이 있지만 최대 100자 또는 120자까지 확장하는 것이 허용됩니다. 그러나 줄이 길면 세부 사항에 대한 관심이 부족함을 나타낼 수 있습니다. 고려해야 할 가로 형식 측면은
+다음과 같습니다.</p>
+<ul><li><strong>공간 및 밀도</strong>: 수평 공간을 사용하여 밀접하게 관련된 개념을 나타냅니다.</li>
+<li><strong>정렬</strong>: 코드의 논리를 강조하지 않는 불필요한 공백을 피하세요.</li>
+<li><strong>들여쓰기</strong>: 명확한 들여쓰기 패턴은 코드의 가독성을 높일 뿐만 아니라 다양한 섹션과 로직 수준을 시각적으로 구분합니다.</li></ul>
+<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token comment">// 나쁜 예: 가독성 문제를 초래하는 불필요한 정렬</span>
+<span class="token keyword">private</span> <span class="token keyword">int</span> quantity<span class="token punctuation">;</span>
+<span class="token keyword">private</span> <span class="token class-name">String</span> productName<span class="token punctuation">;</span>
+<span class="token keyword">private</span> <span class="token keyword">double</span> price<span class="token punctuation">;</span>
+
+<span class="token comment">// 좋은 예: 간단하고 직관적인 선언</span>
+<span class="token keyword">private</span> <span class="token keyword">int</span> quantity<span class="token punctuation">;</span>
+<span class="token keyword">private</span> <span class="token class-name">String</span> productName<span class="token punctuation">;</span>
+<span class="token keyword">private</span> <span class="token keyword">double</span> price<span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
+<h2 id="팀-규칙"><a href="#팀-규칙"><strong>팀 규칙</strong></a></h2>
+<p>팀이 일련의 서식 지정 규칙에 동의하고 모든 구성원이 이를 준수하는지 확인하는 것이 중요합니다. 프로젝트 전반에 걸친 형식의 일관성은 인지 부하를 줄이고 코드의 톤과 방식을 유지합니다.</p>
+<h2 id="결론"><a href="#결론">결론</a></h2>
+<p>코드베이스에서 깔끔하고 일관된 형식을 유지하는 것은 잘 작성된 매뉴얼을 만드는 것과 비슷합니다. 이러한 표준을 따라가는 것은 어려울 수 있지만 장기적으로 보면 그 노력은 성과를 거두게 됩니다. 한 달이 지나면 코드의
+가독성과 유지 관리 용이성에 대해 감사하게 될 것입니다. 우리의 코드가 기능적일 뿐만 아니라 읽고 작업하기에도 즐거운 코드가 되도록 노력합시다.</p>
+</div>
+		<ul class="children space-y-1 mt-4"></ul></article>
+	<div id="utterances-comments" class="content-wrapper mt-auto"></div>
+</main></div>
+
+	<button class="fixed rounded-2xl z-30 bottom-7 right-7 bg-white shadow-2xl"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M11 5.825L6.4 10.4L5 9l7-7l7 7l-1.4 1.425l-4.6-4.6V13h-2zM11 18v-3h2v3zm0 4v-2h2v2z"></path></svg></button>
+</div>
+
+
+			
+			<script>
+				{
+					__sveltekit_rv7q6v = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.6ea13d5f.js"),
+						import("../../_app/immutable/entry/app.352bd974.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 28],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		
+	</div>
+</body>
+
+<style>
+    body {
+        min-height: 100%;
+        /* mobile viewport bug fix */
+        min-height: -webkit-fill-available;
+
+        -ms-overflow-style: none;  /* IE and 엣지 */
+        scrollbar-width: none;  /* 파이어폭스 */
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    html {
+        height: -webkit-fill-available;
+    }
+</style>
+
+</html>

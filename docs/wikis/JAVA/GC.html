@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="../../favicon.ico" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width" />
+	
+		<link href="../../_app/immutable/assets/0.47fa921a.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/33.a8d28ff9.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.6ea13d5f.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.1b37d555.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.2406774b.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.352bd974.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.ffb511a5.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/33.799e13e1.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/stores.ccd8b5be.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/16.e92e5200.js"><title>개발자 썰 모음집 : 가비지 컬렉션</title><!-- HEAD_svelte-1qgbhjt_START --><link rel="icon" type="image/png" href="/favicon.ico"><!-- HEAD_svelte-1qgbhjt_END --><!-- HEAD_svelte-1lz8nxv_START -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WELFQJ9KV"></script>
+		<script>window.dataLayer = window.dataLayer || [];
+
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+
+			gtag('js', new Date());
+			gtag('config', 'G-7WELFQJ9KV');
+		</script><!-- HEAD_svelte-1lz8nxv_END --><!-- HEAD_svelte-i0rv3r_START --><meta name="description" content=""><meta name="keyword" content="개발,JAVA"><link rel="canonical" href="https://dong-park.github.io/wikis/JAVA/GC"><meta property="og:title" content="가비지 컬렉션"><meta property="og:description" content=""><meta property="og:url" content="https://dong-park.github.io/wikis/JAVA/GC"><meta property="og:type" content="article"><meta property="og:site_name" content="dongpark.land"><meta property="og:image" content="https://dong-park.github.io/imgs/favicon.png"><meta name="twitter:card" content="summary"><!-- HEAD_svelte-i0rv3r_END -->
+</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div style="display: contents">
+		
+
+
+
+
+
+<div class="flex h-full"><div class="h-[100vh]">
+		<div class="truncate fixed z-30 flex items-center bg-white w-full py-4 px-2 space-x-2"><div class="w-[220px] hidden" style="min-width: 220px"></div>
+	<div class="flex items-center w-full justify-between"><div class="flex space-x-2">
+
+
+
+
+			<div class="ml-4 flex space-x-1 text-sm pt-0.5"><button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans">wikis</button>
+					<b>/</b><button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans">JAVA</button>
+					<b>/</b><button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans">GC</button>
+					</div></div>
+		<button class=" cursor-pointer hover:bg-gray-100 mr-4"><svg width="15px" height="15px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M15 7.5c0 3.033-2.467 5.5-5.5 5.5h-2.912l2.646 2.646-0.707 0.707-3.853-3.853 3.854-3.854 0.707 0.707-2.647 2.647h2.912c2.481 0 4.5-2.019 4.5-4.5s-2.019-4.5-4.5-4.5h-7.083v-1h7.083c3.033 0 5.5 2.467 5.5 5.5z" fill="#000000"></path></svg></button></div></div></div>
+
+	<div class="main pt-2 px-4 w-full mb-12 svelte-1bubhdm"><div class="mt-[52px]"></div>
+		
+
+<main class="flex flex-col main-height svelte-d38ujb"><article id="slot" class="relative bg-white"><h1 class="svelte-d38ujb">가비지 컬렉션</h1>
+		<div class="">May 13, 2024</div>
+		<nav class="relative z-20 mt-6"><ul class="mt-1 space-y-1 text-sm underline"></ul>
+</nav>
+		<div class="post-content"><div class="mt-[1.5em]"></div>
+	<h2 id="키워드-정리"><a href="#키워드-정리">키워드 정리</a></h2>
+<ul><li>가비지 컬렉션은 메모리 관리방법, 이것을 수행하는게 가비지 컬렉터</li>
+<li>할당된 메모리가 더이상 참조되지 않을때 가비지 형태로 남는다</li>
+<li>자바의 경우 메모리를 더이상 할당할수 없을때 쓰레드가 잠시 멈춘후 GC를 실행한다</li>
+<li>JVM 메모리는 클래스, 힙, 스택, 네이티브 메서드 스택 영역중 GC는 힙 메모리 영역 청소</li>
+<li>힙 메모리는 Young, Old, Perm 영역으로 나뉜다. Eden - Survivor - Old 영역순으로 객체의 메모리가 이동되고 청소</li></ul>
+<hr>
+<h2 id="gc란"><a href="#gc란">GC란?</a></h2>
+<p>가비지 컬렉션 줄여서 GC라고 불린다. 메모리 관리 방법 중 하나로, 시스템에서 더이상 사용하지 않는 동적 할당된 메모리 블럭을 찾아 자동으로 다시 회수하는 것이다.
+시스템에서 가비지 컬렉션을 수행하는 부분을 가비지 컬렉터라 부른다.
+GC를 지원하지 않는 언어는 메모리 해제까지 직접 해야한다. 이로인해 메모리 누수, 해제 했던 메모리를 재사용하는 버그가 양산된다.</p>
+<p>할당된 메모리가 형변환 하거나 새롭게 선언되었을때 다른 곳을 가리키게 되면서 ‘가비지’ 라는게 발생한다. 이때 가비지 컬렉터의 역할은 사용되지 않는 메모리를 해제 시킨다.</p>
+<p>자바의 경우 메모리가 부족해지는 순간이 오면 GC가 실행된다. 이때 Stop-the-world가 발생하는데 GC가 실행됐을때, 나머지 쓰레드는 작업을 일단 멈추는 현상이다. GC튜닝은 바로 이 시간을 줄이는 것을
+뜻한다.</p>
+<h2 id="jvm-메모리-영역"><a href="#jvm-메모리-영역">JVM 메모리 영역</a></h2>
+<p>JVM의 메모리는 클래스 영역, 자바 스택, 힙, 네이티브 메소드 스택 이렇게 4개 영역으로 나뉜다. 자바에서의 GC는 <strong>힙 메모리</strong>를 다루게 된다.</p>
+<h2 id="힙메모리-영역-청소-과정"><a href="#힙메모리-영역-청소-과정">힙메모리 영역 청소 과정</a></h2>
+<p><img src="/imgs/hear_structure.png" alt="hear_structure">
+힙메모리는 또 Young, Old, Perm 영역으로 나뉜다. Young 영역에서 발생한 GC를 Minor GC, 두 영역에서 발생한 GC를 Major GC라고 한다.
+메모리에 객체가 생성되면 eden 영역에 객체가 지정된다. 데이터가 어느 정도 쌓이면 이 영역에 있던 객체가 다른 곳으로 옮겨지거나 삭제된다. 이때 옮겨가는 위치가 survivor space라 고 불린다. 그러다가
+더 큰 객체가 생성되어 Young 영역에 공간이 남지 않으면 객체들은 Old 영역으로 이동하게 된다.</p>
+</div>
+		<ul class="children space-y-1 mt-4"></ul></article>
+	<div id="utterances-comments" class="content-wrapper mt-auto"></div>
+</main></div>
+
+	<button class="fixed rounded-2xl z-30 bottom-7 right-7 bg-white shadow-2xl"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M11 5.825L6.4 10.4L5 9l7-7l7 7l-1.4 1.425l-4.6-4.6V13h-2zM11 18v-3h2v3zm0 4v-2h2v2z"></path></svg></button>
+</div>
+
+
+			
+			<script>
+				{
+					__sveltekit_rv7q6v = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.6ea13d5f.js"),
+						import("../../_app/immutable/entry/app.352bd974.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 16],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		
+	</div>
+</body>
+
+<style>
+    body {
+        min-height: 100%;
+        /* mobile viewport bug fix */
+        min-height: -webkit-fill-available;
+
+        -ms-overflow-style: none;  /* IE and 엣지 */
+        scrollbar-width: none;  /* 파이어폭스 */
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    html {
+        height: -webkit-fill-available;
+    }
+</style>
+
+</html>
