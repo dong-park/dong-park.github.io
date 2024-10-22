@@ -5,7 +5,7 @@
 	export let data;
 </script>
 <main class="p-4 h-full overflow-scroll">
-		<Tags tags="{data.tags}" />
+<!--		<Tags tags="{data.tags}" />-->
 		<Posts posts="{data.posts}" origin="wikis"/>
 </main>
 

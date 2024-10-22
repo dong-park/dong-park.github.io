@@ -56,7 +56,7 @@
 			{#each childrenPosts as children}
 				<li>
 					<button class="link w-full text-left cursor-pointer hover:bg-gray-100"
-									on:click={() => goto(children.path)}>
+									on:click={() => goto('/wikis/' + children.path)}>
 						{children.title}
 					</button>
 				</li>
