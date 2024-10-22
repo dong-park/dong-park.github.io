@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="../../../favicon.ico" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width" />
+	
+		<link href="../../../_app/immutable/assets/0.e1c58b8f.css" rel="stylesheet">
+		<link href="../../../_app/immutable/assets/40.a8d28ff9.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.bb6bba4b.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.27664a63.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.6de11c1f.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.daf3515d.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.fb2417aa.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/40.7ae51f57.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.51263fda.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/26.496bd109.js"><title>개발자 썰 모음집 : 정렬</title><!-- HEAD_svelte-1qgbhjt_START --><link rel="icon" type="image/png" href="/favicon.ico"><!-- HEAD_svelte-1qgbhjt_END --><!-- HEAD_svelte-1lz8nxv_START -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WELFQJ9KV"></script>
+		<script>window.dataLayer = window.dataLayer || [];
+
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+
+			gtag('js', new Date());
+			gtag('config', 'G-7WELFQJ9KV');
+		</script><!-- HEAD_svelte-1lz8nxv_END --><!-- HEAD_svelte-i0rv3r_START --><meta name="description" content=""><meta name="keyword" content=""><link rel="canonical" href="https://dong-park.github.io/wikis/코딩테스트/lv1/정렬"><meta property="og:title" content="정렬"><meta property="og:description" content=""><meta property="og:url" content="https://dong-park.github.io/wikis/코딩테스트/lv1/정렬"><meta property="og:type" content="article"><meta property="og:site_name" content="dongpark.land"><meta property="og:image" content="https://dong-park.github.io/imgs/favicon.png"><meta name="twitter:card" content="summary"><!-- HEAD_svelte-i0rv3r_END -->
+</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div style="display: contents">
+		
+
+
+
+
+
+<div class="flex h-full"><div class="h-[100vh]">
+		<div class="truncate fixed z-30 flex items-center bg-white w-full py-4 px-2 space-x-2"><div class="flex items-center w-full justify-between"><div class="flex space-x-2">
+
+
+
+
+			<div class="ml-4 flex space-x-1 text-sm pt-0.5"><button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans">wikis</button>
+					<b>/</b><button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans">코딩테스트</button>
+					<b>/</b><button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans">lv1</button>
+					<b>/</b><button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans">정렬</button>
+					</div></div>
+		<button class=" cursor-pointer hover:bg-gray-100 mr-4"><svg width="15px" height="15px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M15 7.5c0 3.033-2.467 5.5-5.5 5.5h-2.912l2.646 2.646-0.707 0.707-3.853-3.853 3.854-3.854 0.707 0.707-2.647 2.647h2.912c2.481 0 4.5-2.019 4.5-4.5s-2.019-4.5-4.5-4.5h-7.083v-1h7.083c3.033 0 5.5 2.467 5.5 5.5z" fill="#000000"></path></svg></button></div></div></div>
+
+	<div class="main pt-2 px-4 w-full mb-12 svelte-1bubhdm"><div class="mt-[52px]"></div>
+		
+
+<main class="flex flex-col main-height svelte-d38ujb"><article id="slot" class="relative bg-white"><h1 class="svelte-d38ujb">정렬</h1>
+		<div class="">Jun 1, 2024</div>
+		<nav class="relative z-20 mt-6"><ul class="mt-1 space-y-1 text-sm underline"></ul>
+</nav>
+		<div class="post-content"><div class="mt-[1.5em]"></div>
+	<h1 id="버블정렬"><a href="#버블정렬">버블정렬</a></h1>
+<p>데이터의 인접 요소끼리 비교하고, swap 연산을 수행하며 정렬하는 방식 시간 복잡도는 O(n²)으로 다른 정렬 알고리즘보다 속도가 느린 편입니다.</p>
+<h2 id="버블-정렬-과정"><a href="#버블-정렬-과정">버블 정렬 과정</a></h2>
+<ol><li>비교 연산이 필요한 루프 범위를 설정한다.</li>
+<li>인접한 데이터 값을 비교한다.</li>
+<li>swap 조건에 부합하면 swap 연산을 수행한다.</li>
+<li>루프 범위가 끝날 때 까지 2~3을 반복한다.</li>
+<li>정렬 영역을 설정한다. 다음 루프를 실행할 때는 이 영역을 제외한다.</li>
+<li>비교 대상이 없을 때까지 1~5를 반복한다.</li></ol>
+<h1 id="선택정렬"><a href="#선택정렬">선택정렬</a></h1>
+<p>선택 정렬은 대상 데이터에서 최대나 최소 데이터를 데이터나 나열된 순으로 찾아 가며 선택하는 방법입니다.
+선택 정렬은 구현 방법이 복잡하고, 시간 복잡도도 O(n²)으로 효율적이지 않아 코딩 테스트 에서는 잘 사용하지 않습니다.</p>
+<h2 id="선택-정렬-과정"><a href="#선택-정렬-과정">선택 정렬 과정</a></h2>
+<ol><li>남은 정렬 부분에서 최솟값 또는 최댓값을 찾는다.</li>
+<li>남은 정렬 부분에서 가장 앞에 있는 데이터와 선택된 데이터를 swap한다.</li>
+<li>가장 앞에 있는 데이터으 위치를 변경해 남은 정렬 부분의 범위를 축소한다.</li>
+<li>전체 데이터 크기 만큼 index가 커질 때까지, 남은 정렬 부분이 없어질때까지 반복한다.</li></ol>
+<h1 id="삽입-정렬"><a href="#삽입-정렬">삽입 정렬</a></h1>
+<p>삽입 정렬은 이미 정렬된 데이터 범위에 정렬되지 않은 데이터를 적절한 위치에 삽입시켜 정렬하는 방식입니다.
+평균 시간 복잡도는 O(n²)으로 느린 편이지만 구현하기 쉽습니다.</p>
+<h2 id="삽입-정렬-수행-방식"><a href="#삽입-정렬-수행-방식">삽입 정렬 수행 방식</a></h2>
+<ol><li>현재 index에 있는 데이터 값을 선택한다.</li>
+<li>현재 선택한 데이터가 정렬된 데이터 범위에 삽일될 위치를 탐색한다.</li>
+<li>삽입 위치부터 index에 있는 위치까지 shift 연산을 수행한다.</li>
+<li>삽입 위치에 현재 선택한 데이터를 삽입하고 index++ 연산을 수행한다.</li>
+<li>전체 데이터의 크기만큼 index가 커질 때까지, 즉 선택할 데이터가 없을 떄까지 반복한다.</li></ol>
+<h1 id="퀵-정렬"><a href="#퀵-정렬">퀵 정렬</a></h1>
+<p>퀵 정렬은 기준값을 선정해 해당값보다 작은 데이터와 큰 데이터로 분류하는 것을 반복해 정렬하는 알고리즘 입니다.
+퀵 정렬 수행 방식</p>
+<ol><li>피벗 설정: 배열에서 피벗(pivot)을 설정합니다.</li>
+<li>데이터 분할: 피벗을 기준으로 데이터를 두 개의 집합으로 나눕니다.<ul><li>a. start 이동: start가 가리키는 값이 피벗 값보다 작으면, start를 오른쪽으로 한 칸 이동합니다.</li>
+<li>b. end 이동: end가 가리키는 값이 피벗 값보다 크면, end를 왼쪽으로 한 칸 이동합니다.</li>
+<li>c. 교환: start가 가리키는 값이 피벗 값보다 크고, end가 가리키는 값이 피벗 값보다 작으면, start와 end가 가리키는 값을 교환한 후, start는 오른쪽으로, end는 왼쪽으로 한 칸
+이동합니다.</li>
+<li>d. 반복: start와 end가 만날 때까지 a~c 단계를 반복합니다.</li>
+<li>e. 피벗 위치 확정: start와 end가 만나면, 피벗 값을 start와 end가 만난 지점에 넣습니다. 피벗 값이 더 크면 왼쪽, 더 작으면 오른쪽에 삽입합니다.</li></ul></li>
+<li>재귀 호출: 나뉜 두 집합에서 각각 다시 피벗을 선정하여 위 과정을 반복합니다.</li>
+<li>완료: 분리된 집합이 1개 이하가 될 때까지 1~3 과정을 반복합니다.</li></ol>
+<p>퀵 정렬은 빠르고 효율적이므로 코딩 테스트에서도 자주 사용됩니다. 재귀 함수 형태로 구현해보는 것을 추천합니다.</p>
+<p>피벗을 정하는 방법</p>
+<ul><li>pivot이 같을경우: K번째 수를 찾았으므로 알고리즘을 종료합니다.</li>
+<li>pivot이 큰경우: pivot의 왼쪽 부분에 K가 있으므로 왼쪽 부분(start ~ pivot-1)만 정렬합니다.</li>
+<li>pivot이 작은경우: pivot의 오른쪽 부분에 K가 있으므로 오른쪽 부분(pivot+1 ~ end)만 정렬합니다.</li></ul>
+<h1 id="병합-정렬"><a href="#병합-정렬">병합 정렬</a></h1>
+<p>병합정렬은 분할정복 방식을 사용해 데이터를 분할하고 분할한 집합을 정렬하며 합치는 알고리즘 입니다. 시간 복잡도 평균값은 O(nlongn) 입니다.</p>
+<h2 id="병합-정렬-수행-방식"><a href="#병합-정렬-수행-방식">병합 정렬 수행 방식</a></h2>
+<ol><li>초기 데이터 [27, 12, 43, 39, 8, 32, 50, 29]를 가장 작은 단위로 분할하여 각 부분 집합을 정렬합니다.</li>
+<li>첫 번째 단계에서는 [27, 12]는 [12, 27]로, [43, 39]는 [39, 43]으로, [8, 32]는 그대로, [50, 29]는 [29, 50]으로 정렬됩니다.</li>
+<li>두 번째 단계에서는 [12, 27]과 [39, 43]을 병합하여 [12, 27, 39, 43]로, [8, 32]와 [29, 50]을 병합하여 [8, 29, 32, 50]로 만듭니다.</li>
+<li>마지막 단계에서는 두 개의 집합 [12, 27, 39, 43]과 [8, 29, 32, 50]을 병합하여 최종적으로 [8, 12, 27, 29, 32, 39, 43, 50]로 정렬합니다.</li></ol>
+<p>이와 같이 병합 정렬은 데이터를 분할하고 병합하면서 정렬하는 과정을 거쳐 전체 데이터를 정렬합니다.</p>
+<h1 id="기수-정렬"><a href="#기수-정렬">기수 정렬</a></h1>
+<p>기수 정렬은 값을 비교하지 않는 특이한 정렬입니다. 기수 정렬은 값을 놓고 비교할 자릿수를 정한 다음 해당 자릿수만 비교합니다.
+기수 정렬의 시간 복잡도는 O(kn)으로, 여기서 k는 데이터의 자릿수를 말합니다.</p>
+<h2 id="기수-정렬의-수행-방식"><a href="#기수-정렬의-수행-방식">기수 정렬의 수행 방식</a></h2>
+<ol><li>대상 데이터 준비: 정렬할 숫자 데이터를 준비합니다. 예를 들어, 16, 80, 18, 77, 03, 24, 88, 23.</li>
+<li>일의 자릿수 정렬<ul><li>각 숫자의 일의 자릿수를 기준으로 큐에 분류합니다.</li>
+<li>큐에 분류된 데이터를 순서대로 꺼내서 리스트를 만듭니다.</li>
+<li>이 과정이 끝나면 데이터는 일 자릿수를 기준으로 정렬됩니다.</li></ul></li>
+<li>십의 자릿수 정렬<ul><li>이번에는 각 숫자의 십의 자릿수를 기준으로 큐에 분류합니다.</li>
+<li>큐에 분류된 데이터를 순서대로 꺼내서 리스트를 만듭니다.</li>
+<li>이 과정이 끝나면 데이터는 십의 자릿수를 기준으로 정렬됩니다.</li></ul></li>
+<li>최종 정렬 결과 <ul><li>일의 자릿수와 십의 자릿수를 기준으로 정렬이 완료된 데이터를 얻습니다.</li>
+<li>최종적으로 데이터가 정렬된 상태가 됩니다.</li></ul></li></ol>
+<p>이러한 과정을 통해 기수 정렬은 각 자릿수를 기준으로 데이터를 정렬합니다.</p>
+</div>
+		<ul class="children space-y-1 mt-4"></ul></article>
+	<div id="utterances-comments" class="content-wrapper mt-auto"></div>
+</main></div>
+
+	<button class="fixed rounded-2xl z-30 bottom-7 right-7 bg-white shadow-2xl"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M11 5.825L6.4 10.4L5 9l7-7l7 7l-1.4 1.425l-4.6-4.6V13h-2zM11 18v-3h2v3zm0 4v-2h2v2z"></path></svg></button>
+</div>
+
+
+			
+			<script>
+				{
+					__sveltekit_15p97ve = {
+						base: new URL("../../..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../../../_app/immutable/entry/start.bb6bba4b.js"),
+						import("../../../_app/immutable/entry/app.daf3515d.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 26],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		
+	</div>
+</body>
+
+<style>
+    body {
+        min-height: 100%;
+        /* mobile viewport bug fix */
+        min-height: -webkit-fill-available;
+
+        -ms-overflow-style: none;  /* IE and 엣지 */
+        scrollbar-width: none;  /* 파이어폭스 */
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    html {
+        height: -webkit-fill-available;
+    }
+</style>
+
+</html>
