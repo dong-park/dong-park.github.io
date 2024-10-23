@@ -15,7 +15,7 @@
 <div class="mt-6 space-y-5">
 	{#each posts as post}
 		{#key post}
-			<button class="flex items-center space-x-2 hover:bg-gray-100 hover:cursor-pointer text-left w-full py-1"
+			<button class="flex items-center space-x-2 hover:bg-gray-100 hover:cursor-pointer text-left w-full"
 							on:click={() => gotoPost(post.path)}
 			>
 				<p class="font-serif title text-md">{post.title}</p>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="../../favicon.ico" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width" />
+	
+		<link href="../../_app/immutable/assets/0.e1c58b8f.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/40.d428c8da.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.daf770d4.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.27664a63.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.3f13203a.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.ad073d21.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.6c58aed4.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/40.b05aecaf.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/stores.d55de527.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/25.5c897be8.js"><title>개발자 썰 모음집 : 저주의 숫자 3</title><!-- HEAD_svelte-1qgbhjt_START --><link rel="icon" type="image/png" href="/favicon.ico"><!-- HEAD_svelte-1qgbhjt_END --><!-- HEAD_svelte-1lz8nxv_START -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WELFQJ9KV"></script>
+		<script>window.dataLayer = window.dataLayer || [];
+
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+
+			gtag('js', new Date());
+			gtag('config', 'G-7WELFQJ9KV');
+		</script><!-- HEAD_svelte-1lz8nxv_END --><!-- HEAD_svelte-i0rv3r_START --><meta name="description" content=""><meta name="keyword" content=""><link rel="canonical" href="https://dong-park.github.io/wikis/코딩테스트/저주의숫자"><meta property="og:title" content="저주의 숫자 3"><meta property="og:description" content=""><meta property="og:url" content="https://dong-park.github.io/wikis/코딩테스트/저주의숫자"><meta property="og:type" content="article"><meta property="og:site_name" content="dongpark.land"><meta property="og:image" content="https://dong-park.github.io/imgs/favicon.png"><meta name="twitter:card" content="summary"><!-- HEAD_svelte-i0rv3r_END -->
+</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div style="display: contents">
+		
+
+
+
+
+
+<div class="flex h-full"><div class="h-[100vh]">
+		<div class="truncate fixed z-30 flex items-center bg-white w-full py-4 px-2 space-x-2"><div class="flex items-center w-full justify-between"><div class="flex space-x-2">
+
+
+
+
+			<div class="ml-4 flex space-x-1 text-sm pt-0.5"><button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans">wikis</button>
+					<b>/</b><button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans">코딩테스트</button>
+					<b>/</b><button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans">저주의숫자</button>
+					</div></div>
+		<button class=" cursor-pointer hover:bg-gray-100 mr-4"><svg width="15px" height="15px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M15 7.5c0 3.033-2.467 5.5-5.5 5.5h-2.912l2.646 2.646-0.707 0.707-3.853-3.853 3.854-3.854 0.707 0.707-2.647 2.647h2.912c2.481 0 4.5-2.019 4.5-4.5s-2.019-4.5-4.5-4.5h-7.083v-1h7.083c3.033 0 5.5 2.467 5.5 5.5z" fill="#000000"></path></svg></button></div></div></div>
+
+	<div class="main pt-2 px-4 w-full mb-12 svelte-1bubhdm"><div class="mt-[52px]"></div>
+		
+
+<main class="flex flex-col main-height svelte-d38ujb"><article id="slot" class="relative bg-white"><h1 class="svelte-d38ujb">저주의 숫자 3</h1>
+		<div class="">May 20, 2024</div>
+		<nav class="relative z-20 mt-6"><ul class="mt-1 space-y-1 text-sm underline"></ul>
+</nav>
+		<div class="post-content"><div class="mt-[1.5em]"></div>
+	<h1 id="3x-마을에서의-숫자-변환-문제-해결-과정"><a href="#3x-마을에서의-숫자-변환-문제-해결-과정">3x 마을에서의 숫자 변환 문제 해결 과정</a></h1>
+<h2 id="문제-설명"><a href="#문제-설명">문제 설명</a></h2>
+<p>3x 마을에서는 3의 배수와 숫자 ‘3’이 포함된 숫자를 사용하지 않습니다. 주어진 숫자 <code>n</code>을 3x 마을에서 사용되는 숫자로 변환하는 문제입니다. 예를 들어, <code>n = 15</code>일 경우 결과는 25가
+되고, <code>n = 40</code>일 경우 결과는 76이 됩니다.</p>
+<h2 id="접근-방법"><a href="#접근-방법">접근 방법</a></h2>
+<p>문제를 해결하기 위해서는 1부터 시작하여 3의 배수와 숫자 ‘3’이 포함된 숫자를 건너뛰며 숫자를 카운팅해야 합니다. 이를 위해 다음과 같은 과정을 거쳤습니다.</p>
+<h2 id="단계별-해결-과정"><a href="#단계별-해결-과정">단계별 해결 과정</a></h2>
+<h3 id="1-초기-설정"><a href="#1-초기-설정">1. 초기 설정</a></h3>
+<ul><li><code>count</code>를 0으로 초기화합니다.</li>
+<li><code>current_number</code>를 0으로 초기화합니다.</li></ul>
+<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> current_number <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
+<h3 id="2-반복문-실행"><a href="#2-반복문-실행">2. 반복문 실행</a></h3>
+<p>반복문을 통해 <code>count</code>가 <code>n</code>보다 작을 때까지 <code>current_number</code>를 1씩 증가시킵니다.</p>
+<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">while</span><span class="token punctuation">(</span>count<span class="token operator">&lt;</span>n<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+current_number<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token comment">// 조건을 만족하는 경우에만 count를 증가시킵니다.</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>current_number <span class="token operator">%</span><span class="token number">3</span><span class="token operator">!=</span><span class="token number">0</span><span class="token operator">&amp;&amp;</span><span class="token operator">!</span><span class="token class-name">Integer</span><span class="token punctuation">.</span>
+
+<span class="token function">toString</span><span class="token punctuation">(</span>current_number<span class="token punctuation">)</span><span class="token punctuation">.</span>
+
+<span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">"3"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+count<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
+<h3 id="3-조건-확인"><a href="#3-조건-확인">3. 조건 확인</a></h3>
+<p>각 숫자가 3의 배수가 아니고, 숫자 ‘3’이 포함되지 않는 경우에만 <code>count</code>를 증가시킵니다.</p>
+<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span>current_number <span class="token operator">%</span><span class="token number">3</span><span class="token operator">!=</span><span class="token number">0</span><span class="token operator">&amp;&amp;</span><span class="token operator">!</span><span class="token class-name">Integer</span><span class="token punctuation">.</span>
+
+<span class="token function">toString</span><span class="token punctuation">(</span>current_number<span class="token punctuation">)</span><span class="token punctuation">.</span>
+
+<span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">"3"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+count<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
+<h3 id="4-결과-반환"><a href="#4-결과-반환">4. 결과 반환</a></h3>
+<p>반복문이 종료된 후, <code>current_number</code>가 3x 마을에서의 <code>n</code>번째 숫자가 됩니다.</p>
+<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">return</span> current_number<span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
+<h3 id="전체-코드"><a href="#전체-코드">전체 코드</a></h3>
+<pre class="language-java"><!-- HTML_TAG_START --><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">solution</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> current_number <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>count <span class="token operator">&lt;</span> n<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            current_number<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>current_number <span class="token operator">%</span> <span class="token number">3</span> <span class="token operator">!=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>current_number<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">"3"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                count<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
+
+        <span class="token keyword">return</span> current_number<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
+<h2 id="예제-실행"><a href="#예제-실행">예제 실행</a></h2>
+<h3 id="예제-1-n--15"><a href="#예제-1-n--15">예제 1: <code>n = 15</code></a></h3>
+<ol><li>숫자: 1, 2, 4, 5, 7, 8, 10, 11, 14, 16, 17, 19, 20, 22, 25</li>
+<li>결과: 25</li></ol>
+<h3 id="예제-2-n--40"><a href="#예제-2-n--40">예제 2: <code>n = 40</code></a></h3>
+<ol><li>숫자: 1부터 76까지의 숫자 중 조건을 만족하는 40번째 숫자</li>
+<li>결과: 76</li></ol>
+<h2 id="시행착오-및-결론"><a href="#시행착오-및-결론">시행착오 및 결론</a></h2>
+<p>처음에는 1에서 20까지의 숫자만으로 3x 마을에서 사용되는 숫자를 찾으려 했으나, 예제 결과와 맞지 않는 것을 확인했습니다. 이후, 주어진 숫자 <code>n</code>까지 3의 배수와 숫자 ‘3’이 포함되지 않은 숫자를 하나씩
+증가시키며 찾는 방식으로 접근하여 문제를 해결할 수 있었습니다.</p>
+<p>이 과정을 통해, 3x 마을에서 사용되는 숫자는 정확히 찾아낼 수 있습니다. 추가적인 질문이 있으시면 언제든지 말씀해주세요!</p>
+</div>
+		<ul class="children space-y-1 mt-4"></ul></article>
+	<div id="utterances-comments" class="content-wrapper mt-auto"></div>
+</main></div>
+
+	<button class="fixed rounded-2xl z-30 bottom-7 right-7 bg-white shadow-2xl"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M11 5.825L6.4 10.4L5 9l7-7l7 7l-1.4 1.425l-4.6-4.6V13h-2zM11 18v-3h2v3zm0 4v-2h2v2z"></path></svg></button>
+</div>
+
+
+			
+			<script>
+				{
+					__sveltekit_1yx6kb7 = {
+						base: new URL("../..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.daf770d4.js"),
+						import("../../_app/immutable/entry/app.ad073d21.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 25],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		
+	</div>
+</body>
+
+<style>
+    body {
+        min-height: 100%;
+        /* mobile viewport bug fix */
+        min-height: -webkit-fill-available;
+
+        -ms-overflow-style: none;  /* IE and 엣지 */
+        scrollbar-width: none;  /* 파이어폭스 */
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    html {
+        height: -webkit-fill-available;
+    }
+</style>
+
+</html>

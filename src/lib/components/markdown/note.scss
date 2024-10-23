@@ -4,6 +4,10 @@ $blockquote-border-color: #ccc;
 $code-text-color: #d14; // A shade of red for text
 $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
 
+:global(.main) {
+
+}
+
 :global(li::marker) {
   color: var(--gray-500);
 }
@@ -24,8 +28,8 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
   :global(h6) {
     margin-top: -30px;
     padding-top: 62px;
-    font-family: var(--font-sans);
-    font-weight: 600;
+    font-family: var(--font-serif);
+    font-weight: 500;
   }
 
   @mixin font-style($weight, $family: var(--font-sans)) {
@@ -34,11 +38,11 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
   }
 
   :global(strong) {
-    font-weight: 550;
+    font-weight: 520;
   }
 
   :global(h1) {
-    font-size: 1.4em;
+    font-size: 1.6em;
   }
 
   :global(h2) {
@@ -46,11 +50,11 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
   }
 
   :global(h3) {
-    font-size: 1.25em;
+    font-size: 1.2em;
   }
 
   :global(h4) {
-    font-size: 1.1em;
+    font-size: 1.0em;
     @apply italic;
   }
 
