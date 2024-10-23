@@ -1,4 +1,4 @@
-package wikis.코딩테스트.슬라이딩_윈도우;
+package wikis.algorithm.슬라이딩_윈도우;
 
 import java.util.Deque;
 import java.util.LinkedList;

@@ -1,4 +1,4 @@
-package wikis.코딩테스트.투포인터;
+package wikis.algorithm.투포인터;
 
 public class Example1 {
 

@@ -1,4 +1,4 @@
-package wikis.코딩테스트.구간합;
+package wikis.algorithm.구간합;
 
 import java.util.Arrays;
 

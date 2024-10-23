@@ -12,10 +12,10 @@
 
 </script>
 
-<div class="mt-6 space-y-5">
+<div class="mt-6 space-y-4">
 	{#each posts as post}
 		{#key post}
-			<button class="flex items-center space-x-2 hover:bg-gray-100 hover:cursor-pointer text-left w-full"
+			<button class="text-3xl px-2 py-4 flex justify-between items-center  space-x-2 hover:bg-gray-100 hover:cursor-pointer text-left w-full"
 							on:click={() => gotoPost(post.path)}
 			>
 				<p class="font-serif title text-md">{post.title}</p>

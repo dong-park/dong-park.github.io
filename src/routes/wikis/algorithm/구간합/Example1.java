@@ -1,6 +1,6 @@
-package wikis.코딩테스트.구간합;
+package wikis.algorithm.구간합;
 
-public class Example2 {
+public class Example1 {
 
     // 수 N개가 주어 졌을 때 i번째 수에서 j번째 수 까지의 합을 구하는 프로그램을 작성 하시오
 //    public static void main(String args[]) {

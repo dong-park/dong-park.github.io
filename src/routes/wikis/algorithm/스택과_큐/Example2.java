@@ -1,4 +1,4 @@
-package wikis.코딩테스트.스택과_큐;
+package wikis.algorithm.스택과_큐;
 
 import java.util.Arrays;
 import java.util.Stack;

@@ -1,4 +1,4 @@
-package wikis.코딩테스트.정렬;
+package wikis.algorithm.정렬;
 
 import java.util.Arrays;
 

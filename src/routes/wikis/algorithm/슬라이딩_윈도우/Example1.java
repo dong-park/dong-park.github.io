@@ -1,6 +1,4 @@
-package wikis.코딩테스트.슬라이딩_윈도우;
-
-import java.util.Arrays;
+package wikis.algorithm.슬라이딩_윈도우;
 
 // 평소 문자열을 이용해 노는 것을 좋아하는 민호는 DNA 문자열을 알게 됐다.
 // DNA 문자열은 모든 문자열 에 등장하는 문자가 {'A', 'C', 'G', 'T}인 문자열을 말한다.

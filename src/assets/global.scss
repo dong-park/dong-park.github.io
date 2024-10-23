@@ -309,8 +309,7 @@ article {
   & > h1:first-of-type {
     font-size: 2em;
     @apply sm:text-[3em];
-    line-height: 1.6;
-    height: 3em;
+    line-height: 1;
   }
 }
 

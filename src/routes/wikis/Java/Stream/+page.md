@@ -49,7 +49,7 @@ class Person {
 enum Gender { MALE, FEMALE, OTHER } 
 ```
 
-이는 필드에 일부 게터가 있는 일반적인 [Java Bean](/wikis/JAVA/Bean)입니다. 이제 이러한 사람의 목록이 있고 해당 목록에 있는 모든 “Female” 사람의 대문자 이름 목록을 가져오고 싶다고 가정해 보겠습니다.
+이는 필드에 일부 게터가 있는 일반적인 [Java Bean](/wikis/Java/Bean)입니다. 이제 이러한 사람의 목록이 있고 해당 목록에 있는 모든 “Female” 사람의 대문자 이름 목록을 가져오고 싶다고 가정해 보겠습니다.
 
 ```java
 List names = new ArrayList();
