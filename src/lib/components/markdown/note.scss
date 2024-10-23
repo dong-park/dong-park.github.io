@@ -59,7 +59,7 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
   }
 
   :global(p) {
-    font-size: 1.2em;
+    @apply sm:text-xl;
     @apply mb-2.5;
     :global(a) {
       line-height: 2.1;
