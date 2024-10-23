@@ -5,7 +5,7 @@
 	let activeSection = '';
 
 	function initHeadings() {
-		const h2Elements = Array.from(document.querySelectorAll('h2, h3'));
+		const h2Elements = Array.from(document.querySelectorAll('h2'));
 		headings = h2Elements.map((el, index) => ({
 			id: `heading-${index}`,
 			text: el.innerText,
@@ -13,7 +13,6 @@
 			tagName: el.tagName,
 			el: el
 		}));
-		console.log(headings);
 	}
 
 	onMount(() => {

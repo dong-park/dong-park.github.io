@@ -43,7 +43,6 @@
 	<meta property="og:image" content="{favicon}" />
 	<meta name="twitter:card" content="summary">
 </svelte:head>
-
 <main class="flex flex-col main-height">
 	<article id="slot" class="relative bg-white">
 		<h1 bind:this={element}>{title}</h1>
