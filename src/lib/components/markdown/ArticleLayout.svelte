@@ -18,6 +18,7 @@
 
 	$: canonical = rootPage + decodeURIComponent($page.url.pathname);
 	$: parentPost = path.split('/').slice(0, -1).join('/');
+	$: rootPost = $page.url.pathname.split('/').slice(0, 2).join('/');
 
 	afterNavigate(() => {
 		element.scrollIntoView({ behavior: 'smooth' });
@@ -55,7 +56,7 @@
 			{#each childrenPosts as children}
 				<li>
 					<button class="link w-full text-left cursor-pointer hover:bg-gray-100"
-									on:click={() => goto('/wikis/' + children.path)}>
+									on:click={() => goto(`${rootPost}/` + children.path)}>
 						{children.title}
 					</button>
 				</li>

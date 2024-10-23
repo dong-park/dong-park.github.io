@@ -25,6 +25,10 @@
 <!--				</svg>-->
 <!--			</button>-->
 			<div class="flex text-sm px-2">
+				<button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans"
+								on:click={() => goto('/')}>
+					home
+				</button>
 				<b>/</b>
 				{#each paths as path, index}
 					<button class="px-1 hover:cursor-pointer hover:bg-gray-100 hover:rounded-xl font-sans"
