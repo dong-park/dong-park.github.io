@@ -2,7 +2,7 @@ export const histories = [
 	{
 		company: '이랜드',
 		position: '선임 백엔드개발자',
-		period: '2022.04 ~ 재직중',
+		period: '2022.04 ~ 2024.04',
 		summary: [
 			'이랜드 옥션 및 갤러리 서비스의 백엔드 개발을 담당했습니다',
 			'Python, Django, AWS를 활용하여 서비스를 구축하고 운영했습니다',
