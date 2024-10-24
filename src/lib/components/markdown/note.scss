@@ -17,7 +17,10 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
   :global(*) {
     @apply text-black;
     letter-spacing: 0px;
-    line-height: 1.75;
+
+    @screen sm {
+      line-height: 1.8;
+    }
   }
 
   :global(h1),
@@ -27,7 +30,8 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
   :global(h5),
   :global(h6) {
     margin-top: -60px;
-    padding-top: 62px;
+    @apply pt-[75px];
+    @apply sm:pt-[85px];
     font-family: var(--font-serif);
     font-weight: 500;
   }
@@ -60,7 +64,6 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
 
   :global(p) {
     @apply sm:text-xl;
-    @apply mb-2.5;
     :global(a) {
       line-height: 2.1;
     }
