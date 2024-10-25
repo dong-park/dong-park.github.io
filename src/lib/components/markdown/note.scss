@@ -19,7 +19,7 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
     letter-spacing: 0px;
 
     @screen sm {
-      line-height: 1.8;
+      line-height: 1.6;
     }
   }
 
@@ -33,7 +33,7 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
     @apply pt-[75px];
     @apply sm:pt-[85px];
     font-family: var(--font-serif);
-    font-weight: 500;
+    font-weight: 600;
   }
 
   @mixin font-style($weight, $family: var(--font-sans)) {
@@ -42,7 +42,7 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
   }
 
   :global(strong) {
-    font-weight: 520;
+    font-weight: 500;
   }
 
   :global(h1) {
@@ -50,7 +50,7 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
   }
 
   :global(h2) {
-    font-size: 1.4em;
+    font-size: 1.5em;
   }
 
   :global(h3) {
@@ -64,13 +64,25 @@ $code-font-family: 'Courier New', Courier, monospace; // Monospace font for code
 
   :global(p) {
     @apply sm:text-xl;
+    @apply my-2;
+    @apply sm:mt-5;
     :global(a) {
       line-height: 2.1;
     }
   }
 
+  :global(h1 + p),
+  :global(h2 + p),
+  :global(h3 + p),
+  :global(h4 + p),
+  :global(h5 + p),
+  :global(h6 + p) {
+    @apply my-1; /* Tailwind의 유틸리티 클래스를 사용하여 마진 제거 */
+  }
+
+  :global(ol),
   :global(ul) {
-    @apply mb-2.5;
+    @apply mt-2;
   }
 
   :global(p), :global(li) {

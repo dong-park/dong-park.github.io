@@ -14,7 +14,7 @@
 	<title>{title}</title>
 	<meta name="description" content={summary} />
 </svelte:head>
-
+ =-
 <main class="space-y-6 resume">
 	<Introduce />
 	<WorkExperience />
@@ -24,7 +24,7 @@
 
 <style lang="scss">
   .resume {
-    @apply px-6 mt-1;
+    //@apply px-6 mt-1;
 
     & > :global(*) {
       margin-left: auto;

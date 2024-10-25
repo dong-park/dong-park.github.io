@@ -4,8 +4,7 @@
 
 	export let data;
 </script>
-<main class="p-4 h-full overflow-scroll">
-<!--		<Tags tags="{data.tags}" />-->
+<main class="sm:p-4 h-full overflow-scroll">
 		<Posts posts="{data.posts}" origin="wikis"/>
 </main>
 
