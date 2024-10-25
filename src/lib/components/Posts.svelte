@@ -15,25 +15,27 @@
 <div class="mt-6 space-y-4">
 	{#each posts as post}
 		{#key post}
-			<button class="text-[1.5em] px-2 py-3 flex justify-between items-center  space-x-2 hover:bg-gray-100 hover:cursor-pointer text-left w-full"
-							on:click={() => gotoPost(post.path)}
+			<button
+				class="text-[1.5em] sm:px-2 sm:py-3 sm:flex justify-between items-center
+				sm:space-x-2 hover:bg-gray-100 hover:cursor-pointer text-left w-full"
+				on:click={() => gotoPost(post.path)}
 			>
 				<p class="font-serif title text-md">{post.title}</p>
-				<p class="text-sm mt-1">{transformDate(post.date)}</p>
+				<p class="text-xs sm:text-sm mt-1">{transformDate(post.date)}</p>
 			</button>
 		{/key}
 	{/each}
 </div>
 
 <style lang="scss">
-	.title {
-		font-weight: 600;
-	}
+  .title {
+    font-weight: 600;
+  }
 
-	button {
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
-	}
+  button {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 </style>

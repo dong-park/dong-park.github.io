@@ -47,7 +47,7 @@
 <main class="flex flex-col main-height">
 	<article id="slot" class="relative bg-white">
 		<h1 bind:this={element}>{title}</h1>
-		<div class="">{transformDate(date)}</div>
+		<div class="text-xs mt-1 sm:text-[0.9em]">{transformDate(date)}</div>
 		<IndexNavigationBar />
 		<MarkDownLoader>
 			<slot />
