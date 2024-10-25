@@ -4,7 +4,7 @@
 
 	export let data;
 </script>
-<main class="p-4 h-full overflow-scroll">
+<main class="h-full overflow-scroll">
 		<Posts posts="{data.posts}" origin="journal"/>
 </main>
 
