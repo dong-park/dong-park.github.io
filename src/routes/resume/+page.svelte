@@ -14,7 +14,7 @@
 	<title>{title}</title>
 	<meta name="description" content={summary} />
 </svelte:head>
- =-
+
 <main class="space-y-6 resume">
 	<Introduce />
 	<WorkExperience />
