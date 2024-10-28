@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>이지스타트 - 취미 개발 앱</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- 헤더 영역 -->
+<header>
+	<div class="container">
+		<h1 class="logo">이지스타트</h1>
+		<nav>
+			<ul>
+				<li><a href="#recommendations">취미 추천</a></li>
+				<li><a href="#myHobbies">내 취미</a></li>
+				<li><a href="#community">커뮤니티</a></li>
+				<li><a href="#profile">프로필</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<!-- 메인 배너 -->
+<section class="banner">
+	<div class="banner-content">
+		<h2>나에게 맞는 취미를 찾아보세요!</h2>
+		<p>새로운 취미를 시작하고, 즐거운 일상을 만들어 보세요.</p>
+		<a href="#recommendations" class="btn-primary">취미 추천 받기</a>
+	</div>
+</section>
+
+<!-- 취미 추천 섹션 -->
+<section id="recommendations" class="section">
+	<h2>추천 취미</h2>
+	<div class="hobby-list">
+		<div class="hobby-item">
+			<img src="img/punch-needle.jpg" alt="펀칭 니들">
+			<h3>펀칭 니들</h3>
+			<p>부드러운 실로 패브릭에 다양한 패턴을 만들어보세요!</p>
+			<button class="btn-secondary">더 알아보기</button>
+		</div>
+		<div class="hobby-item">
+			<img src="img/painting.jpg" alt="그림 그리기">
+			<h3>그림 그리기</h3>
+			<p>기초부터 차근차근, 나만의 작품을 완성해 보세요.</p>
+			<button class="btn-secondary">더 알아보기</button>
+		</div>
+		<div class="hobby-item">
+			<img src="img/terrarium.jpg" alt="테라리움">
+			<h3>테라리움</h3>
+			<p>작은 정원을 만들어 자연을 집안에 들이세요.</p>
+			<button class="btn-secondary">더 알아보기</button>
+		</div>
+	</div>
+</section>
+
+<!-- 내 취미 진행 상황 섹션 -->
+<section id="myHobbies" class="section">
+	<h2>내 취미 진행 상황</h2>
+	<div class="progress-list">
+		<div class="progress-item">
+			<h3>펀칭 니들</h3>
+			<p>진행 상황: 2주차 (4주 중)</p>
+			<div class="progress-bar">
+				<div class="progress" style="width: 50%;"></div>
+			</div>
+		</div>
+		<div class="progress-item">
+			<h3>그림 그리기</h3>
+			<p>진행 상황: 1주차 (4주 중)</p>
+			<div class="progress-bar">
+				<div class="progress" style="width: 25%;"></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- 커뮤니티 섹션 -->
+<section id="community" class="section">
+	<h2>커뮤니티</h2>
+	<p>취미를 공유하고 함께 이야기해보세요!</p>
+	<button class="btn-primary">커뮤니티 둘러보기</button>
+</section>
+
+<!-- 프로필 섹션 -->
+<section id="profile" class="section">
+	<h2>프로필</h2>
+	<p>나의 활동을 확인하고, 새로운 취미를 추천받아 보세요.</p>
+	<button class="btn-secondary">프로필 보기</button>
+</section>
+
+<!-- 푸터 영역 -->
+<footer>
+	<p>&copy; 2023 이지스타트. 모든 권리 보유.</p>
+</footer>
+</body>
+</html>
+
+<style>
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    header {
+        background: #007bff;
+        color: #fff;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+
+    nav ul li {
+        margin-left: 1rem;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .banner {
+        background: url('img/banner.jpg') no-repeat center center/cover;
+        padding: 3rem 1rem;
+        color: #fff;
+        text-align: center;
+    }
+
+    .banner-content h2 {
+        font-size: 2rem;
+    }
+
+    .section {
+        padding: 2rem 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .hobby-list {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .hobby-item {
+        background: #f4f4f4;
+        padding: 1rem;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .progress-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .progress-bar {
+        background: #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .progress {
+        background: #007bff;
+        height: 10px;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .btn-primary {
+        background: #007bff;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn-secondary {
+        background: #6c757d;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    footer {
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1rem 0;
+    }
+</style>
