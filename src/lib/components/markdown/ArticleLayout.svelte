@@ -55,7 +55,7 @@
 		<ul class="children space-y-1 mt-4">
 			{#each childrenPosts as children}
 				<li>
-					<button class="link w-full text-left cursor-pointer hover:bg-gray-100"
+					<button class="link w-full text-left cursor-pointer sm:hover:bg-gray-100"
 									on:click={() => goto(`${rootPost}/` + children.path)}>
 						{children.title}
 					</button>

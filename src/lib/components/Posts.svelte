@@ -17,7 +17,7 @@
 		{#key post}
 			<button
 				class="text-[1.5em] sm:px-2 sm:py-3 sm:flex justify-between items-center
-				sm:space-x-2 hover:bg-gray-100 hover:cursor-pointer text-left w-full"
+				sm:space-x-2 sm:hover:bg-gray-100 hover:cursor-pointer text-left w-full"
 				on:click={() => gotoPost(post.path)}
 			>
 				<p class="font-serif title text-md">{post.title}</p>
